@@ -3,9 +3,9 @@
 // Company: 
 // Engineer: 
 // 
-// Create Date: 2023/04/10 15:26:07
+// Create Date: 2023/04/11 01:19:48
 // Design Name: 
-// Module Name: CTRL
+// Module Name: PC
 // Project Name: 
 // Target Devices: 
 // Tool Versions: 
@@ -20,19 +20,7 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module CTRL(
-    input [5:0] op_code,
-    input [5:0] func_code,
-    output [5:0] alu_op,
-    output reg_dst,
-    output branch,
-    output mem_read,
-    output mem_write,
-    output mem_to_reg,
-    output alu_src,
-    output reg_write,
-    output j,
-    output jr,
-    output jal
+module PC(
+
     );
 endmodule
