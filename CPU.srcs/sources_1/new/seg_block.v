@@ -21,6 +21,10 @@
 
 
 module seg_block(
-
+    input clk,
+    input rst,
+    input [31:0] seg_in,
+    output [7:0] seg_op,
+    output [7:0] seg_out
     );
 endmodule

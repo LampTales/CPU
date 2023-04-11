@@ -1,0 +1,18 @@
+0.6
+2017.4
+Dec 15 2017
+21:07:18
+C:/Users/ASUS/Desktop/materials/Pico/VivadoSaving/CPU/CPU.sim/sim_1/behav/xsim/glbl.v,1513215259,verilog,,,,glbl,,,,,,,,
+C:/Users/ASUS/Desktop/materials/Pico/VivadoSaving/CPU/CPU.srcs/sim_1/new/empty.v,1681146243,verilog,,,,empty,,,,,,,,
+C:/Users/ASUS/Desktop/materials/Pico/VivadoSaving/CPU/CPU.srcs/sources_1/new/ALU.v,1681220818,verilog,,C:/Users/ASUS/Desktop/materials/Pico/VivadoSaving/CPU/CPU.srcs/sources_1/new/CTRL.v,,ALU,,,,,,,,
+C:/Users/ASUS/Desktop/materials/Pico/VivadoSaving/CPU/CPU.srcs/sources_1/new/CTRL.v,1681224414,verilog,,C:/Users/ASUS/Desktop/materials/Pico/VivadoSaving/CPU/CPU.srcs/sources_1/new/CXK.v,,CTRL,,,,,,,,
+C:/Users/ASUS/Desktop/materials/Pico/VivadoSaving/CPU/CPU.srcs/sources_1/new/CXK.v,1681229841,verilog,,C:/Users/ASUS/Desktop/materials/Pico/VivadoSaving/CPU/CPU.srcs/sources_1/new/Expander.v,,CXK,,,,,,,,
+C:/Users/ASUS/Desktop/materials/Pico/VivadoSaving/CPU/CPU.srcs/sources_1/new/Expander.v,1681220914,verilog,,C:/Users/ASUS/Desktop/materials/Pico/VivadoSaving/CPU/CPU.srcs/sources_1/new/MUX.v,,Expander,,,,,,,,
+C:/Users/ASUS/Desktop/materials/Pico/VivadoSaving/CPU/CPU.srcs/sources_1/new/MUX.v,1681213728,verilog,,C:/Users/ASUS/Desktop/materials/Pico/VivadoSaving/CPU/CPU.srcs/sources_1/new/PC.v,,MUX,,,,,,,,
+C:/Users/ASUS/Desktop/materials/Pico/VivadoSaving/CPU/CPU.srcs/sources_1/new/PC.v,1681213728,verilog,,C:/Users/ASUS/Desktop/materials/Pico/VivadoSaving/CPU/CPU.srcs/sources_1/new/PCctrl.v,,PC,,,,,,,,
+C:/Users/ASUS/Desktop/materials/Pico/VivadoSaving/CPU/CPU.srcs/sources_1/new/PCctrl.v,1681229091,verilog,,C:/Users/ASUS/Desktop/materials/Pico/VivadoSaving/CPU/CPU.srcs/sources_1/new/REG.v,,PCctrl,,,,,,,,
+C:/Users/ASUS/Desktop/materials/Pico/VivadoSaving/CPU/CPU.srcs/sources_1/new/REG.v,1681229552,verilog,,C:/Users/ASUS/Desktop/materials/Pico/VivadoSaving/CPU/CPU.srcs/sources_1/new/led_block.v,,REG,,,,,,,,
+C:/Users/ASUS/Desktop/materials/Pico/VivadoSaving/CPU/CPU.srcs/sources_1/new/led_block.v,1681222404,verilog,,C:/Users/ASUS/Desktop/materials/Pico/VivadoSaving/CPU/CPU.srcs/sources_1/new/seg_block.v,,led_block,,,,,,,,
+C:/Users/ASUS/Desktop/materials/Pico/VivadoSaving/CPU/CPU.srcs/sources_1/new/main.v,1681230310,verilog,,C:/Users/ASUS/Desktop/materials/Pico/VivadoSaving/CPU/CPU.srcs/sim_1/new/empty.v,,main,,,,,,,,
+C:/Users/ASUS/Desktop/materials/Pico/VivadoSaving/CPU/CPU.srcs/sources_1/new/seg_block.v,1681224879,verilog,,C:/Users/ASUS/Desktop/materials/Pico/VivadoSaving/CPU/CPU.srcs/sources_1/new/test.v,,seg_block,,,,,,,,
+C:/Users/ASUS/Desktop/materials/Pico/VivadoSaving/CPU/CPU.srcs/sources_1/new/test.v,1681125480,verilog,,C:/Users/ASUS/Desktop/materials/Pico/VivadoSaving/CPU/CPU.srcs/sources_1/new/main.v,,test,,,,,,,,

@@ -21,6 +21,7 @@
 
 
 module led_block(
-
+    input [23:0] led_in,
+    output [23:0] led_out
     );
 endmodule

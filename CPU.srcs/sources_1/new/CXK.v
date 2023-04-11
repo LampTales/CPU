@@ -3,9 +3,9 @@
 // Company: 
 // Engineer: 
 // 
-// Create Date: 2023/04/10 15:15:02
+// Create Date: 2023/04/12 00:09:10
 // Design Name: 
-// Module Name: ALU
+// Module Name: CXK
 // Project Name: 
 // Target Devices: 
 // Tool Versions: 
@@ -20,11 +20,12 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module ALU(
-    input [5:0] alu_op,
-    input [31:0] in0,
-    input [31:0] in1,
-    output [31:0] out,
-    output equal
+module CXK(
+    input clk,
+    input rst,
+    output rom_clk,
+    output ram_clk,
+    output reg_clk,
+    output pc_clk
     );
 endmodule

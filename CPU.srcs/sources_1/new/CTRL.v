@@ -26,6 +26,7 @@ module CTRL(
     output [5:0] alu_op,
     output reg_dst,
     output branch,
+    output nbranch,
     output mem_read,
     output mem_write,
     output mem_to_reg,

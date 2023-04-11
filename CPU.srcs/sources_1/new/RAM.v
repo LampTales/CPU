@@ -3,9 +3,9 @@
 // Company: 
 // Engineer: 
 // 
-// Create Date: 2023/04/10 15:15:02
+// Create Date: 2023/04/12 00:30:17
 // Design Name: 
-// Module Name: ALU
+// Module Name: RAM
 // Project Name: 
 // Target Devices: 
 // Tool Versions: 
@@ -20,11 +20,13 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module ALU(
-    input [5:0] alu_op,
-    input [31:0] in0,
-    input [31:0] in1,
-    output [31:0] out,
-    output equal
+module RAM(
+    input clk,
+    input rst,
+    input mem_read,
+    input mem_write,
+    input [31:0] addr,
+    input [31:0] write_data,
+    output [31:0] read_data
     );
 endmodule

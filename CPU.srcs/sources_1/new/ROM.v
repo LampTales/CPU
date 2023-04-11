@@ -3,9 +3,9 @@
 // Company: 
 // Engineer: 
 // 
-// Create Date: 2023/04/10 15:15:02
+// Create Date: 2023/04/12 00:30:02
 // Design Name: 
-// Module Name: ALU
+// Module Name: ROM
 // Project Name: 
 // Target Devices: 
 // Tool Versions: 
@@ -20,11 +20,10 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module ALU(
-    input [5:0] alu_op,
-    input [31:0] in0,
-    input [31:0] in1,
-    output [31:0] out,
-    output equal
+module ROM(
+    input clk,
+    input rst,
+    input [31:0] addr,
+    output [31:0] instruction
     );
 endmodule

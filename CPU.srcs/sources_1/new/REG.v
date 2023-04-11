@@ -21,6 +21,14 @@
 
 
 module REG(
-
+    input clk,
+    input rst,
+    input [4:0] read0,
+    input [4:0] read1,
+    input [4:0] write,
+    input [31:0] write_data,
+    input reg_write,
+    output [31:0] read_data0,
+    output [31:0] read_data1
     );
 endmodule
