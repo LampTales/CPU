@@ -3,9 +3,9 @@
 // Company: 
 // Engineer: 
 // 
-// Create Date: 2023/04/10 15:21:19
+// Create Date: 2023/04/11 17:46:15
 // Design Name: 
-// Module Name: MUX
+// Module Name: PCctrl
 // Project Name: 
 // Target Devices: 
 // Tool Versions: 
@@ -20,13 +20,7 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module MUX(
-    input [31:0] in0,
-    input [31:0] in1,
-    input select,
-    output [31:0] out
-    );
+module PCctrl(
 
-    assign out =  select ? in1 : in0;
-    
+    );
 endmodule

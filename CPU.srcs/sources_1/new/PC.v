@@ -19,8 +19,22 @@
 // 
 //////////////////////////////////////////////////////////////////////////////////
 
+// unfinish
 
 module PC(
-
+    input clk,
+    input rst,
+    input [31:0] next,
+    output [31:0] out
     );
+    reg [31:0] pc;
+
+    always @(posedge clk or negedge rst) begin
+        if (!rst) begin
+            pc <= 0; // should be the start address of the instructions !!!
+        end
+        pc <= next;
+    end
+
+    assign out = pc;
 endmodule
