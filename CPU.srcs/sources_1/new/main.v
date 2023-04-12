@@ -61,9 +61,11 @@ module main(
         .instruction(instruction)
     );
 
+    wire ignore;
     wire [31:0] expand_imme;
     Expander expander(
         .imme(instruction[15:0]),
+        .ignore(ignore),
         .expand_imme(expand_imme)
     );
     
@@ -94,6 +96,7 @@ module main(
         .mem_to_reg(mem_to_reg),
         .alu_src(alu_src),
         .reg_write(reg_write),
+        .ignore(ignore),
         .j(j),
         .jr(jr),
         .jal(jal)

@@ -22,6 +22,7 @@
 
 module Expander(
     input [15:0] imme,
+    input ignore,
     output [31:0] expand_imme
     );
 endmodule

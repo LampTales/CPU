@@ -34,6 +34,7 @@ module CTRL(
     output mem_to_reg,
     output alu_src,
     output reg_write,
+    output ignore,
     output j,
     output jr,
     output jal
