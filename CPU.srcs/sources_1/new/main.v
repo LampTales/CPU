@@ -44,8 +44,8 @@ module main(
         .pc_clk(pc_clk)
     );
 
-    wire pc_next;
-    wire pc_value;
+    wire [31:0] pc_next;
+    wire [31:0] pc_value;
     PC pc_counter(
         .clk(pc_clk),
         .rst(rst),
