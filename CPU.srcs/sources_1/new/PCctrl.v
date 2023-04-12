@@ -27,9 +27,11 @@ module PCctrl(
     input [25:0] j_inst,
     input branch,
     input nbranch,
+    input equal,
     input [31:0] expand_imme,
     input jr,
     input [31:0] ra,
+    output [31:0] link_addr,
     output [31:0] next
     );
 endmodule

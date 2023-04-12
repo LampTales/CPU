@@ -156,10 +156,46 @@ module main(
         .equal(alu_equal)
     );
 
+    wire [31:0] mem_read_data;
+    RAM ram(
+        .clk(ram_clk),
+        .rst(rst),
+        .mem_read(mem_read),
+        .mem_write(mem_write),
+        .addr(alu_result),
+        .write_data(reg_read_data1),
+        .read_data(mem_read_data)
+    );
 
-    
+    wire [31:0] write_data_to_reg_select;
+    MUX_32 which_write_data_to_reg(
+        .in0(alu_result),
+        .in1(mem_read_data),
+        .select(mem_to_reg),
+        .out(write_data_to_reg_select)
+    );
+    wire [31:0] link_addr;
+    MUX_32 whether_write_ra_or_not(
+        .in0(write_data_to_reg_select),
+        .in1(link_addr),
+        .select(jal),
+        .out(reg_write_data)
+    );
 
-
+    PCctrl pc_ctrl(
+        .pc(pc_value),
+        .j(j),
+        .jal(jal),
+        .j_inst(instruction[25:0]),
+        .branch(branch),
+        .nbranch(nbranch),
+        .equal(alu_equal),
+        .expand_imme(expand_imme),
+        .jr(jr),
+        .ra(reg_read_data0),
+        .link_addr(link_addr),
+        .next(pc_next)
+    );
 
 
 endmodule
