@@ -22,7 +22,8 @@
 
 module PCctrl(
     input [31:0] pc,
-    input j_or_jal,
+    input j,
+    input jal,
     input [25:0] j_inst,
     input branch,
     input nbranch,
