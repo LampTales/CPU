@@ -55,7 +55,7 @@ module main(
 
     wire [31:0] instruction;
     ROM rom(
-        .clk(clk),
+        .clk(rom_clk),
         .rst(rst),
         .addr(pc_value),
         .instruction(instruction)
