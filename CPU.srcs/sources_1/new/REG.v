@@ -27,8 +27,12 @@ module REG(
     input [4:0] read1,
     input [4:0] write,
     input [31:0] write_data,
+    input [127:0] simd_write_data,
     input reg_write,
+    input simd,
     output [31:0] read_data0,
-    output [31:0] read_data1
+    output [31:0] read_data1,
+    output [127:0] simd_read_data0,
+    output [127:0] simd_read_data1
     );
 endmodule

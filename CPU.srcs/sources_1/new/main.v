@@ -79,6 +79,7 @@ module main(
     wire mem_to_reg;
     wire alu_src;
     wire reg_write;
+    wire simd;
     wire j;
     wire jr;
     wire jal;
@@ -97,6 +98,7 @@ module main(
         .alu_src(alu_src),
         .reg_write(reg_write),
         .ignore(ignore),
+        .simd(simd),
         .j(j),
         .jr(jr),
         .jal(jal)
@@ -126,8 +128,11 @@ module main(
     );
 
     wire [31:0] reg_write_data;
+    wire [127:0] simd_reg_write_data;
     wire [31:0] reg_read_data0;
     wire [31:0] reg_read_data1;
+    wire [127:0] simd_reg_read_data0;
+    wire [127:0] simd_reg_read_data1;
     REG reg_file(
         .clk(reg_clk),
         .rst(rst),
@@ -135,9 +140,13 @@ module main(
         .read1(instruction[20:16]),
         .write(write_select1),
         .write_data(reg_write_data),
+        .simd_write_data(simd_reg_write_data),
         .reg_write(reg_write),
+        .simd(simd),
         .read_data0(reg_read_data0),
-        .read_data1(reg_read_data1)
+        .read_data1(reg_read_data1),
+        .simd_read_data0(simd_reg_read_data0),
+        .simd_read_data1(simd_reg_read_data1)
     );
 
     wire [31:0] data_to_alu_select;
@@ -157,6 +166,13 @@ module main(
         .in1(data_to_alu_select),
         .out(alu_result),
         .equal(alu_equal)
+    );
+
+    SIMD_ALU simd_alu(
+        .alu_op(alu_op),
+        .in0(simd_reg_read_data0),
+        .in1(simd_reg_read_data1),
+        .out(simd_reg_write_data)
     );
 
     wire [31:0] mem_read_data;

@@ -35,6 +35,7 @@ module CTRL(
     output alu_src,
     output reg_write,
     output ignore,
+    output simd,
     output j,
     output jr,
     output jal
