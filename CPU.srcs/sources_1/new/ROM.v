@@ -26,4 +26,10 @@ module ROM(
     input [31:0] addr,
     output [31:0] instruction
     );
+
+    rom_ip inner_rom(
+        .addra(addr[17:2]),
+        .clka(clk),
+        .douta(instruction)
+    );
 endmodule
