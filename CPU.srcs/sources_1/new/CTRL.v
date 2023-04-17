@@ -24,7 +24,7 @@ module CTRL(
     input [5:0] op_code,
     input [4:0] shamt_in,
     input [5:0] func_code,
-    output [5:0] alu_op,
+    output [11:0] alu_op,
     output [4:0] shamt_out,
     output reg_dst,
     output branch,

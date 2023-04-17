@@ -21,7 +21,7 @@
 
 
 module ALU(
-    input [5:0] alu_op,
+    input [11:0] alu_op,
     input [4:0] shamt,
     input [31:0] in0,
     input [31:0] in1,

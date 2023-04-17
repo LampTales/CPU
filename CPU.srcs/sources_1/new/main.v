@@ -69,7 +69,7 @@ module main(
         .expand_imme(expand_imme)
     );
     
-    wire [5:0] alu_op;
+    wire [11:0] alu_op;
     wire [4:0] shamt;
     wire reg_dst;
     wire branch;
