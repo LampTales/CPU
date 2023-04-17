@@ -29,4 +29,11 @@ module RAM(
     input [31:0] write_data,
     output [31:0] read_data
     );
+    ram_ip inner_ram(
+        .addra(addr[17:2]),
+        .clka(clk),
+        .dina(write_data),
+        .douta(read_data),
+        .wea(mem_write)
+    );
 endmodule

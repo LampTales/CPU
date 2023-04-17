@@ -25,4 +25,8 @@ module Expander(
     input ignore,
     output [31:0] expand_imme
     );
+    wire [31:0] non_ignore;
+    reg [15:0] zero = 0;
+    assign non_ignore = {16 * imme[15], imme[15:0]};
+    assign expand_imme = ignore ? {zero[15:0], imme[15:0]} : non_ignore;
 endmodule
