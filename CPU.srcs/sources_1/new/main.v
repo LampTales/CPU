@@ -34,6 +34,7 @@ module main(
     wire ram_clk;
     wire reg_clk;
     wire pc_clk;
+    wire seg_clk;
 
     CXK clock(
         .clk(clk),
@@ -41,7 +42,8 @@ module main(
         .rom_clk(rom_clk),
         .ram_clk(ram_clk),
         .reg_clk(reg_clk),
-        .pc_clk(pc_clk)
+        .pc_clk(pc_clk),
+        .seg_clk(seg_clk)
     );
 
     wire [31:0] pc_next;

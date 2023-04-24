@@ -26,6 +26,17 @@ module CXK(
     output rom_clk,
     output ram_clk,
     output reg_clk,
-    output pc_clk
+    output pc_clk,
+    output seg_clk
     );
+    wire cpu_clk;
+    clk_ip inner_clk(
+        .clk_in1(clk),
+        .cpu_clk(cpu_clk),
+        .seg_clk(seg_clk)
+    );
+    assign pc_clk = cpu_clk;
+    assign ram_clk = cpu_clk;
+    assign rom_clk = ~cpu_clk;
+    assign reg_clk = ~cpu_clk;
 endmodule
