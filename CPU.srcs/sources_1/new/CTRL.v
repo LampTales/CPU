@@ -55,6 +55,7 @@ I-type:
 J-type:
       j      000010          xxxxxx
       jal    000011          xxxxxx  
+<<<<<<< HEAD
 
 R-type:
     opcode(6 bits) | rs(5 bits) | rt(5 bits) | rd(5 bits) | shamt(5 bits) | funct(6 bits)
@@ -90,6 +91,8 @@ control signals:
     j
     jr
     jal
+=======
+>>>>>>> 0f151b09fac7312f020f0ef66d4eab1ad92d116f
 */
 
 module CTRL(
