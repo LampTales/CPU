@@ -85,6 +85,7 @@ module main(
     wire j;
     wire jr;
     wire jal;
+    wire div;
     CTRL ctrl(
         .op_code(instruction[31:26]),
         .shamt_in(instruction[10:6]),
@@ -103,7 +104,8 @@ module main(
         .simd(simd),
         .j(j),
         .jr(jr),
-        .jal(jal)
+        .jal(jal),
+        .div(div)
     );
 
     reg [4:0] ra_addr = 31;
@@ -148,7 +150,8 @@ module main(
         .read_data0(reg_read_data0),
         .read_data1(reg_read_data1),
         .simd_read_data0(simd_reg_read_data0),
-        .simd_read_data1(simd_reg_read_data1)
+        .simd_read_data1(simd_reg_read_data1),
+        .div(div)
     );
 
     wire [31:0] data_to_alu_select;

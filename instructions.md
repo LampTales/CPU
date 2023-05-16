@@ -34,4 +34,11 @@ I-type:
 J-type:
       j      000010          xxxxxx
       jal    000011          xxxxxx  
+
+R-type:
+    opcode(6 bits) | rs(5 bits) | rt(5 bits) | rd(5 bits) | shamt(5 bits) | funct(6 bits)
+I-type:
+    opcode(6 bits) | rs(5 bits) | rt(5 bits) | immediate(16 bits)
+J-type:
+    opcode(6 bits) | address(26 bits)
 */
