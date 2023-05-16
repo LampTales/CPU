@@ -60,7 +60,8 @@ module ALU(
     input [31:0] in0,
     input [31:0] in1,
     output reg [31:0] out,
-    output reg equal
+    output reg equal,
+    output reg overflow
     );
     always @(*) begin
         casex(alu_op) 
@@ -69,6 +70,40 @@ module ALU(
             12'b000000000100: out = in0 << in1; //sllv
             12'b000000000110: out = in0 >> in1; //srlv
             12'b000000000011: out = $signed(in0) >>> shamt; //sra
+            12'b000000000111: out = $signed(in0) >>> in1; //srav
+            12'b000000100000: out = in0 + in1; //add
+            12'b000000100001: out = in0 + in1; //addu
+            12'b000000100010: out = in0 - in1; //sub
+            12'b000000100011: out = in0 - in1; //subu
+            12'b000000100100: out = in0 & in1; //and
+            12'b000000100101: out = in0 | in1; //or
+            12'b000000100110: out = in0 ^ in1; //xor
+            12'b000000100111: out = ~(in0 | in1); //nor
+            12'b000000101010: out = $signed(in0) < $signed(in1); //slt
+            12'b000000101011: out = in0 < in1; //sltu
+
+            12'b000100xxxxxx: equal = in0 == in1 ? 32'b1 : 32'b0; //beq
+            12'b000101xxxxxx: equal = in0 == in1 ? 32'b1 : 32'b0; //bne
+
+            12'b001000xxxxxx: out = in0 + $signed({16'b0, in1}); //addi
+            12'b001001xxxxxx: out = in0 + {16'b0, in1}; //addiu
+            12'b001010xxxxxx: out = $signed(in0) < $signed({16'b0, in1}); //slti
+            12'b001011xxxxxx: out = in0 < {16'b0, in1}; //sltiu
+            12'b001100xxxxxx: out = in0 & {16'b0, in1}; //andi
+            12'b001101xxxxxx: out = in0 | {16'b0, in1}; //ori
+            12'b001110xxxxxx: out = in0 ^ {16'b0, in1}; //xori
+            12'b001111xxxxxx: out = {16'b0, in1}; //lui
+        endcase
+        
+    end
+
+    always@(*) begin
+        casex(alu_op) 
+            12'b000000000000: overflow = 0; //sll
+            12'b000000000010: overflow = 0; //srl
+            12'b000000000100: overflow = 0; //sllv
+            12'b000000000110: overflow = 0; //srlv
+            12'b000000000011: overflow = 0; //sra
             12'b000000000111: out = $signed(in0) >>> in1; //srav
             12'b000000100000: out = in0 + in1; //add
             12'b000000100001: out = in0 + in1; //addu
