@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2017.4 (64-bit)
+# SW Build 2086221 on Fri Dec 15 20:55:39 MST 2017
+# IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
+# Start of session at: Tue May 16 15:47:08 2023
+# Process ID: 18552
+# Current directory: D:/Sustech/2023 Spring/CS214 Computer Organizations/Project/CPU/CPU.runs/synth_1
+# Command line: vivado.exe -log main.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source main.tcl
+# Log file: D:/Sustech/2023 Spring/CS214 Computer Organizations/Project/CPU/CPU.runs/synth_1/main.vds
+# Journal file: D:/Sustech/2023 Spring/CS214 Computer Organizations/Project/CPU/CPU.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source main.tcl -notrace
