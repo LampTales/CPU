@@ -1,5 +1,13 @@
+<<<<<<< HEAD
 <?xml version="1.0"?>
 <Runs Version="1" Minor="0">
 	<Run Id="synth_1" LaunchDir="D:/Sustech/2023 Spring/CS214 Computer Organizations/Project/CPU/CPU.runs/synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
 </Runs>
 
+=======
+<?xml version="1.0"?>
+<Runs Version="1" Minor="0">
+	<Run Id="synth_1" LaunchDir="D:/Sustech/2023 Spring/CS214 Computer Organizations/Project/CPU/CPU.runs/synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+</Runs>
+
+>>>>>>> 0f151b09fac7312f020f0ef66d4eab1ad92d116f

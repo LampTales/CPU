@@ -55,6 +55,44 @@ I-type:
 J-type:
       j      000010          xxxxxx
       jal    000011          xxxxxx  
+<<<<<<< HEAD
+
+R-type:
+    opcode(6 bits) | rs(5 bits) | rt(5 bits) | rd(5 bits) | shamt(5 bits) | funct(6 bits)
+I-type:
+    opcode(6 bits) | rs(5 bits) | rt(5 bits) | immediate(16 bits)
+J-type:
+    opcode(6 bits) | address(26 bits)
+
+    
+control signals:
+    reg_dst:
+        asserted: register destination is rd
+        deasserted: register destination is rt
+    branch:
+        asserted: current instruction is beq
+        deasserted: others
+    nbranch:
+        asserted: current instruction is bne
+        deasserted: others
+    mem_read:
+        asserted: lw
+        deasserted: others
+    mem_write:
+        asserted: sw
+        deasserted: others
+    mem_to_reg:
+        asserted: The value to be written to the register comes from the memory
+        deasserted: The value to be written to the register comes from the ALU
+    alu_src
+    reg_write
+    ignore
+    simd
+    j
+    jr
+    jal
+=======
+>>>>>>> 0f151b09fac7312f020f0ef66d4eab1ad92d116f
 */
 
 module CTRL(

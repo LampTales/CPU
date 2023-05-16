@@ -1,5 +1,13 @@
+<<<<<<< HEAD
 <?xml version="1.0"?>
 <ProcessHandle Version="1" Minor="0">
     <Process Command="vivado.bat" Owner="Haoson" Host="HAOSON-PC" Pid="22436">
     </Process>
 </ProcessHandle>
+=======
+<?xml version="1.0"?>
+<ProcessHandle Version="1" Minor="0">
+    <Process Command="vivado.bat" Owner="Haoson" Host="HAOSON-PC" Pid="22436">
+    </Process>
+</ProcessHandle>
+>>>>>>> 0f151b09fac7312f020f0ef66d4eab1ad92d116f
