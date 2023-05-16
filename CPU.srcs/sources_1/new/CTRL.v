@@ -55,7 +55,6 @@ I-type:
 J-type:
       j      000010          xxxxxx
       jal    000011          xxxxxx  
-<<<<<<< HEAD
 
 R-type:
     opcode(6 bits) | rs(5 bits) | rt(5 bits) | rd(5 bits) | shamt(5 bits) | funct(6 bits)
@@ -64,36 +63,8 @@ I-type:
 J-type:
     opcode(6 bits) | address(26 bits)
 
-    
-control signals:
-    reg_dst:
-        asserted: register destination is rd
-        deasserted: register destination is rt
-    branch:
-        asserted: current instruction is beq
-        deasserted: others
-    nbranch:
-        asserted: current instruction is bne
-        deasserted: others
-    mem_read:
-        asserted: lw
-        deasserted: others
-    mem_write:
-        asserted: sw
-        deasserted: others
-    mem_to_reg:
-        asserted: The value to be written to the register comes from the memory
-        deasserted: The value to be written to the register comes from the ALU
-    alu_src
-    reg_write
-    ignore
-    simd
-    j
-    jr
-    jal
-=======
->>>>>>> 0f151b09fac7312f020f0ef66d4eab1ad92d116f
 */
+
 
 module CTRL(
     input [5:0] op_code,
@@ -117,9 +88,86 @@ module CTRL(
     output div
     );
     
-    always @(*) begin
-        
-    end
+/*
+control signals:
+    ignore
+    simd
+*/
+/*
+    reg_dst:
+        asserted: register destination is rd
+        deasserted: register destination is rt
+*/
+    assign reg_dst = (op_code == 6'b000000) ? 1'b1 : 1'b0;
+/*
+    branch:
+        asserted: current instruction is beq
+        deasserted: others
+*/
+    assign branch = (op_code == 6'b000100) ? 1'b1 : 1'b0;
+/*
+    nbranch:
+        asserted: current instruction is bne
+        deasserted: others
+*/
+    assign nbranch = (op_code == 6'b000101) ? 1'b1 : 1'b0;
+/*
+    mem_read:
+        asserted: lw
+        deasserted: others
+*/
+    assign mem_read = (op_code == 6'b100011) ? 1'b1 : 1'b0;
+/*
+    mem_write:
+        asserted: sw
+        deasserted: others
+*/
+    assign mem_write = (op_code == 6'b101011) ? 1'b1 : 1'b0;
+/*
+    mem_to_reg:
+        asserted: The value to be written to the register comes from the memory
+        deasserted: The value to be written to the register comes from the ALU
+    others: 0
+    lw: 1
+*/
+    assign mem_to_reg = (op_code == 6'b100011) ? 1'b1 : 1'b0;
+/*
+    alu_src:
+        asserted: The second ALU operand comes from the sign-extended, lower 16 bits of the instruction
+        deasserted: The second ALU operand comes from the second register file output
+    others: 0
+    lw, sw: 1
+*/
+    assign alu_src = (op_code == 6'b100011 || op_code == 6'b101011) ? 1'b1 : 1'b0;
 
+/*
+    reg_write:
+        asserted: The register on the Write register input is written with the value 
+                    on the Write data input
+        deasserted: The register on the Write register input is not written
+    sw, beq, bne: 0
+    others: 1
+*/
+    assign reg_write = (op_code == 6'b100011 || op_code == 6'b000100 || op_code == 6'b000101) ? 1'b0 : 1'b1;
+
+/*
+    j:
+        asserted: j
+        deasserted: others
+*/
+    assign j = (op_code == 6'b000010) ? 1'b1 : 1'b0;
+
+/*
+    jr:
+        asserted: jr
+        deasserted: others
+*/
+    assign jr = (op_code == 6'b000000 && func_code == 6'b001000) ? 1'b1 : 1'b0;
+/*
+    jal:
+        asserted: jal
+        deasserted: others
+*/
+    assign jal = (op_code == 6'b000011) ? 1'b1 : 1'b0;
 
 endmodule
