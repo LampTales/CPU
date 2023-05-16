@@ -75,7 +75,8 @@ module CTRL(
     output simd,
     output j,
     output jr,
-    output jal
+    output jal,
+    output div
     );
     
     always @(*) begin

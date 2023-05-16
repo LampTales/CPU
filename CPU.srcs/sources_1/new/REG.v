@@ -33,6 +33,7 @@ module REG(
     output [31:0] read_data0,
     output [31:0] read_data1,
     output [127:0] simd_read_data0,
-    output [127:0] simd_read_data1
+    output [127:0] simd_read_data1,
+    input div
     );
 endmodule
