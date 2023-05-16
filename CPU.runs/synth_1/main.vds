@@ -2,12 +2,12 @@
 # Vivado v2017.4 (64-bit)
 # SW Build 2086221 on Fri Dec 15 20:55:39 MST 2017
 # IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
-# Start of session at: Tue May 16 15:47:08 2023
-# Process ID: 18552
-# Current directory: D:/Sustech/2023 Spring/CS214 Computer Organizations/Project/CPU/CPU.runs/synth_1
+# Start of session at: Tue May 16 22:26:06 2023
+# Process ID: 22572
+# Current directory: C:/Users/ASUS/Desktop/materials/Pico/VivadoSaving/CPU/CPU.runs/synth_1
 # Command line: vivado.exe -log main.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source main.tcl
-# Log file: D:/Sustech/2023 Spring/CS214 Computer Organizations/Project/CPU/CPU.runs/synth_1/main.vds
-# Journal file: D:/Sustech/2023 Spring/CS214 Computer Organizations/Project/CPU/CPU.runs/synth_1\vivado.jou
+# Log file: C:/Users/ASUS/Desktop/materials/Pico/VivadoSaving/CPU/CPU.runs/synth_1/main.vds
+# Journal file: C:/Users/ASUS/Desktop/materials/Pico/VivadoSaving/CPU/CPU.runs/synth_1\vivado.jou
 #-----------------------------------------------------------
 source main.tcl -notrace
 Command: synth_design -top main -part xc7a100tfgg484-1
@@ -15,29 +15,615 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 20596 
-ERROR: [Synth 8-2715] syntax error near = [D:/Sustech/2023 Spring/CS214 Computer Organizations/Project/CPU/CPU.srcs/sources_1/new/ALU.v:66]
-ERROR: [Synth 8-2715] syntax error near = [D:/Sustech/2023 Spring/CS214 Computer Organizations/Project/CPU/CPU.srcs/sources_1/new/ALU.v:67]
-ERROR: [Synth 8-2715] syntax error near = [D:/Sustech/2023 Spring/CS214 Computer Organizations/Project/CPU/CPU.srcs/sources_1/new/ALU.v:68]
-ERROR: [Synth 8-2715] syntax error near = [D:/Sustech/2023 Spring/CS214 Computer Organizations/Project/CPU/CPU.srcs/sources_1/new/ALU.v:69]
-ERROR: [Synth 8-2715] syntax error near = [D:/Sustech/2023 Spring/CS214 Computer Organizations/Project/CPU/CPU.srcs/sources_1/new/ALU.v:70]
-ERROR: [Synth 8-2715] syntax error near = [D:/Sustech/2023 Spring/CS214 Computer Organizations/Project/CPU/CPU.srcs/sources_1/new/ALU.v:71]
-ERROR: [Synth 8-2715] syntax error near = [D:/Sustech/2023 Spring/CS214 Computer Organizations/Project/CPU/CPU.srcs/sources_1/new/ALU.v:72]
-ERROR: [Synth 8-2715] syntax error near = [D:/Sustech/2023 Spring/CS214 Computer Organizations/Project/CPU/CPU.srcs/sources_1/new/ALU.v:73]
-ERROR: [Synth 8-2715] syntax error near = [D:/Sustech/2023 Spring/CS214 Computer Organizations/Project/CPU/CPU.srcs/sources_1/new/ALU.v:74]
-ERROR: [Synth 8-2715] syntax error near = [D:/Sustech/2023 Spring/CS214 Computer Organizations/Project/CPU/CPU.srcs/sources_1/new/ALU.v:75]
-ERROR: [Synth 8-2715] syntax error near = [D:/Sustech/2023 Spring/CS214 Computer Organizations/Project/CPU/CPU.srcs/sources_1/new/ALU.v:76]
-ERROR: [Synth 8-2715] syntax error near = [D:/Sustech/2023 Spring/CS214 Computer Organizations/Project/CPU/CPU.srcs/sources_1/new/ALU.v:77]
-ERROR: [Synth 8-2715] syntax error near = [D:/Sustech/2023 Spring/CS214 Computer Organizations/Project/CPU/CPU.srcs/sources_1/new/ALU.v:78]
-ERROR: [Synth 8-2715] syntax error near = [D:/Sustech/2023 Spring/CS214 Computer Organizations/Project/CPU/CPU.srcs/sources_1/new/ALU.v:79]
-ERROR: [Synth 8-2715] syntax error near = [D:/Sustech/2023 Spring/CS214 Computer Organizations/Project/CPU/CPU.srcs/sources_1/new/ALU.v:80]
-ERROR: [Synth 8-2715] syntax error near = [D:/Sustech/2023 Spring/CS214 Computer Organizations/Project/CPU/CPU.srcs/sources_1/new/ALU.v:81]
-ERROR: [Synth 8-2715] syntax error near = [D:/Sustech/2023 Spring/CS214 Computer Organizations/Project/CPU/CPU.srcs/sources_1/new/ALU.v:83]
-ERROR: [Synth 8-2715] syntax error near = [D:/Sustech/2023 Spring/CS214 Computer Organizations/Project/CPU/CPU.srcs/sources_1/new/ALU.v:84]
-ERROR: [Synth 8-2715] syntax error near = [D:/Sustech/2023 Spring/CS214 Computer Organizations/Project/CPU/CPU.srcs/sources_1/new/ALU.v:86]
-Failed to read verilog 'D:/Sustech/2023 Spring/CS214 Computer Organizations/Project/CPU/CPU.srcs/sources_1/new/ALU.v'
+INFO: Helper process launched with PID 21288 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:00 ; elapsed = 00:00:04 . Memory (MB): peak = 343.156 ; gain = 102.082
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'main' [C:/Users/ASUS/Desktop/materials/Pico/VivadoSaving/CPU/CPU.srcs/sources_1/new/main.v:23]
+INFO: [Synth 8-638] synthesizing module 'CXK' [C:/Users/ASUS/Desktop/materials/Pico/VivadoSaving/CPU/CPU.srcs/sources_1/new/CXK.v:23]
+INFO: [Synth 8-638] synthesizing module 'clk_ip' [C:/Users/ASUS/Desktop/materials/Pico/VivadoSaving/CPU/CPU.runs/synth_1/.Xil/Vivado-22572-LAPTOP-HRJPMCSA/realtime/clk_ip_stub.v:5]
+INFO: [Synth 8-256] done synthesizing module 'clk_ip' (1#1) [C:/Users/ASUS/Desktop/materials/Pico/VivadoSaving/CPU/CPU.runs/synth_1/.Xil/Vivado-22572-LAPTOP-HRJPMCSA/realtime/clk_ip_stub.v:5]
+INFO: [Synth 8-256] done synthesizing module 'CXK' (2#1) [C:/Users/ASUS/Desktop/materials/Pico/VivadoSaving/CPU/CPU.srcs/sources_1/new/CXK.v:23]
+INFO: [Synth 8-638] synthesizing module 'PC' [C:/Users/ASUS/Desktop/materials/Pico/VivadoSaving/CPU/CPU.srcs/sources_1/new/PC.v:24]
+INFO: [Synth 8-256] done synthesizing module 'PC' (3#1) [C:/Users/ASUS/Desktop/materials/Pico/VivadoSaving/CPU/CPU.srcs/sources_1/new/PC.v:24]
+INFO: [Synth 8-638] synthesizing module 'ROM' [C:/Users/ASUS/Desktop/materials/Pico/VivadoSaving/CPU/CPU.srcs/sources_1/new/ROM.v:23]
+INFO: [Synth 8-638] synthesizing module 'rom_ip' [C:/Users/ASUS/Desktop/materials/Pico/VivadoSaving/CPU/CPU.runs/synth_1/.Xil/Vivado-22572-LAPTOP-HRJPMCSA/realtime/rom_ip_stub.v:6]
+INFO: [Synth 8-256] done synthesizing module 'rom_ip' (4#1) [C:/Users/ASUS/Desktop/materials/Pico/VivadoSaving/CPU/CPU.runs/synth_1/.Xil/Vivado-22572-LAPTOP-HRJPMCSA/realtime/rom_ip_stub.v:6]
+INFO: [Synth 8-256] done synthesizing module 'ROM' (5#1) [C:/Users/ASUS/Desktop/materials/Pico/VivadoSaving/CPU/CPU.srcs/sources_1/new/ROM.v:23]
+INFO: [Synth 8-638] synthesizing module 'Expander' [C:/Users/ASUS/Desktop/materials/Pico/VivadoSaving/CPU/CPU.srcs/sources_1/new/Expander.v:25]
+INFO: [Synth 8-256] done synthesizing module 'Expander' (6#1) [C:/Users/ASUS/Desktop/materials/Pico/VivadoSaving/CPU/CPU.srcs/sources_1/new/Expander.v:25]
+INFO: [Synth 8-638] synthesizing module 'CTRL' [C:/Users/ASUS/Desktop/materials/Pico/VivadoSaving/CPU/CPU.srcs/sources_1/new/CTRL.v:69]
+WARNING: [Synth 8-3848] Net alu_op in module/entity CTRL does not have driver. [C:/Users/ASUS/Desktop/materials/Pico/VivadoSaving/CPU/CPU.srcs/sources_1/new/CTRL.v:73]
+WARNING: [Synth 8-3848] Net shamt_out in module/entity CTRL does not have driver. [C:/Users/ASUS/Desktop/materials/Pico/VivadoSaving/CPU/CPU.srcs/sources_1/new/CTRL.v:74]
+WARNING: [Synth 8-3848] Net ignore in module/entity CTRL does not have driver. [C:/Users/ASUS/Desktop/materials/Pico/VivadoSaving/CPU/CPU.srcs/sources_1/new/CTRL.v:83]
+WARNING: [Synth 8-3848] Net simd in module/entity CTRL does not have driver. [C:/Users/ASUS/Desktop/materials/Pico/VivadoSaving/CPU/CPU.srcs/sources_1/new/CTRL.v:84]
+WARNING: [Synth 8-3848] Net div in module/entity CTRL does not have driver. [C:/Users/ASUS/Desktop/materials/Pico/VivadoSaving/CPU/CPU.srcs/sources_1/new/CTRL.v:88]
+INFO: [Synth 8-256] done synthesizing module 'CTRL' (7#1) [C:/Users/ASUS/Desktop/materials/Pico/VivadoSaving/CPU/CPU.srcs/sources_1/new/CTRL.v:69]
+INFO: [Synth 8-638] synthesizing module 'MUX_5' [C:/Users/ASUS/Desktop/materials/Pico/VivadoSaving/CPU/CPU.srcs/sources_1/new/MUX.v:34]
+INFO: [Synth 8-256] done synthesizing module 'MUX_5' (8#1) [C:/Users/ASUS/Desktop/materials/Pico/VivadoSaving/CPU/CPU.srcs/sources_1/new/MUX.v:34]
+INFO: [Synth 8-638] synthesizing module 'REG' [C:/Users/ASUS/Desktop/materials/Pico/VivadoSaving/CPU/CPU.srcs/sources_1/new/REG.v:23]
+INFO: [Synth 8-256] done synthesizing module 'REG' (9#1) [C:/Users/ASUS/Desktop/materials/Pico/VivadoSaving/CPU/CPU.srcs/sources_1/new/REG.v:23]
+INFO: [Synth 8-638] synthesizing module 'MUX_32' [C:/Users/ASUS/Desktop/materials/Pico/VivadoSaving/CPU/CPU.srcs/sources_1/new/MUX.v:23]
+INFO: [Synth 8-256] done synthesizing module 'MUX_32' (10#1) [C:/Users/ASUS/Desktop/materials/Pico/VivadoSaving/CPU/CPU.srcs/sources_1/new/MUX.v:23]
+INFO: [Synth 8-638] synthesizing module 'ALU' [C:/Users/ASUS/Desktop/materials/Pico/VivadoSaving/CPU/CPU.srcs/sources_1/new/ALU.v:57]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/ASUS/Desktop/materials/Pico/VivadoSaving/CPU/CPU.srcs/sources_1/new/ALU.v:67]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/ASUS/Desktop/materials/Pico/VivadoSaving/CPU/CPU.srcs/sources_1/new/ALU.v:101]
+INFO: [Synth 8-256] done synthesizing module 'ALU' (11#1) [C:/Users/ASUS/Desktop/materials/Pico/VivadoSaving/CPU/CPU.srcs/sources_1/new/ALU.v:57]
+WARNING: [Synth 8-350] instance 'alu' of module 'ALU' requires 7 connections, but only 6 given [C:/Users/ASUS/Desktop/materials/Pico/VivadoSaving/CPU/CPU.srcs/sources_1/new/main.v:167]
+INFO: [Synth 8-638] synthesizing module 'SIMD_ALU' [C:/Users/ASUS/Desktop/materials/Pico/VivadoSaving/CPU/CPU.srcs/sources_1/new/SIMD_ALU.v:23]
+WARNING: [Synth 8-689] width (6) of port connection 'alu_op' does not match port width (12) of module 'ALU' [C:/Users/ASUS/Desktop/materials/Pico/VivadoSaving/CPU/CPU.srcs/sources_1/new/SIMD_ALU.v:31]
+WARNING: [Synth 8-350] instance 'inner_alu0' of module 'ALU' requires 7 connections, but only 5 given [C:/Users/ASUS/Desktop/materials/Pico/VivadoSaving/CPU/CPU.srcs/sources_1/new/SIMD_ALU.v:30]
+WARNING: [Synth 8-689] width (6) of port connection 'alu_op' does not match port width (12) of module 'ALU' [C:/Users/ASUS/Desktop/materials/Pico/VivadoSaving/CPU/CPU.srcs/sources_1/new/SIMD_ALU.v:38]
+WARNING: [Synth 8-350] instance 'inner_alu1' of module 'ALU' requires 7 connections, but only 5 given [C:/Users/ASUS/Desktop/materials/Pico/VivadoSaving/CPU/CPU.srcs/sources_1/new/SIMD_ALU.v:37]
+WARNING: [Synth 8-689] width (6) of port connection 'alu_op' does not match port width (12) of module 'ALU' [C:/Users/ASUS/Desktop/materials/Pico/VivadoSaving/CPU/CPU.srcs/sources_1/new/SIMD_ALU.v:45]
+WARNING: [Synth 8-350] instance 'inner_alu2' of module 'ALU' requires 7 connections, but only 5 given [C:/Users/ASUS/Desktop/materials/Pico/VivadoSaving/CPU/CPU.srcs/sources_1/new/SIMD_ALU.v:44]
+WARNING: [Synth 8-689] width (6) of port connection 'alu_op' does not match port width (12) of module 'ALU' [C:/Users/ASUS/Desktop/materials/Pico/VivadoSaving/CPU/CPU.srcs/sources_1/new/SIMD_ALU.v:52]
+WARNING: [Synth 8-350] instance 'inner_alu3' of module 'ALU' requires 7 connections, but only 5 given [C:/Users/ASUS/Desktop/materials/Pico/VivadoSaving/CPU/CPU.srcs/sources_1/new/SIMD_ALU.v:51]
+WARNING: [Synth 8-3848] Net shamt_zero in module/entity SIMD_ALU does not have driver. [C:/Users/ASUS/Desktop/materials/Pico/VivadoSaving/CPU/CPU.srcs/sources_1/new/SIMD_ALU.v:29]
+INFO: [Synth 8-256] done synthesizing module 'SIMD_ALU' (12#1) [C:/Users/ASUS/Desktop/materials/Pico/VivadoSaving/CPU/CPU.srcs/sources_1/new/SIMD_ALU.v:23]
+WARNING: [Synth 8-689] width (12) of port connection 'alu_op' does not match port width (6) of module 'SIMD_ALU' [C:/Users/ASUS/Desktop/materials/Pico/VivadoSaving/CPU/CPU.srcs/sources_1/new/main.v:177]
+INFO: [Synth 8-638] synthesizing module 'RAM' [C:/Users/ASUS/Desktop/materials/Pico/VivadoSaving/CPU/CPU.srcs/sources_1/new/RAM.v:23]
+INFO: [Synth 8-638] synthesizing module 'ram_ip' [C:/Users/ASUS/Desktop/materials/Pico/VivadoSaving/CPU/CPU.runs/synth_1/.Xil/Vivado-22572-LAPTOP-HRJPMCSA/realtime/ram_ip_stub.v:6]
+INFO: [Synth 8-256] done synthesizing module 'ram_ip' (13#1) [C:/Users/ASUS/Desktop/materials/Pico/VivadoSaving/CPU/CPU.runs/synth_1/.Xil/Vivado-22572-LAPTOP-HRJPMCSA/realtime/ram_ip_stub.v:6]
+INFO: [Synth 8-256] done synthesizing module 'RAM' (14#1) [C:/Users/ASUS/Desktop/materials/Pico/VivadoSaving/CPU/CPU.srcs/sources_1/new/RAM.v:23]
+INFO: [Synth 8-638] synthesizing module 'PCctrl' [C:/Users/ASUS/Desktop/materials/Pico/VivadoSaving/CPU/CPU.srcs/sources_1/new/PCctrl.v:24]
+WARNING: [Synth 8-3848] Net zero in module/entity PCctrl does not have driver. [C:/Users/ASUS/Desktop/materials/Pico/VivadoSaving/CPU/CPU.srcs/sources_1/new/PCctrl.v:43]
+INFO: [Synth 8-256] done synthesizing module 'PCctrl' (15#1) [C:/Users/ASUS/Desktop/materials/Pico/VivadoSaving/CPU/CPU.srcs/sources_1/new/PCctrl.v:24]
+WARNING: [Synth 8-3848] Net led_out in module/entity main does not have driver. [C:/Users/ASUS/Desktop/materials/Pico/VivadoSaving/CPU/CPU.srcs/sources_1/new/main.v:26]
+WARNING: [Synth 8-3848] Net seg_op in module/entity main does not have driver. [C:/Users/ASUS/Desktop/materials/Pico/VivadoSaving/CPU/CPU.srcs/sources_1/new/main.v:27]
+WARNING: [Synth 8-3848] Net seg_out in module/entity main does not have driver. [C:/Users/ASUS/Desktop/materials/Pico/VivadoSaving/CPU/CPU.srcs/sources_1/new/main.v:28]
+INFO: [Synth 8-256] done synthesizing module 'main' (16#1) [C:/Users/ASUS/Desktop/materials/Pico/VivadoSaving/CPU/CPU.srcs/sources_1/new/main.v:23]
+WARNING: [Synth 8-3331] design PCctrl has unconnected port expand_imme[31]
+WARNING: [Synth 8-3331] design PCctrl has unconnected port expand_imme[30]
+WARNING: [Synth 8-3331] design RAM has unconnected port rst
+WARNING: [Synth 8-3331] design RAM has unconnected port mem_read
+WARNING: [Synth 8-3331] design RAM has unconnected port addr[31]
+WARNING: [Synth 8-3331] design RAM has unconnected port addr[30]
+WARNING: [Synth 8-3331] design RAM has unconnected port addr[29]
+WARNING: [Synth 8-3331] design RAM has unconnected port addr[28]
+WARNING: [Synth 8-3331] design RAM has unconnected port addr[27]
+WARNING: [Synth 8-3331] design RAM has unconnected port addr[26]
+WARNING: [Synth 8-3331] design RAM has unconnected port addr[25]
+WARNING: [Synth 8-3331] design RAM has unconnected port addr[24]
+WARNING: [Synth 8-3331] design RAM has unconnected port addr[23]
+WARNING: [Synth 8-3331] design RAM has unconnected port addr[22]
+WARNING: [Synth 8-3331] design RAM has unconnected port addr[21]
+WARNING: [Synth 8-3331] design RAM has unconnected port addr[20]
+WARNING: [Synth 8-3331] design RAM has unconnected port addr[19]
+WARNING: [Synth 8-3331] design RAM has unconnected port addr[18]
+WARNING: [Synth 8-3331] design RAM has unconnected port addr[1]
+WARNING: [Synth 8-3331] design RAM has unconnected port addr[0]
+WARNING: [Synth 8-3331] design CTRL has unconnected port alu_op[11]
+WARNING: [Synth 8-3331] design CTRL has unconnected port alu_op[10]
+WARNING: [Synth 8-3331] design CTRL has unconnected port alu_op[9]
+WARNING: [Synth 8-3331] design CTRL has unconnected port alu_op[8]
+WARNING: [Synth 8-3331] design CTRL has unconnected port alu_op[7]
+WARNING: [Synth 8-3331] design CTRL has unconnected port alu_op[6]
+WARNING: [Synth 8-3331] design CTRL has unconnected port alu_op[5]
+WARNING: [Synth 8-3331] design CTRL has unconnected port alu_op[4]
+WARNING: [Synth 8-3331] design CTRL has unconnected port alu_op[3]
+WARNING: [Synth 8-3331] design CTRL has unconnected port alu_op[2]
+WARNING: [Synth 8-3331] design CTRL has unconnected port alu_op[1]
+WARNING: [Synth 8-3331] design CTRL has unconnected port alu_op[0]
+WARNING: [Synth 8-3331] design CTRL has unconnected port shamt_out[4]
+WARNING: [Synth 8-3331] design CTRL has unconnected port shamt_out[3]
+WARNING: [Synth 8-3331] design CTRL has unconnected port shamt_out[2]
+WARNING: [Synth 8-3331] design CTRL has unconnected port shamt_out[1]
+WARNING: [Synth 8-3331] design CTRL has unconnected port shamt_out[0]
+WARNING: [Synth 8-3331] design CTRL has unconnected port ignore
+WARNING: [Synth 8-3331] design CTRL has unconnected port simd
+WARNING: [Synth 8-3331] design CTRL has unconnected port div
+WARNING: [Synth 8-3331] design CTRL has unconnected port shamt_in[4]
+WARNING: [Synth 8-3331] design CTRL has unconnected port shamt_in[3]
+WARNING: [Synth 8-3331] design CTRL has unconnected port shamt_in[2]
+WARNING: [Synth 8-3331] design CTRL has unconnected port shamt_in[1]
+WARNING: [Synth 8-3331] design CTRL has unconnected port shamt_in[0]
+WARNING: [Synth 8-3331] design ROM has unconnected port rst
+WARNING: [Synth 8-3331] design ROM has unconnected port addr[31]
+WARNING: [Synth 8-3331] design ROM has unconnected port addr[30]
+WARNING: [Synth 8-3331] design ROM has unconnected port addr[29]
+WARNING: [Synth 8-3331] design ROM has unconnected port addr[28]
+WARNING: [Synth 8-3331] design ROM has unconnected port addr[27]
+WARNING: [Synth 8-3331] design ROM has unconnected port addr[26]
+WARNING: [Synth 8-3331] design ROM has unconnected port addr[25]
+WARNING: [Synth 8-3331] design ROM has unconnected port addr[24]
+WARNING: [Synth 8-3331] design ROM has unconnected port addr[23]
+WARNING: [Synth 8-3331] design ROM has unconnected port addr[22]
+WARNING: [Synth 8-3331] design ROM has unconnected port addr[21]
+WARNING: [Synth 8-3331] design ROM has unconnected port addr[20]
+WARNING: [Synth 8-3331] design ROM has unconnected port addr[19]
+WARNING: [Synth 8-3331] design ROM has unconnected port addr[18]
+WARNING: [Synth 8-3331] design ROM has unconnected port addr[1]
+WARNING: [Synth 8-3331] design ROM has unconnected port addr[0]
+WARNING: [Synth 8-3331] design PC has unconnected port rst
+WARNING: [Synth 8-3331] design CXK has unconnected port rst
+WARNING: [Synth 8-3331] design main has unconnected port led_out[23]
+WARNING: [Synth 8-3331] design main has unconnected port led_out[22]
+WARNING: [Synth 8-3331] design main has unconnected port led_out[21]
+WARNING: [Synth 8-3331] design main has unconnected port led_out[20]
+WARNING: [Synth 8-3331] design main has unconnected port led_out[19]
+WARNING: [Synth 8-3331] design main has unconnected port led_out[18]
+WARNING: [Synth 8-3331] design main has unconnected port led_out[17]
+WARNING: [Synth 8-3331] design main has unconnected port led_out[16]
+WARNING: [Synth 8-3331] design main has unconnected port led_out[15]
+WARNING: [Synth 8-3331] design main has unconnected port led_out[14]
+WARNING: [Synth 8-3331] design main has unconnected port led_out[13]
+WARNING: [Synth 8-3331] design main has unconnected port led_out[12]
+WARNING: [Synth 8-3331] design main has unconnected port led_out[11]
+WARNING: [Synth 8-3331] design main has unconnected port led_out[10]
+WARNING: [Synth 8-3331] design main has unconnected port led_out[9]
+WARNING: [Synth 8-3331] design main has unconnected port led_out[8]
+WARNING: [Synth 8-3331] design main has unconnected port led_out[7]
+WARNING: [Synth 8-3331] design main has unconnected port led_out[6]
+WARNING: [Synth 8-3331] design main has unconnected port led_out[5]
+WARNING: [Synth 8-3331] design main has unconnected port led_out[4]
+WARNING: [Synth 8-3331] design main has unconnected port led_out[3]
+WARNING: [Synth 8-3331] design main has unconnected port led_out[2]
+WARNING: [Synth 8-3331] design main has unconnected port led_out[1]
+WARNING: [Synth 8-3331] design main has unconnected port led_out[0]
+WARNING: [Synth 8-3331] design main has unconnected port seg_op[7]
+WARNING: [Synth 8-3331] design main has unconnected port seg_op[6]
+WARNING: [Synth 8-3331] design main has unconnected port seg_op[5]
+WARNING: [Synth 8-3331] design main has unconnected port seg_op[4]
+WARNING: [Synth 8-3331] design main has unconnected port seg_op[3]
+WARNING: [Synth 8-3331] design main has unconnected port seg_op[2]
+WARNING: [Synth 8-3331] design main has unconnected port seg_op[1]
+WARNING: [Synth 8-3331] design main has unconnected port seg_op[0]
+WARNING: [Synth 8-3331] design main has unconnected port seg_out[7]
+WARNING: [Synth 8-3331] design main has unconnected port seg_out[6]
+WARNING: [Synth 8-3331] design main has unconnected port seg_out[5]
+WARNING: [Synth 8-3331] design main has unconnected port seg_out[4]
+INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:00 ; elapsed = 00:00:04 . Memory (MB): peak = 395.586 ; gain = 154.512
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+WARNING: [Synth 8-3295] tying undriven pin inner_alu0:shamt[4] to constant 0 [C:/Users/ASUS/Desktop/materials/Pico/VivadoSaving/CPU/CPU.srcs/sources_1/new/SIMD_ALU.v:30]
+WARNING: [Synth 8-3295] tying undriven pin inner_alu0:shamt[3] to constant 0 [C:/Users/ASUS/Desktop/materials/Pico/VivadoSaving/CPU/CPU.srcs/sources_1/new/SIMD_ALU.v:30]
+WARNING: [Synth 8-3295] tying undriven pin inner_alu0:shamt[2] to constant 0 [C:/Users/ASUS/Desktop/materials/Pico/VivadoSaving/CPU/CPU.srcs/sources_1/new/SIMD_ALU.v:30]
+WARNING: [Synth 8-3295] tying undriven pin inner_alu0:shamt[1] to constant 0 [C:/Users/ASUS/Desktop/materials/Pico/VivadoSaving/CPU/CPU.srcs/sources_1/new/SIMD_ALU.v:30]
+WARNING: [Synth 8-3295] tying undriven pin inner_alu0:shamt[0] to constant 0 [C:/Users/ASUS/Desktop/materials/Pico/VivadoSaving/CPU/CPU.srcs/sources_1/new/SIMD_ALU.v:30]
+WARNING: [Synth 8-3295] tying undriven pin inner_alu1:shamt[4] to constant 0 [C:/Users/ASUS/Desktop/materials/Pico/VivadoSaving/CPU/CPU.srcs/sources_1/new/SIMD_ALU.v:37]
+WARNING: [Synth 8-3295] tying undriven pin inner_alu1:shamt[3] to constant 0 [C:/Users/ASUS/Desktop/materials/Pico/VivadoSaving/CPU/CPU.srcs/sources_1/new/SIMD_ALU.v:37]
+WARNING: [Synth 8-3295] tying undriven pin inner_alu1:shamt[2] to constant 0 [C:/Users/ASUS/Desktop/materials/Pico/VivadoSaving/CPU/CPU.srcs/sources_1/new/SIMD_ALU.v:37]
+WARNING: [Synth 8-3295] tying undriven pin inner_alu1:shamt[1] to constant 0 [C:/Users/ASUS/Desktop/materials/Pico/VivadoSaving/CPU/CPU.srcs/sources_1/new/SIMD_ALU.v:37]
+WARNING: [Synth 8-3295] tying undriven pin inner_alu1:shamt[0] to constant 0 [C:/Users/ASUS/Desktop/materials/Pico/VivadoSaving/CPU/CPU.srcs/sources_1/new/SIMD_ALU.v:37]
+WARNING: [Synth 8-3295] tying undriven pin inner_alu2:shamt[4] to constant 0 [C:/Users/ASUS/Desktop/materials/Pico/VivadoSaving/CPU/CPU.srcs/sources_1/new/SIMD_ALU.v:44]
+WARNING: [Synth 8-3295] tying undriven pin inner_alu2:shamt[3] to constant 0 [C:/Users/ASUS/Desktop/materials/Pico/VivadoSaving/CPU/CPU.srcs/sources_1/new/SIMD_ALU.v:44]
+WARNING: [Synth 8-3295] tying undriven pin inner_alu2:shamt[2] to constant 0 [C:/Users/ASUS/Desktop/materials/Pico/VivadoSaving/CPU/CPU.srcs/sources_1/new/SIMD_ALU.v:44]
+WARNING: [Synth 8-3295] tying undriven pin inner_alu2:shamt[1] to constant 0 [C:/Users/ASUS/Desktop/materials/Pico/VivadoSaving/CPU/CPU.srcs/sources_1/new/SIMD_ALU.v:44]
+WARNING: [Synth 8-3295] tying undriven pin inner_alu2:shamt[0] to constant 0 [C:/Users/ASUS/Desktop/materials/Pico/VivadoSaving/CPU/CPU.srcs/sources_1/new/SIMD_ALU.v:44]
+WARNING: [Synth 8-3295] tying undriven pin inner_alu3:shamt[4] to constant 0 [C:/Users/ASUS/Desktop/materials/Pico/VivadoSaving/CPU/CPU.srcs/sources_1/new/SIMD_ALU.v:51]
+WARNING: [Synth 8-3295] tying undriven pin inner_alu3:shamt[3] to constant 0 [C:/Users/ASUS/Desktop/materials/Pico/VivadoSaving/CPU/CPU.srcs/sources_1/new/SIMD_ALU.v:51]
+WARNING: [Synth 8-3295] tying undriven pin inner_alu3:shamt[2] to constant 0 [C:/Users/ASUS/Desktop/materials/Pico/VivadoSaving/CPU/CPU.srcs/sources_1/new/SIMD_ALU.v:51]
+WARNING: [Synth 8-3295] tying undriven pin inner_alu3:shamt[1] to constant 0 [C:/Users/ASUS/Desktop/materials/Pico/VivadoSaving/CPU/CPU.srcs/sources_1/new/SIMD_ALU.v:51]
+WARNING: [Synth 8-3295] tying undriven pin inner_alu3:shamt[0] to constant 0 [C:/Users/ASUS/Desktop/materials/Pico/VivadoSaving/CPU/CPU.srcs/sources_1/new/SIMD_ALU.v:51]
+WARNING: [Synth 8-3295] tying undriven pin mux0_or_jump:in1[1] to constant 0 [C:/Users/ASUS/Desktop/materials/Pico/VivadoSaving/CPU/CPU.srcs/sources_1/new/PCctrl.v:62]
+WARNING: [Synth 8-3295] tying undriven pin mux0_or_jump:in1[0] to constant 0 [C:/Users/ASUS/Desktop/materials/Pico/VivadoSaving/CPU/CPU.srcs/sources_1/new/PCctrl.v:62]
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:00 ; elapsed = 00:00:04 . Memory (MB): peak = 395.586 ; gain = 154.512
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7a100tfgg484-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [C:/Users/ASUS/Desktop/materials/Pico/VivadoSaving/CPU/CPU.runs/synth_1/.Xil/Vivado-22572-LAPTOP-HRJPMCSA/dcp4/ram_ip_in_context.xdc] for cell 'ram/inner_ram'
+Finished Parsing XDC File [C:/Users/ASUS/Desktop/materials/Pico/VivadoSaving/CPU/CPU.runs/synth_1/.Xil/Vivado-22572-LAPTOP-HRJPMCSA/dcp4/ram_ip_in_context.xdc] for cell 'ram/inner_ram'
+Parsing XDC File [C:/Users/ASUS/Desktop/materials/Pico/VivadoSaving/CPU/CPU.runs/synth_1/.Xil/Vivado-22572-LAPTOP-HRJPMCSA/dcp5/rom_ip_in_context.xdc] for cell 'rom/inner_rom'
+Finished Parsing XDC File [C:/Users/ASUS/Desktop/materials/Pico/VivadoSaving/CPU/CPU.runs/synth_1/.Xil/Vivado-22572-LAPTOP-HRJPMCSA/dcp5/rom_ip_in_context.xdc] for cell 'rom/inner_rom'
+Parsing XDC File [C:/Users/ASUS/Desktop/materials/Pico/VivadoSaving/CPU/CPU.runs/synth_1/.Xil/Vivado-22572-LAPTOP-HRJPMCSA/dcp6/clk_ip_in_context.xdc] for cell 'clock/inner_clk'
+Finished Parsing XDC File [C:/Users/ASUS/Desktop/materials/Pico/VivadoSaving/CPU/CPU.runs/synth_1/.Xil/Vivado-22572-LAPTOP-HRJPMCSA/dcp6/clk_ip_in_context.xdc] for cell 'clock/inner_clk'
+Parsing XDC File [C:/Users/ASUS/Desktop/materials/Pico/VivadoSaving/CPU/CPU.srcs/constrs_1/new/empty.xdc]
+Finished Parsing XDC File [C:/Users/ASUS/Desktop/materials/Pico/VivadoSaving/CPU/CPU.srcs/constrs_1/new/empty.xdc]
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.012 . Memory (MB): peak = 750.582 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:02 ; elapsed = 00:00:13 . Memory (MB): peak = 750.582 ; gain = 509.508
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a100tfgg484-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:02 ; elapsed = 00:00:13 . Memory (MB): peak = 750.582 ; gain = 509.508
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property IO_BUFFER_TYPE = NONE for clk. (constraint file  C:/Users/ASUS/Desktop/materials/Pico/VivadoSaving/CPU/CPU.runs/synth_1/.Xil/Vivado-22572-LAPTOP-HRJPMCSA/dcp6/clk_ip_in_context.xdc, line 4).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for clk. (constraint file  C:/Users/ASUS/Desktop/materials/Pico/VivadoSaving/CPU/CPU.runs/synth_1/.Xil/Vivado-22572-LAPTOP-HRJPMCSA/dcp6/clk_ip_in_context.xdc, line 5).
+Applied set_property DONT_TOUCH = true for clock/inner_clk. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for ram/inner_ram. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for rom/inner_rom. (constraint file  auto generated constraint, line ).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:02 ; elapsed = 00:00:13 . Memory (MB): peak = 750.582 ; gain = 509.508
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5546] ROM "reg_dst" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "branch" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "nbranch" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "mem_read" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "mem_write" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "j" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "jal" won't be mapped to RAM because it is too sparse
+WARNING: [Synth 8-327] inferring latch for variable 'out_reg' [C:/Users/ASUS/Desktop/materials/Pico/VivadoSaving/CPU/CPU.srcs/sources_1/new/ALU.v:107]
+WARNING: [Synth 8-327] inferring latch for variable 'out_reg' [C:/Users/ASUS/Desktop/materials/Pico/VivadoSaving/CPU/CPU.srcs/sources_1/new/ALU.v:68]
+WARNING: [Synth 8-327] inferring latch for variable 'equal_reg' [C:/Users/ASUS/Desktop/materials/Pico/VivadoSaving/CPU/CPU.srcs/sources_1/new/ALU.v:85]
+WARNING: [Synth 8-327] inferring latch for variable 'overflow_reg' [C:/Users/ASUS/Desktop/materials/Pico/VivadoSaving/CPU/CPU.srcs/sources_1/new/ALU.v:102]
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:02 ; elapsed = 00:00:13 . Memory (MB): peak = 750.582 ; gain = 509.508
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 7     
+	   3 Input     32 Bit       Adders := 5     
++---XORs : 
+	   2 Input     32 Bit         XORs := 5     
++---Registers : 
+	               32 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 7     
+	  27 Input     32 Bit        Muxes := 10    
+	   2 Input      5 Bit        Muxes := 3     
+	   2 Input      1 Bit        Muxes := 7     
+	  27 Input      1 Bit        Muxes := 20    
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module PC 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module Expander 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 1     
+Module CTRL 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 7     
+Module MUX_5 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input      5 Bit        Muxes := 1     
+Module MUX_32 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 1     
+Module ALU 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
+	   3 Input     32 Bit       Adders := 1     
++---XORs : 
+	   2 Input     32 Bit         XORs := 1     
++---Muxes : 
+	  27 Input     32 Bit        Muxes := 2     
+	  27 Input      1 Bit        Muxes := 4     
+Module PCctrl 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 2     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 240 (col length:80)
+BRAMs: 270 (col length: RAMB18 80 RAMB36 40)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-3332] Sequential element (overflow_reg) is unused and will be removed from module ALU.
+WARNING: [Synth 8-3332] Sequential element (equal_reg) is unused and will be removed from module ALU__2.
+WARNING: [Synth 8-3332] Sequential element (equal_reg) is unused and will be removed from module ALU__3.
+WARNING: [Synth 8-3332] Sequential element (equal_reg) is unused and will be removed from module ALU__4.
+WARNING: [Synth 8-3332] Sequential element (equal_reg) is unused and will be removed from module ALU.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:06 ; elapsed = 00:00:34 . Memory (MB): peak = 750.582 ; gain = 509.508
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5578] Moved timing constraint from pin 'clock/inner_clk/cpu_clk' to pin 'clock/inner_clk/bbstub_cpu_clk/O'
+INFO: [Synth 8-5578] Moved timing constraint from pin 'clock/inner_clk/seg_clk' to pin 'clock/inner_clk/bbstub_seg_clk/O'
+INFO: [Synth 8-5819] Moved 2 constraints on hierarchical pins to their respective driving/loading pins
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:08 ; elapsed = 00:00:40 . Memory (MB): peak = 857.965 ; gain = 616.891
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:08 ; elapsed = 00:00:40 . Memory (MB): peak = 887.598 ; gain = 646.523
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-3332] Sequential element (alu/equal_reg) is unused and will be removed from module main.
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:08 ; elapsed = 00:00:41 . Memory (MB): peak = 902.422 ; gain = 661.348
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:08 ; elapsed = 00:00:41 . Memory (MB): peak = 902.422 ; gain = 661.348
+---------------------------------------------------------------------------------
+CRITICAL WARNING: [Synth 8-3352] multi-driven net alu_result[31] with 1st driver pin 'alu/out_reg[31]/Q' [C:/Users/ASUS/Desktop/materials/Pico/VivadoSaving/CPU/CPU.srcs/sources_1/new/ALU.v:107]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net alu_result[31] with 2nd driver pin 'alu/out_reg[31]__0/Q' [C:/Users/ASUS/Desktop/materials/Pico/VivadoSaving/CPU/CPU.srcs/sources_1/new/ALU.v:68]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net alu_result[30] with 1st driver pin 'alu/out_reg[30]/Q' [C:/Users/ASUS/Desktop/materials/Pico/VivadoSaving/CPU/CPU.srcs/sources_1/new/ALU.v:107]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net alu_result[30] with 2nd driver pin 'alu/out_reg[30]__0/Q' [C:/Users/ASUS/Desktop/materials/Pico/VivadoSaving/CPU/CPU.srcs/sources_1/new/ALU.v:68]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net alu_result[29] with 1st driver pin 'alu/out_reg[29]/Q' [C:/Users/ASUS/Desktop/materials/Pico/VivadoSaving/CPU/CPU.srcs/sources_1/new/ALU.v:107]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net alu_result[29] with 2nd driver pin 'alu/out_reg[29]__0/Q' [C:/Users/ASUS/Desktop/materials/Pico/VivadoSaving/CPU/CPU.srcs/sources_1/new/ALU.v:68]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net alu_result[28] with 1st driver pin 'alu/out_reg[28]/Q' [C:/Users/ASUS/Desktop/materials/Pico/VivadoSaving/CPU/CPU.srcs/sources_1/new/ALU.v:107]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net alu_result[28] with 2nd driver pin 'alu/out_reg[28]__0/Q' [C:/Users/ASUS/Desktop/materials/Pico/VivadoSaving/CPU/CPU.srcs/sources_1/new/ALU.v:68]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net alu_result[27] with 1st driver pin 'alu/out_reg[27]/Q' [C:/Users/ASUS/Desktop/materials/Pico/VivadoSaving/CPU/CPU.srcs/sources_1/new/ALU.v:107]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net alu_result[27] with 2nd driver pin 'alu/out_reg[27]__0/Q' [C:/Users/ASUS/Desktop/materials/Pico/VivadoSaving/CPU/CPU.srcs/sources_1/new/ALU.v:68]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net alu_result[26] with 1st driver pin 'alu/out_reg[26]/Q' [C:/Users/ASUS/Desktop/materials/Pico/VivadoSaving/CPU/CPU.srcs/sources_1/new/ALU.v:107]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net alu_result[26] with 2nd driver pin 'alu/out_reg[26]__0/Q' [C:/Users/ASUS/Desktop/materials/Pico/VivadoSaving/CPU/CPU.srcs/sources_1/new/ALU.v:68]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net alu_result[25] with 1st driver pin 'alu/out_reg[25]/Q' [C:/Users/ASUS/Desktop/materials/Pico/VivadoSaving/CPU/CPU.srcs/sources_1/new/ALU.v:107]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net alu_result[25] with 2nd driver pin 'alu/out_reg[25]__0/Q' [C:/Users/ASUS/Desktop/materials/Pico/VivadoSaving/CPU/CPU.srcs/sources_1/new/ALU.v:68]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net alu_result[24] with 1st driver pin 'alu/out_reg[24]/Q' [C:/Users/ASUS/Desktop/materials/Pico/VivadoSaving/CPU/CPU.srcs/sources_1/new/ALU.v:107]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net alu_result[24] with 2nd driver pin 'alu/out_reg[24]__0/Q' [C:/Users/ASUS/Desktop/materials/Pico/VivadoSaving/CPU/CPU.srcs/sources_1/new/ALU.v:68]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net alu_result[23] with 1st driver pin 'alu/out_reg[23]/Q' [C:/Users/ASUS/Desktop/materials/Pico/VivadoSaving/CPU/CPU.srcs/sources_1/new/ALU.v:107]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net alu_result[23] with 2nd driver pin 'alu/out_reg[23]__0/Q' [C:/Users/ASUS/Desktop/materials/Pico/VivadoSaving/CPU/CPU.srcs/sources_1/new/ALU.v:68]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net alu_result[22] with 1st driver pin 'alu/out_reg[22]/Q' [C:/Users/ASUS/Desktop/materials/Pico/VivadoSaving/CPU/CPU.srcs/sources_1/new/ALU.v:107]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net alu_result[22] with 2nd driver pin 'alu/out_reg[22]__0/Q' [C:/Users/ASUS/Desktop/materials/Pico/VivadoSaving/CPU/CPU.srcs/sources_1/new/ALU.v:68]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net alu_result[21] with 1st driver pin 'alu/out_reg[21]/Q' [C:/Users/ASUS/Desktop/materials/Pico/VivadoSaving/CPU/CPU.srcs/sources_1/new/ALU.v:107]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net alu_result[21] with 2nd driver pin 'alu/out_reg[21]__0/Q' [C:/Users/ASUS/Desktop/materials/Pico/VivadoSaving/CPU/CPU.srcs/sources_1/new/ALU.v:68]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net alu_result[20] with 1st driver pin 'alu/out_reg[20]/Q' [C:/Users/ASUS/Desktop/materials/Pico/VivadoSaving/CPU/CPU.srcs/sources_1/new/ALU.v:107]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net alu_result[20] with 2nd driver pin 'alu/out_reg[20]__0/Q' [C:/Users/ASUS/Desktop/materials/Pico/VivadoSaving/CPU/CPU.srcs/sources_1/new/ALU.v:68]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net alu_result[19] with 1st driver pin 'alu/out_reg[19]/Q' [C:/Users/ASUS/Desktop/materials/Pico/VivadoSaving/CPU/CPU.srcs/sources_1/new/ALU.v:107]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net alu_result[19] with 2nd driver pin 'alu/out_reg[19]__0/Q' [C:/Users/ASUS/Desktop/materials/Pico/VivadoSaving/CPU/CPU.srcs/sources_1/new/ALU.v:68]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net alu_result[18] with 1st driver pin 'alu/out_reg[18]/Q' [C:/Users/ASUS/Desktop/materials/Pico/VivadoSaving/CPU/CPU.srcs/sources_1/new/ALU.v:107]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net alu_result[18] with 2nd driver pin 'alu/out_reg[18]__0/Q' [C:/Users/ASUS/Desktop/materials/Pico/VivadoSaving/CPU/CPU.srcs/sources_1/new/ALU.v:68]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net alu_result[17] with 1st driver pin 'alu/out_reg[17]/Q' [C:/Users/ASUS/Desktop/materials/Pico/VivadoSaving/CPU/CPU.srcs/sources_1/new/ALU.v:107]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net alu_result[17] with 2nd driver pin 'alu/out_reg[17]__0/Q' [C:/Users/ASUS/Desktop/materials/Pico/VivadoSaving/CPU/CPU.srcs/sources_1/new/ALU.v:68]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net alu_result[16] with 1st driver pin 'alu/out_reg[16]/Q' [C:/Users/ASUS/Desktop/materials/Pico/VivadoSaving/CPU/CPU.srcs/sources_1/new/ALU.v:107]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net alu_result[16] with 2nd driver pin 'alu/out_reg[16]__0/Q' [C:/Users/ASUS/Desktop/materials/Pico/VivadoSaving/CPU/CPU.srcs/sources_1/new/ALU.v:68]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net alu_result[15] with 1st driver pin 'alu/out_reg[15]/Q' [C:/Users/ASUS/Desktop/materials/Pico/VivadoSaving/CPU/CPU.srcs/sources_1/new/ALU.v:107]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net alu_result[15] with 2nd driver pin 'alu/out_reg[15]__0/Q' [C:/Users/ASUS/Desktop/materials/Pico/VivadoSaving/CPU/CPU.srcs/sources_1/new/ALU.v:68]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net alu_result[14] with 1st driver pin 'alu/out_reg[14]/Q' [C:/Users/ASUS/Desktop/materials/Pico/VivadoSaving/CPU/CPU.srcs/sources_1/new/ALU.v:107]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net alu_result[14] with 2nd driver pin 'alu/out_reg[14]__0/Q' [C:/Users/ASUS/Desktop/materials/Pico/VivadoSaving/CPU/CPU.srcs/sources_1/new/ALU.v:68]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net alu_result[13] with 1st driver pin 'alu/out_reg[13]/Q' [C:/Users/ASUS/Desktop/materials/Pico/VivadoSaving/CPU/CPU.srcs/sources_1/new/ALU.v:107]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net alu_result[13] with 2nd driver pin 'alu/out_reg[13]__0/Q' [C:/Users/ASUS/Desktop/materials/Pico/VivadoSaving/CPU/CPU.srcs/sources_1/new/ALU.v:68]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net alu_result[12] with 1st driver pin 'alu/out_reg[12]/Q' [C:/Users/ASUS/Desktop/materials/Pico/VivadoSaving/CPU/CPU.srcs/sources_1/new/ALU.v:107]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net alu_result[12] with 2nd driver pin 'alu/out_reg[12]__0/Q' [C:/Users/ASUS/Desktop/materials/Pico/VivadoSaving/CPU/CPU.srcs/sources_1/new/ALU.v:68]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net alu_result[11] with 1st driver pin 'alu/out_reg[11]/Q' [C:/Users/ASUS/Desktop/materials/Pico/VivadoSaving/CPU/CPU.srcs/sources_1/new/ALU.v:107]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net alu_result[11] with 2nd driver pin 'alu/out_reg[11]__0/Q' [C:/Users/ASUS/Desktop/materials/Pico/VivadoSaving/CPU/CPU.srcs/sources_1/new/ALU.v:68]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net alu_result[10] with 1st driver pin 'alu/out_reg[10]/Q' [C:/Users/ASUS/Desktop/materials/Pico/VivadoSaving/CPU/CPU.srcs/sources_1/new/ALU.v:107]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net alu_result[10] with 2nd driver pin 'alu/out_reg[10]__0/Q' [C:/Users/ASUS/Desktop/materials/Pico/VivadoSaving/CPU/CPU.srcs/sources_1/new/ALU.v:68]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net alu_result[9] with 1st driver pin 'alu/out_reg[9]/Q' [C:/Users/ASUS/Desktop/materials/Pico/VivadoSaving/CPU/CPU.srcs/sources_1/new/ALU.v:107]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net alu_result[9] with 2nd driver pin 'alu/out_reg[9]__0/Q' [C:/Users/ASUS/Desktop/materials/Pico/VivadoSaving/CPU/CPU.srcs/sources_1/new/ALU.v:68]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net alu_result[8] with 1st driver pin 'alu/out_reg[8]/Q' [C:/Users/ASUS/Desktop/materials/Pico/VivadoSaving/CPU/CPU.srcs/sources_1/new/ALU.v:107]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net alu_result[8] with 2nd driver pin 'alu/out_reg[8]__0/Q' [C:/Users/ASUS/Desktop/materials/Pico/VivadoSaving/CPU/CPU.srcs/sources_1/new/ALU.v:68]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net alu_result[7] with 1st driver pin 'alu/out_reg[7]/Q' [C:/Users/ASUS/Desktop/materials/Pico/VivadoSaving/CPU/CPU.srcs/sources_1/new/ALU.v:107]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net alu_result[7] with 2nd driver pin 'alu/out_reg[7]__0/Q' [C:/Users/ASUS/Desktop/materials/Pico/VivadoSaving/CPU/CPU.srcs/sources_1/new/ALU.v:68]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net alu_result[6] with 1st driver pin 'alu/out_reg[6]/Q' [C:/Users/ASUS/Desktop/materials/Pico/VivadoSaving/CPU/CPU.srcs/sources_1/new/ALU.v:107]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net alu_result[6] with 2nd driver pin 'alu/out_reg[6]__0/Q' [C:/Users/ASUS/Desktop/materials/Pico/VivadoSaving/CPU/CPU.srcs/sources_1/new/ALU.v:68]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net alu_result[5] with 1st driver pin 'alu/out_reg[5]/Q' [C:/Users/ASUS/Desktop/materials/Pico/VivadoSaving/CPU/CPU.srcs/sources_1/new/ALU.v:107]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net alu_result[5] with 2nd driver pin 'alu/out_reg[5]__0/Q' [C:/Users/ASUS/Desktop/materials/Pico/VivadoSaving/CPU/CPU.srcs/sources_1/new/ALU.v:68]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net alu_result[4] with 1st driver pin 'alu/out_reg[4]/Q' [C:/Users/ASUS/Desktop/materials/Pico/VivadoSaving/CPU/CPU.srcs/sources_1/new/ALU.v:107]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net alu_result[4] with 2nd driver pin 'alu/out_reg[4]__0/Q' [C:/Users/ASUS/Desktop/materials/Pico/VivadoSaving/CPU/CPU.srcs/sources_1/new/ALU.v:68]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net alu_result[3] with 1st driver pin 'alu/out_reg[3]/Q' [C:/Users/ASUS/Desktop/materials/Pico/VivadoSaving/CPU/CPU.srcs/sources_1/new/ALU.v:107]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net alu_result[3] with 2nd driver pin 'alu/out_reg[3]__0/Q' [C:/Users/ASUS/Desktop/materials/Pico/VivadoSaving/CPU/CPU.srcs/sources_1/new/ALU.v:68]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net alu_result[2] with 1st driver pin 'alu/out_reg[2]/Q' [C:/Users/ASUS/Desktop/materials/Pico/VivadoSaving/CPU/CPU.srcs/sources_1/new/ALU.v:107]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net alu_result[2] with 2nd driver pin 'alu/out_reg[2]__0/Q' [C:/Users/ASUS/Desktop/materials/Pico/VivadoSaving/CPU/CPU.srcs/sources_1/new/ALU.v:68]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net alu_result[1] with 1st driver pin 'alu/out_reg[1]/Q' [C:/Users/ASUS/Desktop/materials/Pico/VivadoSaving/CPU/CPU.srcs/sources_1/new/ALU.v:107]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net alu_result[1] with 2nd driver pin 'alu/out_reg[1]__0/Q' [C:/Users/ASUS/Desktop/materials/Pico/VivadoSaving/CPU/CPU.srcs/sources_1/new/ALU.v:68]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net alu_result[0] with 1st driver pin 'alu/out_reg[0]/Q' [C:/Users/ASUS/Desktop/materials/Pico/VivadoSaving/CPU/CPU.srcs/sources_1/new/ALU.v:107]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net alu_result[0] with 2nd driver pin 'alu/out_reg[0]__0/Q' [C:/Users/ASUS/Desktop/materials/Pico/VivadoSaving/CPU/CPU.srcs/sources_1/new/ALU.v:68]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net simd_reg_write_data[127] with 1st driver pin 'simd_alu/inner_alu0/out_reg[31]/Q' [C:/Users/ASUS/Desktop/materials/Pico/VivadoSaving/CPU/CPU.srcs/sources_1/new/ALU.v:107]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net simd_reg_write_data[127] with 2nd driver pin 'simd_alu/inner_alu0/out_reg[31]__0/Q' [C:/Users/ASUS/Desktop/materials/Pico/VivadoSaving/CPU/CPU.srcs/sources_1/new/ALU.v:68]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net simd_reg_write_data[126] with 1st driver pin 'simd_alu/inner_alu0/out_reg[30]/Q' [C:/Users/ASUS/Desktop/materials/Pico/VivadoSaving/CPU/CPU.srcs/sources_1/new/ALU.v:107]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net simd_reg_write_data[126] with 2nd driver pin 'simd_alu/inner_alu0/out_reg[30]__0/Q' [C:/Users/ASUS/Desktop/materials/Pico/VivadoSaving/CPU/CPU.srcs/sources_1/new/ALU.v:68]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net simd_reg_write_data[125] with 1st driver pin 'simd_alu/inner_alu0/out_reg[29]/Q' [C:/Users/ASUS/Desktop/materials/Pico/VivadoSaving/CPU/CPU.srcs/sources_1/new/ALU.v:107]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net simd_reg_write_data[125] with 2nd driver pin 'simd_alu/inner_alu0/out_reg[29]__0/Q' [C:/Users/ASUS/Desktop/materials/Pico/VivadoSaving/CPU/CPU.srcs/sources_1/new/ALU.v:68]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net simd_reg_write_data[124] with 1st driver pin 'simd_alu/inner_alu0/out_reg[28]/Q' [C:/Users/ASUS/Desktop/materials/Pico/VivadoSaving/CPU/CPU.srcs/sources_1/new/ALU.v:107]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net simd_reg_write_data[124] with 2nd driver pin 'simd_alu/inner_alu0/out_reg[28]__0/Q' [C:/Users/ASUS/Desktop/materials/Pico/VivadoSaving/CPU/CPU.srcs/sources_1/new/ALU.v:68]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net simd_reg_write_data[123] with 1st driver pin 'simd_alu/inner_alu0/out_reg[27]/Q' [C:/Users/ASUS/Desktop/materials/Pico/VivadoSaving/CPU/CPU.srcs/sources_1/new/ALU.v:107]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net simd_reg_write_data[123] with 2nd driver pin 'simd_alu/inner_alu0/out_reg[27]__0/Q' [C:/Users/ASUS/Desktop/materials/Pico/VivadoSaving/CPU/CPU.srcs/sources_1/new/ALU.v:68]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net simd_reg_write_data[122] with 1st driver pin 'simd_alu/inner_alu0/out_reg[26]/Q' [C:/Users/ASUS/Desktop/materials/Pico/VivadoSaving/CPU/CPU.srcs/sources_1/new/ALU.v:107]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net simd_reg_write_data[122] with 2nd driver pin 'simd_alu/inner_alu0/out_reg[26]__0/Q' [C:/Users/ASUS/Desktop/materials/Pico/VivadoSaving/CPU/CPU.srcs/sources_1/new/ALU.v:68]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net simd_reg_write_data[121] with 1st driver pin 'simd_alu/inner_alu0/out_reg[25]/Q' [C:/Users/ASUS/Desktop/materials/Pico/VivadoSaving/CPU/CPU.srcs/sources_1/new/ALU.v:107]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net simd_reg_write_data[121] with 2nd driver pin 'simd_alu/inner_alu0/out_reg[25]__0/Q' [C:/Users/ASUS/Desktop/materials/Pico/VivadoSaving/CPU/CPU.srcs/sources_1/new/ALU.v:68]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net simd_reg_write_data[120] with 1st driver pin 'simd_alu/inner_alu0/out_reg[24]/Q' [C:/Users/ASUS/Desktop/materials/Pico/VivadoSaving/CPU/CPU.srcs/sources_1/new/ALU.v:107]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net simd_reg_write_data[120] with 2nd driver pin 'simd_alu/inner_alu0/out_reg[24]__0/Q' [C:/Users/ASUS/Desktop/materials/Pico/VivadoSaving/CPU/CPU.srcs/sources_1/new/ALU.v:68]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net simd_reg_write_data[119] with 1st driver pin 'simd_alu/inner_alu0/out_reg[23]/Q' [C:/Users/ASUS/Desktop/materials/Pico/VivadoSaving/CPU/CPU.srcs/sources_1/new/ALU.v:107]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net simd_reg_write_data[119] with 2nd driver pin 'simd_alu/inner_alu0/out_reg[23]__0/Q' [C:/Users/ASUS/Desktop/materials/Pico/VivadoSaving/CPU/CPU.srcs/sources_1/new/ALU.v:68]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net simd_reg_write_data[118] with 1st driver pin 'simd_alu/inner_alu0/out_reg[22]/Q' [C:/Users/ASUS/Desktop/materials/Pico/VivadoSaving/CPU/CPU.srcs/sources_1/new/ALU.v:107]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net simd_reg_write_data[118] with 2nd driver pin 'simd_alu/inner_alu0/out_reg[22]__0/Q' [C:/Users/ASUS/Desktop/materials/Pico/VivadoSaving/CPU/CPU.srcs/sources_1/new/ALU.v:68]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net simd_reg_write_data[117] with 1st driver pin 'simd_alu/inner_alu0/out_reg[21]/Q' [C:/Users/ASUS/Desktop/materials/Pico/VivadoSaving/CPU/CPU.srcs/sources_1/new/ALU.v:107]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net simd_reg_write_data[117] with 2nd driver pin 'simd_alu/inner_alu0/out_reg[21]__0/Q' [C:/Users/ASUS/Desktop/materials/Pico/VivadoSaving/CPU/CPU.srcs/sources_1/new/ALU.v:68]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net simd_reg_write_data[116] with 1st driver pin 'simd_alu/inner_alu0/out_reg[20]/Q' [C:/Users/ASUS/Desktop/materials/Pico/VivadoSaving/CPU/CPU.srcs/sources_1/new/ALU.v:107]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net simd_reg_write_data[116] with 2nd driver pin 'simd_alu/inner_alu0/out_reg[20]__0/Q' [C:/Users/ASUS/Desktop/materials/Pico/VivadoSaving/CPU/CPU.srcs/sources_1/new/ALU.v:68]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net simd_reg_write_data[115] with 1st driver pin 'simd_alu/inner_alu0/out_reg[19]/Q' [C:/Users/ASUS/Desktop/materials/Pico/VivadoSaving/CPU/CPU.srcs/sources_1/new/ALU.v:107]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net simd_reg_write_data[115] with 2nd driver pin 'simd_alu/inner_alu0/out_reg[19]__0/Q' [C:/Users/ASUS/Desktop/materials/Pico/VivadoSaving/CPU/CPU.srcs/sources_1/new/ALU.v:68]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net simd_reg_write_data[114] with 1st driver pin 'simd_alu/inner_alu0/out_reg[18]/Q' [C:/Users/ASUS/Desktop/materials/Pico/VivadoSaving/CPU/CPU.srcs/sources_1/new/ALU.v:107]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net simd_reg_write_data[114] with 2nd driver pin 'simd_alu/inner_alu0/out_reg[18]__0/Q' [C:/Users/ASUS/Desktop/materials/Pico/VivadoSaving/CPU/CPU.srcs/sources_1/new/ALU.v:68]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net simd_reg_write_data[113] with 1st driver pin 'simd_alu/inner_alu0/out_reg[17]/Q' [C:/Users/ASUS/Desktop/materials/Pico/VivadoSaving/CPU/CPU.srcs/sources_1/new/ALU.v:107]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net simd_reg_write_data[113] with 2nd driver pin 'simd_alu/inner_alu0/out_reg[17]__0/Q' [C:/Users/ASUS/Desktop/materials/Pico/VivadoSaving/CPU/CPU.srcs/sources_1/new/ALU.v:68]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net simd_reg_write_data[112] with 1st driver pin 'simd_alu/inner_alu0/out_reg[16]/Q' [C:/Users/ASUS/Desktop/materials/Pico/VivadoSaving/CPU/CPU.srcs/sources_1/new/ALU.v:107]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net simd_reg_write_data[112] with 2nd driver pin 'simd_alu/inner_alu0/out_reg[16]__0/Q' [C:/Users/ASUS/Desktop/materials/Pico/VivadoSaving/CPU/CPU.srcs/sources_1/new/ALU.v:68]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net simd_reg_write_data[111] with 1st driver pin 'simd_alu/inner_alu0/out_reg[15]/Q' [C:/Users/ASUS/Desktop/materials/Pico/VivadoSaving/CPU/CPU.srcs/sources_1/new/ALU.v:107]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net simd_reg_write_data[111] with 2nd driver pin 'simd_alu/inner_alu0/out_reg[15]__0/Q' [C:/Users/ASUS/Desktop/materials/Pico/VivadoSaving/CPU/CPU.srcs/sources_1/new/ALU.v:68]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net simd_reg_write_data[110] with 1st driver pin 'simd_alu/inner_alu0/out_reg[14]/Q' [C:/Users/ASUS/Desktop/materials/Pico/VivadoSaving/CPU/CPU.srcs/sources_1/new/ALU.v:107]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net simd_reg_write_data[110] with 2nd driver pin 'simd_alu/inner_alu0/out_reg[14]__0/Q' [C:/Users/ASUS/Desktop/materials/Pico/VivadoSaving/CPU/CPU.srcs/sources_1/new/ALU.v:68]
+INFO: [Common 17-14] Message 'Synth 8-3352' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|      160|Failed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:08 ; elapsed = 00:00:41 . Memory (MB): peak = 902.422 ; gain = 661.348
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:08 ; elapsed = 00:00:41 . Memory (MB): peak = 902.422 ; gain = 661.348
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:08 ; elapsed = 00:00:41 . Memory (MB): peak = 902.422 ; gain = 661.348
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:08 ; elapsed = 00:00:41 . Memory (MB): peak = 902.422 ; gain = 661.348
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:08 ; elapsed = 00:00:41 . Memory (MB): peak = 902.422 ; gain = 661.348
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++------+--------------+----------+
+|      |BlackBox name |Instances |
++------+--------------+----------+
+|1     |REG           |         1|
+|2     |clk_ip        |         1|
+|3     |ram_ip        |         1|
+|4     |rom_ip        |         1|
++------+--------------+----------+
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |REG    |     1|
+|2     |clk_ip |     1|
+|3     |ram_ip |     1|
+|4     |rom_ip |     1|
+|5     |CARRY4 |    56|
+|6     |LUT1   |     2|
+|7     |LUT2   |   141|
+|8     |LUT3   |   102|
+|9     |LUT4   |   103|
+|10    |LUT5   |   162|
+|11    |LUT6   |   423|
+|12    |FDRE   |    32|
+|13    |LD     |   320|
+|14    |IBUF   |     1|
+|15    |OBUFT  |    40|
++------+-------+------+
+
+Report Instance Areas: 
++------+---------------+---------+------+
+|      |Instance       |Module   |Cells |
++------+---------------+---------+------+
+|1     |top            |         |  1768|
+|2     |  alu          |ALU      |    65|
+|3     |  clock        |CXK      |     3|
+|4     |  pc_counter   |PC       |    49|
+|5     |  pc_ctrl      |PCctrl   |    17|
+|6     |  ram          |RAM      |    32|
+|7     |  rom          |ROM      |   345|
+|8     |  simd_alu     |SIMD_ALU |   876|
+|9     |    inner_alu0 |ALU_0    |   219|
+|10    |    inner_alu1 |ALU_1    |   219|
+|11    |    inner_alu2 |ALU_2    |   219|
+|12    |    inner_alu3 |ALU_3    |   219|
++------+---------------+---------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:08 ; elapsed = 00:00:41 . Memory (MB): peak = 902.422 ; gain = 661.348
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 320 critical warnings and 50 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:07 ; elapsed = 00:00:36 . Memory (MB): peak = 902.422 ; gain = 306.352
+Synthesis Optimization Complete : Time (s): cpu = 00:00:08 ; elapsed = 00:00:42 . Memory (MB): peak = 902.422 ; gain = 661.348
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 377 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 320 instances were transformed.
+  LD => LDCE: 320 instances
+
 INFO: [Common 17-83] Releasing license: Synthesis
-2 Infos, 0 Warnings, 1 Critical Warnings and 20 Errors encountered.
-synth_design failed
-ERROR: [Common 17-69] Command failed: Synthesis failed - please see the console or run log file for details
-INFO: [Common 17-206] Exiting Vivado at Tue May 16 15:47:15 2023...
+57 Infos, 152 Warnings, 100 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:09 ; elapsed = 00:00:45 . Memory (MB): peak = 902.422 ; gain = 671.871
+INFO: [Common 17-1381] The checkpoint 'C:/Users/ASUS/Desktop/materials/Pico/VivadoSaving/CPU/CPU.runs/synth_1/main.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file main_utilization_synth.rpt -pb main_utilization_synth.pb
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.029 . Memory (MB): peak = 902.422 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Tue May 16 22:26:54 2023...
