@@ -21,6 +21,7 @@
 
 
 module button(
+    input clk,
     input button_raw,
     output buttion_fix
     );
