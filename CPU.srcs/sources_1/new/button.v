@@ -2,7 +2,10 @@
 //////////////////////////////////////////////////////////////////////////////////
 // Company: 
 // Engineer: 
+<<<<<<< HEAD
 // 
+=======
+>>>>>>> 6d4af386291094800e9def127b3905779eb39c24
 // Create Date: 2023/05/17 14:29:28
 // Design Name: 
 // Module Name: button
@@ -42,7 +45,5 @@ module button(
             keycnt <= keycnt + 1;
             output_button <= output_button | input_button;
         end
-        
-        
     end
 endmodule
