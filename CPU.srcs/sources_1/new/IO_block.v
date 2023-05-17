@@ -40,7 +40,6 @@ module IO_block(
     input [7:0] board_output_sig
 
     // the rest is hardware signal
-    
     );
 
     seg_block seg(
@@ -88,6 +87,7 @@ module IO_block(
         .output_button(ack)
     );
 
+    
     
 
 endmodule

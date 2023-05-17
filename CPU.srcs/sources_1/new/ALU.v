@@ -61,7 +61,7 @@ module ALU(
     input [31:0] in1,
     output reg [31:0] out,
     output reg equal,
-    output reg overflow
+    output reg [7:0] errorcode // todo: what should I do?
     );
     always @(*) begin
         casex(alu_op) 

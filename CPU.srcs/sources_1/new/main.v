@@ -23,10 +23,15 @@
 module main(
     input clk,
     input sysrst,
+    input cpu_rst_butt,
+    input mode_butt,
+    input ack_butt,
     input [23:0] switch_in,
     output [23:0] led_out,
     output [7:0] seg_op,
-    output [7:0] seg_out
+    output [7:0] seg_out,
+    input uart_in,
+    output uart_out
     );
 
     // what should be the rst?
@@ -36,6 +41,11 @@ module main(
     wire reg_clk;
     wire pc_clk;
     wire seg_clk;
+    wire uart_clk;
+
+    wire cpu_rst;
+    wire [1:0] mode;
+    wire ack;
 
     CXK clock(
         .clk(clk),
@@ -44,7 +54,8 @@ module main(
         .ram_clk(ram_clk),
         .reg_clk(reg_clk),
         .pc_clk(pc_clk),
-        .seg_clk(seg_clk)
+        .seg_clk(seg_clk),
+        .uart_clk(uart_clk)
     );
 
     wire [31:0] pc_next;
@@ -86,7 +97,6 @@ module main(
     wire j;
     wire jr;
     wire jal;
-    wire div;
     CTRL ctrl(
         .op_code(instruction[31:26]),
         .shamt_in(instruction[10:6]),
@@ -105,8 +115,7 @@ module main(
         .simd(simd),
         .j(j),
         .jr(jr),
-        .jal(jal),
-        .div(div)
+        .jal(jal)
     );
 
     reg [4:0] ra_addr = 31;
@@ -182,6 +191,10 @@ module main(
     );
 
     wire [31:0] mem_read_data;
+    wire [7:0] in_num;
+    wire [3:0] in_case;
+    wire [31:0] out_num;
+    wire [7:0] out_sig;
     RAM ram(
         .clk(ram_clk),
         .rst(rst),
@@ -189,7 +202,11 @@ module main(
         .mem_write(mem_write),
         .addr(alu_result),
         .write_data(reg_read_data1),
-        .read_data(mem_read_data)
+        .read_data(mem_read_data),
+        .in_num(in_num),
+        .in_case(in_case),
+        .out_num(out_num),
+        .out_sig(out_sig)
     );
 
     wire [31:0] write_data_to_reg_select;
@@ -220,6 +237,43 @@ module main(
         .ra(reg_read_data0),
         .link_addr(link_addr),
         .next(pc_next)
+    );
+
+    IO_block io_block(
+        .switch_in(switch_in),
+        .led_out(led_out),
+        .pc_clk(pc_clk),
+        .seg_clk(seg_clk),
+        .seg_op(seg_op),
+        .seg_out(seg_out),
+        .rst(rst),
+        .cpu_rst_butt(cpu_rst_butt),
+        .mode_butt(mode_butt),
+        .ack_butt(ack_butt),
+        .cpu_rst(cpu_rst),
+        .mode(mode),
+        .ack(ack),
+        .board_input_data(in_num),
+        .board_input_case(in_case),
+        .board_output_data(out_num),
+        .board_output_sig(out_sig)
+    );
+
+    wire uart_out_clk;
+    wire uart_out_wen;
+    wire [13:0] uart_out_addr;
+    wire [31:0] uart_out_data;
+    wire uart_out_done;
+    uart_bmpg_0 uart_block(
+        .upg_clk_i(uart_clk),
+        .upg_rst_i(rst),
+        .upg_rx_i(uart_in),
+        .upg_clk_o(uart_out_clk),
+        .upg_wen_o(uart_out_wen),
+        .upg_adr_o(uart_out_addr),
+        .upg_dat_o(uart_out_data),
+        .upg_done_o(uart_out_done),
+        .upg_tx_o(uart_out)
     );
 
 

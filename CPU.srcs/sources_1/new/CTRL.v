@@ -56,6 +56,12 @@ J-type:
       j      000010          xxxxxx
       jal    000011          xxxxxx  
 
+// special:
+SIMD-type:
+      adds   000000          001011
+      subs   000000          001010
+
+
 R-type:
     opcode(6 bits) | rs(5 bits) | rt(5 bits) | rd(5 bits) | shamt(5 bits) | funct(6 bits)
 I-type:
@@ -84,8 +90,7 @@ module CTRL(
     output simd,
     output j,
     output jr,
-    output jal,
-    output div
+    output jal
     );
     
 /*
@@ -170,4 +175,9 @@ control signals:
 */
     assign jal = (op_code == 6'b000011) ? 1'b1 : 1'b0;
 
+
+    // aditional ports by oyl
+    assign ignore = (op_code == 6'b001100 || op_code == 6'b001101 || op_code == 6'b001110) ? 1'b1 : 1'b0;
+
+    assign simd = (op_code == 6'b000000 && (func_code == 6'b001011 || func_code == 6'b001010)) ? 1'b1 : 1'b0;
 endmodule

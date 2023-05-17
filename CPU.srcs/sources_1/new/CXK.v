@@ -27,13 +27,15 @@ module CXK(
     output ram_clk,
     output reg_clk,
     output pc_clk,
-    output seg_clk
+    output seg_clk,
+    output uart_clk
     );
     wire cpu_clk;
     clk_ip inner_clk(
         .clk_in1(clk),
         .cpu_clk(cpu_clk),
-        .seg_clk(seg_clk)
+        .seg_clk(seg_clk),
+        .uart_clk(uart_clk)
     );
     assign pc_clk = cpu_clk;
     assign ram_clk = cpu_clk;
