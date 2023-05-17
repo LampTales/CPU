@@ -23,6 +23,7 @@
 module IO_block(
     input [23:0] switch_in,
     output [23:0] led_out,
+    input pc_clk,
     input seg_clk,
     output [7:0] seg_op,
     output [7:0] seg_out,

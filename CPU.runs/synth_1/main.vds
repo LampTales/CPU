@@ -2,12 +2,12 @@
 # Vivado v2017.4 (64-bit)
 # SW Build 2086221 on Fri Dec 15 20:55:39 MST 2017
 # IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
-# Start of session at: Wed May 17 12:14:14 2023
-# Process ID: 11944
-# Current directory: C:/Users/Wiman/VivadoSaving/CPU/CPU.runs/synth_1
+# Start of session at: Wed May 17 15:31:58 2023
+# Process ID: 11428
+# Current directory: D:/Sustech/2023 Spring/CS214 Computer Organizations/Project/CPU/CPU.runs/synth_1
 # Command line: vivado.exe -log main.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source main.tcl
-# Log file: C:/Users/Wiman/VivadoSaving/CPU/CPU.runs/synth_1/main.vds
-# Journal file: C:/Users/Wiman/VivadoSaving/CPU/CPU.runs/synth_1\vivado.jou
+# Log file: D:/Sustech/2023 Spring/CS214 Computer Organizations/Project/CPU/CPU.runs/synth_1/main.vds
+# Journal file: D:/Sustech/2023 Spring/CS214 Computer Organizations/Project/CPU/CPU.runs/synth_1\vivado.jou
 #-----------------------------------------------------------
 source main.tcl -notrace
 Command: synth_design -top main -part xc7a100tfgg484-1
@@ -15,66 +15,67 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 11996 
+INFO: Helper process launched with PID 13332 
+WARNING: [Synth 8-1958] event expressions must result in a singular type [D:/Sustech/2023 Spring/CS214 Computer Organizations/Project/CPU/CPU.srcs/sources_1/new/seg_block.v:35]
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 343.223 ; gain = 103.109
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:02 . Memory (MB): peak = 417.438 ; gain = 113.359
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-638] synthesizing module 'main' [C:/Users/Wiman/VivadoSaving/CPU/CPU.srcs/sources_1/new/main.v:23]
-INFO: [Synth 8-638] synthesizing module 'CXK' [C:/Users/Wiman/VivadoSaving/CPU/CPU.srcs/sources_1/new/CXK.v:23]
-INFO: [Synth 8-638] synthesizing module 'clk_ip' [C:/Users/Wiman/VivadoSaving/CPU/CPU.runs/synth_1/.Xil/Vivado-11944-LAPTOP-5FTFKB8F/realtime/clk_ip_stub.v:5]
-INFO: [Synth 8-256] done synthesizing module 'clk_ip' (1#1) [C:/Users/Wiman/VivadoSaving/CPU/CPU.runs/synth_1/.Xil/Vivado-11944-LAPTOP-5FTFKB8F/realtime/clk_ip_stub.v:5]
-WARNING: [Synth 8-350] instance 'inner_clk' of module 'clk_ip' requires 4 connections, but only 3 given [C:/Users/Wiman/VivadoSaving/CPU/CPU.srcs/sources_1/new/CXK.v:33]
-INFO: [Synth 8-256] done synthesizing module 'CXK' (2#1) [C:/Users/Wiman/VivadoSaving/CPU/CPU.srcs/sources_1/new/CXK.v:23]
-INFO: [Synth 8-638] synthesizing module 'PC' [C:/Users/Wiman/VivadoSaving/CPU/CPU.srcs/sources_1/new/PC.v:24]
-INFO: [Synth 8-256] done synthesizing module 'PC' (3#1) [C:/Users/Wiman/VivadoSaving/CPU/CPU.srcs/sources_1/new/PC.v:24]
-INFO: [Synth 8-638] synthesizing module 'ROM' [C:/Users/Wiman/VivadoSaving/CPU/CPU.srcs/sources_1/new/ROM.v:23]
-INFO: [Synth 8-638] synthesizing module 'ram_ip' [C:/Users/Wiman/VivadoSaving/CPU/CPU.runs/synth_1/.Xil/Vivado-11944-LAPTOP-5FTFKB8F/realtime/ram_ip_stub.v:6]
-INFO: [Synth 8-256] done synthesizing module 'ram_ip' (4#1) [C:/Users/Wiman/VivadoSaving/CPU/CPU.runs/synth_1/.Xil/Vivado-11944-LAPTOP-5FTFKB8F/realtime/ram_ip_stub.v:6]
-WARNING: [Synth 8-350] instance 'inner_rom' of module 'ram_ip' requires 5 connections, but only 3 given [C:/Users/Wiman/VivadoSaving/CPU/CPU.srcs/sources_1/new/ROM.v:30]
-INFO: [Synth 8-256] done synthesizing module 'ROM' (5#1) [C:/Users/Wiman/VivadoSaving/CPU/CPU.srcs/sources_1/new/ROM.v:23]
-INFO: [Synth 8-638] synthesizing module 'Expander' [C:/Users/Wiman/VivadoSaving/CPU/CPU.srcs/sources_1/new/Expander.v:25]
-INFO: [Synth 8-256] done synthesizing module 'Expander' (6#1) [C:/Users/Wiman/VivadoSaving/CPU/CPU.srcs/sources_1/new/Expander.v:25]
-INFO: [Synth 8-638] synthesizing module 'CTRL' [C:/Users/Wiman/VivadoSaving/CPU/CPU.srcs/sources_1/new/CTRL.v:69]
-WARNING: [Synth 8-3848] Net alu_op in module/entity CTRL does not have driver. [C:/Users/Wiman/VivadoSaving/CPU/CPU.srcs/sources_1/new/CTRL.v:73]
-WARNING: [Synth 8-3848] Net shamt_out in module/entity CTRL does not have driver. [C:/Users/Wiman/VivadoSaving/CPU/CPU.srcs/sources_1/new/CTRL.v:74]
-WARNING: [Synth 8-3848] Net ignore in module/entity CTRL does not have driver. [C:/Users/Wiman/VivadoSaving/CPU/CPU.srcs/sources_1/new/CTRL.v:83]
-WARNING: [Synth 8-3848] Net simd in module/entity CTRL does not have driver. [C:/Users/Wiman/VivadoSaving/CPU/CPU.srcs/sources_1/new/CTRL.v:84]
-WARNING: [Synth 8-3848] Net div in module/entity CTRL does not have driver. [C:/Users/Wiman/VivadoSaving/CPU/CPU.srcs/sources_1/new/CTRL.v:88]
-INFO: [Synth 8-256] done synthesizing module 'CTRL' (7#1) [C:/Users/Wiman/VivadoSaving/CPU/CPU.srcs/sources_1/new/CTRL.v:69]
-INFO: [Synth 8-638] synthesizing module 'MUX_5' [C:/Users/Wiman/VivadoSaving/CPU/CPU.srcs/sources_1/new/MUX.v:34]
-INFO: [Synth 8-256] done synthesizing module 'MUX_5' (8#1) [C:/Users/Wiman/VivadoSaving/CPU/CPU.srcs/sources_1/new/MUX.v:34]
-INFO: [Synth 8-638] synthesizing module 'REG' [C:/Users/Wiman/VivadoSaving/CPU/CPU.srcs/sources_1/new/REG.v:23]
-INFO: [Synth 8-256] done synthesizing module 'REG' (9#1) [C:/Users/Wiman/VivadoSaving/CPU/CPU.srcs/sources_1/new/REG.v:23]
-INFO: [Synth 8-638] synthesizing module 'MUX_32' [C:/Users/Wiman/VivadoSaving/CPU/CPU.srcs/sources_1/new/MUX.v:23]
-INFO: [Synth 8-256] done synthesizing module 'MUX_32' (10#1) [C:/Users/Wiman/VivadoSaving/CPU/CPU.srcs/sources_1/new/MUX.v:23]
-INFO: [Synth 8-638] synthesizing module 'ALU' [C:/Users/Wiman/VivadoSaving/CPU/CPU.srcs/sources_1/new/ALU.v:57]
-INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/Wiman/VivadoSaving/CPU/CPU.srcs/sources_1/new/ALU.v:67]
-WARNING: [Synth 8-3848] Net overflow in module/entity ALU does not have driver. [C:/Users/Wiman/VivadoSaving/CPU/CPU.srcs/sources_1/new/ALU.v:64]
-INFO: [Synth 8-256] done synthesizing module 'ALU' (11#1) [C:/Users/Wiman/VivadoSaving/CPU/CPU.srcs/sources_1/new/ALU.v:57]
-WARNING: [Synth 8-350] instance 'alu' of module 'ALU' requires 7 connections, but only 6 given [C:/Users/Wiman/VivadoSaving/CPU/CPU.srcs/sources_1/new/main.v:168]
-INFO: [Synth 8-638] synthesizing module 'SIMD_ALU' [C:/Users/Wiman/VivadoSaving/CPU/CPU.srcs/sources_1/new/SIMD_ALU.v:23]
-WARNING: [Synth 8-689] width (6) of port connection 'alu_op' does not match port width (12) of module 'ALU' [C:/Users/Wiman/VivadoSaving/CPU/CPU.srcs/sources_1/new/SIMD_ALU.v:31]
-WARNING: [Synth 8-350] instance 'inner_alu0' of module 'ALU' requires 7 connections, but only 5 given [C:/Users/Wiman/VivadoSaving/CPU/CPU.srcs/sources_1/new/SIMD_ALU.v:30]
-WARNING: [Synth 8-689] width (6) of port connection 'alu_op' does not match port width (12) of module 'ALU' [C:/Users/Wiman/VivadoSaving/CPU/CPU.srcs/sources_1/new/SIMD_ALU.v:38]
-WARNING: [Synth 8-350] instance 'inner_alu1' of module 'ALU' requires 7 connections, but only 5 given [C:/Users/Wiman/VivadoSaving/CPU/CPU.srcs/sources_1/new/SIMD_ALU.v:37]
-WARNING: [Synth 8-689] width (6) of port connection 'alu_op' does not match port width (12) of module 'ALU' [C:/Users/Wiman/VivadoSaving/CPU/CPU.srcs/sources_1/new/SIMD_ALU.v:45]
-WARNING: [Synth 8-350] instance 'inner_alu2' of module 'ALU' requires 7 connections, but only 5 given [C:/Users/Wiman/VivadoSaving/CPU/CPU.srcs/sources_1/new/SIMD_ALU.v:44]
-WARNING: [Synth 8-689] width (6) of port connection 'alu_op' does not match port width (12) of module 'ALU' [C:/Users/Wiman/VivadoSaving/CPU/CPU.srcs/sources_1/new/SIMD_ALU.v:52]
-WARNING: [Synth 8-350] instance 'inner_alu3' of module 'ALU' requires 7 connections, but only 5 given [C:/Users/Wiman/VivadoSaving/CPU/CPU.srcs/sources_1/new/SIMD_ALU.v:51]
-WARNING: [Synth 8-3848] Net shamt_zero in module/entity SIMD_ALU does not have driver. [C:/Users/Wiman/VivadoSaving/CPU/CPU.srcs/sources_1/new/SIMD_ALU.v:29]
-INFO: [Synth 8-256] done synthesizing module 'SIMD_ALU' (12#1) [C:/Users/Wiman/VivadoSaving/CPU/CPU.srcs/sources_1/new/SIMD_ALU.v:23]
-WARNING: [Synth 8-689] width (12) of port connection 'alu_op' does not match port width (6) of module 'SIMD_ALU' [C:/Users/Wiman/VivadoSaving/CPU/CPU.srcs/sources_1/new/main.v:178]
-INFO: [Synth 8-638] synthesizing module 'RAM' [C:/Users/Wiman/VivadoSaving/CPU/CPU.srcs/sources_1/new/RAM.v:23]
-INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/Wiman/VivadoSaving/CPU/CPU.srcs/sources_1/new/RAM.v:65]
-INFO: [Synth 8-256] done synthesizing module 'RAM' (13#1) [C:/Users/Wiman/VivadoSaving/CPU/CPU.srcs/sources_1/new/RAM.v:23]
-WARNING: [Synth 8-350] instance 'ram' of module 'RAM' requires 11 connections, but only 7 given [C:/Users/Wiman/VivadoSaving/CPU/CPU.srcs/sources_1/new/main.v:185]
-INFO: [Synth 8-638] synthesizing module 'PCctrl' [C:/Users/Wiman/VivadoSaving/CPU/CPU.srcs/sources_1/new/PCctrl.v:24]
-WARNING: [Synth 8-3848] Net zero in module/entity PCctrl does not have driver. [C:/Users/Wiman/VivadoSaving/CPU/CPU.srcs/sources_1/new/PCctrl.v:43]
-INFO: [Synth 8-256] done synthesizing module 'PCctrl' (14#1) [C:/Users/Wiman/VivadoSaving/CPU/CPU.srcs/sources_1/new/PCctrl.v:24]
-WARNING: [Synth 8-3848] Net led_out in module/entity main does not have driver. [C:/Users/Wiman/VivadoSaving/CPU/CPU.srcs/sources_1/new/main.v:27]
-WARNING: [Synth 8-3848] Net seg_op in module/entity main does not have driver. [C:/Users/Wiman/VivadoSaving/CPU/CPU.srcs/sources_1/new/main.v:28]
-WARNING: [Synth 8-3848] Net seg_out in module/entity main does not have driver. [C:/Users/Wiman/VivadoSaving/CPU/CPU.srcs/sources_1/new/main.v:29]
-INFO: [Synth 8-256] done synthesizing module 'main' (15#1) [C:/Users/Wiman/VivadoSaving/CPU/CPU.srcs/sources_1/new/main.v:23]
+INFO: [Synth 8-638] synthesizing module 'main' [D:/Sustech/2023 Spring/CS214 Computer Organizations/Project/CPU/CPU.srcs/sources_1/new/main.v:23]
+INFO: [Synth 8-638] synthesizing module 'CXK' [D:/Sustech/2023 Spring/CS214 Computer Organizations/Project/CPU/CPU.srcs/sources_1/new/CXK.v:23]
+INFO: [Synth 8-638] synthesizing module 'clk_ip' [D:/Sustech/2023 Spring/CS214 Computer Organizations/Project/CPU/CPU.runs/synth_1/.Xil/Vivado-11428-Haoson-PC/realtime/clk_ip_stub.v:5]
+INFO: [Synth 8-256] done synthesizing module 'clk_ip' (1#1) [D:/Sustech/2023 Spring/CS214 Computer Organizations/Project/CPU/CPU.runs/synth_1/.Xil/Vivado-11428-Haoson-PC/realtime/clk_ip_stub.v:5]
+WARNING: [Synth 8-350] instance 'inner_clk' of module 'clk_ip' requires 4 connections, but only 3 given [D:/Sustech/2023 Spring/CS214 Computer Organizations/Project/CPU/CPU.srcs/sources_1/new/CXK.v:33]
+INFO: [Synth 8-256] done synthesizing module 'CXK' (2#1) [D:/Sustech/2023 Spring/CS214 Computer Organizations/Project/CPU/CPU.srcs/sources_1/new/CXK.v:23]
+INFO: [Synth 8-638] synthesizing module 'PC' [D:/Sustech/2023 Spring/CS214 Computer Organizations/Project/CPU/CPU.srcs/sources_1/new/PC.v:24]
+INFO: [Synth 8-256] done synthesizing module 'PC' (3#1) [D:/Sustech/2023 Spring/CS214 Computer Organizations/Project/CPU/CPU.srcs/sources_1/new/PC.v:24]
+INFO: [Synth 8-638] synthesizing module 'ROM' [D:/Sustech/2023 Spring/CS214 Computer Organizations/Project/CPU/CPU.srcs/sources_1/new/ROM.v:23]
+INFO: [Synth 8-638] synthesizing module 'ram_ip' [D:/Sustech/2023 Spring/CS214 Computer Organizations/Project/CPU/CPU.runs/synth_1/.Xil/Vivado-11428-Haoson-PC/realtime/ram_ip_stub.v:6]
+INFO: [Synth 8-256] done synthesizing module 'ram_ip' (4#1) [D:/Sustech/2023 Spring/CS214 Computer Organizations/Project/CPU/CPU.runs/synth_1/.Xil/Vivado-11428-Haoson-PC/realtime/ram_ip_stub.v:6]
+WARNING: [Synth 8-350] instance 'inner_rom' of module 'ram_ip' requires 5 connections, but only 3 given [D:/Sustech/2023 Spring/CS214 Computer Organizations/Project/CPU/CPU.srcs/sources_1/new/ROM.v:30]
+INFO: [Synth 8-256] done synthesizing module 'ROM' (5#1) [D:/Sustech/2023 Spring/CS214 Computer Organizations/Project/CPU/CPU.srcs/sources_1/new/ROM.v:23]
+INFO: [Synth 8-638] synthesizing module 'Expander' [D:/Sustech/2023 Spring/CS214 Computer Organizations/Project/CPU/CPU.srcs/sources_1/new/Expander.v:25]
+INFO: [Synth 8-256] done synthesizing module 'Expander' (6#1) [D:/Sustech/2023 Spring/CS214 Computer Organizations/Project/CPU/CPU.srcs/sources_1/new/Expander.v:25]
+INFO: [Synth 8-638] synthesizing module 'CTRL' [D:/Sustech/2023 Spring/CS214 Computer Organizations/Project/CPU/CPU.srcs/sources_1/new/CTRL.v:69]
+WARNING: [Synth 8-3848] Net alu_op in module/entity CTRL does not have driver. [D:/Sustech/2023 Spring/CS214 Computer Organizations/Project/CPU/CPU.srcs/sources_1/new/CTRL.v:73]
+WARNING: [Synth 8-3848] Net shamt_out in module/entity CTRL does not have driver. [D:/Sustech/2023 Spring/CS214 Computer Organizations/Project/CPU/CPU.srcs/sources_1/new/CTRL.v:74]
+WARNING: [Synth 8-3848] Net ignore in module/entity CTRL does not have driver. [D:/Sustech/2023 Spring/CS214 Computer Organizations/Project/CPU/CPU.srcs/sources_1/new/CTRL.v:83]
+WARNING: [Synth 8-3848] Net simd in module/entity CTRL does not have driver. [D:/Sustech/2023 Spring/CS214 Computer Organizations/Project/CPU/CPU.srcs/sources_1/new/CTRL.v:84]
+WARNING: [Synth 8-3848] Net div in module/entity CTRL does not have driver. [D:/Sustech/2023 Spring/CS214 Computer Organizations/Project/CPU/CPU.srcs/sources_1/new/CTRL.v:88]
+INFO: [Synth 8-256] done synthesizing module 'CTRL' (7#1) [D:/Sustech/2023 Spring/CS214 Computer Organizations/Project/CPU/CPU.srcs/sources_1/new/CTRL.v:69]
+INFO: [Synth 8-638] synthesizing module 'MUX_5' [D:/Sustech/2023 Spring/CS214 Computer Organizations/Project/CPU/CPU.srcs/sources_1/new/MUX.v:34]
+INFO: [Synth 8-256] done synthesizing module 'MUX_5' (8#1) [D:/Sustech/2023 Spring/CS214 Computer Organizations/Project/CPU/CPU.srcs/sources_1/new/MUX.v:34]
+INFO: [Synth 8-638] synthesizing module 'REG' [D:/Sustech/2023 Spring/CS214 Computer Organizations/Project/CPU/CPU.srcs/sources_1/new/REG.v:23]
+INFO: [Synth 8-256] done synthesizing module 'REG' (9#1) [D:/Sustech/2023 Spring/CS214 Computer Organizations/Project/CPU/CPU.srcs/sources_1/new/REG.v:23]
+INFO: [Synth 8-638] synthesizing module 'MUX_32' [D:/Sustech/2023 Spring/CS214 Computer Organizations/Project/CPU/CPU.srcs/sources_1/new/MUX.v:23]
+INFO: [Synth 8-256] done synthesizing module 'MUX_32' (10#1) [D:/Sustech/2023 Spring/CS214 Computer Organizations/Project/CPU/CPU.srcs/sources_1/new/MUX.v:23]
+INFO: [Synth 8-638] synthesizing module 'ALU' [D:/Sustech/2023 Spring/CS214 Computer Organizations/Project/CPU/CPU.srcs/sources_1/new/ALU.v:57]
+INFO: [Synth 8-155] case statement is not full and has no default [D:/Sustech/2023 Spring/CS214 Computer Organizations/Project/CPU/CPU.srcs/sources_1/new/ALU.v:67]
+WARNING: [Synth 8-3848] Net overflow in module/entity ALU does not have driver. [D:/Sustech/2023 Spring/CS214 Computer Organizations/Project/CPU/CPU.srcs/sources_1/new/ALU.v:64]
+INFO: [Synth 8-256] done synthesizing module 'ALU' (11#1) [D:/Sustech/2023 Spring/CS214 Computer Organizations/Project/CPU/CPU.srcs/sources_1/new/ALU.v:57]
+WARNING: [Synth 8-350] instance 'alu' of module 'ALU' requires 7 connections, but only 6 given [D:/Sustech/2023 Spring/CS214 Computer Organizations/Project/CPU/CPU.srcs/sources_1/new/main.v:168]
+INFO: [Synth 8-638] synthesizing module 'SIMD_ALU' [D:/Sustech/2023 Spring/CS214 Computer Organizations/Project/CPU/CPU.srcs/sources_1/new/SIMD_ALU.v:23]
+WARNING: [Synth 8-689] width (6) of port connection 'alu_op' does not match port width (12) of module 'ALU' [D:/Sustech/2023 Spring/CS214 Computer Organizations/Project/CPU/CPU.srcs/sources_1/new/SIMD_ALU.v:31]
+WARNING: [Synth 8-350] instance 'inner_alu0' of module 'ALU' requires 7 connections, but only 5 given [D:/Sustech/2023 Spring/CS214 Computer Organizations/Project/CPU/CPU.srcs/sources_1/new/SIMD_ALU.v:30]
+WARNING: [Synth 8-689] width (6) of port connection 'alu_op' does not match port width (12) of module 'ALU' [D:/Sustech/2023 Spring/CS214 Computer Organizations/Project/CPU/CPU.srcs/sources_1/new/SIMD_ALU.v:38]
+WARNING: [Synth 8-350] instance 'inner_alu1' of module 'ALU' requires 7 connections, but only 5 given [D:/Sustech/2023 Spring/CS214 Computer Organizations/Project/CPU/CPU.srcs/sources_1/new/SIMD_ALU.v:37]
+WARNING: [Synth 8-689] width (6) of port connection 'alu_op' does not match port width (12) of module 'ALU' [D:/Sustech/2023 Spring/CS214 Computer Organizations/Project/CPU/CPU.srcs/sources_1/new/SIMD_ALU.v:45]
+WARNING: [Synth 8-350] instance 'inner_alu2' of module 'ALU' requires 7 connections, but only 5 given [D:/Sustech/2023 Spring/CS214 Computer Organizations/Project/CPU/CPU.srcs/sources_1/new/SIMD_ALU.v:44]
+WARNING: [Synth 8-689] width (6) of port connection 'alu_op' does not match port width (12) of module 'ALU' [D:/Sustech/2023 Spring/CS214 Computer Organizations/Project/CPU/CPU.srcs/sources_1/new/SIMD_ALU.v:52]
+WARNING: [Synth 8-350] instance 'inner_alu3' of module 'ALU' requires 7 connections, but only 5 given [D:/Sustech/2023 Spring/CS214 Computer Organizations/Project/CPU/CPU.srcs/sources_1/new/SIMD_ALU.v:51]
+WARNING: [Synth 8-3848] Net shamt_zero in module/entity SIMD_ALU does not have driver. [D:/Sustech/2023 Spring/CS214 Computer Organizations/Project/CPU/CPU.srcs/sources_1/new/SIMD_ALU.v:29]
+INFO: [Synth 8-256] done synthesizing module 'SIMD_ALU' (12#1) [D:/Sustech/2023 Spring/CS214 Computer Organizations/Project/CPU/CPU.srcs/sources_1/new/SIMD_ALU.v:23]
+WARNING: [Synth 8-689] width (12) of port connection 'alu_op' does not match port width (6) of module 'SIMD_ALU' [D:/Sustech/2023 Spring/CS214 Computer Organizations/Project/CPU/CPU.srcs/sources_1/new/main.v:178]
+INFO: [Synth 8-638] synthesizing module 'RAM' [D:/Sustech/2023 Spring/CS214 Computer Organizations/Project/CPU/CPU.srcs/sources_1/new/RAM.v:23]
+INFO: [Synth 8-155] case statement is not full and has no default [D:/Sustech/2023 Spring/CS214 Computer Organizations/Project/CPU/CPU.srcs/sources_1/new/RAM.v:65]
+INFO: [Synth 8-256] done synthesizing module 'RAM' (13#1) [D:/Sustech/2023 Spring/CS214 Computer Organizations/Project/CPU/CPU.srcs/sources_1/new/RAM.v:23]
+WARNING: [Synth 8-350] instance 'ram' of module 'RAM' requires 11 connections, but only 7 given [D:/Sustech/2023 Spring/CS214 Computer Organizations/Project/CPU/CPU.srcs/sources_1/new/main.v:185]
+INFO: [Synth 8-638] synthesizing module 'PCctrl' [D:/Sustech/2023 Spring/CS214 Computer Organizations/Project/CPU/CPU.srcs/sources_1/new/PCctrl.v:24]
+WARNING: [Synth 8-3848] Net zero in module/entity PCctrl does not have driver. [D:/Sustech/2023 Spring/CS214 Computer Organizations/Project/CPU/CPU.srcs/sources_1/new/PCctrl.v:43]
+INFO: [Synth 8-256] done synthesizing module 'PCctrl' (14#1) [D:/Sustech/2023 Spring/CS214 Computer Organizations/Project/CPU/CPU.srcs/sources_1/new/PCctrl.v:24]
+WARNING: [Synth 8-3848] Net led_out in module/entity main does not have driver. [D:/Sustech/2023 Spring/CS214 Computer Organizations/Project/CPU/CPU.srcs/sources_1/new/main.v:27]
+WARNING: [Synth 8-3848] Net seg_op in module/entity main does not have driver. [D:/Sustech/2023 Spring/CS214 Computer Organizations/Project/CPU/CPU.srcs/sources_1/new/main.v:28]
+WARNING: [Synth 8-3848] Net seg_out in module/entity main does not have driver. [D:/Sustech/2023 Spring/CS214 Computer Organizations/Project/CPU/CPU.srcs/sources_1/new/main.v:29]
+INFO: [Synth 8-256] done synthesizing module 'main' (15#1) [D:/Sustech/2023 Spring/CS214 Computer Organizations/Project/CPU/CPU.srcs/sources_1/new/main.v:23]
 WARNING: [Synth 8-3331] design PCctrl has unconnected port expand_imme[31]
 WARNING: [Synth 8-3331] design PCctrl has unconnected port expand_imme[30]
 WARNING: [Synth 8-3331] design RAM has unconnected port rst
@@ -177,7 +178,7 @@ WARNING: [Synth 8-3331] design main has unconnected port switch_in[14]
 WARNING: [Synth 8-3331] design main has unconnected port switch_in[13]
 INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 396.023 ; gain = 155.910
+Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 449.113 ; gain = 145.035
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -186,82 +187,82 @@ Report Check Netlist:
 +------+------------------+-------+---------+-------+------------------+
 |1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
 +------+------------------+-------+---------+-------+------------------+
-WARNING: [Synth 8-3295] tying undriven pin inner_alu0:shamt[4] to constant 0 [C:/Users/Wiman/VivadoSaving/CPU/CPU.srcs/sources_1/new/SIMD_ALU.v:30]
-WARNING: [Synth 8-3295] tying undriven pin inner_alu0:shamt[3] to constant 0 [C:/Users/Wiman/VivadoSaving/CPU/CPU.srcs/sources_1/new/SIMD_ALU.v:30]
-WARNING: [Synth 8-3295] tying undriven pin inner_alu0:shamt[2] to constant 0 [C:/Users/Wiman/VivadoSaving/CPU/CPU.srcs/sources_1/new/SIMD_ALU.v:30]
-WARNING: [Synth 8-3295] tying undriven pin inner_alu0:shamt[1] to constant 0 [C:/Users/Wiman/VivadoSaving/CPU/CPU.srcs/sources_1/new/SIMD_ALU.v:30]
-WARNING: [Synth 8-3295] tying undriven pin inner_alu0:shamt[0] to constant 0 [C:/Users/Wiman/VivadoSaving/CPU/CPU.srcs/sources_1/new/SIMD_ALU.v:30]
-WARNING: [Synth 8-3295] tying undriven pin inner_alu1:shamt[4] to constant 0 [C:/Users/Wiman/VivadoSaving/CPU/CPU.srcs/sources_1/new/SIMD_ALU.v:37]
-WARNING: [Synth 8-3295] tying undriven pin inner_alu1:shamt[3] to constant 0 [C:/Users/Wiman/VivadoSaving/CPU/CPU.srcs/sources_1/new/SIMD_ALU.v:37]
-WARNING: [Synth 8-3295] tying undriven pin inner_alu1:shamt[2] to constant 0 [C:/Users/Wiman/VivadoSaving/CPU/CPU.srcs/sources_1/new/SIMD_ALU.v:37]
-WARNING: [Synth 8-3295] tying undriven pin inner_alu1:shamt[1] to constant 0 [C:/Users/Wiman/VivadoSaving/CPU/CPU.srcs/sources_1/new/SIMD_ALU.v:37]
-WARNING: [Synth 8-3295] tying undriven pin inner_alu1:shamt[0] to constant 0 [C:/Users/Wiman/VivadoSaving/CPU/CPU.srcs/sources_1/new/SIMD_ALU.v:37]
-WARNING: [Synth 8-3295] tying undriven pin inner_alu2:shamt[4] to constant 0 [C:/Users/Wiman/VivadoSaving/CPU/CPU.srcs/sources_1/new/SIMD_ALU.v:44]
-WARNING: [Synth 8-3295] tying undriven pin inner_alu2:shamt[3] to constant 0 [C:/Users/Wiman/VivadoSaving/CPU/CPU.srcs/sources_1/new/SIMD_ALU.v:44]
-WARNING: [Synth 8-3295] tying undriven pin inner_alu2:shamt[2] to constant 0 [C:/Users/Wiman/VivadoSaving/CPU/CPU.srcs/sources_1/new/SIMD_ALU.v:44]
-WARNING: [Synth 8-3295] tying undriven pin inner_alu2:shamt[1] to constant 0 [C:/Users/Wiman/VivadoSaving/CPU/CPU.srcs/sources_1/new/SIMD_ALU.v:44]
-WARNING: [Synth 8-3295] tying undriven pin inner_alu2:shamt[0] to constant 0 [C:/Users/Wiman/VivadoSaving/CPU/CPU.srcs/sources_1/new/SIMD_ALU.v:44]
-WARNING: [Synth 8-3295] tying undriven pin inner_alu3:shamt[4] to constant 0 [C:/Users/Wiman/VivadoSaving/CPU/CPU.srcs/sources_1/new/SIMD_ALU.v:51]
-WARNING: [Synth 8-3295] tying undriven pin inner_alu3:shamt[3] to constant 0 [C:/Users/Wiman/VivadoSaving/CPU/CPU.srcs/sources_1/new/SIMD_ALU.v:51]
-WARNING: [Synth 8-3295] tying undriven pin inner_alu3:shamt[2] to constant 0 [C:/Users/Wiman/VivadoSaving/CPU/CPU.srcs/sources_1/new/SIMD_ALU.v:51]
-WARNING: [Synth 8-3295] tying undriven pin inner_alu3:shamt[1] to constant 0 [C:/Users/Wiman/VivadoSaving/CPU/CPU.srcs/sources_1/new/SIMD_ALU.v:51]
-WARNING: [Synth 8-3295] tying undriven pin inner_alu3:shamt[0] to constant 0 [C:/Users/Wiman/VivadoSaving/CPU/CPU.srcs/sources_1/new/SIMD_ALU.v:51]
-WARNING: [Synth 8-3295] tying undriven pin mux0_or_jump:in1[1] to constant 0 [C:/Users/Wiman/VivadoSaving/CPU/CPU.srcs/sources_1/new/PCctrl.v:62]
-WARNING: [Synth 8-3295] tying undriven pin mux0_or_jump:in1[0] to constant 0 [C:/Users/Wiman/VivadoSaving/CPU/CPU.srcs/sources_1/new/PCctrl.v:62]
-WARNING: [Synth 8-3295] tying undriven pin ram:in_num[7] to constant 0 [C:/Users/Wiman/VivadoSaving/CPU/CPU.srcs/sources_1/new/main.v:185]
-WARNING: [Synth 8-3295] tying undriven pin ram:in_num[6] to constant 0 [C:/Users/Wiman/VivadoSaving/CPU/CPU.srcs/sources_1/new/main.v:185]
-WARNING: [Synth 8-3295] tying undriven pin ram:in_num[5] to constant 0 [C:/Users/Wiman/VivadoSaving/CPU/CPU.srcs/sources_1/new/main.v:185]
-WARNING: [Synth 8-3295] tying undriven pin ram:in_num[4] to constant 0 [C:/Users/Wiman/VivadoSaving/CPU/CPU.srcs/sources_1/new/main.v:185]
-WARNING: [Synth 8-3295] tying undriven pin ram:in_num[3] to constant 0 [C:/Users/Wiman/VivadoSaving/CPU/CPU.srcs/sources_1/new/main.v:185]
-WARNING: [Synth 8-3295] tying undriven pin ram:in_num[2] to constant 0 [C:/Users/Wiman/VivadoSaving/CPU/CPU.srcs/sources_1/new/main.v:185]
-WARNING: [Synth 8-3295] tying undriven pin ram:in_num[1] to constant 0 [C:/Users/Wiman/VivadoSaving/CPU/CPU.srcs/sources_1/new/main.v:185]
-WARNING: [Synth 8-3295] tying undriven pin ram:in_num[0] to constant 0 [C:/Users/Wiman/VivadoSaving/CPU/CPU.srcs/sources_1/new/main.v:185]
-WARNING: [Synth 8-3295] tying undriven pin ram:in_case[3] to constant 0 [C:/Users/Wiman/VivadoSaving/CPU/CPU.srcs/sources_1/new/main.v:185]
-WARNING: [Synth 8-3295] tying undriven pin ram:in_case[2] to constant 0 [C:/Users/Wiman/VivadoSaving/CPU/CPU.srcs/sources_1/new/main.v:185]
-WARNING: [Synth 8-3295] tying undriven pin ram:in_case[1] to constant 0 [C:/Users/Wiman/VivadoSaving/CPU/CPU.srcs/sources_1/new/main.v:185]
-WARNING: [Synth 8-3295] tying undriven pin ram:in_case[0] to constant 0 [C:/Users/Wiman/VivadoSaving/CPU/CPU.srcs/sources_1/new/main.v:185]
+WARNING: [Synth 8-3295] tying undriven pin inner_alu0:shamt[4] to constant 0 [D:/Sustech/2023 Spring/CS214 Computer Organizations/Project/CPU/CPU.srcs/sources_1/new/SIMD_ALU.v:30]
+WARNING: [Synth 8-3295] tying undriven pin inner_alu0:shamt[3] to constant 0 [D:/Sustech/2023 Spring/CS214 Computer Organizations/Project/CPU/CPU.srcs/sources_1/new/SIMD_ALU.v:30]
+WARNING: [Synth 8-3295] tying undriven pin inner_alu0:shamt[2] to constant 0 [D:/Sustech/2023 Spring/CS214 Computer Organizations/Project/CPU/CPU.srcs/sources_1/new/SIMD_ALU.v:30]
+WARNING: [Synth 8-3295] tying undriven pin inner_alu0:shamt[1] to constant 0 [D:/Sustech/2023 Spring/CS214 Computer Organizations/Project/CPU/CPU.srcs/sources_1/new/SIMD_ALU.v:30]
+WARNING: [Synth 8-3295] tying undriven pin inner_alu0:shamt[0] to constant 0 [D:/Sustech/2023 Spring/CS214 Computer Organizations/Project/CPU/CPU.srcs/sources_1/new/SIMD_ALU.v:30]
+WARNING: [Synth 8-3295] tying undriven pin inner_alu1:shamt[4] to constant 0 [D:/Sustech/2023 Spring/CS214 Computer Organizations/Project/CPU/CPU.srcs/sources_1/new/SIMD_ALU.v:37]
+WARNING: [Synth 8-3295] tying undriven pin inner_alu1:shamt[3] to constant 0 [D:/Sustech/2023 Spring/CS214 Computer Organizations/Project/CPU/CPU.srcs/sources_1/new/SIMD_ALU.v:37]
+WARNING: [Synth 8-3295] tying undriven pin inner_alu1:shamt[2] to constant 0 [D:/Sustech/2023 Spring/CS214 Computer Organizations/Project/CPU/CPU.srcs/sources_1/new/SIMD_ALU.v:37]
+WARNING: [Synth 8-3295] tying undriven pin inner_alu1:shamt[1] to constant 0 [D:/Sustech/2023 Spring/CS214 Computer Organizations/Project/CPU/CPU.srcs/sources_1/new/SIMD_ALU.v:37]
+WARNING: [Synth 8-3295] tying undriven pin inner_alu1:shamt[0] to constant 0 [D:/Sustech/2023 Spring/CS214 Computer Organizations/Project/CPU/CPU.srcs/sources_1/new/SIMD_ALU.v:37]
+WARNING: [Synth 8-3295] tying undriven pin inner_alu2:shamt[4] to constant 0 [D:/Sustech/2023 Spring/CS214 Computer Organizations/Project/CPU/CPU.srcs/sources_1/new/SIMD_ALU.v:44]
+WARNING: [Synth 8-3295] tying undriven pin inner_alu2:shamt[3] to constant 0 [D:/Sustech/2023 Spring/CS214 Computer Organizations/Project/CPU/CPU.srcs/sources_1/new/SIMD_ALU.v:44]
+WARNING: [Synth 8-3295] tying undriven pin inner_alu2:shamt[2] to constant 0 [D:/Sustech/2023 Spring/CS214 Computer Organizations/Project/CPU/CPU.srcs/sources_1/new/SIMD_ALU.v:44]
+WARNING: [Synth 8-3295] tying undriven pin inner_alu2:shamt[1] to constant 0 [D:/Sustech/2023 Spring/CS214 Computer Organizations/Project/CPU/CPU.srcs/sources_1/new/SIMD_ALU.v:44]
+WARNING: [Synth 8-3295] tying undriven pin inner_alu2:shamt[0] to constant 0 [D:/Sustech/2023 Spring/CS214 Computer Organizations/Project/CPU/CPU.srcs/sources_1/new/SIMD_ALU.v:44]
+WARNING: [Synth 8-3295] tying undriven pin inner_alu3:shamt[4] to constant 0 [D:/Sustech/2023 Spring/CS214 Computer Organizations/Project/CPU/CPU.srcs/sources_1/new/SIMD_ALU.v:51]
+WARNING: [Synth 8-3295] tying undriven pin inner_alu3:shamt[3] to constant 0 [D:/Sustech/2023 Spring/CS214 Computer Organizations/Project/CPU/CPU.srcs/sources_1/new/SIMD_ALU.v:51]
+WARNING: [Synth 8-3295] tying undriven pin inner_alu3:shamt[2] to constant 0 [D:/Sustech/2023 Spring/CS214 Computer Organizations/Project/CPU/CPU.srcs/sources_1/new/SIMD_ALU.v:51]
+WARNING: [Synth 8-3295] tying undriven pin inner_alu3:shamt[1] to constant 0 [D:/Sustech/2023 Spring/CS214 Computer Organizations/Project/CPU/CPU.srcs/sources_1/new/SIMD_ALU.v:51]
+WARNING: [Synth 8-3295] tying undriven pin inner_alu3:shamt[0] to constant 0 [D:/Sustech/2023 Spring/CS214 Computer Organizations/Project/CPU/CPU.srcs/sources_1/new/SIMD_ALU.v:51]
+WARNING: [Synth 8-3295] tying undriven pin mux0_or_jump:in1[1] to constant 0 [D:/Sustech/2023 Spring/CS214 Computer Organizations/Project/CPU/CPU.srcs/sources_1/new/PCctrl.v:62]
+WARNING: [Synth 8-3295] tying undriven pin mux0_or_jump:in1[0] to constant 0 [D:/Sustech/2023 Spring/CS214 Computer Organizations/Project/CPU/CPU.srcs/sources_1/new/PCctrl.v:62]
+WARNING: [Synth 8-3295] tying undriven pin ram:in_num[7] to constant 0 [D:/Sustech/2023 Spring/CS214 Computer Organizations/Project/CPU/CPU.srcs/sources_1/new/main.v:185]
+WARNING: [Synth 8-3295] tying undriven pin ram:in_num[6] to constant 0 [D:/Sustech/2023 Spring/CS214 Computer Organizations/Project/CPU/CPU.srcs/sources_1/new/main.v:185]
+WARNING: [Synth 8-3295] tying undriven pin ram:in_num[5] to constant 0 [D:/Sustech/2023 Spring/CS214 Computer Organizations/Project/CPU/CPU.srcs/sources_1/new/main.v:185]
+WARNING: [Synth 8-3295] tying undriven pin ram:in_num[4] to constant 0 [D:/Sustech/2023 Spring/CS214 Computer Organizations/Project/CPU/CPU.srcs/sources_1/new/main.v:185]
+WARNING: [Synth 8-3295] tying undriven pin ram:in_num[3] to constant 0 [D:/Sustech/2023 Spring/CS214 Computer Organizations/Project/CPU/CPU.srcs/sources_1/new/main.v:185]
+WARNING: [Synth 8-3295] tying undriven pin ram:in_num[2] to constant 0 [D:/Sustech/2023 Spring/CS214 Computer Organizations/Project/CPU/CPU.srcs/sources_1/new/main.v:185]
+WARNING: [Synth 8-3295] tying undriven pin ram:in_num[1] to constant 0 [D:/Sustech/2023 Spring/CS214 Computer Organizations/Project/CPU/CPU.srcs/sources_1/new/main.v:185]
+WARNING: [Synth 8-3295] tying undriven pin ram:in_num[0] to constant 0 [D:/Sustech/2023 Spring/CS214 Computer Organizations/Project/CPU/CPU.srcs/sources_1/new/main.v:185]
+WARNING: [Synth 8-3295] tying undriven pin ram:in_case[3] to constant 0 [D:/Sustech/2023 Spring/CS214 Computer Organizations/Project/CPU/CPU.srcs/sources_1/new/main.v:185]
+WARNING: [Synth 8-3295] tying undriven pin ram:in_case[2] to constant 0 [D:/Sustech/2023 Spring/CS214 Computer Organizations/Project/CPU/CPU.srcs/sources_1/new/main.v:185]
+WARNING: [Synth 8-3295] tying undriven pin ram:in_case[1] to constant 0 [D:/Sustech/2023 Spring/CS214 Computer Organizations/Project/CPU/CPU.srcs/sources_1/new/main.v:185]
+WARNING: [Synth 8-3295] tying undriven pin ram:in_case[0] to constant 0 [D:/Sustech/2023 Spring/CS214 Computer Organizations/Project/CPU/CPU.srcs/sources_1/new/main.v:185]
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 396.023 ; gain = 155.910
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 449.113 ; gain = 145.035
 ---------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xc7a100tfgg484-1
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
-Parsing XDC File [C:/Users/Wiman/VivadoSaving/CPU/CPU.runs/synth_1/.Xil/Vivado-11944-LAPTOP-5FTFKB8F/dcp3/ram_ip_in_context.xdc] for cell 'rom/inner_rom'
-Finished Parsing XDC File [C:/Users/Wiman/VivadoSaving/CPU/CPU.runs/synth_1/.Xil/Vivado-11944-LAPTOP-5FTFKB8F/dcp3/ram_ip_in_context.xdc] for cell 'rom/inner_rom'
-Parsing XDC File [C:/Users/Wiman/VivadoSaving/CPU/CPU.runs/synth_1/.Xil/Vivado-11944-LAPTOP-5FTFKB8F/dcp3/ram_ip_in_context.xdc] for cell 'ram/inner_ram'
-Finished Parsing XDC File [C:/Users/Wiman/VivadoSaving/CPU/CPU.runs/synth_1/.Xil/Vivado-11944-LAPTOP-5FTFKB8F/dcp3/ram_ip_in_context.xdc] for cell 'ram/inner_ram'
-Parsing XDC File [C:/Users/Wiman/VivadoSaving/CPU/CPU.runs/synth_1/.Xil/Vivado-11944-LAPTOP-5FTFKB8F/dcp4/clk_ip_in_context.xdc] for cell 'clock/inner_clk'
-Finished Parsing XDC File [C:/Users/Wiman/VivadoSaving/CPU/CPU.runs/synth_1/.Xil/Vivado-11944-LAPTOP-5FTFKB8F/dcp4/clk_ip_in_context.xdc] for cell 'clock/inner_clk'
-Parsing XDC File [C:/Users/Wiman/VivadoSaving/CPU/CPU.srcs/constrs_1/new/empty.xdc]
-Finished Parsing XDC File [C:/Users/Wiman/VivadoSaving/CPU/CPU.srcs/constrs_1/new/empty.xdc]
+Parsing XDC File [D:/Sustech/2023 Spring/CS214 Computer Organizations/Project/CPU/CPU.runs/synth_1/.Xil/Vivado-11428-Haoson-PC/dcp3/ram_ip_in_context.xdc] for cell 'rom/inner_rom'
+Finished Parsing XDC File [D:/Sustech/2023 Spring/CS214 Computer Organizations/Project/CPU/CPU.runs/synth_1/.Xil/Vivado-11428-Haoson-PC/dcp3/ram_ip_in_context.xdc] for cell 'rom/inner_rom'
+Parsing XDC File [D:/Sustech/2023 Spring/CS214 Computer Organizations/Project/CPU/CPU.runs/synth_1/.Xil/Vivado-11428-Haoson-PC/dcp3/ram_ip_in_context.xdc] for cell 'ram/inner_ram'
+Finished Parsing XDC File [D:/Sustech/2023 Spring/CS214 Computer Organizations/Project/CPU/CPU.runs/synth_1/.Xil/Vivado-11428-Haoson-PC/dcp3/ram_ip_in_context.xdc] for cell 'ram/inner_ram'
+Parsing XDC File [D:/Sustech/2023 Spring/CS214 Computer Organizations/Project/CPU/CPU.runs/synth_1/.Xil/Vivado-11428-Haoson-PC/dcp4/clk_ip_in_context.xdc] for cell 'clock/inner_clk'
+Finished Parsing XDC File [D:/Sustech/2023 Spring/CS214 Computer Organizations/Project/CPU/CPU.runs/synth_1/.Xil/Vivado-11428-Haoson-PC/dcp4/clk_ip_in_context.xdc] for cell 'clock/inner_clk'
+Parsing XDC File [D:/Sustech/2023 Spring/CS214 Computer Organizations/Project/CPU/CPU.srcs/constrs_1/new/empty.xdc]
+Finished Parsing XDC File [D:/Sustech/2023 Spring/CS214 Computer Organizations/Project/CPU/CPU.srcs/constrs_1/new/empty.xdc]
 Completed Processing XDC Constraints
 
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.006 . Memory (MB): peak = 747.648 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 810.980 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:17 ; elapsed = 00:00:19 . Memory (MB): peak = 747.734 ; gain = 507.621
+Finished Constraint Validation : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 810.980 ; gain = 506.902
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a100tfgg484-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:17 ; elapsed = 00:00:19 . Memory (MB): peak = 747.734 ; gain = 507.621
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 810.980 ; gain = 506.902
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
-Applied set_property IO_BUFFER_TYPE = NONE for clk. (constraint file  C:/Users/Wiman/VivadoSaving/CPU/CPU.runs/synth_1/.Xil/Vivado-11944-LAPTOP-5FTFKB8F/dcp4/clk_ip_in_context.xdc, line 5).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for clk. (constraint file  C:/Users/Wiman/VivadoSaving/CPU/CPU.runs/synth_1/.Xil/Vivado-11944-LAPTOP-5FTFKB8F/dcp4/clk_ip_in_context.xdc, line 6).
+Applied set_property IO_BUFFER_TYPE = NONE for clk. (constraint file  {D:/Sustech/2023 Spring/CS214 Computer Organizations/Project/CPU/CPU.runs/synth_1/.Xil/Vivado-11428-Haoson-PC/dcp4/clk_ip_in_context.xdc}, line 5).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for clk. (constraint file  {D:/Sustech/2023 Spring/CS214 Computer Organizations/Project/CPU/CPU.runs/synth_1/.Xil/Vivado-11428-Haoson-PC/dcp4/clk_ip_in_context.xdc}, line 6).
 Applied set_property DONT_TOUCH = true for clock/inner_clk. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for ram/inner_ram. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for rom/inner_rom. (constraint file  auto generated constraint, line ).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:17 ; elapsed = 00:00:19 . Memory (MB): peak = 747.734 ; gain = 507.621
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 810.980 ; gain = 506.902
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-5546] ROM "reg_dst" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "branch" won't be mapped to RAM because it is too sparse
@@ -270,14 +271,14 @@ INFO: [Synth 8-5546] ROM "mem_read" won't be mapped to RAM because it is too spa
 INFO: [Synth 8-5546] ROM "mem_write" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "j" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "jal" won't be mapped to RAM because it is too sparse
-WARNING: [Synth 8-3936] Found unconnected internal register 'board_output_sig_reg' and it is trimmed from '32' to '8' bits. [C:/Users/Wiman/VivadoSaving/CPU/CPU.srcs/sources_1/new/RAM.v:62]
-WARNING: [Synth 8-3936] Found unconnected internal register 'board_output_data_reg' and it is trimmed from '32' to '8' bits. [C:/Users/Wiman/VivadoSaving/CPU/CPU.srcs/sources_1/new/RAM.v:60]
-WARNING: [Synth 8-327] inferring latch for variable 'out_reg' [C:/Users/Wiman/VivadoSaving/CPU/CPU.srcs/sources_1/new/ALU.v:68]
-WARNING: [Synth 8-327] inferring latch for variable 'equal_reg' [C:/Users/Wiman/VivadoSaving/CPU/CPU.srcs/sources_1/new/ALU.v:85]
-WARNING: [Synth 8-327] inferring latch for variable 'board_output_data_reg' [C:/Users/Wiman/VivadoSaving/CPU/CPU.srcs/sources_1/new/RAM.v:60]
-WARNING: [Synth 8-327] inferring latch for variable 'board_output_sig_reg' [C:/Users/Wiman/VivadoSaving/CPU/CPU.srcs/sources_1/new/RAM.v:62]
+WARNING: [Synth 8-3936] Found unconnected internal register 'board_output_sig_reg' and it is trimmed from '32' to '8' bits. [D:/Sustech/2023 Spring/CS214 Computer Organizations/Project/CPU/CPU.srcs/sources_1/new/RAM.v:62]
+WARNING: [Synth 8-3936] Found unconnected internal register 'board_output_data_reg' and it is trimmed from '32' to '8' bits. [D:/Sustech/2023 Spring/CS214 Computer Organizations/Project/CPU/CPU.srcs/sources_1/new/RAM.v:60]
+WARNING: [Synth 8-327] inferring latch for variable 'out_reg' [D:/Sustech/2023 Spring/CS214 Computer Organizations/Project/CPU/CPU.srcs/sources_1/new/ALU.v:68]
+WARNING: [Synth 8-327] inferring latch for variable 'equal_reg' [D:/Sustech/2023 Spring/CS214 Computer Organizations/Project/CPU/CPU.srcs/sources_1/new/ALU.v:85]
+WARNING: [Synth 8-327] inferring latch for variable 'board_output_data_reg' [D:/Sustech/2023 Spring/CS214 Computer Organizations/Project/CPU/CPU.srcs/sources_1/new/RAM.v:60]
+WARNING: [Synth 8-327] inferring latch for variable 'board_output_sig_reg' [D:/Sustech/2023 Spring/CS214 Computer Organizations/Project/CPU/CPU.srcs/sources_1/new/RAM.v:62]
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:17 ; elapsed = 00:00:19 . Memory (MB): peak = 747.734 ; gain = 507.621
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 810.980 ; gain = 506.902
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -388,7 +389,7 @@ WARNING: [Synth 8-3332] Sequential element (equal_reg) is unused and will be rem
 WARNING: [Synth 8-3332] Sequential element (equal_reg) is unused and will be removed from module ALU__4.
 WARNING: [Synth 8-3332] Sequential element (equal_reg) is unused and will be removed from module ALU.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:35 ; elapsed = 00:00:36 . Memory (MB): peak = 747.734 ; gain = 507.621
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:21 ; elapsed = 00:00:21 . Memory (MB): peak = 810.980 ; gain = 506.902
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -404,13 +405,13 @@ INFO: [Synth 8-5578] Moved timing constraint from pin 'clock/inner_clk/seg_clk' 
 INFO: [Synth 8-5578] Moved timing constraint from pin 'clock/inner_clk/uart_clk' to pin 'clock/inner_clk/bbstub_uart_clk/O'
 INFO: [Synth 8-5819] Moved 3 constraints on hierarchical pins to their respective driving/loading pins
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:44 ; elapsed = 00:00:45 . Memory (MB): peak = 835.297 ; gain = 595.184
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:28 ; elapsed = 00:00:29 . Memory (MB): peak = 898.176 ; gain = 594.098
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:44 ; elapsed = 00:00:46 . Memory (MB): peak = 862.027 ; gain = 621.914
+Finished Timing Optimization : Time (s): cpu = 00:00:29 ; elapsed = 00:00:29 . Memory (MB): peak = 926.711 ; gain = 622.633
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -423,7 +424,7 @@ Start Technology Mapping
 ---------------------------------------------------------------------------------
 WARNING: [Synth 8-3332] Sequential element (alu/equal_reg) is unused and will be removed from module main.
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:44 ; elapsed = 00:00:46 . Memory (MB): peak = 869.227 ; gain = 629.113
+Finished Technology Mapping : Time (s): cpu = 00:00:29 ; elapsed = 00:00:30 . Memory (MB): peak = 935.520 ; gain = 631.441
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -480,7 +481,7 @@ CRITICAL WARNING: [Synth 8-4442] BlackBox module \rom/inner_rom  has unconnected
 CRITICAL WARNING: [Synth 8-4442] BlackBox module \rom/inner_rom  has unconnected pin dina[1]
 CRITICAL WARNING: [Synth 8-4442] BlackBox module \rom/inner_rom  has unconnected pin dina[0]
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:45 ; elapsed = 00:00:47 . Memory (MB): peak = 869.227 ; gain = 629.113
+Finished IO Insertion : Time (s): cpu = 00:00:30 ; elapsed = 00:00:30 . Memory (MB): peak = 935.520 ; gain = 631.441
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -493,7 +494,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:45 ; elapsed = 00:00:47 . Memory (MB): peak = 869.227 ; gain = 629.113
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:30 ; elapsed = 00:00:30 . Memory (MB): peak = 935.520 ; gain = 631.441
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -505,25 +506,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:45 ; elapsed = 00:00:47 . Memory (MB): peak = 869.227 ; gain = 629.113
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:30 ; elapsed = 00:00:30 . Memory (MB): peak = 935.520 ; gain = 631.441
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:45 ; elapsed = 00:00:47 . Memory (MB): peak = 869.227 ; gain = 629.113
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:30 ; elapsed = 00:00:30 . Memory (MB): peak = 935.520 ; gain = 631.441
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:45 ; elapsed = 00:00:47 . Memory (MB): peak = 869.227 ; gain = 629.113
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:30 ; elapsed = 00:00:30 . Memory (MB): peak = 935.520 ; gain = 631.441
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:45 ; elapsed = 00:00:47 . Memory (MB): peak = 869.227 ; gain = 629.113
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:30 ; elapsed = 00:00:30 . Memory (MB): peak = 935.520 ; gain = 631.441
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -576,11 +577,11 @@ Report Instance Areas:
 |12    |    inner_alu3 |ALU_3    |    32|
 +------+---------------+---------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:45 ; elapsed = 00:00:47 . Memory (MB): peak = 869.227 ; gain = 629.113
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:30 ; elapsed = 00:00:30 . Memory (MB): peak = 935.520 ; gain = 631.441
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 33 critical warnings and 94 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:33 ; elapsed = 00:00:40 . Memory (MB): peak = 869.227 ; gain = 277.402
-Synthesis Optimization Complete : Time (s): cpu = 00:00:45 ; elapsed = 00:00:47 . Memory (MB): peak = 869.227 ; gain = 629.113
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:23 ; elapsed = 00:00:27 . Memory (MB): peak = 935.520 ; gain = 269.574
+Synthesis Optimization Complete : Time (s): cpu = 00:00:30 ; elapsed = 00:00:30 . Memory (MB): peak = 935.520 ; gain = 631.441
 INFO: [Project 1-571] Translating synthesized netlist
 INFO: [Netlist 29-17] Analyzing 177 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
@@ -591,10 +592,10 @@ INFO: [Project 1-111] Unisim Transformation Summary:
   LD => LDCE: 160 instances
 
 INFO: [Common 17-83] Releasing license: Synthesis
-55 Infos, 185 Warnings, 33 Critical Warnings and 0 Errors encountered.
+55 Infos, 186 Warnings, 33 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:48 ; elapsed = 00:00:51 . Memory (MB): peak = 869.227 ; gain = 639.113
-INFO: [Common 17-1381] The checkpoint 'C:/Users/Wiman/VivadoSaving/CPU/CPU.runs/synth_1/main.dcp' has been generated.
+synth_design: Time (s): cpu = 00:00:32 ; elapsed = 00:00:34 . Memory (MB): peak = 935.520 ; gain = 642.938
+INFO: [Common 17-1381] The checkpoint 'D:/Sustech/2023 Spring/CS214 Computer Organizations/Project/CPU/CPU.runs/synth_1/main.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file main_utilization_synth.rpt -pb main_utilization_synth.pb
-report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.042 . Memory (MB): peak = 869.227 ; gain = 0.000
-INFO: [Common 17-206] Exiting Vivado at Wed May 17 12:15:09 2023...
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.036 . Memory (MB): peak = 935.520 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Wed May 17 15:32:35 2023...

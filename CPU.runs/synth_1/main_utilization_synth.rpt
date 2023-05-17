@@ -1,8 +1,8 @@
 Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2017.4 (win64) Build 2086221 Fri Dec 15 20:55:39 MST 2017
-| Date         : Wed May 17 12:15:09 2023
-| Host         : LAPTOP-5FTFKB8F running 64-bit major release  (build 9200)
+| Date         : Wed May 17 15:32:35 2023
+| Host         : Haoson-PC running 64-bit major release  (build 9200)
 | Command      : report_utilization -file main_utilization_synth.rpt -pb main_utilization_synth.pb
 | Design       : main
 | Device       : 7a100tfgg484-1
