@@ -30,7 +30,7 @@ module RAM(
     output reg [31:0] read_data,
     input [7:0] in_num,
     input [3:0] in_case,
-    output [7:0] out_num,
+    output [31:0] out_num,
     output [7:0] out_sig
     );
     wire [31:0] ram_out;

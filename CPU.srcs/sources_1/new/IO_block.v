@@ -27,13 +27,14 @@ module IO_block(
     output [7:0] seg_op,
     output [7:0] seg_out,
     input rst,
+    input cpu_rst_butt,
     input mode_butt,
     input ack_butt,
     output [1:0] mode,
     output ack,
     output [7:0] board_input_data,
     output [3:0] board_input_case,
-    input [7:0] board_output_data,
+    input [31:0] board_output_data,
     input [7:0] board_output_sig
     );
 
@@ -44,6 +45,7 @@ module IO_block(
         .seg_op(seg_op),
         .seg_out(seg_out)
     );
+
 
     
 
