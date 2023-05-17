@@ -16,7 +16,7 @@ proc create_report { reportName command } {
     send_msg_id runtcl-5 warning "$msg"
   }
 }
-set_param synth.incrementalSynthesisCache {D:/Sustech/2023 Spring/CS214 Computer Organizations/Project/CPU/.Xil/Vivado-14792-Haoson-PC/incrSyn}
+set_param synth.incrementalSynthesisCache C:/Users/Wiman/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-9596-LAPTOP-5FTFKB8F/incrSyn
 set_msg_config -id {Synth 8-256} -limit 10000
 set_msg_config -id {Synth 8-638} -limit 10000
 create_project -in_memory -part xc7a100tfgg484-1
@@ -25,43 +25,41 @@ set_param project.singleFileAddWarning.threshold 0
 set_param project.compositeFile.enableAutoGeneration 0
 set_param synth.vivado.isSynthRun true
 set_msg_config -source 4 -id {IP_Flow 19-2162} -severity warning -new_severity info
-set_property webtalk.parent_dir {D:/Sustech/2023 Spring/CS214 Computer Organizations/Project/CPU/CPU.cache/wt} [current_project]
-set_property parent.project_path {D:/Sustech/2023 Spring/CS214 Computer Organizations/Project/CPU/CPU.xpr} [current_project]
+set_property webtalk.parent_dir C:/Users/Wiman/VivadoSaving/CPU/CPU.cache/wt [current_project]
+set_property parent.project_path C:/Users/Wiman/VivadoSaving/CPU/CPU.xpr [current_project]
 set_property XPM_LIBRARIES {XPM_CDC XPM_MEMORY} [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
-set_property ip_repo_paths {{d:/Sustech/2023 Spring/CS214 Computer Organizations/Project/CPU/file_saving/SEU_CSE_507_user_uart_bmpg_1.3}} [current_project]
-set_property ip_output_repo {d:/Sustech/2023 Spring/CS214 Computer Organizations/Project/CPU/CPU.cache/ip} [current_project]
+set_property ip_repo_paths c:/Users/Wiman/VivadoSaving/CPU/file_saving/SEU_CSE_507_user_uart_bmpg_1.3 [current_project]
+set_property ip_output_repo c:/Users/Wiman/VivadoSaving/CPU/CPU.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
 read_verilog -library xil_defaultlib {
-  {D:/Sustech/2023 Spring/CS214 Computer Organizations/Project/CPU/CPU.srcs/sources_1/new/ALU.v}
-  {D:/Sustech/2023 Spring/CS214 Computer Organizations/Project/CPU/CPU.srcs/sources_1/new/CTRL.v}
-  {D:/Sustech/2023 Spring/CS214 Computer Organizations/Project/CPU/CPU.srcs/sources_1/new/CXK.v}
-  {D:/Sustech/2023 Spring/CS214 Computer Organizations/Project/CPU/CPU.srcs/sources_1/new/Expander.v}
-  {D:/Sustech/2023 Spring/CS214 Computer Organizations/Project/CPU/CPU.srcs/sources_1/new/MUX.v}
-  {D:/Sustech/2023 Spring/CS214 Computer Organizations/Project/CPU/CPU.srcs/sources_1/new/PC.v}
-  {D:/Sustech/2023 Spring/CS214 Computer Organizations/Project/CPU/CPU.srcs/sources_1/new/PCctrl.v}
-  {D:/Sustech/2023 Spring/CS214 Computer Organizations/Project/CPU/CPU.srcs/sources_1/new/REG.v}
-  {D:/Sustech/2023 Spring/CS214 Computer Organizations/Project/CPU/CPU.srcs/sources_1/new/led_block.v}
-  {D:/Sustech/2023 Spring/CS214 Computer Organizations/Project/CPU/CPU.srcs/sources_1/new/seg_block.v}
-  {D:/Sustech/2023 Spring/CS214 Computer Organizations/Project/CPU/CPU.srcs/sources_1/new/test.v}
-  {D:/Sustech/2023 Spring/CS214 Computer Organizations/Project/CPU/CPU.srcs/sources_1/new/main.v}
-  {D:/Sustech/2023 Spring/CS214 Computer Organizations/Project/CPU/CPU.srcs/sources_1/new/ROM.v}
-  {D:/Sustech/2023 Spring/CS214 Computer Organizations/Project/CPU/CPU.srcs/sources_1/new/RAM.v}
-  {D:/Sustech/2023 Spring/CS214 Computer Organizations/Project/CPU/CPU.srcs/sources_1/new/SIMD_ALU.v}
+  C:/Users/Wiman/VivadoSaving/CPU/CPU.srcs/sources_1/new/ALU.v
+  C:/Users/Wiman/VivadoSaving/CPU/CPU.srcs/sources_1/new/CTRL.v
+  C:/Users/Wiman/VivadoSaving/CPU/CPU.srcs/sources_1/new/CXK.v
+  C:/Users/Wiman/VivadoSaving/CPU/CPU.srcs/sources_1/new/Expander.v
+  C:/Users/Wiman/VivadoSaving/CPU/CPU.srcs/sources_1/new/MUX.v
+  C:/Users/Wiman/VivadoSaving/CPU/CPU.srcs/sources_1/new/PC.v
+  C:/Users/Wiman/VivadoSaving/CPU/CPU.srcs/sources_1/new/PCctrl.v
+  C:/Users/Wiman/VivadoSaving/CPU/CPU.srcs/sources_1/new/REG.v
+  C:/Users/Wiman/VivadoSaving/CPU/CPU.srcs/sources_1/new/led_block.v
+  C:/Users/Wiman/VivadoSaving/CPU/CPU.srcs/sources_1/new/seg_block.v
+  C:/Users/Wiman/VivadoSaving/CPU/CPU.srcs/sources_1/new/test.v
+  C:/Users/Wiman/VivadoSaving/CPU/CPU.srcs/sources_1/new/main.v
+  C:/Users/Wiman/VivadoSaving/CPU/CPU.srcs/sources_1/new/ROM.v
+  C:/Users/Wiman/VivadoSaving/CPU/CPU.srcs/sources_1/new/RAM.v
+  C:/Users/Wiman/VivadoSaving/CPU/CPU.srcs/sources_1/new/SIMD_ALU.v
+  C:/Users/Wiman/VivadoSaving/CPU/CPU.srcs/sources_1/new/IO_block.v
 }
-read_ip -quiet {{D:/Sustech/2023 Spring/CS214 Computer Organizations/Project/CPU/CPU.srcs/sources_1/ip/ram_ip/ram_ip.xci}}
-set_property used_in_implementation false [get_files -all {{d:/Sustech/2023 Spring/CS214 Computer Organizations/Project/CPU/CPU.srcs/sources_1/ip/ram_ip/ram_ip_ooc.xdc}}]
+read_ip -quiet C:/Users/Wiman/VivadoSaving/CPU/CPU.srcs/sources_1/ip/ram_ip/ram_ip.xci
+set_property used_in_implementation false [get_files -all c:/Users/Wiman/VivadoSaving/CPU/CPU.srcs/sources_1/ip/ram_ip/ram_ip_ooc.xdc]
 
-read_ip -quiet {{D:/Sustech/2023 Spring/CS214 Computer Organizations/Project/CPU/CPU.srcs/sources_1/ip/rom_ip/rom_ip.xci}}
-set_property used_in_implementation false [get_files -all {{d:/Sustech/2023 Spring/CS214 Computer Organizations/Project/CPU/CPU.srcs/sources_1/ip/rom_ip/rom_ip_ooc.xdc}}]
+read_ip -quiet C:/Users/Wiman/VivadoSaving/CPU/CPU.srcs/sources_1/ip/clk_ip/clk_ip.xci
+set_property used_in_implementation false [get_files -all c:/Users/Wiman/VivadoSaving/CPU/CPU.srcs/sources_1/ip/clk_ip/clk_ip_board.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/Wiman/VivadoSaving/CPU/CPU.srcs/sources_1/ip/clk_ip/clk_ip.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/Wiman/VivadoSaving/CPU/CPU.srcs/sources_1/ip/clk_ip/clk_ip_ooc.xdc]
 
-read_ip -quiet {{D:/Sustech/2023 Spring/CS214 Computer Organizations/Project/CPU/CPU.srcs/sources_1/ip/clk_ip/clk_ip.xci}}
-set_property used_in_implementation false [get_files -all {{d:/Sustech/2023 Spring/CS214 Computer Organizations/Project/CPU/CPU.srcs/sources_1/ip/clk_ip/clk_ip_board.xdc}}]
-set_property used_in_implementation false [get_files -all {{d:/Sustech/2023 Spring/CS214 Computer Organizations/Project/CPU/CPU.srcs/sources_1/ip/clk_ip/clk_ip.xdc}}]
-set_property used_in_implementation false [get_files -all {{d:/Sustech/2023 Spring/CS214 Computer Organizations/Project/CPU/CPU.srcs/sources_1/ip/clk_ip/clk_ip_ooc.xdc}}]
-
-read_ip -quiet {{D:/Sustech/2023 Spring/CS214 Computer Organizations/Project/CPU/CPU.srcs/sources_1/ip/uart_bmpg_0/uart_bmpg_0.xci}}
+read_ip -quiet C:/Users/Wiman/VivadoSaving/CPU/CPU.srcs/sources_1/ip/uart_bmpg_0/uart_bmpg_0.xci
 
 # Mark all dcp files as not used in implementation to prevent them from being
 # stitched into the results of this synthesis run. Any black boxes in the
@@ -71,8 +69,8 @@ read_ip -quiet {{D:/Sustech/2023 Spring/CS214 Computer Organizations/Project/CPU
 foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
   set_property used_in_implementation false $dcp
 }
-read_xdc {{D:/Sustech/2023 Spring/CS214 Computer Organizations/Project/CPU/CPU.srcs/constrs_1/new/empty.xdc}}
-set_property used_in_implementation false [get_files {{D:/Sustech/2023 Spring/CS214 Computer Organizations/Project/CPU/CPU.srcs/constrs_1/new/empty.xdc}}]
+read_xdc C:/Users/Wiman/VivadoSaving/CPU/CPU.srcs/constrs_1/new/empty.xdc
+set_property used_in_implementation false [get_files C:/Users/Wiman/VivadoSaving/CPU/CPU.srcs/constrs_1/new/empty.xdc]
 
 
 synth_design -top main -part xc7a100tfgg484-1

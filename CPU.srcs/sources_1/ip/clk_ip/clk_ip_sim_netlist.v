@@ -1,10 +1,10 @@
 // Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2017.4 (win64) Build 2086221 Fri Dec 15 20:55:39 MST 2017
-// Date        : Mon Apr 24 15:16:27 2023
+// Date        : Wed May 17 11:45:50 2023
 // Host        : LAPTOP-5FTFKB8F running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode funcsim
-//               c:/Users/Wiman/VivadoSaving/CPU/CPU.srcs/sources_1/ip/clk_ip/clk_ip_sim_netlist.v
+//               C:/Users/Wiman/VivadoSaving/CPU/CPU.srcs/sources_1/ip/clk_ip/clk_ip_sim_netlist.v
 // Design      : clk_ip
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -16,28 +16,34 @@
 module clk_ip
    (cpu_clk,
     seg_clk,
+    uart_clk,
     clk_in1);
   output cpu_clk;
   output seg_clk;
+  output uart_clk;
   input clk_in1;
 
   (* IBUF_LOW_PWR *) wire clk_in1;
   wire cpu_clk;
   wire seg_clk;
+  wire uart_clk;
 
   clk_ip_clk_ip_clk_wiz inst
        (.clk_in1(clk_in1),
         .cpu_clk(cpu_clk),
-        .seg_clk(seg_clk));
+        .seg_clk(seg_clk),
+        .uart_clk(uart_clk));
 endmodule
 
 (* ORIG_REF_NAME = "clk_ip_clk_wiz" *) 
 module clk_ip_clk_ip_clk_wiz
    (cpu_clk,
     seg_clk,
+    uart_clk,
     clk_in1);
   output cpu_clk;
   output seg_clk;
+  output uart_clk;
   input clk_in1;
 
   wire clk_in1;
@@ -48,7 +54,8 @@ module clk_ip_clk_ip_clk_wiz
   wire cpu_clk_clk_ip;
   wire seg_clk;
   wire seg_clk_clk_ip;
-  wire NLW_plle2_adv_inst_CLKOUT2_UNCONNECTED;
+  wire uart_clk;
+  wire uart_clk_clk_ip;
   wire NLW_plle2_adv_inst_CLKOUT3_UNCONNECTED;
   wire NLW_plle2_adv_inst_CLKOUT4_UNCONNECTED;
   wire NLW_plle2_adv_inst_CLKOUT5_UNCONNECTED;
@@ -78,6 +85,10 @@ module clk_ip_clk_ip_clk_wiz
        (.I(seg_clk_clk_ip),
         .O(seg_clk));
   (* BOX_TYPE = "PRIMITIVE" *) 
+  BUFG clkout3_buf
+       (.I(uart_clk_clk_ip),
+        .O(uart_clk));
+  (* BOX_TYPE = "PRIMITIVE" *) 
   PLLE2_ADV #(
     .BANDWIDTH("OPTIMIZED"),
     .CLKFBOUT_MULT(23),
@@ -90,7 +101,7 @@ module clk_ip_clk_ip_clk_wiz
     .CLKOUT1_DIVIDE(23),
     .CLKOUT1_DUTY_CYCLE(0.500000),
     .CLKOUT1_PHASE(0.000000),
-    .CLKOUT2_DIVIDE(1),
+    .CLKOUT2_DIVIDE(115),
     .CLKOUT2_DUTY_CYCLE(0.500000),
     .CLKOUT2_PHASE(0.000000),
     .CLKOUT3_DIVIDE(1),
@@ -118,7 +129,7 @@ module clk_ip_clk_ip_clk_wiz
         .CLKINSEL(1'b1),
         .CLKOUT0(cpu_clk_clk_ip),
         .CLKOUT1(seg_clk_clk_ip),
-        .CLKOUT2(NLW_plle2_adv_inst_CLKOUT2_UNCONNECTED),
+        .CLKOUT2(uart_clk_clk_ip),
         .CLKOUT3(NLW_plle2_adv_inst_CLKOUT3_UNCONNECTED),
         .CLKOUT4(NLW_plle2_adv_inst_CLKOUT4_UNCONNECTED),
         .CLKOUT5(NLW_plle2_adv_inst_CLKOUT5_UNCONNECTED),

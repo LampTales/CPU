@@ -16,6 +16,9 @@ proc create_report { reportName command } {
     send_msg_id runtcl-5 warning "$msg"
   }
 }
+set_param synth.incrementalSynthesisCache C:/Users/Wiman/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-9596-LAPTOP-5FTFKB8F/incrSyn
+set_msg_config -id {Synth 8-256} -limit 10000
+set_msg_config -id {Synth 8-638} -limit 10000
 set_param project.vivado.isBlockSynthRun true
 set_msg_config -msgmgr_mode ooc_run
 create_project -in_memory -part xc7a100tfgg484-1
@@ -29,9 +32,10 @@ set_property parent.project_path C:/Users/Wiman/VivadoSaving/CPU/CPU.xpr [curren
 set_property XPM_LIBRARIES {XPM_CDC XPM_MEMORY} [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
+set_property ip_repo_paths c:/Users/Wiman/VivadoSaving/CPU/file_saving/SEU_CSE_507_user_uart_bmpg_1.3 [current_project]
 set_property ip_output_repo c:/Users/Wiman/VivadoSaving/CPU/CPU.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
-read_ip -quiet c:/Users/Wiman/VivadoSaving/CPU/CPU.srcs/sources_1/ip/clk_ip/clk_ip.xci
+read_ip -quiet C:/Users/Wiman/VivadoSaving/CPU/CPU.srcs/sources_1/ip/clk_ip/clk_ip.xci
 set_property used_in_implementation false [get_files -all c:/Users/Wiman/VivadoSaving/CPU/CPU.srcs/sources_1/ip/clk_ip/clk_ip_board.xdc]
 set_property used_in_implementation false [get_files -all c:/Users/Wiman/VivadoSaving/CPU/CPU.srcs/sources_1/ip/clk_ip/clk_ip.xdc]
 set_property used_in_implementation false [get_files -all c:/Users/Wiman/VivadoSaving/CPU/CPU.srcs/sources_1/ip/clk_ip/clk_ip_ooc.xdc]
@@ -86,32 +90,32 @@ write_checkpoint -force -noxdef clk_ip.dcp
 create_report "clk_ip_synth_1_synth_report_utilization_0" "report_utilization -file clk_ip_utilization_synth.rpt -pb clk_ip_utilization_synth.pb"
 
 if { [catch {
-  file copy -force C:/Users/Wiman/VivadoSaving/CPU/CPU.runs/clk_ip_synth_1/clk_ip.dcp c:/Users/Wiman/VivadoSaving/CPU/CPU.srcs/sources_1/ip/clk_ip/clk_ip.dcp
+  file copy -force C:/Users/Wiman/VivadoSaving/CPU/CPU.runs/clk_ip_synth_1/clk_ip.dcp C:/Users/Wiman/VivadoSaving/CPU/CPU.srcs/sources_1/ip/clk_ip/clk_ip.dcp
 } _RESULT ] } { 
   send_msg_id runtcl-3 error "ERROR: Unable to successfully create or copy the sub-design checkpoint file."
   error "ERROR: Unable to successfully create or copy the sub-design checkpoint file."
 }
 
 if { [catch {
-  write_verilog -force -mode synth_stub c:/Users/Wiman/VivadoSaving/CPU/CPU.srcs/sources_1/ip/clk_ip/clk_ip_stub.v
+  write_verilog -force -mode synth_stub C:/Users/Wiman/VivadoSaving/CPU/CPU.srcs/sources_1/ip/clk_ip/clk_ip_stub.v
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create a Verilog synthesis stub for the sub-design. This may lead to errors in top level synthesis of the design. Error reported: $_RESULT"
 }
 
 if { [catch {
-  write_vhdl -force -mode synth_stub c:/Users/Wiman/VivadoSaving/CPU/CPU.srcs/sources_1/ip/clk_ip/clk_ip_stub.vhdl
+  write_vhdl -force -mode synth_stub C:/Users/Wiman/VivadoSaving/CPU/CPU.srcs/sources_1/ip/clk_ip/clk_ip_stub.vhdl
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create a VHDL synthesis stub for the sub-design. This may lead to errors in top level synthesis of the design. Error reported: $_RESULT"
 }
 
 if { [catch {
-  write_verilog -force -mode funcsim c:/Users/Wiman/VivadoSaving/CPU/CPU.srcs/sources_1/ip/clk_ip/clk_ip_sim_netlist.v
+  write_verilog -force -mode funcsim C:/Users/Wiman/VivadoSaving/CPU/CPU.srcs/sources_1/ip/clk_ip/clk_ip_sim_netlist.v
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create the Verilog functional simulation sub-design file. Post-Synthesis Functional Simulation with this file may not be possible or may give incorrect results. Error reported: $_RESULT"
 }
 
 if { [catch {
-  write_vhdl -force -mode funcsim c:/Users/Wiman/VivadoSaving/CPU/CPU.srcs/sources_1/ip/clk_ip/clk_ip_sim_netlist.vhdl
+  write_vhdl -force -mode funcsim C:/Users/Wiman/VivadoSaving/CPU/CPU.srcs/sources_1/ip/clk_ip/clk_ip_sim_netlist.vhdl
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create the VHDL functional simulation sub-design file. Post-Synthesis Functional Simulation with this file may not be possible or may give incorrect results. Error reported: $_RESULT"
 }
@@ -121,32 +125,32 @@ if { [catch {
 
 
 if { [catch {
-  file copy -force C:/Users/Wiman/VivadoSaving/CPU/CPU.runs/clk_ip_synth_1/clk_ip.dcp c:/Users/Wiman/VivadoSaving/CPU/CPU.srcs/sources_1/ip/clk_ip/clk_ip.dcp
+  file copy -force C:/Users/Wiman/VivadoSaving/CPU/CPU.runs/clk_ip_synth_1/clk_ip.dcp C:/Users/Wiman/VivadoSaving/CPU/CPU.srcs/sources_1/ip/clk_ip/clk_ip.dcp
 } _RESULT ] } { 
   send_msg_id runtcl-3 error "ERROR: Unable to successfully create or copy the sub-design checkpoint file."
   error "ERROR: Unable to successfully create or copy the sub-design checkpoint file."
 }
 
 if { [catch {
-  file rename -force C:/Users/Wiman/VivadoSaving/CPU/CPU.runs/clk_ip_synth_1/clk_ip_stub.v c:/Users/Wiman/VivadoSaving/CPU/CPU.srcs/sources_1/ip/clk_ip/clk_ip_stub.v
+  file rename -force C:/Users/Wiman/VivadoSaving/CPU/CPU.runs/clk_ip_synth_1/clk_ip_stub.v C:/Users/Wiman/VivadoSaving/CPU/CPU.srcs/sources_1/ip/clk_ip/clk_ip_stub.v
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create a Verilog synthesis stub for the sub-design. This may lead to errors in top level synthesis of the design. Error reported: $_RESULT"
 }
 
 if { [catch {
-  file rename -force C:/Users/Wiman/VivadoSaving/CPU/CPU.runs/clk_ip_synth_1/clk_ip_stub.vhdl c:/Users/Wiman/VivadoSaving/CPU/CPU.srcs/sources_1/ip/clk_ip/clk_ip_stub.vhdl
+  file rename -force C:/Users/Wiman/VivadoSaving/CPU/CPU.runs/clk_ip_synth_1/clk_ip_stub.vhdl C:/Users/Wiman/VivadoSaving/CPU/CPU.srcs/sources_1/ip/clk_ip/clk_ip_stub.vhdl
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create a VHDL synthesis stub for the sub-design. This may lead to errors in top level synthesis of the design. Error reported: $_RESULT"
 }
 
 if { [catch {
-  file rename -force C:/Users/Wiman/VivadoSaving/CPU/CPU.runs/clk_ip_synth_1/clk_ip_sim_netlist.v c:/Users/Wiman/VivadoSaving/CPU/CPU.srcs/sources_1/ip/clk_ip/clk_ip_sim_netlist.v
+  file rename -force C:/Users/Wiman/VivadoSaving/CPU/CPU.runs/clk_ip_synth_1/clk_ip_sim_netlist.v C:/Users/Wiman/VivadoSaving/CPU/CPU.srcs/sources_1/ip/clk_ip/clk_ip_sim_netlist.v
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create the Verilog functional simulation sub-design file. Post-Synthesis Functional Simulation with this file may not be possible or may give incorrect results. Error reported: $_RESULT"
 }
 
 if { [catch {
-  file rename -force C:/Users/Wiman/VivadoSaving/CPU/CPU.runs/clk_ip_synth_1/clk_ip_sim_netlist.vhdl c:/Users/Wiman/VivadoSaving/CPU/CPU.srcs/sources_1/ip/clk_ip/clk_ip_sim_netlist.vhdl
+  file rename -force C:/Users/Wiman/VivadoSaving/CPU/CPU.runs/clk_ip_synth_1/clk_ip_sim_netlist.vhdl C:/Users/Wiman/VivadoSaving/CPU/CPU.srcs/sources_1/ip/clk_ip/clk_ip_sim_netlist.vhdl
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create the VHDL functional simulation sub-design file. Post-Synthesis Functional Simulation with this file may not be possible or may give incorrect results. Error reported: $_RESULT"
 }
@@ -155,12 +159,12 @@ if { [catch {
 
 if {[file isdir C:/Users/Wiman/VivadoSaving/CPU/CPU.ip_user_files/ip/clk_ip]} {
   catch { 
-    file copy -force c:/Users/Wiman/VivadoSaving/CPU/CPU.srcs/sources_1/ip/clk_ip/clk_ip_stub.v C:/Users/Wiman/VivadoSaving/CPU/CPU.ip_user_files/ip/clk_ip
+    file copy -force C:/Users/Wiman/VivadoSaving/CPU/CPU.srcs/sources_1/ip/clk_ip/clk_ip_stub.v C:/Users/Wiman/VivadoSaving/CPU/CPU.ip_user_files/ip/clk_ip
   }
 }
 
 if {[file isdir C:/Users/Wiman/VivadoSaving/CPU/CPU.ip_user_files/ip/clk_ip]} {
   catch { 
-    file copy -force c:/Users/Wiman/VivadoSaving/CPU/CPU.srcs/sources_1/ip/clk_ip/clk_ip_stub.vhdl C:/Users/Wiman/VivadoSaving/CPU/CPU.ip_user_files/ip/clk_ip
+    file copy -force C:/Users/Wiman/VivadoSaving/CPU/CPU.srcs/sources_1/ip/clk_ip/clk_ip_stub.vhdl C:/Users/Wiman/VivadoSaving/CPU/CPU.ip_user_files/ip/clk_ip
   }
 }

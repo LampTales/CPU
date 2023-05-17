@@ -27,7 +27,7 @@ module ROM(
     output [31:0] instruction
     );
 
-    rom_ip inner_rom(
+    ram_ip inner_rom(
         .addra(addr[17:2]),
         .clka(clk),
         .douta(instruction)
