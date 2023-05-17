@@ -58,6 +58,7 @@
 //----------------------------------------------------------------------------
 // _cpu_clk____23.000______0.000______50.0______196.402____158.301
 // _seg_clk____50.000______0.000______50.0______163.144____158.301
+// uart_clk____10.000______0.000______50.0______240.754____158.301
 //
 //----------------------------------------------------------------------------
 // Input Clock   Freq (MHz)    Input Jitter (UI)
@@ -72,6 +73,7 @@ module clk_ip_clk_wiz
   // Clock out ports
   output        cpu_clk,
   output        seg_clk,
+  output        uart_clk,
   input         clk_in1
  );
   // Input buffering
@@ -94,7 +96,7 @@ wire clk_in2_clk_ip;
 
   wire        cpu_clk_clk_ip;
   wire        seg_clk_clk_ip;
-  wire        clk_out3_clk_ip;
+  wire        uart_clk_clk_ip;
   wire        clk_out4_clk_ip;
   wire        clk_out5_clk_ip;
   wire        clk_out6_clk_ip;
@@ -107,7 +109,6 @@ wire clk_in2_clk_ip;
   wire        clkfbout_clk_ip;
   wire        clkfbout_buf_clk_ip;
   wire        clkfboutb_unused;
-   wire clkout2_unused;
    wire clkout3_unused;
    wire clkout4_unused;
   wire        clkout5_unused;
@@ -128,6 +129,9 @@ wire clk_in2_clk_ip;
     .CLKOUT1_DIVIDE       (23),
     .CLKOUT1_PHASE        (0.000),
     .CLKOUT1_DUTY_CYCLE   (0.500),
+    .CLKOUT2_DIVIDE       (115),
+    .CLKOUT2_PHASE        (0.000),
+    .CLKOUT2_DUTY_CYCLE   (0.500),
     .CLKIN1_PERIOD        (10.000))
   plle2_adv_inst
     // Output clocks
@@ -135,7 +139,7 @@ wire clk_in2_clk_ip;
     .CLKFBOUT            (clkfbout_clk_ip),
     .CLKOUT0             (cpu_clk_clk_ip),
     .CLKOUT1             (seg_clk_clk_ip),
-    .CLKOUT2             (clkout2_unused),
+    .CLKOUT2             (uart_clk_clk_ip),
     .CLKOUT3             (clkout3_unused),
     .CLKOUT4             (clkout4_unused),
     .CLKOUT5             (clkout5_unused),
@@ -180,6 +184,10 @@ wire clk_in2_clk_ip;
   BUFG clkout2_buf
    (.O   (seg_clk),
     .I   (seg_clk_clk_ip));
+
+  BUFG clkout3_buf
+   (.O   (uart_clk),
+    .I   (uart_clk_clk_ip));
 
 
 

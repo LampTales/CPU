@@ -3,8 +3,8 @@
 // Tool Version: Vivado v.2017.4 (win64) Build 2086221 Fri Dec 15 20:55:39 MST 2017
 // Date        : Wed May 17 11:45:50 2023
 // Host        : LAPTOP-5FTFKB8F running 64-bit major release  (build 9200)
-// Command     : write_verilog -force -mode funcsim
-//               C:/Users/Wiman/VivadoSaving/CPU/CPU.srcs/sources_1/ip/clk_ip/clk_ip_sim_netlist.v
+// Command     : write_verilog -force -mode funcsim -rename_top decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix -prefix
+//               decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ clk_ip_sim_netlist.v
 // Design      : clk_ip
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -13,7 +13,7 @@
 `timescale 1 ps / 1 ps
 
 (* NotValidForBitStream *)
-module clk_ip
+module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix
    (cpu_clk,
     seg_clk,
     uart_clk,
@@ -28,15 +28,14 @@ module clk_ip
   wire seg_clk;
   wire uart_clk;
 
-  clk_ip_clk_ip_clk_wiz inst
+  decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_clk_ip_clk_wiz inst
        (.clk_in1(clk_in1),
         .cpu_clk(cpu_clk),
         .seg_clk(seg_clk),
         .uart_clk(uart_clk));
 endmodule
 
-(* ORIG_REF_NAME = "clk_ip_clk_wiz" *) 
-module clk_ip_clk_ip_clk_wiz
+module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_clk_ip_clk_wiz
    (cpu_clk,
     seg_clk,
     uart_clk,

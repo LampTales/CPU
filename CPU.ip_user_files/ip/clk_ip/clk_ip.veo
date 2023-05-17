@@ -57,6 +57,7 @@
 //----------------------------------------------------------------------------
 // _cpu_clk____23.000______0.000______50.0______196.402____158.301
 // _seg_clk____50.000______0.000______50.0______163.144____158.301
+// uart_clk____10.000______0.000______50.0______240.754____158.301
 //
 //----------------------------------------------------------------------------
 // Input Clock   Freq (MHz)    Input Jitter (UI)
@@ -74,6 +75,7 @@
     // Clock out ports
     .cpu_clk(cpu_clk),     // output cpu_clk
     .seg_clk(seg_clk),     // output seg_clk
+    .uart_clk(uart_clk),     // output uart_clk
    // Clock in ports
     .clk_in1(clk_in1));      // input clk_in1
 // INST_TAG_END ------ End INSTANTIATION Template ---------

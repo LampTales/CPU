@@ -3,8 +3,8 @@
 -- Tool Version: Vivado v.2017.4 (win64) Build 2086221 Fri Dec 15 20:55:39 MST 2017
 -- Date        : Wed May 17 11:45:50 2023
 -- Host        : LAPTOP-5FTFKB8F running 64-bit major release  (build 9200)
--- Command     : write_vhdl -force -mode funcsim
---               C:/Users/Wiman/VivadoSaving/CPU/CPU.srcs/sources_1/ip/clk_ip/clk_ip_sim_netlist.vhdl
+-- Command     : write_vhdl -force -mode funcsim -rename_top decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix -prefix
+--               decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ clk_ip_sim_netlist.vhdl
 -- Design      : clk_ip
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -14,18 +14,16 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
-entity clk_ip_clk_ip_clk_wiz is
+entity decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_clk_ip_clk_wiz is
   port (
     cpu_clk : out STD_LOGIC;
     seg_clk : out STD_LOGIC;
     uart_clk : out STD_LOGIC;
     clk_in1 : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of clk_ip_clk_ip_clk_wiz : entity is "clk_ip_clk_wiz";
-end clk_ip_clk_ip_clk_wiz;
+end decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_clk_ip_clk_wiz;
 
-architecture STRUCTURE of clk_ip_clk_ip_clk_wiz is
+architecture STRUCTURE of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_clk_ip_clk_wiz is
   signal clk_in1_clk_ip : STD_LOGIC;
   signal clkfbout_buf_clk_ip : STD_LOGIC;
   signal clkfbout_clk_ip : STD_LOGIC;
@@ -142,7 +140,7 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
-entity clk_ip is
+entity decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix is
   port (
     cpu_clk : out STD_LOGIC;
     seg_clk : out STD_LOGIC;
@@ -150,12 +148,12 @@ entity clk_ip is
     clk_in1 : in STD_LOGIC
   );
   attribute NotValidForBitStream : boolean;
-  attribute NotValidForBitStream of clk_ip : entity is true;
-end clk_ip;
+  attribute NotValidForBitStream of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix : entity is true;
+end decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix;
 
-architecture STRUCTURE of clk_ip is
+architecture STRUCTURE of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix is
 begin
-inst: entity work.clk_ip_clk_ip_clk_wiz
+inst: entity work.decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_clk_ip_clk_wiz
      port map (
       clk_in1 => clk_in1,
       cpu_clk => cpu_clk,

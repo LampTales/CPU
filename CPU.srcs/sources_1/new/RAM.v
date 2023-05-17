@@ -27,12 +27,14 @@ module RAM(
     input mem_write,
     input [31:0] addr,
     input [31:0] write_data,
-    output [31:0] read_data,
+    output reg [31:0] read_data,
     input [7:0] in_num,
+    input [3:0] in_case,
     output [7:0] out_num,
-    output 
+    output [7:0] out_sig
     );
     wire [31:0] ram_out;
+    wire [31:0] ram_in;
     ram_ip inner_ram(
         .addra(addr[17:2]),
         .clka(clk),
@@ -41,9 +43,28 @@ module RAM(
         .wea(mem_write)
     );
 
-    wire [31:0] board_input;
-    assign board_input = in_num;
-    assign read_data = (addr == 32'b0000 0000 0000 0000 1111 1111 1111 0000) ? board_input : ram_out;
+    wire [31:0] board_input_data;
+    assign board_input_data = in_num;
+    wire [31:0] board_input_case;
+    assign board_input_case = in_case;
 
-    // todo: make mem_write branch
+    always@(*) begin
+        casex(addr)
+            32'b00000000000000001111111111110000: read_data = board_input_data;
+            32'b00000000000000001111111111110100: read_data = board_input_case;
+            default: read_data = ram_out;
+        endcase
+    end
+    
+    reg [31:0] board_output_data;
+    assign out_num = board_output_data;
+    reg [31:0] board_output_sig;
+    assign out_sig = board_output_sig;
+
+    always@(*) begin
+        casex(addr)
+           32'b00000000000000001111111111111000: board_output_data = (mem_write) ? write_data : board_output_data;
+           32'b00000000000000001111111111111100: board_output_sig = (mem_write) ? write_data : board_output_sig;
+        endcase
+    end
 endmodule

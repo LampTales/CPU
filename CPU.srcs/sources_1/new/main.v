@@ -23,6 +23,7 @@
 module main(
     input clk,
     input sysrst,
+    input [23:0] switch_in,
     output [23:0] led_out,
     output [7:0] seg_op,
     output [7:0] seg_out
