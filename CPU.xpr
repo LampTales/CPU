@@ -3,7 +3,7 @@
 <!--                                                         -->
 <!-- Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.   -->
 
-<Project Version="7" Minor="35" Path="C:/Users/Wiman/VivadoSaving/CPU/CPU.xpr">
+<Project Version="7" Minor="35" Path="C:/Users/ASUS/Desktop/materials/Pico/VivadoSaving/CPU/CPU.xpr">
   <DefaultLaunch Dir="$PRUNDIR"/>
   <Configuration>
     <Option Name="Id" Val="2b621ba031124e1aa740c31ca1f57363"/>
@@ -163,6 +163,13 @@
         </FileInfo>
       </File>
       <File Path="$PSRCDIR/sources_1/new/IO_block.v">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/new/button.v">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>

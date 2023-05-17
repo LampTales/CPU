@@ -3,9 +3,9 @@
 // Company: 
 // Engineer: 
 // 
-// Create Date: 2023/04/10 19:20:56
+// Create Date: 2023/05/17 14:29:28
 // Design Name: 
-// Module Name: seg_block
+// Module Name: button
 // Project Name: 
 // Target Devices: 
 // Tool Versions: 
@@ -20,13 +20,10 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module seg_block(
-    input clk,
-    input rst,
-    input [7:0] seg_in,
-    output [7:0] seg_op,
-    output [7:0] seg_out
+module button(
+    input button_raw,
+    output buttion_fix
     );
 
-    // todo: show the seg_in as a hexadecimal number
+    // todo: anti shake
 endmodule
