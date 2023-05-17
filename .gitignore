@@ -1,4 +1,7 @@
 .Xil
 vivado*.str
-vivado*.jou
-vivado*.log
+*.jou
+*.log
+*runs
+*cache
+*hw
