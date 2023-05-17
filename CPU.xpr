@@ -3,7 +3,7 @@
 <!--                                                         -->
 <!-- Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.   -->
 
-<Project Version="7" Minor="35" Path="D:/Sustech/2023 Spring/CS214 Computer Organizations/Project/CPU/CPU.xpr">
+<Project Version="7" Minor="35" Path="C:/Users/Wiman/VivadoSaving/CPU/CPU.xpr">
   <DefaultLaunch Dir="$PRUNDIR"/>
   <Configuration>
     <Option Name="Id" Val="2b621ba031124e1aa740c31ca1f57363"/>
