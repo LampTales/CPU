@@ -5,3 +5,4 @@ vivado*.str
 *runs
 *cache
 *hw
+*sim

@@ -23,6 +23,7 @@
 module IO_block(
     input [23:0] switch_in,
     output [23:0] led_out,
+    input pc_clk,
     input seg_clk,
     output [7:0] seg_op,
     output [7:0] seg_out,
@@ -34,7 +35,9 @@ module IO_block(
     output [7:0] board_input_data,
     output [3:0] board_input_case,
     input [7:0] board_output_data,
-    input [7:0] board_output_sig
+    input [7:0] board_output_sig,
+    // here are the bits for the hardware
+    input error
     );
 
     seg_block seg(
