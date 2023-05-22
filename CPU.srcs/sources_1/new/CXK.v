@@ -36,7 +36,8 @@ module CXK(
         .clk_in1(clk),
         .cpu_clk(cpu_clk),
         .seg_clk(seg_clk),
-        .uart_clk(uart_clk)
+        .uart_clk(uart_clk),
+        .icu_clk(icu_clk)
     );
     assign pc_clk = cpu_clk;
     assign ram_clk = cpu_clk;
