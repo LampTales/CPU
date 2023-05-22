@@ -39,7 +39,12 @@ module REG(
 
     always @(posedge clk or negedge rst) begin
         if (!rst) begin
-            save[1023:992] <= 0;
+            save[31:0] <= 0; // zero
+            save[29*32+31:29*32] <= 2'b00000000000000001111111100000000;
+
+        end
+
+        if (reg_write) begin
             
         end
     end
