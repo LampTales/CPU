@@ -72,28 +72,26 @@ J-type:
 */
 
 
-module CTRL(
-    input [5:0] op_code,
-    input [4:0] shamt_in,
-    input [5:0] func_code,
-    output [11:0] alu_op,
-    output [4:0] shamt_out,
-    output reg_dst,
-    output branch,
-    output nbranch,
-    output mem_read,
-    output mem_write,
-    output mem_to_reg,
-    output alu_src,
-    output reg_write,
-    output ignore,
-    output simd,
-    output j,
-    output jr,
-    output eret,
-    output jal
-    );
-    
+module CTRL(input [5:0] op_code,
+            input [4:0] shamt_in,
+            input [5:0] func_code,
+            output [11:0] alu_op,
+            output [4:0] shamt_out,
+            output reg_dst,
+            output branch,
+            output nbranch,
+            output mem_read,
+            output mem_write,
+            output mem_to_reg,
+            output alu_src,
+            output reg_write,
+            output ignore,
+            output simd,
+            output j,
+            output jr,
+            output jal,
+            output eret);
+
 /*
 control signals:
     ignore
