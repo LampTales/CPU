@@ -24,7 +24,7 @@ module ICU(input clk,
            input eret,
            input pc,
            input button,
-           output [31:0] out);
+           output reg [31:0] out);
     reg [1:0]need_interrupt;
     reg need_eret;
     reg exl;
@@ -48,15 +48,15 @@ module ICU(input clk,
         end
         else if (~exl)begin
             if (need_interrupt[0]) begin
-                need_interrupt[0] = 0
-                exl = 1
-                epc = pc+4
+                need_interrupt[0] = 0;
+                exl = 1;
+                epc = pc+4;
                 out <= handler;
             end
             else if (need_interrupt[1])begin
-                need_interrupt[1] = 0
-                exl = 1
-                epc = pc+4
+                need_interrupt[1] = 0;
+                exl = 1;
+                epc = pc+4;
                 out <= handler;
             end
         end
