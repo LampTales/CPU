@@ -50,8 +50,8 @@ module RAM(
 
     always@(*) begin
         casex(addr)
-            32'b00000000000000001111111111110000: read_data = board_input_data;
-            32'b00000000000000001111111111110100: read_data = board_input_case;
+            32'b00000000000000000011111111110000: read_data = board_input_data;
+            32'b00000000000000000011111111110100: read_data = board_input_case;
             default: read_data = ram_out;
         endcase
     end
@@ -63,8 +63,8 @@ module RAM(
 
     always@(*) begin
         casex(addr)
-           32'b00000000000000001111111111111000: board_output_data = (mem_write) ? write_data : board_output_data;
-           32'b00000000000000001111111111111100: board_output_sig = (mem_write) ? write_data : board_output_sig;
+           32'b00000000000000000011111111111000: board_output_data = (mem_write) ? write_data : board_output_data;
+           32'b00000000000000000011111111111100: board_output_sig = (mem_write) ? write_data : board_output_sig;
         endcase
     end
 endmodule

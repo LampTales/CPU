@@ -43,7 +43,7 @@ module REG(
         if (!rst) begin
             save[31:0] <= 0;  // $zero
             save[927:96] <= 0;  // common regs
-            save[959:928] <= 2'b00000000000000001111111100000000;  // $sp
+            save[959:928] <= 2'b00000000000000000011111100000000;  // $sp
 
         end
         else if(reg_write) begin
