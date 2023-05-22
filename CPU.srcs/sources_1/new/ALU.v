@@ -225,7 +225,7 @@ module ALU(
                 equal = in0 == in1 ? 32'b1 : 32'b0; 
                 errorcode = 8'b00;
             end//beq
-            
+
             BNE: begin 
                 out = 0;
                 equal = in0 == in1 ? 32'b1 : 32'b0; 
@@ -286,15 +286,6 @@ module ALU(
                 errorcode = 8'b0; 
             end
 
-        endcase
-    end
-
-    // error code
-    always @(*) begin
-        casex(alu_op)
-            DIV: errorcode = in1 == 0 ? 8'b10 : 8'b00;
-            ADD: errorcode = (in0[31] == in1[31] && out[31] != in0[31]) ? 8'b01 : 8'b00;
-            default: errorcode = 8'b00;
         endcase
     end
 
