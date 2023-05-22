@@ -123,6 +123,7 @@ module main(
         .jal(jal),
         .eret(eret)
     );
+    
     wire button;
     wire icu_out;
     ICU icu(
@@ -133,6 +134,7 @@ module main(
         .button(button),
         .out(icu_out)
     );
+
     reg [4:0] ra_addr = 31;
     wire [4:0] read0_select;
     MUX_5 read0_which_reg(

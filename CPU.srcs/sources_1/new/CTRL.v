@@ -179,5 +179,7 @@ control signals:
     assign ignore = (op_code == 6'b001100 || op_code == 6'b001101 || op_code == 6'b001110) ? 1'b1 : 1'b0;
 
     assign simd = (op_code == 6'b000000 && (func_code == 6'b001011 || func_code == 6'b001010)) ? 1'b1 : 1'b0;
+
+    // ICU return from wyr
     assign eret = (op_code ==6'b010000) ? 1'b1 : 1'b0;
 endmodule
