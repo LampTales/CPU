@@ -28,7 +28,8 @@ module CXK(
     output reg_clk,
     output pc_clk,
     output seg_clk,
-    output uart_clk
+    output uart_clk,
+    output icu_clk
     );
     wire cpu_clk;
     clk_ip inner_clk(

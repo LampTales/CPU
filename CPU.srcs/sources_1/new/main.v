@@ -42,6 +42,7 @@ module main(
     wire pc_clk;
     wire seg_clk;
     wire uart_clk;
+    wire icu_clk;
 
     wire cpu_rst;
     wire [1:0] mode;
@@ -55,7 +56,8 @@ module main(
         .reg_clk(reg_clk),
         .pc_clk(pc_clk),
         .seg_clk(seg_clk),
-        .uart_clk(uart_clk)
+        .uart_clk(uart_clk),
+        .icu_clk(icu_clk)
     );
 
     wire [31:0] pc_next;
@@ -97,6 +99,7 @@ module main(
     wire j;
     wire jr;
     wire jal;
+    wire eret;
     CTRL ctrl(
         .op_code(instruction[31:26]),
         .shamt_in(instruction[10:6]),
@@ -115,9 +118,19 @@ module main(
         .simd(simd),
         .j(j),
         .jr(jr),
-        .jal(jal)
+        .jal(jal),
+        .eret(eret)
     );
-
+    wire button;
+    wire icu_out;
+    ICU icu(
+        .clk(icu_clk),
+        .rst(rst),
+        .eret(eret),
+        .pc(pc_value),
+        .button(button),
+        .out(icu_out)
+    );
     reg [4:0] ra_addr = 31;
     wire [4:0] read0_select;
     MUX_5 read0_which_reg(
@@ -235,6 +248,7 @@ module main(
         .expand_imme(expand_imme),
         .jr(jr),
         .ra(reg_read_data0),
+        .interrupt_handler(icu_out),
         .link_addr(link_addr),
         .next(pc_next)
     );
