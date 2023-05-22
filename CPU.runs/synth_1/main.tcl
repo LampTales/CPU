@@ -48,6 +48,7 @@ read_verilog -library xil_defaultlib {
   C:/Users/Wiman/VivadoSaving/CPU/CPU.srcs/sources_1/new/SIMD_ALU.v
   C:/Users/Wiman/VivadoSaving/CPU/CPU.srcs/sources_1/new/IO_block.v
   C:/Users/Wiman/VivadoSaving/CPU/CPU.srcs/sources_1/new/button.v
+  C:/Users/Wiman/VivadoSaving/CPU/CPU.srcs/sources_1/new/ICU.v
 }
 read_ip -quiet C:/Users/Wiman/VivadoSaving/CPU/CPU.srcs/sources_1/ip/ram_ip/ram_ip.xci
 set_property used_in_implementation false [get_files -all c:/Users/Wiman/VivadoSaving/CPU/CPU.srcs/sources_1/ip/ram_ip/ram_ip_ooc.xdc]

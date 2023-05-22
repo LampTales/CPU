@@ -24,7 +24,7 @@ module ICU(input clk,
            input eret,
            input pc,
            input button,
-           output reg[31:0] out);
+           output reg [31:0] out);
     reg [1:0]need_interrupt;
     reg need_eret;
     reg exl;

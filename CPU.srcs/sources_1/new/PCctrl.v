@@ -32,9 +32,10 @@ module PCctrl(
     input [31:0] expand_imme,
     input jr,
     input [31:0] ra,
-    input[31:0] interrupt_handler,
     output [31:0] link_addr,
-    output [31:0] next
+    output [31:0] next,
+
+    input[31:0] interrupt_handler
     );
     wire [31:0] pc_add_4_dest;
     assign pc_add_4_dest = pc + 4;
@@ -77,6 +78,8 @@ module PCctrl(
         .out(mux2_out)
     );
 
-    assign next = interrupt_handler==0? mux2_out:interrupt_handler;
+    assign next = mux2_out;
+    // ICU interrupt
+    // assign next = (interrupt_handler==0) ? mux2_out : interrupt_handler;
 
 endmodule
