@@ -33,7 +33,10 @@ module PC(
         if (!rst) begin
             pc <= 0; // should be the start address of the instructions !!!
         end
-        pc <= next;
+        else begin
+            pc <= next;
+        end
+        
     end
 
     assign out = pc;

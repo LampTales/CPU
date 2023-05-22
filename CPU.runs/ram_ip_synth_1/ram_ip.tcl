@@ -26,12 +26,13 @@ set_param synth.vivado.isSynthRun true
 set_msg_config -source 4 -id {IP_Flow 19-2162} -severity warning -new_severity info
 set_property webtalk.parent_dir C:/Users/Wiman/VivadoSaving/CPU/CPU.cache/wt [current_project]
 set_property parent.project_path C:/Users/Wiman/VivadoSaving/CPU/CPU.xpr [current_project]
-set_property XPM_LIBRARIES XPM_MEMORY [current_project]
+set_property XPM_LIBRARIES {XPM_CDC XPM_MEMORY} [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
+set_property ip_repo_paths c:/Users/Wiman/VivadoSaving/CPU/file_saving/SEU_CSE_507_user_uart_bmpg_1.3 [current_project]
 set_property ip_output_repo c:/Users/Wiman/VivadoSaving/CPU/CPU.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
-read_ip -quiet c:/Users/Wiman/VivadoSaving/CPU/CPU.srcs/sources_1/ip/ram_ip/ram_ip.xci
+read_ip -quiet C:/Users/Wiman/VivadoSaving/CPU/CPU.srcs/sources_1/ip/ram_ip/ram_ip.xci
 set_property used_in_implementation false [get_files -all c:/Users/Wiman/VivadoSaving/CPU/CPU.srcs/sources_1/ip/ram_ip/ram_ip_ooc.xdc]
 
 # Mark all dcp files as not used in implementation to prevent them from being
@@ -84,32 +85,32 @@ write_checkpoint -force -noxdef ram_ip.dcp
 create_report "ram_ip_synth_1_synth_report_utilization_0" "report_utilization -file ram_ip_utilization_synth.rpt -pb ram_ip_utilization_synth.pb"
 
 if { [catch {
-  file copy -force C:/Users/Wiman/VivadoSaving/CPU/CPU.runs/ram_ip_synth_1/ram_ip.dcp c:/Users/Wiman/VivadoSaving/CPU/CPU.srcs/sources_1/ip/ram_ip/ram_ip.dcp
+  file copy -force C:/Users/Wiman/VivadoSaving/CPU/CPU.runs/ram_ip_synth_1/ram_ip.dcp C:/Users/Wiman/VivadoSaving/CPU/CPU.srcs/sources_1/ip/ram_ip/ram_ip.dcp
 } _RESULT ] } { 
   send_msg_id runtcl-3 error "ERROR: Unable to successfully create or copy the sub-design checkpoint file."
   error "ERROR: Unable to successfully create or copy the sub-design checkpoint file."
 }
 
 if { [catch {
-  write_verilog -force -mode synth_stub c:/Users/Wiman/VivadoSaving/CPU/CPU.srcs/sources_1/ip/ram_ip/ram_ip_stub.v
+  write_verilog -force -mode synth_stub C:/Users/Wiman/VivadoSaving/CPU/CPU.srcs/sources_1/ip/ram_ip/ram_ip_stub.v
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create a Verilog synthesis stub for the sub-design. This may lead to errors in top level synthesis of the design. Error reported: $_RESULT"
 }
 
 if { [catch {
-  write_vhdl -force -mode synth_stub c:/Users/Wiman/VivadoSaving/CPU/CPU.srcs/sources_1/ip/ram_ip/ram_ip_stub.vhdl
+  write_vhdl -force -mode synth_stub C:/Users/Wiman/VivadoSaving/CPU/CPU.srcs/sources_1/ip/ram_ip/ram_ip_stub.vhdl
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create a VHDL synthesis stub for the sub-design. This may lead to errors in top level synthesis of the design. Error reported: $_RESULT"
 }
 
 if { [catch {
-  write_verilog -force -mode funcsim c:/Users/Wiman/VivadoSaving/CPU/CPU.srcs/sources_1/ip/ram_ip/ram_ip_sim_netlist.v
+  write_verilog -force -mode funcsim C:/Users/Wiman/VivadoSaving/CPU/CPU.srcs/sources_1/ip/ram_ip/ram_ip_sim_netlist.v
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create the Verilog functional simulation sub-design file. Post-Synthesis Functional Simulation with this file may not be possible or may give incorrect results. Error reported: $_RESULT"
 }
 
 if { [catch {
-  write_vhdl -force -mode funcsim c:/Users/Wiman/VivadoSaving/CPU/CPU.srcs/sources_1/ip/ram_ip/ram_ip_sim_netlist.vhdl
+  write_vhdl -force -mode funcsim C:/Users/Wiman/VivadoSaving/CPU/CPU.srcs/sources_1/ip/ram_ip/ram_ip_sim_netlist.vhdl
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create the VHDL functional simulation sub-design file. Post-Synthesis Functional Simulation with this file may not be possible or may give incorrect results. Error reported: $_RESULT"
 }
@@ -119,32 +120,32 @@ if { [catch {
 
 
 if { [catch {
-  file copy -force C:/Users/Wiman/VivadoSaving/CPU/CPU.runs/ram_ip_synth_1/ram_ip.dcp c:/Users/Wiman/VivadoSaving/CPU/CPU.srcs/sources_1/ip/ram_ip/ram_ip.dcp
+  file copy -force C:/Users/Wiman/VivadoSaving/CPU/CPU.runs/ram_ip_synth_1/ram_ip.dcp C:/Users/Wiman/VivadoSaving/CPU/CPU.srcs/sources_1/ip/ram_ip/ram_ip.dcp
 } _RESULT ] } { 
   send_msg_id runtcl-3 error "ERROR: Unable to successfully create or copy the sub-design checkpoint file."
   error "ERROR: Unable to successfully create or copy the sub-design checkpoint file."
 }
 
 if { [catch {
-  file rename -force C:/Users/Wiman/VivadoSaving/CPU/CPU.runs/ram_ip_synth_1/ram_ip_stub.v c:/Users/Wiman/VivadoSaving/CPU/CPU.srcs/sources_1/ip/ram_ip/ram_ip_stub.v
+  file rename -force C:/Users/Wiman/VivadoSaving/CPU/CPU.runs/ram_ip_synth_1/ram_ip_stub.v C:/Users/Wiman/VivadoSaving/CPU/CPU.srcs/sources_1/ip/ram_ip/ram_ip_stub.v
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create a Verilog synthesis stub for the sub-design. This may lead to errors in top level synthesis of the design. Error reported: $_RESULT"
 }
 
 if { [catch {
-  file rename -force C:/Users/Wiman/VivadoSaving/CPU/CPU.runs/ram_ip_synth_1/ram_ip_stub.vhdl c:/Users/Wiman/VivadoSaving/CPU/CPU.srcs/sources_1/ip/ram_ip/ram_ip_stub.vhdl
+  file rename -force C:/Users/Wiman/VivadoSaving/CPU/CPU.runs/ram_ip_synth_1/ram_ip_stub.vhdl C:/Users/Wiman/VivadoSaving/CPU/CPU.srcs/sources_1/ip/ram_ip/ram_ip_stub.vhdl
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create a VHDL synthesis stub for the sub-design. This may lead to errors in top level synthesis of the design. Error reported: $_RESULT"
 }
 
 if { [catch {
-  file rename -force C:/Users/Wiman/VivadoSaving/CPU/CPU.runs/ram_ip_synth_1/ram_ip_sim_netlist.v c:/Users/Wiman/VivadoSaving/CPU/CPU.srcs/sources_1/ip/ram_ip/ram_ip_sim_netlist.v
+  file rename -force C:/Users/Wiman/VivadoSaving/CPU/CPU.runs/ram_ip_synth_1/ram_ip_sim_netlist.v C:/Users/Wiman/VivadoSaving/CPU/CPU.srcs/sources_1/ip/ram_ip/ram_ip_sim_netlist.v
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create the Verilog functional simulation sub-design file. Post-Synthesis Functional Simulation with this file may not be possible or may give incorrect results. Error reported: $_RESULT"
 }
 
 if { [catch {
-  file rename -force C:/Users/Wiman/VivadoSaving/CPU/CPU.runs/ram_ip_synth_1/ram_ip_sim_netlist.vhdl c:/Users/Wiman/VivadoSaving/CPU/CPU.srcs/sources_1/ip/ram_ip/ram_ip_sim_netlist.vhdl
+  file rename -force C:/Users/Wiman/VivadoSaving/CPU/CPU.runs/ram_ip_synth_1/ram_ip_sim_netlist.vhdl C:/Users/Wiman/VivadoSaving/CPU/CPU.srcs/sources_1/ip/ram_ip/ram_ip_sim_netlist.vhdl
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create the VHDL functional simulation sub-design file. Post-Synthesis Functional Simulation with this file may not be possible or may give incorrect results. Error reported: $_RESULT"
 }
@@ -153,12 +154,12 @@ if { [catch {
 
 if {[file isdir C:/Users/Wiman/VivadoSaving/CPU/CPU.ip_user_files/ip/ram_ip]} {
   catch { 
-    file copy -force c:/Users/Wiman/VivadoSaving/CPU/CPU.srcs/sources_1/ip/ram_ip/ram_ip_stub.v C:/Users/Wiman/VivadoSaving/CPU/CPU.ip_user_files/ip/ram_ip
+    file copy -force C:/Users/Wiman/VivadoSaving/CPU/CPU.srcs/sources_1/ip/ram_ip/ram_ip_stub.v C:/Users/Wiman/VivadoSaving/CPU/CPU.ip_user_files/ip/ram_ip
   }
 }
 
 if {[file isdir C:/Users/Wiman/VivadoSaving/CPU/CPU.ip_user_files/ip/ram_ip]} {
   catch { 
-    file copy -force c:/Users/Wiman/VivadoSaving/CPU/CPU.srcs/sources_1/ip/ram_ip/ram_ip_stub.vhdl C:/Users/Wiman/VivadoSaving/CPU/CPU.ip_user_files/ip/ram_ip
+    file copy -force C:/Users/Wiman/VivadoSaving/CPU/CPU.srcs/sources_1/ip/ram_ip/ram_ip_stub.vhdl C:/Users/Wiman/VivadoSaving/CPU/CPU.ip_user_files/ip/ram_ip
   }
 }
