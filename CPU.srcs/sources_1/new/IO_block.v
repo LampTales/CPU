@@ -93,13 +93,20 @@ module IO_block(
         .output_button(ack)
     );
 
-    assign inner_cpu_rst = cpu_rst | !rst;
+    assign inner_cpu_rst = rst | !cpu_rst;
     reg [7:0] error;
-    always@(errorcode) begin
-        if (errorcode != 0 && errorcode != error) begin
+    always@(errorcode, inner_cpu_rst) begin
+        if (!inner_cpu_rst) begin
+            error = 0;
+        end
+        else if (errorcode != 0 && errorcode != error) begin
             error = errorcode;
         end
     end
+
+    assign led_out[23:16] = board_output_sig[7:0];
+    assign led_out[15:8] = error[7:0];
+    assign led_out[7:0] = 0;
     
     
 

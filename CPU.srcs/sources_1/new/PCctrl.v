@@ -79,7 +79,7 @@ module PCctrl(
     );
 
     assign next = mux2_out;
-    // ICU interrupt
+    // ICU interrupt from WYR
     // assign next = (interrupt_handler==0) ? mux2_out : interrupt_handler;
 
 endmodule

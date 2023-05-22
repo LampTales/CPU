@@ -23,9 +23,9 @@
 module main(
     input clk,
     input sysrst,
-    input cpu_rst_butt,
     input mode_butt,
     input ack_butt,
+    input cpu_rst_butt,
     input [23:0] switch_in,
     output [23:0] led_out,
     output [7:0] seg_op,
