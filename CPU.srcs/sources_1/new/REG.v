@@ -94,7 +94,7 @@ module REG(
         case(read0)
             0: read_data0 = save[31:0];
             1: read_data0 = save[63:32];
-            2: read_data0 = save[95:64];
+            2: read_data0 = ack_v0;
             3: read_data0 = save[127:96];
             4: read_data0 = save[159:128];
             5: read_data0 = save[191:160];
@@ -131,7 +131,7 @@ module REG(
         case(read1) 
             0: read_data1 = save[31:0];
             1: read_data1 = save[63:32];
-            2: read_data1 = save[95:64];
+            2: read_data1 = ack_v0;
             3: read_data1 = save[127:96];
             4: read_data1 = save[159:128];
             5: read_data1 = save[191:160];
