@@ -106,153 +106,183 @@ module ALU(
 
             SLL: begin 
                 out = in0 << shamt; 
+                equal = 0;
                 errorcode = 8'b00;
             end//sll
 
             SRL: begin 
                 out = in0 >> shamt; 
+                equal = 0;
                 errorcode = 8'b00;
             end//srl
 
             SLLV: begin 
                 out = in0 << in1; 
+                equal = 0;
                 errorcode = 8'b00;
             end//sllv
 
             SRLV: begin 
                 out = in0 >> in1; 
+                equal = 0;
                 errorcode = 8'b00;
             end//srlv
 
             SRA: begin 
                 out = $signed(in0) >>> shamt; 
+                equal = 0;
                 errorcode = 8'b00;
             end//sra
 
             SRAV: begin 
                 out = $signed(in0) >>> in1; 
+                equal = 0;
                 errorcode = 8'b00;
             end//srav
 
             MULT: begin 
                 out = in0 * in1; 
+                equal = 0;
                 errorcode = 8'b00;
             end//mult
 
             DIV: begin 
                 if (in1 == 0) begin 
                     out = 32'b0; 
+                    equal = 0;
                     errorcode = 8'b10; 
                 end
                 else begin 
                     out[31:16] = in0 / in1; 
                     out[15:0] = in0 % in1; 
+                equal = 0;
                     errorcode = 8'b00; 
                 end
             end//div
 
             ADD: begin 
                 out = in0 + in1; 
+                equal = 0;
                 errorcode = (in0[31] == in1[31] && out[31] != in0[31]) ? 8'b01 : 8'b00; 
             end//add
 
             ADDU: begin 
                 out = in0 + in1; 
+                equal = 0;
                 errorcode = 8'b00;
             end//addu
 
             SUB: begin 
                 out = in0 - in1; 
+                equal = 0;
                 errorcode = (in0[31] != in1[31] && out[31] != in0[31]) ? 8'b01 : 8'b00; 
             end//sub
 
             SUBU: begin 
                 out = in0 - in1; 
+                equal = 0;
                 errorcode = 8'b00;
             end//subu
 
             AND: begin 
                 out = in0 & in1; 
+                equal = 0;
                 errorcode = 8'b00;
             end//and
 
             OR: begin 
                 out = in0 | in1; 
+                equal = 0;
                 errorcode = 8'b00;
             end//or
 
             XOR: begin 
                 out = in0 ^ in1; 
+                equal = 0;
                 errorcode = 8'b00;
             end//xor
 
             NOR: begin 
                 out = ~(in0 | in1); 
+                equal = 0;
                 errorcode = 8'b00;
             end//nor
 
             SLT: begin 
                 out = $signed(in0) < $signed(in1); 
+                equal = 0;
                 errorcode = 8'b00;
             end//slt
 
             SLTU: begin 
                 out = in0 < in1; 
+                equal = 0;
                 errorcode = 8'b00;
             end//sltu
 
             BEQ: begin 
+                out = 0;
                 equal = in0 == in1 ? 32'b1 : 32'b0; 
                 errorcode = 8'b00;
             end//beq
             
             BNE: begin 
+                out = 0;
                 equal = in0 == in1 ? 32'b1 : 32'b0; 
                 errorcode = 8'b00;
             end//bne
 
             ADDI: begin 
                 out = in0 + $signed({16'b0, in1}); 
+                equal = 0;
                 errorcode = (in0[31] == {16'b0, in1}[31] && out[31] != in0[31]) ? 8'b01 : 8'b00;
             end//addi
 
             ADDIU: begin 
                 out = in0 + {16'b0, in1}; 
+                equal = 0;
                 errorcode = 8'b00;
             end//addiu
 
             SLTI: begin 
                 out = $signed(in0) < $signed({16'b0, in1}); 
+                equal = 0;
                 errorcode = 8'b00;
             end//slti
 
             SLTIU: begin 
                 out = in0 < {16'b0, in1}; 
+                equal = 0;
                 errorcode = 8'b00;
             end//sltiu
 
             ANDI: begin 
                 out = in0 & {16'b0, in1}; 
+                equal = 0;
                 errorcode = 8'b00;
             end//andi
 
             ORI: begin 
                 out = in0 | {16'b0, in1}; 
+                equal = 0;
                 errorcode = 8'b00;
             end//ori
 
             XORI: begin 
                 out = in0 ^ {16'b0, in1}; 
+                equal = 0;
                 errorcode = 8'b00;
             end//xori
 
             LUI: begin 
                 out = {16'b0, in1}; 
+                equal = 0;
                 errorcode = 8'b00;
             end//lui
 
             default: begin 
                 out = 32'b0; 
+                equal = 0;
                 errorcode = 8'b0; 
             end
 
