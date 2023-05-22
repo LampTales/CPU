@@ -60,8 +60,8 @@ J-type:
 SIMD-type:
       adds   000000          001011
       subs   000000          001010
-
-
+CPU-ctrl:
+      eret   010000          xxxxxx
 R-type:
     opcode(6 bits) | rs(5 bits) | rt(5 bits) | rd(5 bits) | shamt(5 bits) | funct(6 bits)
 I-type:
@@ -90,6 +90,7 @@ module CTRL(
     output simd,
     output j,
     output jr,
+    output eret,
     output jal
     );
     
@@ -180,4 +181,5 @@ control signals:
     assign ignore = (op_code == 6'b001100 || op_code == 6'b001101 || op_code == 6'b001110) ? 1'b1 : 1'b0;
 
     assign simd = (op_code == 6'b000000 && (func_code == 6'b001011 || func_code == 6'b001010)) ? 1'b1 : 1'b0;
+    assign eret = (op_code ==6'b010000) ? 1'b1 : 1'b0;
 endmodule
