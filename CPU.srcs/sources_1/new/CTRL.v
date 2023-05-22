@@ -72,25 +72,32 @@ J-type:
 */
 
 
-module CTRL(input [5:0] op_code,
-            input [4:0] shamt_in,
-            input [5:0] func_code,
-            output [11:0] alu_op,
-            output [4:0] shamt_out,
-            output reg_dst,
-            output branch,
-            output nbranch,
-            output mem_read,
-            output mem_write,
-            output mem_to_reg,
-            output alu_src,
-            output reg_write,
-            output ignore,
-            output simd,
-            output j,
-            output jr,
-            output jal,
-            output eret);
+module CTRL(
+    input [5:0] op_code,
+    input [4:0] shamt_in,
+    input [5:0] func_code,
+    output [11:0] alu_op,
+    output [4:0] shamt_out,
+    output reg_dst,
+    output branch,
+    output nbranch,
+    output mem_read,
+    output mem_write,
+    output mem_to_reg,
+    output alu_src,
+    output reg_write,
+    output ignore,
+    output simd,
+    output j,
+    output jr,
+    output jal,
+    output eret
+    );
+
+
+    assign alu_op[11:0] = {op_code[5:0], func_code[5:0]};
+
+    assign shamt_out = shamt_in;
 
 /*
 control signals:
@@ -152,7 +159,7 @@ control signals:
     sw, beq, bne: 0
     others: 1
 */
-    assign reg_write = (op_code == 6'b100011 || op_code == 6'b000100 || op_code == 6'b000101) ? 1'b0 : 1'b1;
+    assign reg_write = (op_code == 6'b100011 || op_code == 6'b000100 || op_code == 6'b000101) ? 1'b1 : 1'b0;
 
 /*
     j:
