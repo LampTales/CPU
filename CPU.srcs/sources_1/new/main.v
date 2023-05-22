@@ -43,9 +43,11 @@ module main(
     wire seg_clk;
     wire uart_clk;
 
-    wire cpu_rst;
+    wire cpu_rst_out;
     wire [1:0] mode;
     wire ack;
+
+    wire cpu_rst = cpu_rst_out | !rst;
 
     CXK clock(
         .clk(clk),
@@ -62,7 +64,7 @@ module main(
     wire [31:0] pc_value;
     PC pc_counter(
         .clk(pc_clk),
-        .rst(rst),
+        .rst(cpu_rst),
         .next(pc_next),
         .out(pc_value)
     );
@@ -70,7 +72,7 @@ module main(
     wire [31:0] instruction;
     ROM rom(
         .clk(rom_clk),
-        .rst(rst),
+        .rst(cpu_rst),
         .addr(pc_value),
         .instruction(instruction)
     );
@@ -149,7 +151,7 @@ module main(
     wire [127:0] simd_reg_read_data1;
     REG reg_file(
         .clk(reg_clk),
-        .rst(rst),
+        .rst(cpu_rst),
         .read0(read0_select),
         .read1(instruction[20:16]),
         .write(write_select1),
@@ -160,8 +162,7 @@ module main(
         .read_data0(reg_read_data0),
         .read_data1(reg_read_data1),
         .simd_read_data0(simd_reg_read_data0),
-        .simd_read_data1(simd_reg_read_data1),
-        .div(div)
+        .simd_read_data1(simd_reg_read_data1)
     );
 
     wire [31:0] data_to_alu_select;
@@ -197,7 +198,7 @@ module main(
     wire [7:0] out_sig;
     RAM ram(
         .clk(ram_clk),
-        .rst(rst),
+        .rst(cpu_rst),
         .mem_read(mem_read),
         .mem_write(mem_write),
         .addr(alu_result),
@@ -250,7 +251,7 @@ module main(
         .cpu_rst_butt(cpu_rst_butt),
         .mode_butt(mode_butt),
         .ack_butt(ack_butt),
-        .cpu_rst(cpu_rst),
+        .cpu_rst(cpu_rst_out),
         .mode(mode),
         .ack(ack),
         .board_input_data(in_num),

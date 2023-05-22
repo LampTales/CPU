@@ -57,7 +57,7 @@
 ram_ip your_instance_name (
   .clka(clka),    // input wire clka
   .wea(wea),      // input wire [0 : 0] wea
-  .addra(addra),  // input wire [15 : 0] addra
+  .addra(addra),  // input wire [13 : 0] addra
   .dina(dina),    // input wire [31 : 0] dina
   .douta(douta)  // output wire [31 : 0] douta
 );

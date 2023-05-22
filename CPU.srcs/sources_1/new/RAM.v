@@ -36,7 +36,7 @@ module RAM(
     wire [31:0] ram_out;
     wire [31:0] ram_in;
     ram_ip inner_ram(
-        .addra(addr[17:2]),
+        .addra(addr[15:2]),
         .clka(clk),
         .dina(write_data),
         .douta(ram_out),

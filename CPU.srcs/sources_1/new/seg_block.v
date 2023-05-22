@@ -20,6 +20,12 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
+/*
+todo:
+(a) fix the multi-driving problem
+*/
+
+
 module seg_block(
     input clk,
     input rst,
