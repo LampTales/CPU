@@ -1,8 +1,7 @@
 .Xil
 vivado*.str
-*.jou
 *.log
-*runs
-*cache
-*hw
-*sim
+CPU.runs
+CPU.cache
+CPU.hw
+CPU.sim

@@ -30,6 +30,8 @@ R-type:
       srlv   000000          000110
       sra    000000          000011
       srav   000000          000111
+      mult   000000          011000
+      div    000000          011010
       add    000000          100000
       addu   000000          100001
       sub    000000          100010
@@ -55,14 +57,39 @@ I-type:
 */
 
 
-/*
-todo:
-(a) assign errorcode
-    1. when overflow, output 1;
-    2. when divide by zero, output 2;
-(b) add mul and div instruction
-    speacially: for div, join the two results together
-*/
+
+
+// R-type
+localparam [11:0] SLL = 12'b000000000000;
+localparam [11:0] SRL = 12'b000000000010;
+localparam [11:0] SLLV = 12'b000000000100;
+localparam [11:0] SRLV = 12'b000000000110;
+localparam [11:0] SRA = 12'b000000000011;
+localparam [11:0] SRAV = 12'b000000000111;
+localparam [11:0] MULT = 12'b000000011000;
+localparam [11:0] DIV = 12'b000000011010;
+localparam [11:0] ADD = 12'b000000100000;
+localparam [11:0] ADDU = 12'b000000100001;
+localparam [11:0] SUB = 12'b000000100010;
+localparam [11:0] SUBU = 12'b000000100011;
+localparam [11:0] AND = 12'b000000100100;
+localparam [11:0] OR = 12'b000000100101;
+localparam [11:0] XOR = 12'b000000100110;
+localparam [11:0] NOR = 12'b000000100111;
+localparam [11:0] SLT = 12'b000000101010;
+localparam [11:0] SLTU = 12'b000000101011;
+
+// I-type
+localparam [11:0] BEQ = 12'b000100xxxxxx;
+localparam [11:0] BNE = 12'b000101xxxxxx;
+localparam [11:0] ADDI = 12'b001000xxxxxx;
+localparam [11:0] ADDIU = 12'b001001xxxxxx;
+localparam [11:0] SLTI = 12'b001010xxxxxx;
+localparam [11:0] SLTIU = 12'b001011xxxxxx;
+localparam [11:0] ANDI = 12'b001100xxxxxx;
+localparam [11:0] ORI = 12'b001101xxxxxx;
+localparam [11:0] XORI = 12'b001110xxxxxx;
+localparam [11:0] LUI = 12'b001111xxxxxx;
 
 module ALU(
     input [11:0] alu_op,
@@ -73,38 +100,172 @@ module ALU(
     output reg equal,
     output reg [7:0] errorcode
     );
+
     always @(*) begin
-        casex(alu_op) 
-            12'b000000000000: out = in0 << shamt; //sll
-            12'b000000000010: out = in0 >> shamt; //srl
-            12'b000000000100: out = in0 << in1; //sllv
-            12'b000000000110: out = in0 >> in1; //srlv
-            12'b000000000011: out = $signed(in0) >>> shamt; //sra
-            12'b000000000111: out = $signed(in0) >>> in1; //srav
-            12'b000000100000: out = in0 + in1; //add
-            12'b000000100001: out = in0 + in1; //addu
-            12'b000000100010: out = in0 - in1; //sub
-            12'b000000100011: out = in0 - in1; //subu
-            12'b000000100100: out = in0 & in1; //and
-            12'b000000100101: out = in0 | in1; //or
-            12'b000000100110: out = in0 ^ in1; //xor
-            12'b000000100111: out = ~(in0 | in1); //nor
-            12'b000000101010: out = $signed(in0) < $signed(in1); //slt
-            12'b000000101011: out = in0 < in1; //sltu
+        casex(alu_op)
 
-            12'b000100xxxxxx: equal = in0 == in1 ? 32'b1 : 32'b0; //beq
-            12'b000101xxxxxx: equal = in0 == in1 ? 32'b1 : 32'b0; //bne
+            SLL: begin 
+                out = in0 << shamt; 
+                errorcode = 8'b00;
+            end//sll
 
-            12'b001000xxxxxx: out = in0 + $signed({16'b0, in1}); //addi
-            12'b001001xxxxxx: out = in0 + {16'b0, in1}; //addiu
-            12'b001010xxxxxx: out = $signed(in0) < $signed({16'b0, in1}); //slti
-            12'b001011xxxxxx: out = in0 < {16'b0, in1}; //sltiu
-            12'b001100xxxxxx: out = in0 & {16'b0, in1}; //andi
-            12'b001101xxxxxx: out = in0 | {16'b0, in1}; //ori
-            12'b001110xxxxxx: out = in0 ^ {16'b0, in1}; //xori
-            12'b001111xxxxxx: out = {16'b0, in1}; //lui
+            SRL: begin 
+                out = in0 >> shamt; 
+                errorcode = 8'b00;
+            end//srl
+
+            SLLV: begin 
+                out = in0 << in1; 
+                errorcode = 8'b00;
+            end//sllv
+
+            SRLV: begin 
+                out = in0 >> in1; 
+                errorcode = 8'b00;
+            end//srlv
+
+            SRA: begin 
+                out = $signed(in0) >>> shamt; 
+                errorcode = 8'b00;
+            end//sra
+
+            SRAV: begin 
+                out = $signed(in0) >>> in1; 
+                errorcode = 8'b00;
+            end//srav
+
+            MULT: begin 
+                out = in0 * in1; 
+                errorcode = 8'b00;
+            end//mult
+
+            DIV: begin 
+                if (in1 == 0) begin 
+                    out = 32'b0; 
+                    errorcode = 8'b10; 
+                end
+                else begin 
+                    out[31:16] = in0 / in1; 
+                    out[15:0] = in0 % in1; 
+                    errorcode = 8'b00; 
+                end
+            end//div
+
+            ADD: begin 
+                out = in0 + in1; 
+                errorcode = (in0[31] == in1[31] && out[31] != in0[31]) ? 8'b01 : 8'b00; 
+            end//add
+
+            ADDU: begin 
+                out = in0 + in1; 
+                errorcode = 8'b00;
+            end//addu
+
+            SUB: begin 
+                out = in0 - in1; 
+                errorcode = (in0[31] != in1[31] && out[31] != in0[31]) ? 8'b01 : 8'b00; 
+            end//sub
+
+            SUBU: begin 
+                out = in0 - in1; 
+                errorcode = 8'b00;
+            end//subu
+
+            AND: begin 
+                out = in0 & in1; 
+                errorcode = 8'b00;
+            end//and
+
+            OR: begin 
+                out = in0 | in1; 
+                errorcode = 8'b00;
+            end//or
+
+            XOR: begin 
+                out = in0 ^ in1; 
+                errorcode = 8'b00;
+            end//xor
+
+            NOR: begin 
+                out = ~(in0 | in1); 
+                errorcode = 8'b00;
+            end//nor
+
+            SLT: begin 
+                out = $signed(in0) < $signed(in1); 
+                errorcode = 8'b00;
+            end//slt
+
+            SLTU: begin 
+                out = in0 < in1; 
+                errorcode = 8'b00;
+            end//sltu
+
+            BEQ: begin 
+                equal = in0 == in1 ? 32'b1 : 32'b0; 
+                errorcode = 8'b00;
+            end//beq
+            
+            BNE: begin 
+                equal = in0 == in1 ? 32'b1 : 32'b0; 
+                errorcode = 8'b00;
+            end//bne
+
+            ADDI: begin 
+                out = in0 + $signed({16'b0, in1}); 
+                errorcode = (in0[31] == {16'b0, in1}[31] && out[31] != in0[31]) ? 8'b01 : 8'b00;
+            end//addi
+
+            ADDIU: begin 
+                out = in0 + {16'b0, in1}; 
+                errorcode = 8'b00;
+            end//addiu
+
+            SLTI: begin 
+                out = $signed(in0) < $signed({16'b0, in1}); 
+                errorcode = 8'b00;
+            end//slti
+
+            SLTIU: begin 
+                out = in0 < {16'b0, in1}; 
+                errorcode = 8'b00;
+            end//sltiu
+
+            ANDI: begin 
+                out = in0 & {16'b0, in1}; 
+                errorcode = 8'b00;
+            end//andi
+
+            ORI: begin 
+                out = in0 | {16'b0, in1}; 
+                errorcode = 8'b00;
+            end//ori
+
+            XORI: begin 
+                out = in0 ^ {16'b0, in1}; 
+                errorcode = 8'b00;
+            end//xori
+
+            LUI: begin 
+                out = {16'b0, in1}; 
+                errorcode = 8'b00;
+            end//lui
+
+            default: begin 
+                out = 32'b0; 
+                errorcode = 8'b0; 
+            end
+
         endcase
-        
+    end
+
+    // error code
+    always @(*) begin
+        casex(alu_op)
+            DIV: errorcode = in1 == 0 ? 8'b10 : 8'b00;
+            ADD: errorcode = (in0[31] == in1[31] && out[31] != in0[31]) ? 8'b01 : 8'b00;
+            default: errorcode = 8'b00;
+        endcase
     end
 
 endmodule
