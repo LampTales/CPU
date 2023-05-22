@@ -32,6 +32,7 @@ module PCctrl(
     input [31:0] expand_imme,
     input jr,
     input [31:0] ra,
+    input[31:0] interrupt_handler,
     output [31:0] link_addr,
     output [31:0] next
     );
@@ -76,6 +77,6 @@ module PCctrl(
         .out(mux2_out)
     );
 
-    assign next = mux2_out;
+    assign next = interrupt_handler==0? mux2_out:interrupt_handler;
 
 endmodule
