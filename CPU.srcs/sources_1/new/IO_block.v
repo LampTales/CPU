@@ -37,10 +37,16 @@ module IO_block(
     output [7:0] board_input_data,
     output [3:0] board_input_case,
     input [31:0] board_output_data,
-    input [7:0] board_output_sig
+    input [7:0] board_output_sig,
 
     // the rest is hardware signal
+    input [7:0] errorcode
     );
+
+    assign board_input_case[3:0] = switch_in[23:20];
+    assign board_input_data[7:0] = switch_in[19:12];
+
+    wire inner_cpu_rst;
 
     seg_block seg(
         .clk(seg_clk),
@@ -87,6 +93,13 @@ module IO_block(
         .output_button(ack)
     );
 
+    assign inner_cpu_rst = cpu_rst | !rst;
+    reg [7:0] error;
+    always@(errorcode) begin
+        if (errorcode != 0 && errorcode != error) begin
+            error = errorcode;
+        end
+    end
     
     
 

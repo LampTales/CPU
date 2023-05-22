@@ -47,7 +47,7 @@ module main(
     wire [1:0] mode;
     wire ack;
 
-    wire cpu_rst = cpu_rst_out | !rst;
+    wire cpu_rst = rst | !cpu_rst_out;
 
     CXK clock(
         .clk(clk),
@@ -162,7 +162,8 @@ module main(
         .read_data0(reg_read_data0),
         .read_data1(reg_read_data1),
         .simd_read_data0(simd_reg_read_data0),
-        .simd_read_data1(simd_reg_read_data1)
+        .simd_read_data1(simd_reg_read_data1),
+        .ack(ack)
     );
 
     wire [31:0] data_to_alu_select;

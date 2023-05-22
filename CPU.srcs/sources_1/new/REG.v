@@ -30,8 +30,8 @@ module REG(
     input [127:0] simd_write_data,
     input reg_write,
     input simd,
-    output [31:0] read_data0,
-    output [31:0] read_data1,
+    output reg [31:0] read_data0,
+    output reg [31:0] read_data1,
     output [127:0] simd_read_data0,
     output [127:0] simd_read_data1,
     input ack
@@ -41,8 +41,9 @@ module REG(
     // reg write
     always @(posedge clk or negedge rst) begin
         if (!rst) begin
-            save[31:0] <= 0; // zero
-            save[959:928] <= 2'b00000000000000001111111100000000;
+            save[31:0] <= 0;  // $zero
+            save[927:96] <= 0;  // common regs
+            save[959:928] <= 2'b00000000000000001111111100000000;  // $sp
 
         end
         else if(reg_write) begin
@@ -81,10 +82,85 @@ module REG(
         end
     end
 
+    // ack cnt
+    reg [31:0] ack_v0;
+    always @(posedge ack or negedge rst) begin
+        if(!rst) ack_v0 <= 0;
+        else ack_v0 <= ack_v0 + 1;
+    end
+
     // reg read
     always @(read0) begin
         case(read0)
-            
+            0: read_data0 = save[31:0];
+            1: read_data0 = save[63:32];
+            2: read_data0 = save[95:64];
+            3: read_data0 = save[127:96];
+            4: read_data0 = save[159:128];
+            5: read_data0 = save[191:160];
+            6: read_data0 = save[223:192];
+            7: read_data0 = save[255:224];
+            8: read_data0 = save[287:256];
+            9: read_data0 = save[319:288];
+            10: read_data0 = save[351:320];
+            11: read_data0 = save[383:352];
+            12: read_data0 = save[415:384];
+            13: read_data0 = save[447:416];
+            14: read_data0 = save[479:448];
+            15: read_data0 = save[511:480];
+            16: read_data0 = save[543:512];
+            17: read_data0 = save[575:544];
+            18: read_data0 = save[607:576];
+            19: read_data0 = save[639:608];
+            20: read_data0 = save[671:640];
+            21: read_data0 = save[703:672];
+            22: read_data0 = save[735:704];
+            23: read_data0 = save[767:736];
+            24: read_data0 = save[799:768];
+            25: read_data0 = save[831:800];
+            26: read_data0 = save[863:832];
+            27: read_data0 = save[895:864];
+            28: read_data0 = save[927:896];
+            29: read_data0 = save[959:928];
+            30: read_data0 = save[991:960];
+            31: read_data0 = save[1023:992];
+        endcase
+    end
+
+    always @(read1) begin
+        case(read1) 
+            0: read_data1 = save[31:0];
+            1: read_data1 = save[63:32];
+            2: read_data1 = save[95:64];
+            3: read_data1 = save[127:96];
+            4: read_data1 = save[159:128];
+            5: read_data1 = save[191:160];
+            6: read_data1 = save[223:192];
+            7: read_data1 = save[255:224];
+            8: read_data1 = save[287:256];
+            9: read_data1 = save[319:288];
+            10: read_data1 = save[351:320];
+            11: read_data1 = save[383:352];
+            12: read_data1 = save[415:384];
+            13: read_data1 = save[447:416];
+            14: read_data1 = save[479:448];
+            15: read_data1 = save[511:480];
+            16: read_data1 = save[543:512];
+            17: read_data1 = save[575:544];
+            18: read_data1 = save[607:576];
+            19: read_data1 = save[639:608];
+            20: read_data1 = save[671:640];
+            21: read_data1 = save[703:672];
+            22: read_data1 = save[735:704];
+            23: read_data1 = save[767:736];
+            24: read_data1 = save[799:768];
+            25: read_data1 = save[831:800];
+            26: read_data1 = save[863:832];
+            27: read_data1 = save[895:864];
+            28: read_data1 = save[927:896];
+            29: read_data1 = save[959:928];
+            30: read_data1 = save[991:960];
+            31: read_data1 = save[1023:992];
         endcase
     end
 
