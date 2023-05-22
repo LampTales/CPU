@@ -33,7 +33,14 @@ module REG(
     output [31:0] read_data0,
     output [31:0] read_data1,
     output [127:0] simd_read_data0,
-    output [127:0] simd_read_data1,
-    input div
+    output [127:0] simd_read_data1
     );
+    reg [1023:0] save;
+
+    always @(posedge clk or negedge rst) begin
+        if (!rst) begin
+            save[1023:992] <= 0;
+            
+        end
+    end
 endmodule
