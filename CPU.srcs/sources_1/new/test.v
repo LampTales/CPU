@@ -157,7 +157,7 @@ always@(clk) #5  icu_clk = ~icu_clk;
         .clk(icu_clk),
         .rst(cpu_rst),
         .eret(eret),
-        .pc(pc_value),
+        .pc(pc_next),
         .button(intr_butt_out),
         .out(icu_out)
     );

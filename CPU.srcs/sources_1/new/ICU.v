@@ -50,13 +50,13 @@ module ICU(input clk,
             if (need_interrupt[0]) begin
                 need_interrupt[0] <= 0;
                 exl <= 1;
-                epc <= pc+4;
+                epc <= pc;
                 out <= 4;
             end
             else if (need_interrupt[1])begin
                 need_interrupt[1] <= 0;
                 exl <= 1;
-                epc <= pc+4;
+                epc <= pc;
                 out <= 4;
             end
             else begin
