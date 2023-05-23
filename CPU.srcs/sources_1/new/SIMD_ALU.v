@@ -27,11 +27,11 @@ module SIMD_ALU(
     output [127:0] out
     );
 
-    wire [11:0] simd_op;
+    reg [11:0] simd_op;
     always@(*) begin
         case(alu_op[5:0])
-            2'b001010: simd_op = 2'b000000100000;
-            2'b001011: simd_op = 2'b000000011000;
+            6'b001010: simd_op = 12'b000000100000;
+            6'b001011: simd_op = 12'b000000011000;
             default: simd_op = 0;
         endcase
     end

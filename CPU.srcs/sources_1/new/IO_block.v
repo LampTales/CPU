@@ -73,7 +73,8 @@ module IO_block(
 
     always@(posedge mode_change or negedge rst) begin
         if(!rst) begin
-            mode <= 2'b00;  // ori
+            //mode <= 2'b00;  // ori
+            mode <= 2'b10;  // ori
         end
         else begin
             case(mode)

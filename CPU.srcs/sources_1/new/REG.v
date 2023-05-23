@@ -126,63 +126,61 @@ module REG(
 
 
 
-    always @(*) begin
-        case(simd_read_data0):
-            3: simd_read_data0 = save[223:96];
-            4: simd_read_data0 = save[255:128];
-            5: simd_read_data0 = save[287:160];
-            6: simd_read_data0 = save[319:192];
-            7: simd_read_data0 = save[351:224];
-            8: simd_read_data0 = save[383:256];
-            9: simd_read_data0 = save[415:288];
-            10: simd_read_data0 = save[447:320];
-            11: simd_read_data0 = save[479:352];
-            12: simd_read_data0 = save[511:384];
-            13: simd_read_data0 = save[543:416];
-            14: simd_read_data0 = save[575:448];
-            15: simd_read_data0 = save[607:480];
-            16: simd_read_data0 = save[639:512];
-            17: simd_read_data0 = save[671:544];
-            18: simd_read_data0 = save[703:576];
-            19: simd_read_data0 = save[735:608];
-            20: simd_read_data0 = save[767:640];
-            21: simd_read_data0 = save[799:672];
-            22: simd_read_data0 = save[831:704];
-            23: simd_read_data0 = save[863:736];
-            24: simd_read_data0 = save[895:768];
-            default: simd_read_data0 = 0;
+//    always @(*) begin
+//        case(simd_read_data0)
+//            3: simd_read_data0 = save[223:96];
+//            4: simd_read_data0 = save[255:128];
+//            5: simd_read_data0 = save[287:160];
+//            6: simd_read_data0 = save[319:192];
+//            7: simd_read_data0 = save[351:224];
+//            8: simd_read_data0 = save[383:256];
+//            9: simd_read_data0 = save[415:288];
+//            10: simd_read_data0 = save[447:320];
+//            11: simd_read_data0 = save[479:352];
+//            12: simd_read_data0 = save[511:384];
+//            13: simd_read_data0 = save[543:416];
+//            14: simd_read_data0 = save[575:448];
+//            15: simd_read_data0 = save[607:480];
+//            16: simd_read_data0 = save[639:512];
+//            17: simd_read_data0 = save[671:544];
+//            18: simd_read_data0 = save[703:576];
+//            19: simd_read_data0 = save[735:608];
+//            20: simd_read_data0 = save[767:640];
+//            21: simd_read_data0 = save[799:672];
+//            22: simd_read_data0 = save[831:704];
+//            23: simd_read_data0 = save[863:736];
+//            24: simd_read_data0 = save[895:768];
+//            default: simd_read_data0 = 0;
+//        endcase
+//    end
 
-        endcase
-    end
-
-    always @(*) begin
-        case(simd_read_data0):
-            3: simd_read_data1 = save[223:96];
-            4: simd_read_data1 = save[255:128];
-            5: simd_read_data1 = save[287:160];
-            6: simd_read_data1 = save[319:192];
-            7: simd_read_data1 = save[351:224];
-            8: simd_read_data1 = save[383:256];
-            9: simd_read_data1 = save[415:288];
-            10: simd_read_data1 = save[447:320];
-            11: simd_read_data1 = save[479:352];
-            12: simd_read_data1 = save[511:384];
-            13: simd_read_data1 = save[543:416];
-            14: simd_read_data1 = save[575:448];
-            15: simd_read_data1 = save[607:480];
-            16: simd_read_data1 = save[639:512];
-            17: simd_read_data1 = save[671:544];
-            18: simd_read_data1 = save[703:576];
-            19: simd_read_data1 = save[735:608];
-            20: simd_read_data1 = save[767:640];
-            21: simd_read_data1 = save[799:672];
-            22: simd_read_data1 = save[831:704];
-            23: simd_read_data1 = save[863:736];
-            24: simd_read_data1 = save[895:768];
-            default: simd_read_data0 = 0;
-
-        endcase
-    end
+//    always @(*) begin
+//        case(simd_read_data0)
+//            3: simd_read_data1 = save[223:96];
+//            4: simd_read_data1 = save[255:128];
+//            5: simd_read_data1 = save[287:160];
+//            6: simd_read_data1 = save[319:192];
+//            7: simd_read_data1 = save[351:224];
+//            8: simd_read_data1 = save[383:256];
+//            9: simd_read_data1 = save[415:288];
+//            10: simd_read_data1 = save[447:320];
+//            11: simd_read_data1 = save[479:352];
+//            12: simd_read_data1 = save[511:384];
+//            13: simd_read_data1 = save[543:416];
+//            14: simd_read_data1 = save[575:448];
+//            15: simd_read_data1 = save[607:480];
+//            16: simd_read_data1 = save[639:512];
+//            17: simd_read_data1 = save[671:544];
+//            18: simd_read_data1 = save[703:576];
+//            19: simd_read_data1 = save[735:608];
+//            20: simd_read_data1 = save[767:640];
+//            21: simd_read_data1 = save[799:672];
+//            22: simd_read_data1 = save[831:704];
+//            23: simd_read_data1 = save[863:736];
+//            24: simd_read_data1 = save[895:768];
+//            default: simd_read_data0 = 0;
+//        endcase
+//    end
 
 
 // reg write
@@ -190,7 +188,7 @@ module REG(
         if (!rst) begin
             save[31:0] <= 0;  // $zero
             save[927:96] <= 0;  // common regs
-            save[959:928] <= 2'b00000000000000000011111100000000;  // $sp
+            save[959:928] <= 32'b00000000000000000011111100000000;  // $sp
 
         end
         else if(reg_write) begin
