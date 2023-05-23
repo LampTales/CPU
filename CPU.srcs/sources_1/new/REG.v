@@ -32,8 +32,8 @@ module REG(
     input simd,
     output reg [31:0] read_data0,
     output reg [31:0] read_data1,
-    output [127:0] simd_read_data0,
-    output [127:0] simd_read_data1,
+    output reg [127:0] simd_read_data0,
+    output reg [127:0] simd_read_data1,
     input ack
     );
     reg [1023:0] save;
@@ -127,7 +127,7 @@ module REG(
 
 
     always @(*) begin
-        case(simd_read_data0):
+        case(read0)
             3: simd_read_data0 = save[223:96];
             4: simd_read_data0 = save[255:128];
             5: simd_read_data0 = save[287:160];
@@ -156,7 +156,7 @@ module REG(
     end
 
     always @(*) begin
-        case(simd_read_data0):
+        case(read1)
             3: simd_read_data1 = save[223:96];
             4: simd_read_data1 = save[255:128];
             5: simd_read_data1 = save[287:160];
@@ -190,7 +190,7 @@ module REG(
         if (!rst) begin
             save[31:0] <= 0;  // $zero
             save[927:96] <= 0;  // common regs
-            save[959:928] <= 2'b00000000000000000011111100000000;  // $sp
+            save[959:928] <= 32'b00000000000000000011111100000000;  // $sp
 
         end
         else if(reg_write) begin

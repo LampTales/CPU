@@ -59,37 +59,7 @@ I-type:
 
 //TODO lw & sw
 
-// R-type
-localparam [11:0] SLL = 12'b000000000000;
-localparam [11:0] SRL = 12'b000000000010;
-localparam [11:0] SLLV = 12'b000000000100;
-localparam [11:0] SRLV = 12'b000000000110;
-localparam [11:0] SRA = 12'b000000000011;
-localparam [11:0] SRAV = 12'b000000000111;
-localparam [11:0] MULT = 12'b000000011000;
-localparam [11:0] DIV = 12'b000000011010;
-localparam [11:0] ADD = 12'b000000100000;
-localparam [11:0] ADDU = 12'b000000100001;
-localparam [11:0] SUB = 12'b000000100010;
-localparam [11:0] SUBU = 12'b000000100011;
-localparam [11:0] AND = 12'b000000100100;
-localparam [11:0] OR = 12'b000000100101;
-localparam [11:0] XOR = 12'b000000100110;
-localparam [11:0] NOR = 12'b000000100111;
-localparam [11:0] SLT = 12'b000000101010;
-localparam [11:0] SLTU = 12'b000000101011;
 
-// I-type
-localparam [11:0] BEQ = 12'b000100xxxxxx;
-localparam [11:0] BNE = 12'b000101xxxxxx;
-localparam [11:0] ADDI = 12'b001000xxxxxx;
-localparam [11:0] ADDIU = 12'b001001xxxxxx;
-localparam [11:0] SLTI = 12'b001010xxxxxx;
-localparam [11:0] SLTIU = 12'b001011xxxxxx;
-localparam [11:0] ANDI = 12'b001100xxxxxx;
-localparam [11:0] ORI = 12'b001101xxxxxx;
-localparam [11:0] XORI = 12'b001110xxxxxx;
-localparam [11:0] LUI = 12'b001111xxxxxx;
 
 module ALU(
     input [11:0] alu_op,
@@ -100,6 +70,39 @@ module ALU(
     output reg equal,
     output reg [7:0] errorcode
     );
+
+    // R-type
+    localparam [11:0] SLL = 12'b000000000000;
+    localparam [11:0] SRL = 12'b000000000010;
+    localparam [11:0] SLLV = 12'b000000000100;
+    localparam [11:0] SRLV = 12'b000000000110;
+    localparam [11:0] SRA = 12'b000000000011;
+    localparam [11:0] SRAV = 12'b000000000111;
+    localparam [11:0] MULT = 12'b000000011000;
+    localparam [11:0] DIV = 12'b000000011010;
+    localparam [11:0] ADD = 12'b000000100000;
+    localparam [11:0] ADDU = 12'b000000100001;
+    localparam [11:0] SUB = 12'b000000100010;
+    localparam [11:0] SUBU = 12'b000000100011;
+    localparam [11:0] AND = 12'b000000100100;
+    localparam [11:0] OR = 12'b000000100101;
+    localparam [11:0] XOR = 12'b000000100110;
+    localparam [11:0] NOR = 12'b000000100111;
+    localparam [11:0] SLT = 12'b000000101010;
+    localparam [11:0] SLTU = 12'b000000101011;
+
+    // I-type
+    localparam [11:0] BEQ = 12'b000100xxxxxx;
+    localparam [11:0] BNE = 12'b000101xxxxxx;
+    localparam [11:0] ADDI = 12'b001000xxxxxx;
+    localparam [11:0] ADDIU = 12'b001001xxxxxx;
+    localparam [11:0] SLTI = 12'b001010xxxxxx;
+    localparam [11:0] SLTIU = 12'b001011xxxxxx;
+    localparam [11:0] ANDI = 12'b001100xxxxxx;
+    localparam [11:0] ORI = 12'b001101xxxxxx;
+    localparam [11:0] XORI = 12'b001110xxxxxx;
+    localparam [11:0] LUI = 12'b001111xxxxxx;
+
 
     always @(*) begin
         casex(alu_op)

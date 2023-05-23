@@ -191,13 +191,15 @@ module main(
 
     wire [31:0] alu_result;
     wire alu_equal;
+    wire [7:0] errorcode;
     ALU alu(
         .alu_op(alu_op),
         .shamt(shamt),
         .in0(reg_read_data0),
         .in1(data_to_alu_select),
         .out(alu_result),
-        .equal(alu_equal)
+        .equal(alu_equal),
+        .errorcode(errorcode)
     );
 
     SIMD_ALU simd_alu(
@@ -274,7 +276,8 @@ module main(
         .board_input_data(in_num),
         .board_input_case(in_case),
         .board_output_data(out_num),
-        .board_output_sig(out_sig)
+        .board_output_sig(out_sig),
+        .errorcode(errorcode)
     );
 
     wire uart_out_clk;
