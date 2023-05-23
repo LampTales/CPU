@@ -57,7 +57,7 @@ I-type:
 */
 
 
-
+//TODO lw & sw
 
 // R-type
 localparam [11:0] SLL = 12'b000000000000;

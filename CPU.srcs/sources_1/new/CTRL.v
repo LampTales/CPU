@@ -159,7 +159,7 @@ control signals:
     sw, beq, bne: 0
     others: 1
 */
-    assign reg_write = (op_code == 6'b100011 || op_code == 6'b000100 || op_code == 6'b000101) ? 1'b1 : 1'b0;
+    assign reg_write = (op_code == 6'b101011 || op_code == 6'b000100 || op_code == 6'b000101) ? 1'b0 : 1'b1;
 
 /*
     j:

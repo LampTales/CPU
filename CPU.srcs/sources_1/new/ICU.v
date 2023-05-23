@@ -33,10 +33,10 @@ module ICU(input clk,
     reg [31:0] cnt;
     reg [31:0] handler;
     always @(negedge rst) begin
-        need_interrupt = 0;
-        out            = 0;
-        exl            = 0;
-        cnt            = 0;
+        need_interrupt <= 0;
+        out            <= 0;
+        exl            <= 0;
+        cnt            <= 0;
     end
     always @(posedge clk) begin
         cnt = cnt+1;

@@ -125,7 +125,7 @@ module main(
     );
     
     wire button;
-    wire icu_out;
+    wire[31:0] icu_out;
     ICU icu(
         .clk(icu_clk),
         .rst(cpu_rst),
