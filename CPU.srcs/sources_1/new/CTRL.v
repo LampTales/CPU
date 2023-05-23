@@ -58,8 +58,8 @@ J-type:
 
 // special:
 SIMD-type:
-      adds   000000          001011
-      subs   000000          001010
+      addS   000000          001010
+      mulS   000000          001011
 CPU-ctrl:
       eret   010000          xxxxxx
 R-type:
