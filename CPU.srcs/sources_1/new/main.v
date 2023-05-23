@@ -26,6 +26,7 @@ module main(
     input mode_butt,
     input ack_butt,
     input cpu_rst_butt,
+    input intr_butt,
     input [23:0] switch_in,
     output [23:0] led_out,
     output [7:0] seg_op,
@@ -35,6 +36,7 @@ module main(
     );
 
     // what should be the rst?
+    wire rst;
     assign rst = sysrst;
     wire rom_clk;
     wire ram_clk;
@@ -124,14 +126,14 @@ module main(
         .eret(eret)
     );
     
-    wire button;
+    wire interrupt;
     wire[31:0] icu_out;
     ICU icu(
         .clk(icu_clk),
         .rst(cpu_rst),
         .eret(eret),
         .pc(pc_value),
-        .button(button),
+        .button(interrupt),
         .out(icu_out)
     );
 
@@ -270,6 +272,8 @@ module main(
         .cpu_rst_butt(cpu_rst_butt),
         .mode_butt(mode_butt),
         .ack_butt(ack_butt),
+        .intr_butt(intr_butt),
+        .interrupt(interrupt),
         .cpu_rst(cpu_rst_out),
         .mode(mode),
         .ack(ack),

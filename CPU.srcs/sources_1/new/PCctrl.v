@@ -42,7 +42,8 @@ module PCctrl(
     assign link_addr = pc_add_4_dest;
 
     wire [31:0] j_dest;
-    reg [31:0] zero;
+    wire [31:0] zero;
+    assign zero = 0;
     assign j_dest = {pc[31:28], j_inst[25:0], zero[1:0]};
 
     wire [31:0] branch_dest;

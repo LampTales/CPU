@@ -31,7 +31,6 @@ module ICU(input clk,
     reg exl;
     reg [31:0] epc;
     reg [31:0] cnt;
-    reg [31:0] handler;
     always @(negedge rst) begin
         need_interrupt <= 0;
         out            <= 0;
@@ -52,13 +51,13 @@ module ICU(input clk,
                 need_interrupt[0] = 0;
                 exl = 1;
                 epc = pc+4;
-                out <= handler;
+                out <= 4;
             end
             else if (need_interrupt[1])begin
                 need_interrupt[1] = 0;
                 exl = 1;
                 epc = pc+4;
-                out <= handler;
+                out <= 4;
             end
         end
         else begin

@@ -31,6 +31,8 @@ module IO_block(
     input cpu_rst_butt,
     input mode_butt,
     input ack_butt,
+    input intr_butt,
+    output interrupt,
     output cpu_rst,
     output reg [1:0] mode,
     output ack,
@@ -92,6 +94,13 @@ module IO_block(
         .input_button(ack_butt),
         .output_button(ack)
     );
+
+    button interrupt_butt_antishake(
+        .clk(pc_clk),
+        .rst_n(rst),
+        .input_button(intr_butt),
+        .output_button(interrupt)
+    ); 
 
     assign inner_cpu_rst = rst & !cpu_rst;
     reg [7:0] error;

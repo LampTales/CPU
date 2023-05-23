@@ -49,8 +49,8 @@ module seg_block(
         hexadecimals[7] = seg_in[31:28];
     end
 
-    always @ (posedge clk or posedge rst) begin
-        if (rst) begin
+    always @ (posedge clk or negedge rst) begin
+        if (!rst) begin
             cnt <= 0;
             current_hex <= 0;
             seg_op <= 8'b1111_1111;
