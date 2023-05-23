@@ -22,7 +22,7 @@
 module ICU(input clk,
            input rst,
            input eret,
-           input pc,
+           input[31:0] pc,
            input button,
            output reg [31:0] out);
            
@@ -48,16 +48,19 @@ module ICU(input clk,
         end
         else if (~exl)begin
             if (need_interrupt[0]) begin
-                need_interrupt[0] = 0;
-                exl = 1;
-                epc = pc+4;
+                need_interrupt[0] <= 0;
+                exl <= 1;
+                epc <= pc+4;
                 out <= 4;
             end
             else if (need_interrupt[1])begin
-                need_interrupt[1] = 0;
-                exl = 1;
-                epc = pc+4;
+                need_interrupt[1] <= 0;
+                exl <= 1;
+                epc <= pc+4;
                 out <= 4;
+            end
+            else begin
+                out <= 0;
             end
         end
         else begin
@@ -66,13 +69,13 @@ module ICU(input clk,
     end
     // button interrupt
     always @(posedge button) begin
-        need_interrupt[0] =  1;
+        need_interrupt[0] <=  1;
     end
     // clock interrupt
     always @(posedge cnt[31]) begin
-        need_interrupt[1] =  1;
+        need_interrupt[1] <=  1;
     end
     always @(posedge eret) begin
-        need_eret = 1;
+        need_eret <= 1;
     end
 endmodule

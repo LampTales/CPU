@@ -148,6 +148,8 @@ always@(clk) #5  icu_clk = ~icu_clk;
         .jal(jal),
         .eret(eret)
     );
+
+    wire interrupt;
     wire intr_butt_out;
     assign intr_butt_out = intr_butt;
     wire[31:0] icu_out;
@@ -216,13 +218,15 @@ always@(clk) #5  icu_clk = ~icu_clk;
 
     wire [31:0] alu_result;
     wire alu_equal;
+    wire [7:0] errorcode;
     ALU alu(
         .alu_op(alu_op),
         .shamt(shamt),
         .in0(reg_read_data0),
         .in1(data_to_alu_select),
         .out(alu_result),
-        .equal(alu_equal)
+        .equal(alu_equal),
+        .errorcode(errorcode)
     );
 
     SIMD_ALU simd_alu(
@@ -293,13 +297,16 @@ always@(clk) #5  icu_clk = ~icu_clk;
         .cpu_rst_butt(cpu_rst_butt),
         .mode_butt(mode_butt),
         .ack_butt(ack_butt),
+        .intr_butt(intr_butt),
+        .interrupt(interrupt),
         .cpu_rst(cpu_rst_out),
         .mode(mode),
         .ack(ack),
         .board_input_data(in_num),
         .board_input_case(in_case),
         .board_output_data(out_num),
-        .board_output_sig(out_sig)
+        .board_output_sig(out_sig),
+        .errorcode(errorcode)
     );
 
     wire uart_out_clk;

@@ -10,11 +10,11 @@ vmap xpm activehdl/xpm
 vmap blk_mem_gen_v8_4_1 activehdl/blk_mem_gen_v8_4_1
 
 vlog -work xil_defaultlib  -sv2k12 \
-"D:/exes/Vivado/Vivado/Vivado/2017.4/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv" \
-"D:/exes/Vivado/Vivado/Vivado/2017.4/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv" \
+"C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv" \
+"C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv" \
 
 vcom -work xpm -93 \
-"D:/exes/Vivado/Vivado/Vivado/2017.4/data/ip/xpm/xpm_VCOMP.vhd" \
+"C:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_VCOMP.vhd" \
 
 vlog -work blk_mem_gen_v8_4_1  -v2k5 \
 "../../../ipstatic/simulation/blk_mem_gen_v8_4.v" \

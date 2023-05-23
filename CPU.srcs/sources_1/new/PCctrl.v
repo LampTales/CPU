@@ -42,12 +42,10 @@ module PCctrl(
     assign link_addr = pc_add_4_dest;
 
     wire [31:0] j_dest;
-    wire [31:0] zero;
-    assign zero = 0;
-    assign j_dest = {pc[31:28], j_inst[25:0], zero[1:0]};
+    assign j_dest = {pc[31:28], j_inst[25:0], 2'b00};
 
     wire [31:0] branch_dest;
-    assign branch_dest = pc_add_4_dest + {expand_imme[29:0], zero[1:0]};
+    assign branch_dest = pc_add_4_dest + {expand_imme[29:0], 2'b00};
 
     wire pcadd4_branch_select;
     assign pcadd4_branch_select = (equal & branch) | ((~equal) & nbranch);
@@ -79,8 +77,8 @@ module PCctrl(
         .out(mux2_out)
     );
 
-    assign next = mux2_out;
+    //assign next = mux2_out;
     // ICU interrupt from WYR
-    // assign next = (interrupt_handler==0) ? mux2_out : interrupt_handler;
+    assign next = (interrupt_handler==0) ? mux2_out : interrupt_handler;
 
 endmodule
