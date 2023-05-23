@@ -90,7 +90,7 @@ module REG(
     end
 
     // reg read
-    always @(read0) begin
+    always @(*) begin
         case(read0)
             0: read_data0 = save[31:0];
             1: read_data0 = save[63:32];
@@ -127,7 +127,7 @@ module REG(
         endcase
     end
 
-    always @(read1) begin
+    always @(*) begin
         case(read1) 
             0: read_data1 = save[31:0];
             1: read_data1 = save[63:32];

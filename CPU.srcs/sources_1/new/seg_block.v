@@ -38,7 +38,7 @@ module seg_block(
     reg [3:0] hexadecimals [7:0];
     reg [3:0] current_hex;
 
-    always @ (hexadecimals) begin
+    always @ (seg_in) begin
         hexadecimals[0] = seg_in[3:0];
         hexadecimals[1] = seg_in[7:4];
         hexadecimals[2] = seg_in[11:8];
