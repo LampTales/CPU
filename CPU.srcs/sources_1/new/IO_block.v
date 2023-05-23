@@ -93,7 +93,7 @@ module IO_block(
         .output_button(ack)
     );
 
-    assign inner_cpu_rst = rst | !cpu_rst;
+    assign inner_cpu_rst = rst & !cpu_rst;
     reg [7:0] error;
     always@(errorcode, inner_cpu_rst) begin
         if (!inner_cpu_rst) begin

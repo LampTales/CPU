@@ -233,49 +233,49 @@ module ALU(
             end//bne
 
             ADDI: begin 
-                out = in0 + $signed({16'b0, in1}); 
+                out = in0 + in1; 
                 equal = 0;
-                errorcode = (in0[31] == {16'b0, in1}[31] && out[31] != in0[31]) ? 8'b01 : 8'b00;
+                errorcode = (in0[31] == in1[31] && out[31] != in0[31]) ? 8'b01 : 8'b00; 
             end//addi
 
             ADDIU: begin 
-                out = in0 + {16'b0, in1}; 
+                out = in0 + in1; 
                 equal = 0;
                 errorcode = 8'b00;
             end//addiu
 
             SLTI: begin 
-                out = $signed(in0) < $signed({16'b0, in1}); 
+                out = in0 < in1; 
                 equal = 0;
                 errorcode = 8'b00;
             end//slti
 
             SLTIU: begin 
-                out = in0 < {16'b0, in1}; 
+                out = in0 < in1; 
                 equal = 0;
                 errorcode = 8'b00;
             end//sltiu
 
             ANDI: begin 
-                out = in0 & {16'b0, in1}; 
+                out = in0 & in1; 
                 equal = 0;
                 errorcode = 8'b00;
             end//andi
 
             ORI: begin 
-                out = in0 | {16'b0, in1}; 
+                out = in0 | in1; 
                 equal = 0;
                 errorcode = 8'b00;
             end//ori
 
             XORI: begin 
-                out = in0 ^ {16'b0, in1}; 
+                out = in0 ^ in1; 
                 equal = 0;
                 errorcode = 8'b00;
             end//xori
 
             LUI: begin 
-                out = {16'b0, in1}; 
+                out = {in1[15:0], 16'b0}; 
                 equal = 0;
                 errorcode = 8'b00;
             end//lui

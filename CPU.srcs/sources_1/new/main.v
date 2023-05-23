@@ -48,7 +48,7 @@ module main(
     wire [1:0] mode;
     wire ack;
 
-    wire cpu_rst = rst | !cpu_rst_out;
+    wire cpu_rst = rst & !cpu_rst_out;
 
     CXK clock(
         .clk(clk),
