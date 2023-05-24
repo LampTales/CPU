@@ -5,59 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="01fbbbd4-bdde-4324-a0ea-dc4610bddc20" name="变更" comment="">
-      <change beforePath="$PROJECT_DIR$/../../../CPU.cache/wt/gui_handlers.wdf" beforeDir="false" afterPath="$PROJECT_DIR$/../../../CPU.cache/wt/gui_handlers.wdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../CPU.cache/wt/java_command_handlers.wdf" beforeDir="false" afterPath="$PROJECT_DIR$/../../../CPU.cache/wt/java_command_handlers.wdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../CPU.cache/wt/project.wpc" beforeDir="false" afterPath="$PROJECT_DIR$/../../../CPU.cache/wt/project.wpc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../CPU.cache/wt/synthesis.wdf" beforeDir="false" afterPath="$PROJECT_DIR$/../../../CPU.cache/wt/synthesis.wdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../CPU.cache/wt/webtalk_pa.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../CPU.cache/wt/webtalk_pa.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../CPU.ip_user_files/ip/rom_ip/rom_ip.veo" beforeDir="false" afterPath="$PROJECT_DIR$/../../../CPU.ip_user_files/ip/rom_ip/rom_ip.veo" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../CPU.ip_user_files/ip/rom_ip/rom_ip.vho" beforeDir="false" afterPath="$PROJECT_DIR$/../../../CPU.ip_user_files/ip/rom_ip/rom_ip.vho" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../CPU.ip_user_files/ip/rom_ip/rom_ip_stub.v" beforeDir="false" afterPath="$PROJECT_DIR$/../../../CPU.ip_user_files/ip/rom_ip/rom_ip_stub.v" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../CPU.ip_user_files/ip/rom_ip/rom_ip_stub.vhdl" beforeDir="false" afterPath="$PROJECT_DIR$/../../../CPU.ip_user_files/ip/rom_ip/rom_ip_stub.vhdl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../CPU.ip_user_files/mem_init_files/rom_ip.mif" beforeDir="false" afterPath="$PROJECT_DIR$/../../../CPU.ip_user_files/mem_init_files/rom_ip.mif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../CPU.ip_user_files/mem_init_files/summary.log" beforeDir="false" afterPath="$PROJECT_DIR$/../../../CPU.ip_user_files/mem_init_files/summary.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../CPU.ip_user_files/sim_scripts/rom_ip/activehdl/README.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../../CPU.ip_user_files/sim_scripts/rom_ip/activehdl/README.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../CPU.ip_user_files/sim_scripts/rom_ip/activehdl/compile.do" beforeDir="false" afterPath="$PROJECT_DIR$/../../../CPU.ip_user_files/sim_scripts/rom_ip/activehdl/compile.do" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../CPU.ip_user_files/sim_scripts/rom_ip/activehdl/file_info.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../../CPU.ip_user_files/sim_scripts/rom_ip/activehdl/file_info.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../CPU.ip_user_files/sim_scripts/rom_ip/activehdl/glbl.v" beforeDir="false" afterPath="$PROJECT_DIR$/../../../CPU.ip_user_files/sim_scripts/rom_ip/activehdl/glbl.v" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../CPU.ip_user_files/sim_scripts/rom_ip/activehdl/rom_ip.sh" beforeDir="false" afterPath="$PROJECT_DIR$/../../../CPU.ip_user_files/sim_scripts/rom_ip/activehdl/rom_ip.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../CPU.ip_user_files/sim_scripts/rom_ip/ies/README.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../../CPU.ip_user_files/sim_scripts/rom_ip/ies/README.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../CPU.ip_user_files/sim_scripts/rom_ip/ies/file_info.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../../CPU.ip_user_files/sim_scripts/rom_ip/ies/file_info.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../CPU.ip_user_files/sim_scripts/rom_ip/ies/glbl.v" beforeDir="false" afterPath="$PROJECT_DIR$/../../../CPU.ip_user_files/sim_scripts/rom_ip/ies/glbl.v" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../CPU.ip_user_files/sim_scripts/rom_ip/ies/rom_ip.sh" beforeDir="false" afterPath="$PROJECT_DIR$/../../../CPU.ip_user_files/sim_scripts/rom_ip/ies/rom_ip.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../CPU.ip_user_files/sim_scripts/rom_ip/ies/run.f" beforeDir="false" afterPath="$PROJECT_DIR$/../../../CPU.ip_user_files/sim_scripts/rom_ip/ies/run.f" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../CPU.ip_user_files/sim_scripts/rom_ip/modelsim/README.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../../CPU.ip_user_files/sim_scripts/rom_ip/modelsim/README.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../CPU.ip_user_files/sim_scripts/rom_ip/modelsim/compile.do" beforeDir="false" afterPath="$PROJECT_DIR$/../../../CPU.ip_user_files/sim_scripts/rom_ip/modelsim/compile.do" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../CPU.ip_user_files/sim_scripts/rom_ip/modelsim/file_info.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../../CPU.ip_user_files/sim_scripts/rom_ip/modelsim/file_info.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../CPU.ip_user_files/sim_scripts/rom_ip/modelsim/glbl.v" beforeDir="false" afterPath="$PROJECT_DIR$/../../../CPU.ip_user_files/sim_scripts/rom_ip/modelsim/glbl.v" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../CPU.ip_user_files/sim_scripts/rom_ip/modelsim/rom_ip.sh" beforeDir="false" afterPath="$PROJECT_DIR$/../../../CPU.ip_user_files/sim_scripts/rom_ip/modelsim/rom_ip.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../CPU.ip_user_files/sim_scripts/rom_ip/questa/README.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../../CPU.ip_user_files/sim_scripts/rom_ip/questa/README.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../CPU.ip_user_files/sim_scripts/rom_ip/questa/compile.do" beforeDir="false" afterPath="$PROJECT_DIR$/../../../CPU.ip_user_files/sim_scripts/rom_ip/questa/compile.do" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../CPU.ip_user_files/sim_scripts/rom_ip/questa/file_info.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../../CPU.ip_user_files/sim_scripts/rom_ip/questa/file_info.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../CPU.ip_user_files/sim_scripts/rom_ip/questa/glbl.v" beforeDir="false" afterPath="$PROJECT_DIR$/../../../CPU.ip_user_files/sim_scripts/rom_ip/questa/glbl.v" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../CPU.ip_user_files/sim_scripts/rom_ip/questa/rom_ip.sh" beforeDir="false" afterPath="$PROJECT_DIR$/../../../CPU.ip_user_files/sim_scripts/rom_ip/questa/rom_ip.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../CPU.ip_user_files/sim_scripts/rom_ip/riviera/README.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../../CPU.ip_user_files/sim_scripts/rom_ip/riviera/README.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../CPU.ip_user_files/sim_scripts/rom_ip/riviera/compile.do" beforeDir="false" afterPath="$PROJECT_DIR$/../../../CPU.ip_user_files/sim_scripts/rom_ip/riviera/compile.do" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../CPU.ip_user_files/sim_scripts/rom_ip/riviera/file_info.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../../CPU.ip_user_files/sim_scripts/rom_ip/riviera/file_info.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../CPU.ip_user_files/sim_scripts/rom_ip/riviera/glbl.v" beforeDir="false" afterPath="$PROJECT_DIR$/../../../CPU.ip_user_files/sim_scripts/rom_ip/riviera/glbl.v" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../CPU.ip_user_files/sim_scripts/rom_ip/riviera/rom_ip.sh" beforeDir="false" afterPath="$PROJECT_DIR$/../../../CPU.ip_user_files/sim_scripts/rom_ip/riviera/rom_ip.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../CPU.ip_user_files/sim_scripts/rom_ip/vcs/README.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../../CPU.ip_user_files/sim_scripts/rom_ip/vcs/README.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../CPU.ip_user_files/sim_scripts/rom_ip/vcs/file_info.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../../CPU.ip_user_files/sim_scripts/rom_ip/vcs/file_info.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../CPU.ip_user_files/sim_scripts/rom_ip/vcs/glbl.v" beforeDir="false" afterPath="$PROJECT_DIR$/../../../CPU.ip_user_files/sim_scripts/rom_ip/vcs/glbl.v" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../CPU.ip_user_files/sim_scripts/rom_ip/vcs/rom_ip.sh" beforeDir="false" afterPath="$PROJECT_DIR$/../../../CPU.ip_user_files/sim_scripts/rom_ip/vcs/rom_ip.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../CPU.ip_user_files/sim_scripts/rom_ip/xsim/README.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../../CPU.ip_user_files/sim_scripts/rom_ip/xsim/README.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../CPU.ip_user_files/sim_scripts/rom_ip/xsim/glbl.v" beforeDir="false" afterPath="$PROJECT_DIR$/../../../CPU.ip_user_files/sim_scripts/rom_ip/xsim/glbl.v" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../CPU.ip_user_files/sim_scripts/rom_ip/xsim/rom_ip.sh" beforeDir="false" afterPath="$PROJECT_DIR$/../../../CPU.ip_user_files/sim_scripts/rom_ip/xsim/rom_ip.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../CPU.ip_user_files/sim_scripts/rom_ip/xsim/xsim.ini" beforeDir="false" afterPath="$PROJECT_DIR$/../../../CPU.ip_user_files/sim_scripts/rom_ip/xsim/xsim.ini" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../CPU.runs/synth_1/gen_run.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../CPU.runs/synth_1/gen_run.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../CPU.sim/sim_1/behav/xsim/compile.bat" beforeDir="false" afterPath="$PROJECT_DIR$/../../../CPU.sim/sim_1/behav/xsim/compile.bat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../CPU.sim/sim_1/behav/xsim/compile.log" beforeDir="false" afterPath="$PROJECT_DIR$/../../../CPU.sim/sim_1/behav/xsim/compile.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../CPU.sim/sim_1/behav/xsim/elaborate.bat" beforeDir="false" afterPath="$PROJECT_DIR$/../../../CPU.sim/sim_1/behav/xsim/elaborate.bat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../CPU.sim/sim_1/behav/xsim/elaborate.log" beforeDir="false" afterPath="$PROJECT_DIR$/../../../CPU.sim/sim_1/behav/xsim/elaborate.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../CPU.sim/sim_1/behav/xsim/test_vlog.prj" beforeDir="false" afterPath="$PROJECT_DIR$/../../../CPU.sim/sim_1/behav/xsim/test_vlog.prj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../CPU.sim/sim_1/behav/xsim/xelab.pb" beforeDir="false" afterPath="$PROJECT_DIR$/../../../CPU.sim/sim_1/behav/xsim/xelab.pb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../CPU.sim/sim_1/behav/xsim/xsim.dir/test_behav/obj/xsim_0.win64.obj" beforeDir="false" afterPath="$PROJECT_DIR$/../../../CPU.sim/sim_1/behav/xsim/xsim.dir/test_behav/obj/xsim_0.win64.obj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../CPU.sim/sim_1/behav/xsim/xsim.dir/test_behav/obj/xsim_1.c" beforeDir="false" afterPath="$PROJECT_DIR$/../../../CPU.sim/sim_1/behav/xsim/xsim.dir/test_behav/obj/xsim_1.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../CPU.sim/sim_1/behav/xsim/xsim.dir/test_behav/xsim.mem" beforeDir="false" afterPath="$PROJECT_DIR$/../../../CPU.sim/sim_1/behav/xsim/xsim.dir/test_behav/xsim.mem" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../CPU.sim/sim_1/behav/xsim/xsim.dir/test_behav/xsim.reloc" beforeDir="false" afterPath="$PROJECT_DIR$/../../../CPU.sim/sim_1/behav/xsim/xsim.dir/test_behav/xsim.reloc" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../CPU.sim/sim_1/behav/xsim/xsim.dir/xil_defaultlib/@a@l@u.sdb" beforeDir="false" afterPath="$PROJECT_DIR$/../../../CPU.sim/sim_1/behav/xsim/xsim.dir/xil_defaultlib/@a@l@u.sdb" afterDir="false" />
@@ -68,37 +18,14 @@
       <change beforePath="$PROJECT_DIR$/../../../CPU.sim/sim_1/behav/xsim/xsim.dir/xil_defaultlib/@p@cctrl.sdb" beforeDir="false" afterPath="$PROJECT_DIR$/../../../CPU.sim/sim_1/behav/xsim/xsim.dir/xil_defaultlib/@p@cctrl.sdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../CPU.sim/sim_1/behav/xsim/xsim.dir/xil_defaultlib/@r@e@g.sdb" beforeDir="false" afterPath="$PROJECT_DIR$/../../../CPU.sim/sim_1/behav/xsim/xsim.dir/xil_defaultlib/@r@e@g.sdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../CPU.sim/sim_1/behav/xsim/xsim.dir/xil_defaultlib/empty.sdb" beforeDir="false" afterPath="$PROJECT_DIR$/../../../CPU.sim/sim_1/behav/xsim/xsim.dir/xil_defaultlib/empty.sdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../CPU.sim/sim_1/behav/xsim/xsim.dir/xil_defaultlib/glbl.sdb" beforeDir="false" afterPath="$PROJECT_DIR$/../../../CPU.sim/sim_1/behav/xsim/xsim.dir/xil_defaultlib/glbl.sdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../CPU.sim/sim_1/behav/xsim/xsim.dir/xil_defaultlib/led_block.sdb" beforeDir="false" afterPath="$PROJECT_DIR$/../../../CPU.sim/sim_1/behav/xsim/xsim.dir/xil_defaultlib/led_block.sdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../CPU.sim/sim_1/behav/xsim/xsim.dir/xil_defaultlib/main.sdb" beforeDir="false" afterPath="$PROJECT_DIR$/../../../CPU.sim/sim_1/behav/xsim/xsim.dir/xil_defaultlib/main.sdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../CPU.sim/sim_1/behav/xsim/xsim.dir/xil_defaultlib/seg_block.sdb" beforeDir="false" afterPath="$PROJECT_DIR$/../../../CPU.sim/sim_1/behav/xsim/xsim.dir/xil_defaultlib/seg_block.sdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../CPU.sim/sim_1/behav/xsim/xsim.dir/xil_defaultlib/test.sdb" beforeDir="false" afterPath="$PROJECT_DIR$/../../../CPU.sim/sim_1/behav/xsim/xsim.dir/xil_defaultlib/test.sdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../CPU.sim/sim_1/behav/xsim/xsim.dir/xil_defaultlib/xil_defaultlib.rlx" beforeDir="false" afterPath="$PROJECT_DIR$/../../../CPU.sim/sim_1/behav/xsim/xsim.dir/xil_defaultlib/xil_defaultlib.rlx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../CPU.sim/sim_1/behav/xsim/xsim.ini" beforeDir="false" afterPath="$PROJECT_DIR$/../../../CPU.sim/sim_1/behav/xsim/xsim.ini" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../CPU.sim/sim_1/behav/xsim/xvlog.log" beforeDir="false" afterPath="$PROJECT_DIR$/../../../CPU.sim/sim_1/behav/xsim/xvlog.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../CPU.sim/sim_1/behav/xsim/xvlog.pb" beforeDir="false" afterPath="$PROJECT_DIR$/../../../CPU.sim/sim_1/behav/xsim/xvlog.pb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ip/rom_ip/doc/blk_mem_gen_v8_4_changelog.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../ip/rom_ip/doc/blk_mem_gen_v8_4_changelog.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ip/rom_ip/hdl/blk_mem_gen_v8_4_vhsyn_rfs.vhd" beforeDir="false" afterPath="$PROJECT_DIR$/../ip/rom_ip/hdl/blk_mem_gen_v8_4_vhsyn_rfs.vhd" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ip/rom_ip/misc/blk_mem_gen_v8_4.vhd" beforeDir="false" afterPath="$PROJECT_DIR$/../ip/rom_ip/misc/blk_mem_gen_v8_4.vhd" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ip/rom_ip/rom_ip.dcp" beforeDir="false" afterPath="$PROJECT_DIR$/../ip/rom_ip/rom_ip.dcp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ip/rom_ip/rom_ip.veo" beforeDir="false" afterPath="$PROJECT_DIR$/../ip/rom_ip/rom_ip.veo" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ip/rom_ip/rom_ip.vho" beforeDir="false" afterPath="$PROJECT_DIR$/../ip/rom_ip/rom_ip.vho" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ip/rom_ip/rom_ip.xci" beforeDir="false" afterPath="$PROJECT_DIR$/../ip/rom_ip/rom_ip.xci" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ip/rom_ip/rom_ip.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ip/rom_ip/rom_ip.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ip/rom_ip/rom_ip_ooc.xdc" beforeDir="false" afterPath="$PROJECT_DIR$/../ip/rom_ip/rom_ip_ooc.xdc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ip/rom_ip/rom_ip_sim_netlist.v" beforeDir="false" afterPath="$PROJECT_DIR$/../ip/rom_ip/rom_ip_sim_netlist.v" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ip/rom_ip/rom_ip_sim_netlist.vhdl" beforeDir="false" afterPath="$PROJECT_DIR$/../ip/rom_ip/rom_ip_sim_netlist.vhdl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ip/rom_ip/rom_ip_stub.v" beforeDir="false" afterPath="$PROJECT_DIR$/../ip/rom_ip/rom_ip_stub.v" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ip/rom_ip/rom_ip_stub.vhdl" beforeDir="false" afterPath="$PROJECT_DIR$/../ip/rom_ip/rom_ip_stub.vhdl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ip/rom_ip/sim/rom_ip.v" beforeDir="false" afterPath="$PROJECT_DIR$/../ip/rom_ip/sim/rom_ip.v" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ip/rom_ip/simulation/blk_mem_gen_v8_4.v" beforeDir="false" afterPath="$PROJECT_DIR$/../ip/rom_ip/simulation/blk_mem_gen_v8_4.v" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ip/rom_ip/synth/rom_ip.vhd" beforeDir="false" afterPath="$PROJECT_DIR$/../ip/rom_ip/synth/rom_ip.vhd" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ALU.v" beforeDir="false" afterPath="$PROJECT_DIR$/ALU.v" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CXK.v" beforeDir="false" afterPath="$PROJECT_DIR$/CXK.v" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ICU.v" beforeDir="false" afterPath="$PROJECT_DIR$/ICU.v" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IO_block.v" beforeDir="false" afterPath="$PROJECT_DIR$/IO_block.v" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PCctrl.v" beforeDir="false" afterPath="$PROJECT_DIR$/PCctrl.v" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test.v" beforeDir="false" afterPath="$PROJECT_DIR$/test.v" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/REG.v" beforeDir="false" afterPath="$PROJECT_DIR$/REG.v" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SIMD_ALU.v" beforeDir="false" afterPath="$PROJECT_DIR$/SIMD_ALU.v" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../CPU.xpr" beforeDir="false" afterPath="$PROJECT_DIR$/../../../CPU.xpr" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -114,21 +41,21 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "true",
-    "last_opened_file_path": "D:/CS214/CPU/CPU.srcs/sources_1/new/main.v",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "two.files.diff.last.used.file": "D:/CS214/CPU/CPU.srcs/sources_1/new/main.v",
-    "two.files.diff.last.used.folder": "C:/Users/Wang/OneDrive/文档/cs214_proj/CPU/CPU.srcs/sources_1/new",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/CS214/CPU/CPU.srcs/sources_1/new/main.v&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;two.files.diff.last.used.file&quot;: &quot;D:/CS214/CPU/CPU.srcs/sources_1/new/main.v&quot;,
+    &quot;two.files.diff.last.used.folder&quot;: &quot;C:/Users/Wang/OneDrive/文档/cs214_proj/CPU/CPU.srcs/sources_1/new&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager">
     <configuration default="true" type="JetRunConfigurationType">
       <module name="new" />
@@ -155,6 +82,7 @@
       <workItem from="1684835789120" duration="8511000" />
       <workItem from="1684853189698" duration="34000" />
       <workItem from="1684853915834" duration="118000" />
+      <workItem from="1684905464636" duration="693000" />
     </task>
     <servers />
   </component>

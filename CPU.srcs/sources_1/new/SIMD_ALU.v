@@ -40,28 +40,28 @@ module SIMD_ALU(
     reg [4:0] shamt_zero;
     ALU inner_alu0(
         .alu_op(simd_op),
-        .shamt(shamt_zero),
+        .shamt(5'b0),
         .in0(in0[127:96]),
         .in1(in1[127:96]),
         .out(out[127:96])
     );
     ALU inner_alu1(
         .alu_op(simd_op),
-        .shamt(shamt_zero),
+        .shamt(5'b0),
         .in0(in0[95:64]),
         .in1(in1[95:64]),
         .out(out[95:64])
     );
     ALU inner_alu2(
         .alu_op(simd_op),
-        .shamt(shamt_zero),
+        .shamt(5'b0),
         .in0(in0[63:32]),
         .in1(in1[63:32]),
         .out(out[63:32])
     );
     ALU inner_alu3(
         .alu_op(simd_op),
-        .shamt(shamt_zero),
+        .shamt(5'b0),
         .in0(in0[31:0]),
         .in1(in1[31:0]),
         .out(out[31:0])

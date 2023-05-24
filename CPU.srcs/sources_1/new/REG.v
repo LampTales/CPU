@@ -179,7 +179,7 @@ module REG(
             22: simd_read_data1 = save[831:704];
             23: simd_read_data1 = save[863:736];
             24: simd_read_data1 = save[895:768];
-            default: simd_read_data0 = 0;
+            default: simd_read_data1 = 0;
 
         endcase
     end
