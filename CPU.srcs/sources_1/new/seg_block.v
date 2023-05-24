@@ -38,11 +38,11 @@ module seg_block(input clk,
     reg[6:0] temp;
     
     always @ (seg_in) begin
-        if (seg_in[15:8] = 8'hff)begin
+        if (seg_in[15:8] == 8'hff)begin
             temp            = seg_in[6:0] ;
-            if(seg_in[7]begin
-                temp = ~temp +1
-            end)
+            if(seg_in[7])begin
+                temp = ~temp +1;
+            end
             hexadecimals[0] = temp%10;
             temp            = temp/10;
             hexadecimals[1] = temp%10;
@@ -57,11 +57,11 @@ module seg_block(input clk,
             hexadecimals[3] = seg_in[15:12];
         end
         
-        if (seg_in[31:24] = 8'hff)begin
+        if (seg_in[31:24] == 8'hff)begin
             temp            = seg_in[22:16];
-            if(seg_in[23]begin
-                temp = ~temp +1
-            end)
+            if(seg_in[23])begin
+                temp = ~temp +1;
+            end
             hexadecimals[4] = temp%10;
             temp            = temp/10;
             hexadecimals[5] = temp%10;
