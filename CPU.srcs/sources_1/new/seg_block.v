@@ -52,8 +52,6 @@ module seg_block(
     always @ (posedge clk or negedge rst) begin
         if (!rst) begin
             cnt <= 0;
-            current_hex <= 0;
-            seg_op <= 8'b1111_1111;
         end
         else begin
             cnt <= cnt + 1'b1;
