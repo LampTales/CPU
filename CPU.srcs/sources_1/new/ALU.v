@@ -108,13 +108,13 @@ always @(*) begin
     casex(alu_op)
         
         SLL: begin
-            out       = in0 << shamt;
+            out       = in1 << shamt;
             equal     = 0;
             errorcode = 8'b00;
         end//sll
         
         SRL: begin
-            out       = in0 >> shamt;
+            out       = in1 >> shamt;
             equal     = 0;
             errorcode = 8'b00;
         end//srl
