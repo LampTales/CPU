@@ -88,7 +88,7 @@ module main(
         .ignore(ignore),
         .expand_imme(expand_imme)
     );
-    
+
     wire [11:0] alu_op;
     wire [4:0] shamt;
     wire reg_dst;
@@ -125,7 +125,7 @@ module main(
         .jal(jal),
         .eret(eret)
     );
-    
+
     wire interrupt;
     wire[31:0] icu_out;
     ICU icu(
