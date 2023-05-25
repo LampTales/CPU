@@ -163,10 +163,11 @@ module CTRL(input [5:0] op_code,
      asserted: The register on the Write register input is written with the value
      on the Write data input
      deasserted: The register on the Write register input is not written
-     sw, beq, bne, eret: 0
+     sw, beq, bne, eret, j, jal : 0
      others: 1
      */
-    assign reg_write = (op_code == 6'b101011 || op_code == 6'b000100 || op_code == 6'b000101 || op_code == 6'b010000) ? 1'b0 : 1'b1;
+    assign reg_write = (op_code == 6'b101011 || op_code == 6'b000100 || op_code == 6'b000101 || op_code == 6'b010000
+    ||op_code == 6'b000010 || op_code == 6'b 000011) ? 1'b0 : 1'b1;
     
     /*
      j:

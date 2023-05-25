@@ -59,7 +59,7 @@ initial begin
     cpu_rst_butt = 0;
     mode_butt    = 0;
     ack_butt     = 0;
-    switch_in    = 24'h003fff;
+    switch_in    = 24'h7fffff;
     intr_butt =0;
 
     #10
@@ -72,7 +72,13 @@ initial begin
     intr_butt =1;
     #5
     intr_butt =0;
+    #1000
+    switch_in = 24'h702fff;
+    intr_butt =1;
+    #5
+    intr_butt =0;
     #3000
+    switch_in = 24'h302fff;
     intr_butt =1;
     #5
     intr_butt =0;
