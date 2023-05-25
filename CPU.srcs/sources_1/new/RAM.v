@@ -27,7 +27,7 @@ module RAM(input clk,
            input [31:0] addr,
            input [31:0] write_data,
            output reg [31:0] read_data,
-           input [7:0] in_num,
+           input [15:0] in_num,
            input [3:0] in_case,
            output [31:0] out_num,
            output [7:0] out_sig);

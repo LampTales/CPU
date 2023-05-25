@@ -52,7 +52,7 @@ module REG(
         case(read0)
             0: read_data0 = save[31:0];
             1: read_data0 = save[63:32];
-            2: read_data0 = ack_v0;
+            2: read_data0 = save[95:64];
             3: read_data0 = save[127:96];
             4: read_data0 = save[159:128];
             5: read_data0 = save[191:160];
@@ -76,7 +76,7 @@ module REG(
             23: read_data0 = save[767:736];
             24: read_data0 = save[799:768];
             25: read_data0 = save[831:800];
-            26: read_data0 = save[863:832];
+            26: read_data0 = ack_v0;
             27: read_data0 = save[895:864];
             28: read_data0 = save[927:896];
             29: read_data0 = save[959:928];
@@ -90,7 +90,7 @@ module REG(
         case(read1) 
             0: read_data1 = save[31:0];
             1: read_data1 = save[63:32];
-            2: read_data1 = ack_v0;
+            2: read_data1 = save[95:64];
             3: read_data1 = save[127:96];
             4: read_data1 = save[159:128];
             5: read_data1 = save[191:160];
@@ -114,7 +114,7 @@ module REG(
             23: read_data1 = save[767:736];
             24: read_data1 = save[799:768];
             25: read_data1 = save[831:800];
-            26: read_data1 = save[863:832];
+            26: read_data1 = ack_v0;
             27: read_data1 = save[895:864];
             28: read_data1 = save[927:896];
             29: read_data1 = save[959:928];
@@ -128,6 +128,9 @@ module REG(
 
     always @(*) begin
         case(read0)
+            0: simd_read_data0 = save[127:0];
+            1: simd_read_data0 = save[159:32];
+            2: simd_read_data0 = save[191:64];
             3: simd_read_data0 = save[223:96];
             4: simd_read_data0 = save[255:128];
             5: simd_read_data0 = save[287:160];
@@ -148,8 +151,6 @@ module REG(
             20: simd_read_data0 = save[767:640];
             21: simd_read_data0 = save[799:672];
             22: simd_read_data0 = save[831:704];
-            23: simd_read_data0 = save[863:736];
-            24: simd_read_data0 = save[895:768];
             default: simd_read_data0 = 0;
 
         endcase
@@ -157,6 +158,9 @@ module REG(
 
     always @(*) begin
         case(read1)
+            0: simd_read_data1 = save[127:0];
+            1: simd_read_data1 = save[159:32];
+            2: simd_read_data1 = save[191:64];
             3: simd_read_data1 = save[223:96];
             4: simd_read_data1 = save[255:128];
             5: simd_read_data1 = save[287:160];
@@ -177,8 +181,6 @@ module REG(
             20: simd_read_data1 = save[767:640];
             21: simd_read_data1 = save[799:672];
             22: simd_read_data1 = save[831:704];
-            23: simd_read_data1 = save[863:736];
-            24: simd_read_data1 = save[895:768];
             default: simd_read_data1 = 0;
 
         endcase
@@ -188,8 +190,7 @@ module REG(
 // reg write
     always @(posedge clk or negedge rst) begin
         if (!rst) begin
-            save[31:0] <= 0;  // $zero
-            save[927:96] <= 0;  // common regs
+            save[927:0] <= 0;  // common regs
             save[959:928] <= 32'b00000000000000000011111100000000;  // $sp
 
         end
@@ -197,6 +198,9 @@ module REG(
 
             if(simd) begin
                 case(write)
+                0: save[127:0] <= simd_write_data;
+                1: save[159:32] <= simd_write_data;
+                2: save[191:64] <= simd_write_data;
                 3: save[223:96] <= simd_write_data;
                 4: save[255:128] <= simd_write_data;
                 5: save[287:160] <= simd_write_data;
@@ -217,13 +221,14 @@ module REG(
                 20: save[767:640] <= simd_write_data;
                 21: save[799:672] <= simd_write_data;
                 22: save[831:704] <= simd_write_data;
-                23: save[863:736] <= simd_write_data;
-                24: save[895:768] <= simd_write_data;
                 default: save[31:0] <= 0;
                 endcase
             end
             else begin
                 case(write)
+                0: save[31:0] <= write_data;
+                1: save[63:32] <= write_data;
+                2: save[95:64] <= write_data;
                 3: save[127:96] <= write_data;
                 4: save[159:128] <= write_data;
                 5: save[191:160] <= write_data;
@@ -247,8 +252,8 @@ module REG(
                 23: save[767:736] <= write_data;
                 24: save[799:768] <= write_data;
                 25: save[831:800] <= write_data;
-                26: save[863:832] <= write_data;
-                27: save[895:864] <= write_data;
+                26: save[31:0] <= 0;
+                27: save[31:0] <= 0;
                 28: save[927:896] <= write_data;
                 29: save[959:928] <= write_data;
                 30: save[991:960] <= write_data;

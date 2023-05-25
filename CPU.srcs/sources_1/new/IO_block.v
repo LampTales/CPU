@@ -36,7 +36,7 @@ module IO_block(
     output cpu_rst,
     output reg [1:0] mode,
     output ack,
-    output [7:0] board_input_data,
+    output [15:0] board_input_data,
     output [3:0] board_input_case,
     input [31:0] board_output_data,
     input [7:0] board_output_sig,
@@ -46,7 +46,7 @@ module IO_block(
     );
 
     assign board_input_case[3:0] = switch_in[23:20];
-    assign board_input_data[7:0] = switch_in[19:12];
+    assign board_input_data[15:0] = switch_in[19:4];
 
     wire inner_cpu_rst;
 
