@@ -1,9 +1,10 @@
 -- Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2017.4 (win64) Build 2086221 Fri Dec 15 20:55:39 MST 2017
--- Date        : Thu May 25 17:25:02 2023
+-- Date        : Thu May 25 16:25:24 2023
 -- Host        : DESKTOP-KMJCO78 running 64-bit major release  (build 9200)
--- Command     : write_vhdl -force -mode synth_stub D:/CS214/CPU/CPU.srcs/sources_1/ip/rom_ip/rom_ip_stub.vhdl
+-- Command     : write_vhdl -force -mode synth_stub -rename_top rom_ip -prefix
+--               rom_ip_ rom_ip_stub.vhdl
 -- Design      : rom_ip
 -- Purpose     : Stub declaration of top-level module interface
 -- Device      : xc7a100tfgg484-1

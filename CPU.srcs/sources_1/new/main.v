@@ -132,7 +132,7 @@ module main(
         .clk(icu_clk),
         .rst(cpu_rst),
         .eret(eret),
-        .pc(pc_value),
+        .pc(pc_next),
         .button(interrupt),
         .out(icu_out)
     );
@@ -300,6 +300,4 @@ module main(
         .upg_done_o(uart_out_done),
         .upg_tx_o(uart_out)
     );
-
-
 endmodule

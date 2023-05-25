@@ -28,18 +28,19 @@ module CXK(
     output reg_clk,
     output pc_clk,
     output seg_clk,
-    output uart_clk
-    // output icu_clk
+    output uart_clk,
+    output icu_clk
     );
     wire cpu_clk;
-    assign cpu_clk = clk;
-    assign seg_clk = clk;
-    // clk_ip inner_clk(
-    //     .clk_in1(clk),
-    //     .cpu_clk(cpu_clk),
-    //     .seg_clk(seg_clk),
-    //     .uart_clk(uart_clk)
-    // );
+    // assign cpu_clk = clk;
+    clk_ip inner_clk(
+        .clk_in1(clk),
+        .cpu_clk(cpu_clk),
+        .seg_clk(seg_clk),
+        .uart_clk(uart_clk),
+        .icu_clk(icu_clk)
+    );
+    // assign seg_clk = clk;
     assign pc_clk = cpu_clk;
     assign ram_clk = cpu_clk;
     assign rom_clk = ~cpu_clk;
