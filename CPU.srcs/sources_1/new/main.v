@@ -45,6 +45,7 @@ module main(
     wire seg_clk;
     wire uart_clk;
     wire icu_clk;
+    wire switch_clk;
 
     wire cpu_rst_out;
     wire [1:0] mode;
@@ -55,6 +56,8 @@ module main(
     CXK clock(
         .clk(clk),
         .rst(rst),
+        .mode(mode),
+        .switch_clk(switch_clk),
         .rom_clk(rom_clk),
         .ram_clk(ram_clk),
         .reg_clk(reg_clk),
@@ -277,6 +280,7 @@ module main(
         .cpu_rst(cpu_rst_out),
         .mode(mode),
         .ack(ack),
+        .switch_clk(switch_clk),
         .board_input_data(in_num),
         .board_input_case(in_case),
         .board_output_data(out_num),

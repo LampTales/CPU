@@ -32,6 +32,7 @@ module PCctrl(
     input [31:0] expand_imme,
     input jr,
     input [31:0] ra,
+    input [1:0] mode,
     output [31:0] link_addr,
     output [31:0] next,
 
@@ -78,7 +79,10 @@ module PCctrl(
     );
 
     //assign next = mux2_out;
-    // ICU interrupt from WYR
-    assign next = (interrupt_handler==0) ? mux2_out : interrupt_handler;
+    // ICU interrupt from wyr
+    wire next_with_icu;
+    assign next_with_icu = (interrupt_handler==0) ? mux2_out : interrupt_handler;
+    // debug mode select from oyl
+    assign next = (mode == 2'b11) ?  mux2_out : next_with_icu;
 
 endmodule

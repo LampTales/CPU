@@ -198,7 +198,6 @@ module REG(
 
             if(simd) begin
                 case(write)
-                0: save[127:0] <= simd_write_data;
                 1: save[159:32] <= simd_write_data;
                 2: save[191:64] <= simd_write_data;
                 3: save[223:96] <= simd_write_data;
@@ -226,7 +225,6 @@ module REG(
             end
             else begin
                 case(write)
-                0: save[31:0] <= write_data;
                 1: save[63:32] <= write_data;
                 2: save[95:64] <= write_data;
                 3: save[127:96] <= write_data;
