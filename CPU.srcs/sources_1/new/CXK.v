@@ -35,14 +35,14 @@ module CXK(
     );
     wire cpu_clk;
     wire ip_cpu_clk;
-    // assign cpu_clk = clk;
-    clk_ip inner_clk(
-        .clk_in1(clk),
-        .cpu_clk(ip_cpu_clk),
-        .seg_clk(seg_clk),
-        .uart_clk(uart_clk),
-        .icu_clk(icu_clk)
-    );
+    assign ip_cpu_clk = clk;
+    // clk_ip inner_clk(
+    //     .clk_in1(clk),
+    //     .cpu_clk(ip_cpu_clk),
+    //     .seg_clk(seg_clk),
+    //     .uart_clk(uart_clk),
+    //     .icu_clk(icu_clk)
+    // );
     assign cpu_clk = (mode == 2'b11) ? switch_clk : ip_cpu_clk;
     assign pc_clk = cpu_clk;
     assign ram_clk = cpu_clk;

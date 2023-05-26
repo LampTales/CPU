@@ -5,23 +5,40 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="01fbbbd4-bdde-4324-a0ea-dc4610bddc20" name="变更" comment="">
-      <change beforePath="$PROJECT_DIR$/../../../CPU.cache/wt/gui_handlers.wdf" beforeDir="false" afterPath="$PROJECT_DIR$/../../../CPU.cache/wt/gui_handlers.wdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../CPU.cache/wt/java_command_handlers.wdf" beforeDir="false" afterPath="$PROJECT_DIR$/../../../CPU.cache/wt/java_command_handlers.wdf" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../CPU.cache/wt/project.wpc" beforeDir="false" afterPath="$PROJECT_DIR$/../../../CPU.cache/wt/project.wpc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../CPU.cache/wt/synthesis.wdf" beforeDir="false" afterPath="$PROJECT_DIR$/../../../CPU.cache/wt/synthesis.wdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../CPU.cache/wt/webtalk_pa.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../CPU.cache/wt/webtalk_pa.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../CPU.ip_user_files/ip/rom_ip/rom_ip_stub.v" beforeDir="false" afterPath="$PROJECT_DIR$/../../../CPU.ip_user_files/ip/rom_ip/rom_ip_stub.v" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../CPU.ip_user_files/ip/rom_ip/rom_ip_stub.vhdl" beforeDir="false" afterPath="$PROJECT_DIR$/../../../CPU.ip_user_files/ip/rom_ip/rom_ip_stub.vhdl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ip/rom_ip/rom_ip.dcp" beforeDir="false" afterPath="$PROJECT_DIR$/../ip/rom_ip/rom_ip.dcp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ip/rom_ip/rom_ip.mif" beforeDir="false" afterPath="$PROJECT_DIR$/../ip/rom_ip/rom_ip.mif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ip/rom_ip/rom_ip.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ip/rom_ip/rom_ip.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ip/rom_ip/rom_ip_sim_netlist.v" beforeDir="false" afterPath="$PROJECT_DIR$/../ip/rom_ip/rom_ip_sim_netlist.v" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ip/rom_ip/rom_ip_sim_netlist.vhdl" beforeDir="false" afterPath="$PROJECT_DIR$/../ip/rom_ip/rom_ip_sim_netlist.vhdl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ip/rom_ip/rom_ip_stub.v" beforeDir="false" afterPath="$PROJECT_DIR$/../ip/rom_ip/rom_ip_stub.v" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ip/rom_ip/rom_ip_stub.vhdl" beforeDir="false" afterPath="$PROJECT_DIR$/../ip/rom_ip/rom_ip_stub.vhdl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../CPU.ip_user_files/ipstatic/mmcm_pll_drp_func_7s_mmcm.vh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../CPU.ip_user_files/ipstatic/mmcm_pll_drp_func_7s_pll.vh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../CPU.ip_user_files/ipstatic/mmcm_pll_drp_func_us_mmcm.vh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../CPU.ip_user_files/ipstatic/mmcm_pll_drp_func_us_pll.vh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../CPU.ip_user_files/ipstatic/mmcm_pll_drp_func_us_plus_mmcm.vh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../CPU.ip_user_files/ipstatic/mmcm_pll_drp_func_us_plus_pll.vh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../CPU.ip_user_files/mem_init_files/prgmip32.coe" beforeDir="false" afterPath="$PROJECT_DIR$/../../../CPU.ip_user_files/mem_init_files/prgmip32.coe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../CPU.ip_user_files/mem_init_files/rom_ip.mif" beforeDir="false" afterPath="$PROJECT_DIR$/../../../CPU.ip_user_files/mem_init_files/rom_ip.mif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../CPU.runs/clk_ip_synth_1/gen_run.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../CPU.runs/clk_ip_synth_1/gen_run.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../CPU.sim/sim_1/behav/xsim/compile.bat" beforeDir="false" afterPath="$PROJECT_DIR$/../../../CPU.sim/sim_1/behav/xsim/compile.bat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../CPU.sim/sim_1/behav/xsim/elaborate.bat" beforeDir="false" afterPath="$PROJECT_DIR$/../../../CPU.sim/sim_1/behav/xsim/elaborate.bat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../CPU.sim/sim_1/behav/xsim/xsim.dir/test_behav/obj/xsim_0.win64.obj" beforeDir="false" afterPath="$PROJECT_DIR$/../../../CPU.sim/sim_1/behav/xsim/xsim.dir/test_behav/obj/xsim_0.win64.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../CPU.sim/sim_1/behav/xsim/xsim.dir/test_behav/obj/xsim_1.c" beforeDir="false" afterPath="$PROJECT_DIR$/../../../CPU.sim/sim_1/behav/xsim/xsim.dir/test_behav/obj/xsim_1.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../CPU.sim/sim_1/behav/xsim/xsim.dir/test_behav/xsim.mem" beforeDir="false" afterPath="$PROJECT_DIR$/../../../CPU.sim/sim_1/behav/xsim/xsim.dir/test_behav/xsim.mem" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../CPU.sim/sim_1/behav/xsim/xsim.dir/test_behav/xsim.reloc" beforeDir="false" afterPath="$PROJECT_DIR$/../../../CPU.sim/sim_1/behav/xsim/xsim.dir/test_behav/xsim.reloc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../CPU.sim/sim_1/behav/xsim/xsim.dir/xil_defaultlib/@a@l@u.sdb" beforeDir="false" afterPath="$PROJECT_DIR$/../../../CPU.sim/sim_1/behav/xsim/xsim.dir/xil_defaultlib/@a@l@u.sdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../CPU.sim/sim_1/behav/xsim/xsim.dir/xil_defaultlib/@c@t@r@l.sdb" beforeDir="false" afterPath="$PROJECT_DIR$/../../../CPU.sim/sim_1/behav/xsim/xsim.dir/xil_defaultlib/@c@t@r@l.sdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../CPU.sim/sim_1/behav/xsim/xsim.dir/xil_defaultlib/@c@x@k.sdb" beforeDir="false" afterPath="$PROJECT_DIR$/../../../CPU.sim/sim_1/behav/xsim/xsim.dir/xil_defaultlib/@c@x@k.sdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../CPU.sim/sim_1/behav/xsim/xsim.dir/xil_defaultlib/@expander.sdb" beforeDir="false" afterPath="$PROJECT_DIR$/../../../CPU.sim/sim_1/behav/xsim/xsim.dir/xil_defaultlib/@expander.sdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../CPU.sim/sim_1/behav/xsim/xsim.dir/xil_defaultlib/@p@c.sdb" beforeDir="false" afterPath="$PROJECT_DIR$/../../../CPU.sim/sim_1/behav/xsim/xsim.dir/xil_defaultlib/@p@c.sdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../CPU.sim/sim_1/behav/xsim/xsim.dir/xil_defaultlib/@p@cctrl.sdb" beforeDir="false" afterPath="$PROJECT_DIR$/../../../CPU.sim/sim_1/behav/xsim/xsim.dir/xil_defaultlib/@p@cctrl.sdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../CPU.sim/sim_1/behav/xsim/xsim.dir/xil_defaultlib/@r@e@g.sdb" beforeDir="false" afterPath="$PROJECT_DIR$/../../../CPU.sim/sim_1/behav/xsim/xsim.dir/xil_defaultlib/@r@e@g.sdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../CPU.sim/sim_1/behav/xsim/xsim.dir/xil_defaultlib/empty.sdb" beforeDir="false" afterPath="$PROJECT_DIR$/../../../CPU.sim/sim_1/behav/xsim/xsim.dir/xil_defaultlib/empty.sdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../CPU.sim/sim_1/behav/xsim/xsim.dir/xil_defaultlib/led_block.sdb" beforeDir="false" afterPath="$PROJECT_DIR$/../../../CPU.sim/sim_1/behav/xsim/xsim.dir/xil_defaultlib/led_block.sdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../CPU.sim/sim_1/behav/xsim/xsim.dir/xil_defaultlib/main.sdb" beforeDir="false" afterPath="$PROJECT_DIR$/../../../CPU.sim/sim_1/behav/xsim/xsim.dir/xil_defaultlib/main.sdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../CPU.sim/sim_1/behav/xsim/xsim.dir/xil_defaultlib/seg_block.sdb" beforeDir="false" afterPath="$PROJECT_DIR$/../../../CPU.sim/sim_1/behav/xsim/xsim.dir/xil_defaultlib/seg_block.sdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../CPU.sim/sim_1/behav/xsim/xsim.dir/xil_defaultlib/test.sdb" beforeDir="false" afterPath="$PROJECT_DIR$/../../../CPU.sim/sim_1/behav/xsim/xsim.dir/xil_defaultlib/test.sdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../CPU.sim/sim_1/behav/xsim/xsim.dir/xil_defaultlib/xil_defaultlib.rlx" beforeDir="false" afterPath="$PROJECT_DIR$/../../../CPU.sim/sim_1/behav/xsim/xsim.dir/xil_defaultlib/xil_defaultlib.rlx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CXK.v" beforeDir="false" afterPath="$PROJECT_DIR$/CXK.v" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IO_block.v" beforeDir="false" afterPath="$PROJECT_DIR$/IO_block.v" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RAM.v" beforeDir="false" afterPath="$PROJECT_DIR$/RAM.v" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.v" beforeDir="false" afterPath="$PROJECT_DIR$/main.v" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test.v" beforeDir="false" afterPath="$PROJECT_DIR$/test.v" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../CPU.xpr" beforeDir="false" afterPath="$PROJECT_DIR$/../../../CPU.xpr" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -80,6 +97,7 @@
       <workItem from="1684853915834" duration="118000" />
       <workItem from="1684905464636" duration="1301000" />
       <workItem from="1685007443219" duration="572000" />
+      <workItem from="1685078957111" duration="235000" />
     </task>
     <servers />
   </component>

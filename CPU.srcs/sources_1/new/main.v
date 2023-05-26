@@ -261,7 +261,8 @@ module main(
         .ra(reg_read_data0),
         .interrupt_handler(icu_out),
         .link_addr(link_addr),
-        .next(pc_next)
+        .next(pc_next),
+        .mode(mode)
     );
 
     IO_block io_block(
