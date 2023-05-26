@@ -35,7 +35,6 @@ module CXK(
     );
     wire cpu_clk;
     wire ip_cpu_clk;
-    assign ip_cpu_clk = clk;
     // clk_ip inner_clk(
     //     .clk_in1(clk),
     //     .cpu_clk(ip_cpu_clk),
@@ -48,4 +47,7 @@ module CXK(
     assign ram_clk = cpu_clk;
     assign rom_clk = ~cpu_clk;
     assign reg_clk = ~cpu_clk;
+    //only for tests~
+    assign ip_cpu_clk = clk;
+    assign seg_clk = cpu_clk;
 endmodule

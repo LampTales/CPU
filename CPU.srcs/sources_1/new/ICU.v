@@ -25,36 +25,31 @@ module ICU(input clk,
            input[31:0] pc,
            input button,
            output reg [31:0] out);
-           
-    reg [1:0]need_interrupt;
+    reg need_butt_intr;
+    reg need_clk_intr;
     reg need_eret;
     reg exl;
     reg [31:0] epc;
     reg [31:0] cnt;
-    always @(negedge rst) begin
-        need_interrupt <= 0;
-        out            <= 0;
-        exl            <= 0;
-        cnt            <= 0;
-    end
-    always @(posedge clk) begin
+    always @(negedge clk or negedge rst) begin
+        if (!rst)begin
+            need_clk_intr <= 0;
+            out           <= 0;
+            exl           <= 0;
+            cnt           <= 0;
+        end
         cnt = cnt+1;
-    end
-    always @(negedge clk) begin
         if (need_eret) begin
-            need_eret <= 0;
             out <= epc;
             exl <= 0;
         end
-        else if (~exl)begin
-            if (need_interrupt[0]) begin
-                need_interrupt[0] <= 0;
+        else if (!exl)begin
+            if (need_butt_intr) begin
                 exl <= 1;
                 epc <= pc;
                 out <= 4;
             end
-            else if (need_interrupt[1])begin
-                need_interrupt[1] <= 0;
+            else if (need_clk_intr)begin
                 exl <= 1;
                 epc <= pc;
                 out <= 4;
@@ -68,14 +63,30 @@ module ICU(input clk,
         end
     end
     // button interrupt
-    always @(posedge button) begin
-        need_interrupt[0] <=  1;
+    always @(posedge button or negedge clk or negedge rst) begin
+        if(button) begin
+            need_butt_intr <= 1;
+        end
+        else if (!exl | !rst)begin
+            need_butt_intr <= 0;
+        end
     end
     // clock interrupt
-    always @(posedge cnt[31]) begin
-        need_interrupt[1] <=  1;
+    always @(negedge clk or negedge rst) begin
+        if(cnt[31]) begin
+            need_clk_intr <= 1;
+        end
+        else if ((!clk & !exl) | !rst)begin
+            need_clk_intr <= 0;
+        end
     end
-    always @(posedge eret) begin
-        need_eret <= 1;
+
+    always @(posedge eret or negedge clk or negedge rst) begin
+        if (eret)begin
+            need_eret <= 1;
+        end
+        else begin
+            need_eret <= 0;
+        end
     end
 endmodule
