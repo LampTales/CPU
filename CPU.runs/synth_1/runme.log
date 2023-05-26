@@ -14,20 +14,20 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 53632 
+INFO: Helper process launched with PID 44840 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 344.406 ; gain = 102.836
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 344.984 ; gain = 102.418
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-638] synthesizing module 'main' [D:/CS214/CPU/CPU.srcs/sources_1/new/main.v:23]
 INFO: [Synth 8-638] synthesizing module 'CXK' [D:/CS214/CPU/CPU.srcs/sources_1/new/CXK.v:23]
-INFO: [Synth 8-638] synthesizing module 'clk_ip' [D:/CS214/CPU/CPU.runs/synth_1/.Xil/Vivado-43404-DESKTOP-KMJCO78/realtime/clk_ip_stub.v:5]
-INFO: [Synth 8-256] done synthesizing module 'clk_ip' (1#1) [D:/CS214/CPU/CPU.runs/synth_1/.Xil/Vivado-43404-DESKTOP-KMJCO78/realtime/clk_ip_stub.v:5]
+INFO: [Synth 8-638] synthesizing module 'clk_ip' [D:/CS214/CPU/CPU.runs/synth_1/.Xil/Vivado-55292-DESKTOP-KMJCO78/realtime/clk_ip_stub.v:5]
+INFO: [Synth 8-256] done synthesizing module 'clk_ip' (1#1) [D:/CS214/CPU/CPU.runs/synth_1/.Xil/Vivado-55292-DESKTOP-KMJCO78/realtime/clk_ip_stub.v:5]
 INFO: [Synth 8-256] done synthesizing module 'CXK' (2#1) [D:/CS214/CPU/CPU.srcs/sources_1/new/CXK.v:23]
 INFO: [Synth 8-638] synthesizing module 'PC' [D:/CS214/CPU/CPU.srcs/sources_1/new/PC.v:24]
 INFO: [Synth 8-256] done synthesizing module 'PC' (3#1) [D:/CS214/CPU/CPU.srcs/sources_1/new/PC.v:24]
 INFO: [Synth 8-638] synthesizing module 'ROM' [D:/CS214/CPU/CPU.srcs/sources_1/new/ROM.v:23]
-INFO: [Synth 8-638] synthesizing module 'rom_ip' [D:/CS214/CPU/CPU.runs/synth_1/.Xil/Vivado-43404-DESKTOP-KMJCO78/realtime/rom_ip_stub.v:6]
-INFO: [Synth 8-256] done synthesizing module 'rom_ip' (4#1) [D:/CS214/CPU/CPU.runs/synth_1/.Xil/Vivado-43404-DESKTOP-KMJCO78/realtime/rom_ip_stub.v:6]
+INFO: [Synth 8-638] synthesizing module 'rom_ip' [D:/CS214/CPU/CPU.runs/synth_1/.Xil/Vivado-55292-DESKTOP-KMJCO78/realtime/rom_ip_stub.v:6]
+INFO: [Synth 8-256] done synthesizing module 'rom_ip' (4#1) [D:/CS214/CPU/CPU.runs/synth_1/.Xil/Vivado-55292-DESKTOP-KMJCO78/realtime/rom_ip_stub.v:6]
 WARNING: [Synth 8-350] instance 'inner_rom' of module 'rom_ip' requires 5 connections, but only 3 given [D:/CS214/CPU/CPU.srcs/sources_1/new/ROM.v:30]
 INFO: [Synth 8-256] done synthesizing module 'ROM' (5#1) [D:/CS214/CPU/CPU.srcs/sources_1/new/ROM.v:23]
 INFO: [Synth 8-638] synthesizing module 'Expander' [D:/CS214/CPU/CPU.srcs/sources_1/new/Expander.v:25]
@@ -35,7 +35,6 @@ INFO: [Synth 8-256] done synthesizing module 'Expander' (6#1) [D:/CS214/CPU/CPU.
 INFO: [Synth 8-638] synthesizing module 'CTRL' [D:/CS214/CPU/CPU.srcs/sources_1/new/CTRL.v:75]
 INFO: [Synth 8-256] done synthesizing module 'CTRL' (7#1) [D:/CS214/CPU/CPU.srcs/sources_1/new/CTRL.v:75]
 INFO: [Synth 8-638] synthesizing module 'ICU' [D:/CS214/CPU/CPU.srcs/sources_1/new/ICU.v:22]
-WARNING: [Synth 8-5788] Register epc_reg in module ICU is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/CS214/CPU/CPU.srcs/sources_1/new/ICU.v:39]
 INFO: [Synth 8-256] done synthesizing module 'ICU' (8#1) [D:/CS214/CPU/CPU.srcs/sources_1/new/ICU.v:22]
 INFO: [Synth 8-638] synthesizing module 'MUX_5' [D:/CS214/CPU/CPU.srcs/sources_1/new/MUX.v:34]
 INFO: [Synth 8-256] done synthesizing module 'MUX_5' (9#1) [D:/CS214/CPU/CPU.srcs/sources_1/new/MUX.v:34]
@@ -84,8 +83,8 @@ WARNING: [Synth 8-350] instance 'inner_alu2' of module 'ALU' requires 7 connecti
 WARNING: [Synth 8-350] instance 'inner_alu3' of module 'ALU' requires 7 connections, but only 5 given [D:/CS214/CPU/CPU.srcs/sources_1/new/SIMD_ALU.v:62]
 INFO: [Synth 8-256] done synthesizing module 'SIMD_ALU' (13#1) [D:/CS214/CPU/CPU.srcs/sources_1/new/SIMD_ALU.v:23]
 INFO: [Synth 8-638] synthesizing module 'RAM' [D:/CS214/CPU/CPU.srcs/sources_1/new/RAM.v:23]
-INFO: [Synth 8-638] synthesizing module 'ram_ip' [D:/CS214/CPU/CPU.runs/synth_1/.Xil/Vivado-43404-DESKTOP-KMJCO78/realtime/ram_ip_stub.v:6]
-INFO: [Synth 8-256] done synthesizing module 'ram_ip' (14#1) [D:/CS214/CPU/CPU.runs/synth_1/.Xil/Vivado-43404-DESKTOP-KMJCO78/realtime/ram_ip_stub.v:6]
+INFO: [Synth 8-638] synthesizing module 'ram_ip' [D:/CS214/CPU/CPU.runs/synth_1/.Xil/Vivado-55292-DESKTOP-KMJCO78/realtime/ram_ip_stub.v:6]
+INFO: [Synth 8-256] done synthesizing module 'ram_ip' (14#1) [D:/CS214/CPU/CPU.runs/synth_1/.Xil/Vivado-55292-DESKTOP-KMJCO78/realtime/ram_ip_stub.v:6]
 INFO: [Synth 8-155] case statement is not full and has no default [D:/CS214/CPU/CPU.srcs/sources_1/new/RAM.v:67]
 INFO: [Synth 8-256] done synthesizing module 'RAM' (15#1) [D:/CS214/CPU/CPU.srcs/sources_1/new/RAM.v:23]
 INFO: [Synth 8-638] synthesizing module 'PCctrl' [D:/CS214/CPU/CPU.srcs/sources_1/new/PCctrl.v:24]
@@ -99,10 +98,10 @@ INFO: [Synth 8-256] done synthesizing module 'seg_block' (17#1) [D:/CS214/CPU/CP
 INFO: [Synth 8-638] synthesizing module 'button' [D:/CS214/CPU/CPU.srcs/sources_1/new/button.v:22]
 INFO: [Synth 8-256] done synthesizing module 'button' (18#1) [D:/CS214/CPU/CPU.srcs/sources_1/new/button.v:22]
 INFO: [Synth 8-256] done synthesizing module 'IO_block' (19#1) [D:/CS214/CPU/CPU.srcs/sources_1/new/IO_block.v:23]
-WARNING: [Synth 8-350] instance 'io_block' of module 'IO_block' requires 21 connections, but only 20 given [D:/CS214/CPU/CPU.srcs/sources_1/new/main.v:269]
-INFO: [Synth 8-638] synthesizing module 'uart_bmpg_0' [D:/CS214/CPU/CPU.runs/synth_1/.Xil/Vivado-43404-DESKTOP-KMJCO78/realtime/uart_bmpg_0_stub.v:6]
-INFO: [Synth 8-256] done synthesizing module 'uart_bmpg_0' (20#1) [D:/CS214/CPU/CPU.runs/synth_1/.Xil/Vivado-43404-DESKTOP-KMJCO78/realtime/uart_bmpg_0_stub.v:6]
-WARNING: [Synth 8-689] width (14) of port connection 'upg_adr_o' does not match port width (15) of module 'uart_bmpg_0' [D:/CS214/CPU/CPU.srcs/sources_1/new/main.v:304]
+WARNING: [Synth 8-350] instance 'io_block' of module 'IO_block' requires 21 connections, but only 20 given [D:/CS214/CPU/CPU.srcs/sources_1/new/main.v:270]
+INFO: [Synth 8-638] synthesizing module 'uart_bmpg_0' [D:/CS214/CPU/CPU.runs/synth_1/.Xil/Vivado-55292-DESKTOP-KMJCO78/realtime/uart_bmpg_0_stub.v:6]
+INFO: [Synth 8-256] done synthesizing module 'uart_bmpg_0' (20#1) [D:/CS214/CPU/CPU.runs/synth_1/.Xil/Vivado-55292-DESKTOP-KMJCO78/realtime/uart_bmpg_0_stub.v:6]
+WARNING: [Synth 8-689] width (14) of port connection 'upg_adr_o' does not match port width (15) of module 'uart_bmpg_0' [D:/CS214/CPU/CPU.srcs/sources_1/new/main.v:305]
 INFO: [Synth 8-256] done synthesizing module 'main' (21#1) [D:/CS214/CPU/CPU.srcs/sources_1/new/main.v:23]
 WARNING: [Synth 8-3331] design IO_block has unconnected port switch_in[11]
 WARNING: [Synth 8-3331] design IO_block has unconnected port switch_in[10]
@@ -147,7 +146,7 @@ WARNING: [Synth 8-3331] design ROM has unconnected port addr[1]
 WARNING: [Synth 8-3331] design ROM has unconnected port addr[0]
 WARNING: [Synth 8-3331] design CXK has unconnected port rst
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 409.215 ; gain = 167.645
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 409.199 ; gain = 166.633
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -157,21 +156,21 @@ Report Check Netlist:
 |1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
 +------+------------------+-------+---------+-------+------------------+
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 409.215 ; gain = 167.645
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 409.199 ; gain = 166.633
 ---------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xc7a100tfgg484-1
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
-Parsing XDC File [D:/CS214/CPU/CPU.runs/synth_1/.Xil/Vivado-43404-DESKTOP-KMJCO78/dcp4/clk_ip_in_context.xdc] for cell 'clock/inner_clk'
-Finished Parsing XDC File [D:/CS214/CPU/CPU.runs/synth_1/.Xil/Vivado-43404-DESKTOP-KMJCO78/dcp4/clk_ip_in_context.xdc] for cell 'clock/inner_clk'
-Parsing XDC File [D:/CS214/CPU/CPU.runs/synth_1/.Xil/Vivado-43404-DESKTOP-KMJCO78/dcp5/rom_ip_in_context.xdc] for cell 'rom/inner_rom'
-Finished Parsing XDC File [D:/CS214/CPU/CPU.runs/synth_1/.Xil/Vivado-43404-DESKTOP-KMJCO78/dcp5/rom_ip_in_context.xdc] for cell 'rom/inner_rom'
-Parsing XDC File [D:/CS214/CPU/CPU.runs/synth_1/.Xil/Vivado-43404-DESKTOP-KMJCO78/dcp6/uart_bmpg_0_in_context.xdc] for cell 'uart_block'
-Finished Parsing XDC File [D:/CS214/CPU/CPU.runs/synth_1/.Xil/Vivado-43404-DESKTOP-KMJCO78/dcp6/uart_bmpg_0_in_context.xdc] for cell 'uart_block'
-Parsing XDC File [D:/CS214/CPU/CPU.runs/synth_1/.Xil/Vivado-43404-DESKTOP-KMJCO78/dcp7/ram_ip_in_context.xdc] for cell 'ram/inner_ram'
-Finished Parsing XDC File [D:/CS214/CPU/CPU.runs/synth_1/.Xil/Vivado-43404-DESKTOP-KMJCO78/dcp7/ram_ip_in_context.xdc] for cell 'ram/inner_ram'
+Parsing XDC File [D:/CS214/CPU/CPU.runs/synth_1/.Xil/Vivado-55292-DESKTOP-KMJCO78/dcp4/clk_ip_in_context.xdc] for cell 'clock/inner_clk'
+Finished Parsing XDC File [D:/CS214/CPU/CPU.runs/synth_1/.Xil/Vivado-55292-DESKTOP-KMJCO78/dcp4/clk_ip_in_context.xdc] for cell 'clock/inner_clk'
+Parsing XDC File [D:/CS214/CPU/CPU.runs/synth_1/.Xil/Vivado-55292-DESKTOP-KMJCO78/dcp5/rom_ip_in_context.xdc] for cell 'rom/inner_rom'
+Finished Parsing XDC File [D:/CS214/CPU/CPU.runs/synth_1/.Xil/Vivado-55292-DESKTOP-KMJCO78/dcp5/rom_ip_in_context.xdc] for cell 'rom/inner_rom'
+Parsing XDC File [D:/CS214/CPU/CPU.runs/synth_1/.Xil/Vivado-55292-DESKTOP-KMJCO78/dcp6/uart_bmpg_0_in_context.xdc] for cell 'uart_block'
+Finished Parsing XDC File [D:/CS214/CPU/CPU.runs/synth_1/.Xil/Vivado-55292-DESKTOP-KMJCO78/dcp6/uart_bmpg_0_in_context.xdc] for cell 'uart_block'
+Parsing XDC File [D:/CS214/CPU/CPU.runs/synth_1/.Xil/Vivado-55292-DESKTOP-KMJCO78/dcp7/ram_ip_in_context.xdc] for cell 'ram/inner_ram'
+Finished Parsing XDC File [D:/CS214/CPU/CPU.runs/synth_1/.Xil/Vivado-55292-DESKTOP-KMJCO78/dcp7/ram_ip_in_context.xdc] for cell 'ram/inner_ram'
 Parsing XDC File [D:/CS214/CPU/CPU.srcs/constrs_1/new/empty.xdc]
 Finished Parsing XDC File [D:/CS214/CPU/CPU.srcs/constrs_1/new/empty.xdc]
 INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [D:/CS214/CPU/CPU.srcs/constrs_1/new/empty.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/main_propImpl.xdc].
@@ -183,28 +182,28 @@ Completed Processing XDC Constraints
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 807.832 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 807.234 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 807.832 ; gain = 566.262
+Finished Constraint Validation : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 807.234 ; gain = 564.668
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a100tfgg484-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 807.832 ; gain = 566.262
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 807.234 ; gain = 564.668
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
-Applied set_property IO_BUFFER_TYPE = NONE for clk. (constraint file  D:/CS214/CPU/CPU.runs/synth_1/.Xil/Vivado-43404-DESKTOP-KMJCO78/dcp4/clk_ip_in_context.xdc, line 6).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for clk. (constraint file  D:/CS214/CPU/CPU.runs/synth_1/.Xil/Vivado-43404-DESKTOP-KMJCO78/dcp4/clk_ip_in_context.xdc, line 7).
+Applied set_property IO_BUFFER_TYPE = NONE for clk. (constraint file  D:/CS214/CPU/CPU.runs/synth_1/.Xil/Vivado-55292-DESKTOP-KMJCO78/dcp4/clk_ip_in_context.xdc, line 6).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for clk. (constraint file  D:/CS214/CPU/CPU.runs/synth_1/.Xil/Vivado-55292-DESKTOP-KMJCO78/dcp4/clk_ip_in_context.xdc, line 7).
 Applied set_property DONT_TOUCH = true for clock/inner_clk. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for ram/inner_ram. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for rom/inner_rom. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for uart_block. (constraint file  auto generated constraint, line ).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 807.832 ; gain = 566.262
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 807.234 ; gain = 564.668
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-5546] ROM "reg_dst" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "branch" won't be mapped to RAM because it is too sparse
@@ -214,7 +213,7 @@ INFO: [Synth 8-5546] ROM "mem_write" won't be mapped to RAM because it is too sp
 INFO: [Synth 8-5546] ROM "j" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "jal" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "eret" won't be mapped to RAM because it is too sparse
-WARNING: [Synth 8-6014] Unused sequential element cnt_reg was removed.  [D:/CS214/CPU/CPU.srcs/sources_1/new/ICU.v:72]
+WARNING: [Synth 8-6014] Unused sequential element cnt_reg was removed.  [D:/CS214/CPU/CPU.srcs/sources_1/new/ICU.v:123]
 WARNING: [Synth 8-6014] Unused sequential element ack_v0_reg was removed.  [D:/CS214/CPU/CPU.srcs/sources_1/new/REG.v:46]
 INFO: [Synth 8-5545] ROM "out" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 INFO: [Synth 8-5545] ROM "errorcode" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
@@ -224,7 +223,7 @@ WARNING: [Synth 8-327] inferring latch for variable 'board_output_data_reg' [D:/
 WARNING: [Synth 8-327] inferring latch for variable 'board_output_sig_reg' [D:/CS214/CPU/CPU.srcs/sources_1/new/RAM.v:59]
 WARNING: [Synth 8-327] inferring latch for variable 'error_reg' [D:/CS214/CPU/CPU.srcs/sources_1/new/IO_block.v:112]
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 807.832 ; gain = 566.262
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 807.234 ; gain = 564.668
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -235,7 +234,7 @@ Report RTL Partitions:
 |2     |REG__GB1      |           1|     18993|
 |3     |ALU           |           5|     14661|
 |4     |SIMD_ALU__GC0 |           1|        27|
-|5     |main__GC0     |           1|      6060|
+|5     |main__GC0     |           1|      6097|
 +------+--------------+------------+----------+
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -268,12 +267,12 @@ Detailed RTL Component Info :
 	   2 Input      7 Bit        Muxes := 2     
 	   2 Input      6 Bit        Muxes := 2     
 	   2 Input      5 Bit        Muxes := 3     
+	   3 Input      4 Bit        Muxes := 1     
 	   2 Input      4 Bit        Muxes := 4     
-	   4 Input      3 Bit        Muxes := 1     
 	   2 Input      2 Bit        Muxes := 5     
 	  31 Input      2 Bit        Muxes := 5     
 	  31 Input      1 Bit        Muxes := 5     
-	   2 Input      1 Bit        Muxes := 19    
+	   2 Input      1 Bit        Muxes := 17    
 	   3 Input      1 Bit        Muxes := 2     
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
@@ -332,8 +331,8 @@ Detailed RTL Component Info :
 	                1 Bit    Registers := 1     
 +---Muxes : 
 	   2 Input     32 Bit        Muxes := 1     
-	   4 Input      3 Bit        Muxes := 1     
-	   2 Input      1 Bit        Muxes := 4     
+	   3 Input      4 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 2     
 Module MUX_5__1 
 Detailed RTL Component Info : 
 +---Muxes : 
@@ -466,8 +465,8 @@ DSP Report: operator out0 is absorbed into DSP out0.
 DSP Report: Generating DSP out0, operation Mode is: (PCIN>>17)+A*B.
 DSP Report: operator out0 is absorbed into DSP out0.
 DSP Report: operator out0 is absorbed into DSP out0.
-WARNING: [Synth 8-6014] Unused sequential element icu/cnt_reg was removed.  [D:/CS214/CPU/CPU.srcs/sources_1/new/ICU.v:72]
-WARNING: [Synth 8-6014] Unused sequential element io_block/seg/cnt_reg was removed.  [D:/CS214/CPU/CPU.srcs/sources_1/new/seg_block.v:82]
+WARNING: [Synth 8-6014] Unused sequential element cnt_reg was removed.  [D:/CS214/CPU/CPU.srcs/sources_1/new/ICU.v:123]
+WARNING: [Synth 8-6014] Unused sequential element seg/cnt_reg was removed.  [D:/CS214/CPU/CPU.srcs/sources_1/new/seg_block.v:82]
 INFO: [Synth 8-3886] merging instance 'reg_filei_0/save_reg[832]' (FDCE) to 'reg_filei_0/save_reg[864]'
 INFO: [Synth 8-3886] merging instance 'reg_filei_0/save_reg[833]' (FDCE) to 'reg_filei_0/save_reg[864]'
 INFO: [Synth 8-3886] merging instance 'reg_filei_0/save_reg[834]' (FDCE) to 'reg_filei_0/save_reg[864]'
@@ -564,12 +563,12 @@ INFO: [Synth 8-3886] merging instance 'reg_filei_0/save_reg[894]' (FDCE) to 'reg
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (reg_filei_0/\save_reg[30] )
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (reg_filei_0/\save_reg[895] )
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (reg_filei_0/\save_reg[31] )
-INFO: [Synth 8-3333] propagating constant 1 across sequential element (i_2/\icu/need_clk_intr_reg )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_2/\icu/need_clk_intr_reg )
 INFO: [Synth 8-3333] propagating constant 1 across sequential element (i_2/\icu/need_butt_intr_reg )
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_2/\io_block/mode_reg[0] )
 INFO: [Synth 8-3333] propagating constant 1 across sequential element (i_2/\io_block/mode_reg[1] )
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:26 ; elapsed = 00:00:27 . Memory (MB): peak = 807.832 ; gain = 566.262
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:32 ; elapsed = 00:00:33 . Memory (MB): peak = 807.234 ; gain = 564.668
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP and Shift Register Reporting
@@ -598,7 +597,7 @@ Report RTL Partitions:
 |2     |REG__GB1      |           1|      8209|
 |3     |ALU           |           1|      7762|
 |4     |SIMD_ALU__GC0 |           1|        10|
-|5     |main__GC0     |           1|      1530|
+|5     |main__GC0     |           1|      1594|
 |6     |ALU__1        |           4|       226|
 +------+--------------+------------+----------+
 ---------------------------------------------------------------------------------
@@ -610,13 +609,13 @@ INFO: [Synth 8-5578] Moved timing constraint from pin 'clock/inner_clk/seg_clk' 
 INFO: [Synth 8-5578] Moved timing constraint from pin 'clock/inner_clk/uart_clk' to pin 'clock/inner_clk/bbstub_uart_clk/O'
 INFO: [Synth 8-5819] Moved 4 constraints on hierarchical pins to their respective driving/loading pins
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:34 ; elapsed = 00:00:35 . Memory (MB): peak = 869.750 ; gain = 628.180
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:42 ; elapsed = 00:00:44 . Memory (MB): peak = 865.656 ; gain = 623.090
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:47 ; elapsed = 00:00:48 . Memory (MB): peak = 996.371 ; gain = 754.801
+Finished Timing Optimization : Time (s): cpu = 00:00:57 ; elapsed = 00:00:59 . Memory (MB): peak = 969.590 ; gain = 727.023
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -627,13 +626,13 @@ Report RTL Partitions:
 |2     |ALU           |           1|      7762|
 |3     |SIMD_ALU__GC0 |           1|        10|
 |4     |ALU__1        |           4|       226|
-|5     |main_GT0      |           1|      9492|
+|5     |main_GT0      |           1|      9684|
 +------+--------------+------------+----------+
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:58 ; elapsed = 00:00:59 . Memory (MB): peak = 996.371 ; gain = 754.801
+Finished Technology Mapping : Time (s): cpu = 00:01:12 ; elapsed = 00:01:14 . Memory (MB): peak = 969.590 ; gain = 727.023
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -690,7 +689,7 @@ CRITICAL WARNING: [Synth 8-4442] BlackBox module \rom/inner_rom  has unconnected
 CRITICAL WARNING: [Synth 8-4442] BlackBox module \rom/inner_rom  has unconnected pin dina[1]
 CRITICAL WARNING: [Synth 8-4442] BlackBox module \rom/inner_rom  has unconnected pin dina[0]
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:59 ; elapsed = 00:01:00 . Memory (MB): peak = 996.371 ; gain = 754.801
+Finished IO Insertion : Time (s): cpu = 00:01:14 ; elapsed = 00:01:16 . Memory (MB): peak = 969.590 ; gain = 727.023
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -703,7 +702,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:59 ; elapsed = 00:01:00 . Memory (MB): peak = 996.371 ; gain = 754.801
+Finished Renaming Generated Instances : Time (s): cpu = 00:01:14 ; elapsed = 00:01:16 . Memory (MB): peak = 969.590 ; gain = 727.023
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -715,25 +714,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:00 ; elapsed = 00:01:01 . Memory (MB): peak = 996.371 ; gain = 754.801
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:15 ; elapsed = 00:01:17 . Memory (MB): peak = 969.590 ; gain = 727.023
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:01:01 ; elapsed = 00:01:02 . Memory (MB): peak = 996.371 ; gain = 754.801
+Finished Renaming Generated Ports : Time (s): cpu = 00:01:16 ; elapsed = 00:01:18 . Memory (MB): peak = 969.590 ; gain = 727.023
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:01:01 ; elapsed = 00:01:02 . Memory (MB): peak = 996.371 ; gain = 754.801
+Finished Handling Custom Attributes : Time (s): cpu = 00:01:16 ; elapsed = 00:01:18 . Memory (MB): peak = 969.590 ; gain = 727.023
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:01:01 ; elapsed = 00:01:02 . Memory (MB): peak = 996.371 ; gain = 754.801
+Finished Renaming Generated Nets : Time (s): cpu = 00:01:16 ; elapsed = 00:01:18 . Memory (MB): peak = 969.590 ; gain = 727.023
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -761,16 +760,16 @@ Report Cell Usage:
 |6     |CARRY4      |   697|
 |7     |DSP48E1     |    15|
 |8     |LUT1        |    21|
-|9     |LUT2        |   307|
-|10    |LUT3        |   991|
-|11    |LUT4        |   153|
-|12    |LUT5        |  3055|
-|13    |LUT6        |  2408|
-|14    |MUXF7       |   609|
-|15    |MUXF8       |   256|
-|16    |FDCE        |  1026|
+|9     |LUT2        |   311|
+|10    |LUT3        |   922|
+|11    |LUT4        |   250|
+|12    |LUT5        |  2387|
+|13    |LUT6        |  3033|
+|14    |MUXF7       |   608|
+|15    |MUXF8       |   259|
+|16    |FDCE        |  1058|
 |17    |FDPE        |     8|
-|18    |FDRE        |    96|
+|18    |FDRE        |    64|
 |19    |LDC         |    32|
 |20    |IBUF        |    16|
 |21    |OBUF        |    41|
@@ -780,19 +779,19 @@ Report Instance Areas:
 +------+---------------------------+----------+------+
 |      |Instance                   |Module    |Cells |
 +------+---------------------------+----------+------+
-|1     |top                        |          |  9853|
-|2     |  alu                      |ALU       |  1032|
+|1     |top                        |          |  9844|
+|2     |  alu                      |ALU       |  1062|
 |3     |  clock                    |CXK       |     4|
-|4     |  icu                      |ICU       |   111|
-|5     |  io_block                 |IO_block  |   186|
+|4     |  icu                      |ICU       |    76|
+|5     |  io_block                 |IO_block  |   185|
 |6     |    ack_butt_antishake     |button    |    75|
-|7     |    cpu_rst_butt_antishake |button_4  |    85|
+|7     |    cpu_rst_butt_antishake |button_4  |    84|
 |8     |    seg                    |seg_block |    26|
 |9     |  pc_counter               |PC        |    37|
 |10    |  pc_ctrl                  |PCctrl    |    16|
-|11    |  ram                      |RAM       |   141|
+|11    |  ram                      |RAM       |   142|
 |12    |  reg_file                 |REG       |  3925|
-|13    |  rom                      |ROM       |  4168|
+|13    |  rom                      |ROM       |  4164|
 |14    |  simd_alu                 |SIMD_ALU  |   120|
 |15    |    inner_alu0             |ALU_0     |    30|
 |16    |    inner_alu1             |ALU_1     |    30|
@@ -800,13 +799,13 @@ Report Instance Areas:
 |18    |    inner_alu3             |ALU_3     |    30|
 +------+---------------------------+----------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:01:01 ; elapsed = 00:01:02 . Memory (MB): peak = 996.371 ; gain = 754.801
+Finished Writing Synthesis Report : Time (s): cpu = 00:01:16 ; elapsed = 00:01:18 . Memory (MB): peak = 969.590 ; gain = 727.023
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 33 critical warnings and 9 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:51 ; elapsed = 00:00:56 . Memory (MB): peak = 996.371 ; gain = 356.184
-Synthesis Optimization Complete : Time (s): cpu = 00:01:01 ; elapsed = 00:01:02 . Memory (MB): peak = 996.371 ; gain = 754.801
+Synthesis Optimization Runtime : Time (s): cpu = 00:01:05 ; elapsed = 00:01:11 . Memory (MB): peak = 969.590 ; gain = 328.988
+Synthesis Optimization Complete : Time (s): cpu = 00:01:16 ; elapsed = 00:01:18 . Memory (MB): peak = 969.590 ; gain = 727.023
 INFO: [Project 1-571] Translating synthesized netlist
-INFO: [Netlist 29-17] Analyzing 1625 Unisim elements for replacement
+INFO: [Netlist 29-17] Analyzing 1627 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
@@ -815,10 +814,10 @@ INFO: [Project 1-111] Unisim Transformation Summary:
   LDC => LDCE: 32 instances
 
 INFO: [Common 17-83] Releasing license: Synthesis
-178 Infos, 60 Warnings, 33 Critical Warnings and 0 Errors encountered.
+178 Infos, 59 Warnings, 33 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:01:04 ; elapsed = 00:01:06 . Memory (MB): peak = 996.371 ; gain = 765.004
+synth_design: Time (s): cpu = 00:01:20 ; elapsed = 00:01:23 . Memory (MB): peak = 969.590 ; gain = 738.547
 INFO: [Common 17-1381] The checkpoint 'D:/CS214/CPU/CPU.runs/synth_1/main.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file main_utilization_synth.rpt -pb main_utilization_synth.pb
-report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.052 . Memory (MB): peak = 996.371 ; gain = 0.000
-INFO: [Common 17-206] Exiting Vivado at Fri May 26 23:30:18 2023...
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.057 . Memory (MB): peak = 969.590 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Sat May 27 01:02:39 2023...
