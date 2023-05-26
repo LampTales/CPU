@@ -69,7 +69,7 @@ module IO_block(
 
     wire mode_change;
     button mode_butt_antishake(
-        .clk(seg_clk),
+        .clk(pc_clk),
         .rst_n(rst),
         .input_button(mode_butt),
         .output_button(mode_change)
