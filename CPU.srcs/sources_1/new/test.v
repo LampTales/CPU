@@ -55,7 +55,7 @@ module test;
 
 initial begin
     clk          = 0;
-    icu_clk      = 1;
+    icu_clk      = 0;
     sysrst       = 1;
     cpu_rst_butt = 0;
     mode_butt    = 0;

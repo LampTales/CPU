@@ -27,19 +27,15 @@ module ICU(input clk,
            output reg [31:0] out);
     reg need_butt_intr;
     reg need_clk_intr;
-    reg need_eret;
     reg exl;
     reg [31:0] epc;
     reg [31:0] cnt;
-    always @(negedge clk or negedge rst) begin
+    always @(posedge clk or negedge rst) begin
         if (!rst)begin
-            need_clk_intr <= 0;
             out           <= 0;
             exl           <= 0;
-            cnt           <= 0;
         end
-        cnt = cnt+1;
-        if (need_eret) begin
+        else if (eret) begin
             out <= epc;
             exl <= 0;
         end
@@ -63,7 +59,7 @@ module ICU(input clk,
         end
     end
     // button interrupt
-    always @(posedge button or negedge clk or negedge rst) begin
+    always @(posedge clk or negedge rst) begin
         if(button) begin
             need_butt_intr <= 1;
         end
@@ -72,21 +68,18 @@ module ICU(input clk,
         end
     end
     // clock interrupt
-    always @(negedge clk or negedge rst) begin
-        if(cnt[31]) begin
+    always @(posedge clk or negedge rst) begin
+        if(cnt >= 32'd100_000_000) begin
             need_clk_intr <= 1;
+            cnt <=0;
         end
-        else if ((!clk & !exl) | !rst)begin
+        else if (!exl | !rst)begin
+            cnt <=0;
             need_clk_intr <= 0;
+        end
+        else begin
+            cnt <= cnt+1;
         end
     end
 
-    always @(posedge eret or negedge clk or negedge rst) begin
-        if (eret)begin
-            need_eret <= 1;
-        end
-        else begin
-            need_eret <= 0;
-        end
-    end
 endmodule
