@@ -2,8 +2,8 @@
 # Vivado v2017.4 (64-bit)
 # SW Build 2086221 on Fri Dec 15 20:55:39 MST 2017
 # IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
-# Start of session at: Fri May 26 16:40:58 2023
-# Process ID: 25816
+# Start of session at: Fri May 26 23:29:08 2023
+# Process ID: 43404
 # Current directory: D:/CS214/CPU/CPU.runs/synth_1
 # Command line: vivado.exe -log main.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source main.tcl
 # Log file: D:/CS214/CPU/CPU.runs/synth_1/main.vds
@@ -15,20 +15,20 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 46720 
+INFO: Helper process launched with PID 53632 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 344.125 ; gain = 102.703
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 344.406 ; gain = 102.836
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-638] synthesizing module 'main' [D:/CS214/CPU/CPU.srcs/sources_1/new/main.v:23]
 INFO: [Synth 8-638] synthesizing module 'CXK' [D:/CS214/CPU/CPU.srcs/sources_1/new/CXK.v:23]
-INFO: [Synth 8-638] synthesizing module 'clk_ip' [D:/CS214/CPU/CPU.runs/synth_1/.Xil/Vivado-25816-DESKTOP-KMJCO78/realtime/clk_ip_stub.v:5]
-INFO: [Synth 8-256] done synthesizing module 'clk_ip' (1#1) [D:/CS214/CPU/CPU.runs/synth_1/.Xil/Vivado-25816-DESKTOP-KMJCO78/realtime/clk_ip_stub.v:5]
+INFO: [Synth 8-638] synthesizing module 'clk_ip' [D:/CS214/CPU/CPU.runs/synth_1/.Xil/Vivado-43404-DESKTOP-KMJCO78/realtime/clk_ip_stub.v:5]
+INFO: [Synth 8-256] done synthesizing module 'clk_ip' (1#1) [D:/CS214/CPU/CPU.runs/synth_1/.Xil/Vivado-43404-DESKTOP-KMJCO78/realtime/clk_ip_stub.v:5]
 INFO: [Synth 8-256] done synthesizing module 'CXK' (2#1) [D:/CS214/CPU/CPU.srcs/sources_1/new/CXK.v:23]
 INFO: [Synth 8-638] synthesizing module 'PC' [D:/CS214/CPU/CPU.srcs/sources_1/new/PC.v:24]
 INFO: [Synth 8-256] done synthesizing module 'PC' (3#1) [D:/CS214/CPU/CPU.srcs/sources_1/new/PC.v:24]
 INFO: [Synth 8-638] synthesizing module 'ROM' [D:/CS214/CPU/CPU.srcs/sources_1/new/ROM.v:23]
-INFO: [Synth 8-638] synthesizing module 'rom_ip' [D:/CS214/CPU/CPU.runs/synth_1/.Xil/Vivado-25816-DESKTOP-KMJCO78/realtime/rom_ip_stub.v:6]
-INFO: [Synth 8-256] done synthesizing module 'rom_ip' (4#1) [D:/CS214/CPU/CPU.runs/synth_1/.Xil/Vivado-25816-DESKTOP-KMJCO78/realtime/rom_ip_stub.v:6]
+INFO: [Synth 8-638] synthesizing module 'rom_ip' [D:/CS214/CPU/CPU.runs/synth_1/.Xil/Vivado-43404-DESKTOP-KMJCO78/realtime/rom_ip_stub.v:6]
+INFO: [Synth 8-256] done synthesizing module 'rom_ip' (4#1) [D:/CS214/CPU/CPU.runs/synth_1/.Xil/Vivado-43404-DESKTOP-KMJCO78/realtime/rom_ip_stub.v:6]
 WARNING: [Synth 8-350] instance 'inner_rom' of module 'rom_ip' requires 5 connections, but only 3 given [D:/CS214/CPU/CPU.srcs/sources_1/new/ROM.v:30]
 INFO: [Synth 8-256] done synthesizing module 'ROM' (5#1) [D:/CS214/CPU/CPU.srcs/sources_1/new/ROM.v:23]
 INFO: [Synth 8-638] synthesizing module 'Expander' [D:/CS214/CPU/CPU.srcs/sources_1/new/Expander.v:25]
@@ -85,9 +85,9 @@ WARNING: [Synth 8-350] instance 'inner_alu2' of module 'ALU' requires 7 connecti
 WARNING: [Synth 8-350] instance 'inner_alu3' of module 'ALU' requires 7 connections, but only 5 given [D:/CS214/CPU/CPU.srcs/sources_1/new/SIMD_ALU.v:62]
 INFO: [Synth 8-256] done synthesizing module 'SIMD_ALU' (13#1) [D:/CS214/CPU/CPU.srcs/sources_1/new/SIMD_ALU.v:23]
 INFO: [Synth 8-638] synthesizing module 'RAM' [D:/CS214/CPU/CPU.srcs/sources_1/new/RAM.v:23]
-INFO: [Synth 8-638] synthesizing module 'ram_ip' [D:/CS214/CPU/CPU.runs/synth_1/.Xil/Vivado-25816-DESKTOP-KMJCO78/realtime/ram_ip_stub.v:6]
-INFO: [Synth 8-256] done synthesizing module 'ram_ip' (14#1) [D:/CS214/CPU/CPU.runs/synth_1/.Xil/Vivado-25816-DESKTOP-KMJCO78/realtime/ram_ip_stub.v:6]
-INFO: [Synth 8-155] case statement is not full and has no default [D:/CS214/CPU/CPU.srcs/sources_1/new/RAM.v:62]
+INFO: [Synth 8-638] synthesizing module 'ram_ip' [D:/CS214/CPU/CPU.runs/synth_1/.Xil/Vivado-43404-DESKTOP-KMJCO78/realtime/ram_ip_stub.v:6]
+INFO: [Synth 8-256] done synthesizing module 'ram_ip' (14#1) [D:/CS214/CPU/CPU.runs/synth_1/.Xil/Vivado-43404-DESKTOP-KMJCO78/realtime/ram_ip_stub.v:6]
+INFO: [Synth 8-155] case statement is not full and has no default [D:/CS214/CPU/CPU.srcs/sources_1/new/RAM.v:67]
 INFO: [Synth 8-256] done synthesizing module 'RAM' (15#1) [D:/CS214/CPU/CPU.srcs/sources_1/new/RAM.v:23]
 INFO: [Synth 8-638] synthesizing module 'PCctrl' [D:/CS214/CPU/CPU.srcs/sources_1/new/PCctrl.v:24]
 INFO: [Synth 8-256] done synthesizing module 'PCctrl' (16#1) [D:/CS214/CPU/CPU.srcs/sources_1/new/PCctrl.v:24]
@@ -100,9 +100,10 @@ INFO: [Synth 8-256] done synthesizing module 'seg_block' (17#1) [D:/CS214/CPU/CP
 INFO: [Synth 8-638] synthesizing module 'button' [D:/CS214/CPU/CPU.srcs/sources_1/new/button.v:22]
 INFO: [Synth 8-256] done synthesizing module 'button' (18#1) [D:/CS214/CPU/CPU.srcs/sources_1/new/button.v:22]
 INFO: [Synth 8-256] done synthesizing module 'IO_block' (19#1) [D:/CS214/CPU/CPU.srcs/sources_1/new/IO_block.v:23]
-INFO: [Synth 8-638] synthesizing module 'uart_bmpg_0' [D:/CS214/CPU/CPU.runs/synth_1/.Xil/Vivado-25816-DESKTOP-KMJCO78/realtime/uart_bmpg_0_stub.v:6]
-INFO: [Synth 8-256] done synthesizing module 'uart_bmpg_0' (20#1) [D:/CS214/CPU/CPU.runs/synth_1/.Xil/Vivado-25816-DESKTOP-KMJCO78/realtime/uart_bmpg_0_stub.v:6]
-WARNING: [Synth 8-689] width (14) of port connection 'upg_adr_o' does not match port width (15) of module 'uart_bmpg_0' [D:/CS214/CPU/CPU.srcs/sources_1/new/main.v:303]
+WARNING: [Synth 8-350] instance 'io_block' of module 'IO_block' requires 21 connections, but only 20 given [D:/CS214/CPU/CPU.srcs/sources_1/new/main.v:269]
+INFO: [Synth 8-638] synthesizing module 'uart_bmpg_0' [D:/CS214/CPU/CPU.runs/synth_1/.Xil/Vivado-43404-DESKTOP-KMJCO78/realtime/uart_bmpg_0_stub.v:6]
+INFO: [Synth 8-256] done synthesizing module 'uart_bmpg_0' (20#1) [D:/CS214/CPU/CPU.runs/synth_1/.Xil/Vivado-43404-DESKTOP-KMJCO78/realtime/uart_bmpg_0_stub.v:6]
+WARNING: [Synth 8-689] width (14) of port connection 'upg_adr_o' does not match port width (15) of module 'uart_bmpg_0' [D:/CS214/CPU/CPU.srcs/sources_1/new/main.v:304]
 INFO: [Synth 8-256] done synthesizing module 'main' (21#1) [D:/CS214/CPU/CPU.srcs/sources_1/new/main.v:23]
 WARNING: [Synth 8-3331] design IO_block has unconnected port switch_in[11]
 WARNING: [Synth 8-3331] design IO_block has unconnected port switch_in[10]
@@ -147,7 +148,7 @@ WARNING: [Synth 8-3331] design ROM has unconnected port addr[1]
 WARNING: [Synth 8-3331] design ROM has unconnected port addr[0]
 WARNING: [Synth 8-3331] design CXK has unconnected port rst
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 408.859 ; gain = 167.438
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 409.215 ; gain = 167.645
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -157,26 +158,23 @@ Report Check Netlist:
 |1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
 +------+------------------+-------+---------+-------+------------------+
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 408.859 ; gain = 167.438
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 409.215 ; gain = 167.645
 ---------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xc7a100tfgg484-1
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
-Parsing XDC File [D:/CS214/CPU/CPU.runs/synth_1/.Xil/Vivado-25816-DESKTOP-KMJCO78/dcp4/rom_ip_in_context.xdc] for cell 'rom/inner_rom'
-Finished Parsing XDC File [D:/CS214/CPU/CPU.runs/synth_1/.Xil/Vivado-25816-DESKTOP-KMJCO78/dcp4/rom_ip_in_context.xdc] for cell 'rom/inner_rom'
-Parsing XDC File [D:/CS214/CPU/CPU.runs/synth_1/.Xil/Vivado-25816-DESKTOP-KMJCO78/dcp5/clk_ip_in_context.xdc] for cell 'clock/inner_clk'
-Finished Parsing XDC File [D:/CS214/CPU/CPU.runs/synth_1/.Xil/Vivado-25816-DESKTOP-KMJCO78/dcp5/clk_ip_in_context.xdc] for cell 'clock/inner_clk'
-Parsing XDC File [D:/CS214/CPU/CPU.runs/synth_1/.Xil/Vivado-25816-DESKTOP-KMJCO78/dcp6/uart_bmpg_0_in_context.xdc] for cell 'uart_block'
-Finished Parsing XDC File [D:/CS214/CPU/CPU.runs/synth_1/.Xil/Vivado-25816-DESKTOP-KMJCO78/dcp6/uart_bmpg_0_in_context.xdc] for cell 'uart_block'
-Parsing XDC File [D:/CS214/CPU/CPU.runs/synth_1/.Xil/Vivado-25816-DESKTOP-KMJCO78/dcp7/ram_ip_in_context.xdc] for cell 'ram/inner_ram'
-Finished Parsing XDC File [D:/CS214/CPU/CPU.runs/synth_1/.Xil/Vivado-25816-DESKTOP-KMJCO78/dcp7/ram_ip_in_context.xdc] for cell 'ram/inner_ram'
+Parsing XDC File [D:/CS214/CPU/CPU.runs/synth_1/.Xil/Vivado-43404-DESKTOP-KMJCO78/dcp4/clk_ip_in_context.xdc] for cell 'clock/inner_clk'
+Finished Parsing XDC File [D:/CS214/CPU/CPU.runs/synth_1/.Xil/Vivado-43404-DESKTOP-KMJCO78/dcp4/clk_ip_in_context.xdc] for cell 'clock/inner_clk'
+Parsing XDC File [D:/CS214/CPU/CPU.runs/synth_1/.Xil/Vivado-43404-DESKTOP-KMJCO78/dcp5/rom_ip_in_context.xdc] for cell 'rom/inner_rom'
+Finished Parsing XDC File [D:/CS214/CPU/CPU.runs/synth_1/.Xil/Vivado-43404-DESKTOP-KMJCO78/dcp5/rom_ip_in_context.xdc] for cell 'rom/inner_rom'
+Parsing XDC File [D:/CS214/CPU/CPU.runs/synth_1/.Xil/Vivado-43404-DESKTOP-KMJCO78/dcp6/uart_bmpg_0_in_context.xdc] for cell 'uart_block'
+Finished Parsing XDC File [D:/CS214/CPU/CPU.runs/synth_1/.Xil/Vivado-43404-DESKTOP-KMJCO78/dcp6/uart_bmpg_0_in_context.xdc] for cell 'uart_block'
+Parsing XDC File [D:/CS214/CPU/CPU.runs/synth_1/.Xil/Vivado-43404-DESKTOP-KMJCO78/dcp7/ram_ip_in_context.xdc] for cell 'ram/inner_ram'
+Finished Parsing XDC File [D:/CS214/CPU/CPU.runs/synth_1/.Xil/Vivado-43404-DESKTOP-KMJCO78/dcp7/ram_ip_in_context.xdc] for cell 'ram/inner_ram'
 Parsing XDC File [D:/CS214/CPU/CPU.srcs/constrs_1/new/empty.xdc]
-WARNING: [Vivado 12-584] No ports matched 'rst'. [D:/CS214/CPU/CPU.srcs/constrs_1/new/empty.xdc:18]
-WARNING: [Vivado 12-584] No ports matched 'rst'. [D:/CS214/CPU/CPU.srcs/constrs_1/new/empty.xdc:39]
 Finished Parsing XDC File [D:/CS214/CPU/CPU.srcs/constrs_1/new/empty.xdc]
-WARNING: [Project 1-498] One or more constraints failed evaluation while reading constraint file [D:/CS214/CPU/CPU.srcs/constrs_1/new/empty.xdc] and the design contains unresolved black boxes. These constraints will be read post-synthesis (as long as their source constraint file is marked as used_in_implementation) and should be applied correctly then. You should review the constraints listed in the file [.Xil/main_propImpl.xdc] and check the run log file to verify that these constraints were correctly applied.
 INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [D:/CS214/CPU/CPU.srcs/constrs_1/new/empty.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/main_propImpl.xdc].
 Resolution: To avoid this warning, move constraints listed in [.Xil/main_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
 Parsing XDC File [D:/CS214/CPU/CPU.runs/synth_1/dont_touch.xdc]
@@ -186,28 +184,28 @@ Completed Processing XDC Constraints
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 806.977 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 807.832 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:14 ; elapsed = 00:00:14 . Memory (MB): peak = 806.977 ; gain = 565.555
+Finished Constraint Validation : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 807.832 ; gain = 566.262
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a100tfgg484-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:14 ; elapsed = 00:00:14 . Memory (MB): peak = 806.977 ; gain = 565.555
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 807.832 ; gain = 566.262
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
-Applied set_property IO_BUFFER_TYPE = NONE for clk. (constraint file  D:/CS214/CPU/CPU.runs/synth_1/.Xil/Vivado-25816-DESKTOP-KMJCO78/dcp5/clk_ip_in_context.xdc, line 6).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for clk. (constraint file  D:/CS214/CPU/CPU.runs/synth_1/.Xil/Vivado-25816-DESKTOP-KMJCO78/dcp5/clk_ip_in_context.xdc, line 7).
+Applied set_property IO_BUFFER_TYPE = NONE for clk. (constraint file  D:/CS214/CPU/CPU.runs/synth_1/.Xil/Vivado-43404-DESKTOP-KMJCO78/dcp4/clk_ip_in_context.xdc, line 6).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for clk. (constraint file  D:/CS214/CPU/CPU.runs/synth_1/.Xil/Vivado-43404-DESKTOP-KMJCO78/dcp4/clk_ip_in_context.xdc, line 7).
 Applied set_property DONT_TOUCH = true for clock/inner_clk. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for ram/inner_ram. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for rom/inner_rom. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for uart_block. (constraint file  auto generated constraint, line ).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:14 ; elapsed = 00:00:14 . Memory (MB): peak = 806.977 ; gain = 565.555
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 807.832 ; gain = 566.262
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-5546] ROM "reg_dst" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "branch" won't be mapped to RAM because it is too sparse
@@ -222,11 +220,12 @@ WARNING: [Synth 8-6014] Unused sequential element ack_v0_reg was removed.  [D:/C
 INFO: [Synth 8-5545] ROM "out" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 INFO: [Synth 8-5545] ROM "errorcode" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 INFO: [Synth 8-5546] ROM "simd_op" won't be mapped to RAM because it is too sparse
+WARNING: [Synth 8-6014] Unused sequential element cnt_reg was removed.  [D:/CS214/CPU/CPU.srcs/sources_1/new/seg_block.v:82]
 WARNING: [Synth 8-327] inferring latch for variable 'board_output_data_reg' [D:/CS214/CPU/CPU.srcs/sources_1/new/RAM.v:57]
 WARNING: [Synth 8-327] inferring latch for variable 'board_output_sig_reg' [D:/CS214/CPU/CPU.srcs/sources_1/new/RAM.v:59]
 WARNING: [Synth 8-327] inferring latch for variable 'error_reg' [D:/CS214/CPU/CPU.srcs/sources_1/new/IO_block.v:112]
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 806.977 ; gain = 565.555
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 807.832 ; gain = 566.262
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -237,7 +236,7 @@ Report RTL Partitions:
 |2     |REG__GB1      |           1|     18993|
 |3     |ALU           |           5|     14661|
 |4     |SIMD_ALU__GC0 |           1|        27|
-|5     |main__GC0     |           1|      6077|
+|5     |main__GC0     |           1|      6060|
 +------+--------------+------------+----------+
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -248,16 +247,14 @@ Detailed RTL Component Info :
 	   3 Input     32 Bit       Adders := 5     
 	   2 Input     28 Bit       Adders := 4     
 	   2 Input      7 Bit       Adders := 2     
-	   2 Input      3 Bit       Adders := 1     
 +---XORs : 
 	   2 Input     32 Bit         XORs := 5     
 +---Registers : 
 	             1024 Bit    Registers := 1     
-	               32 Bit    Registers := 3     
+	               32 Bit    Registers := 4     
 	               28 Bit    Registers := 4     
-	                3 Bit    Registers := 1     
 	                2 Bit    Registers := 1     
-	                1 Bit    Registers := 11    
+	                1 Bit    Registers := 9     
 +---Multipliers : 
 	                32x32  Multipliers := 5     
 +---Muxes : 
@@ -276,7 +273,6 @@ Detailed RTL Component Info :
 	   4 Input      3 Bit        Muxes := 1     
 	   2 Input      2 Bit        Muxes := 5     
 	  31 Input      2 Bit        Muxes := 5     
-	   4 Input      2 Bit        Muxes := 1     
 	  31 Input      1 Bit        Muxes := 5     
 	   2 Input      1 Bit        Muxes := 19    
 	   3 Input      1 Bit        Muxes := 2     
@@ -333,8 +329,8 @@ Detailed RTL Component Info :
 Module ICU 
 Detailed RTL Component Info : 
 +---Registers : 
-	               32 Bit    Registers := 2     
-	                1 Bit    Registers := 3     
+	               32 Bit    Registers := 3     
+	                1 Bit    Registers := 1     
 +---Muxes : 
 	   2 Input     32 Bit        Muxes := 1     
 	   4 Input      3 Bit        Muxes := 1     
@@ -392,9 +388,6 @@ Module seg_block
 Detailed RTL Component Info : 
 +---Adders : 
 	   2 Input      7 Bit       Adders := 2     
-	   2 Input      3 Bit       Adders := 1     
-+---Registers : 
-	                3 Bit    Registers := 1     
 +---Muxes : 
 	   8 Input      8 Bit        Muxes := 1     
 	   2 Input      7 Bit        Muxes := 2     
@@ -443,8 +436,6 @@ Module IO_block
 Detailed RTL Component Info : 
 +---Registers : 
 	                2 Bit    Registers := 1     
-+---Muxes : 
-	   4 Input      2 Bit        Muxes := 1     
 ---------------------------------------------------------------------------------
 Finished RTL Hierarchical Component Statistics
 ---------------------------------------------------------------------------------
@@ -477,6 +468,7 @@ DSP Report: Generating DSP out0, operation Mode is: (PCIN>>17)+A*B.
 DSP Report: operator out0 is absorbed into DSP out0.
 DSP Report: operator out0 is absorbed into DSP out0.
 WARNING: [Synth 8-6014] Unused sequential element icu/cnt_reg was removed.  [D:/CS214/CPU/CPU.srcs/sources_1/new/ICU.v:72]
+WARNING: [Synth 8-6014] Unused sequential element io_block/seg/cnt_reg was removed.  [D:/CS214/CPU/CPU.srcs/sources_1/new/seg_block.v:82]
 INFO: [Synth 8-3886] merging instance 'reg_filei_0/save_reg[832]' (FDCE) to 'reg_filei_0/save_reg[864]'
 INFO: [Synth 8-3886] merging instance 'reg_filei_0/save_reg[833]' (FDCE) to 'reg_filei_0/save_reg[864]'
 INFO: [Synth 8-3886] merging instance 'reg_filei_0/save_reg[834]' (FDCE) to 'reg_filei_0/save_reg[864]'
@@ -575,14 +567,10 @@ INFO: [Synth 8-3333] propagating constant 0 across sequential element (reg_filei
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (reg_filei_0/\save_reg[31] )
 INFO: [Synth 8-3333] propagating constant 1 across sequential element (i_2/\icu/need_clk_intr_reg )
 INFO: [Synth 8-3333] propagating constant 1 across sequential element (i_2/\icu/need_butt_intr_reg )
-INFO: [Synth 8-3886] merging instance 'i_2/io_block/error_reg[2]' (LDC) to 'i_2/io_block/error_reg[7]'
-INFO: [Synth 8-3886] merging instance 'i_2/io_block/error_reg[3]' (LDC) to 'i_2/io_block/error_reg[7]'
-INFO: [Synth 8-3886] merging instance 'i_2/io_block/error_reg[4]' (LDC) to 'i_2/io_block/error_reg[7]'
-INFO: [Synth 8-3886] merging instance 'i_2/io_block/error_reg[5]' (LDC) to 'i_2/io_block/error_reg[7]'
-INFO: [Synth 8-3886] merging instance 'i_2/io_block/error_reg[6]' (LDC) to 'i_2/io_block/error_reg[7]'
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_2/\io_block/error_reg[7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_2/\io_block/mode_reg[0] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (i_2/\io_block/mode_reg[1] )
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:29 ; elapsed = 00:00:30 . Memory (MB): peak = 806.977 ; gain = 565.555
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:26 ; elapsed = 00:00:27 . Memory (MB): peak = 807.832 ; gain = 566.262
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP and Shift Register Reporting
@@ -609,9 +597,9 @@ Report RTL Partitions:
 +------+--------------+------------+----------+
 |1     |muxpart       |           1|        99|
 |2     |REG__GB1      |           1|      8209|
-|3     |ALU           |           1|      8316|
+|3     |ALU           |           1|      7762|
 |4     |SIMD_ALU__GC0 |           1|        10|
-|5     |main__GC0     |           1|      1680|
+|5     |main__GC0     |           1|      1530|
 |6     |ALU__1        |           4|       226|
 +------+--------------+------------+----------+
 ---------------------------------------------------------------------------------
@@ -623,13 +611,13 @@ INFO: [Synth 8-5578] Moved timing constraint from pin 'clock/inner_clk/seg_clk' 
 INFO: [Synth 8-5578] Moved timing constraint from pin 'clock/inner_clk/uart_clk' to pin 'clock/inner_clk/bbstub_uart_clk/O'
 INFO: [Synth 8-5819] Moved 4 constraints on hierarchical pins to their respective driving/loading pins
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:37 ; elapsed = 00:00:38 . Memory (MB): peak = 876.629 ; gain = 635.207
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:34 ; elapsed = 00:00:35 . Memory (MB): peak = 869.750 ; gain = 628.180
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:53 ; elapsed = 00:00:54 . Memory (MB): peak = 993.160 ; gain = 751.738
+Finished Timing Optimization : Time (s): cpu = 00:00:47 ; elapsed = 00:00:48 . Memory (MB): peak = 996.371 ; gain = 754.801
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -637,16 +625,16 @@ Report RTL Partitions:
 |      |RTL Partition |Replication |Instances |
 +------+--------------+------------+----------+
 |1     |muxpart       |           1|        99|
-|2     |ALU           |           1|      8316|
+|2     |ALU           |           1|      7762|
 |3     |SIMD_ALU__GC0 |           1|        10|
 |4     |ALU__1        |           4|       226|
-|5     |main_GT0      |           1|      9770|
+|5     |main_GT0      |           1|      9492|
 +------+--------------+------------+----------+
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:01:06 ; elapsed = 00:01:06 . Memory (MB): peak = 993.160 ; gain = 751.738
+Finished Technology Mapping : Time (s): cpu = 00:00:58 ; elapsed = 00:00:59 . Memory (MB): peak = 996.371 ; gain = 754.801
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -703,100 +691,20 @@ CRITICAL WARNING: [Synth 8-4442] BlackBox module \rom/inner_rom  has unconnected
 CRITICAL WARNING: [Synth 8-4442] BlackBox module \rom/inner_rom  has unconnected pin dina[1]
 CRITICAL WARNING: [Synth 8-4442] BlackBox module \rom/inner_rom  has unconnected pin dina[0]
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:01:06 ; elapsed = 00:01:07 . Memory (MB): peak = 993.160 ; gain = 751.738
+Finished IO Insertion : Time (s): cpu = 00:00:59 ; elapsed = 00:01:00 . Memory (MB): peak = 996.371 ; gain = 754.801
 ---------------------------------------------------------------------------------
-CRITICAL WARNING: [Synth 8-3352] multi-driven net out_num[8] with 1st driver pin 'ram/board_output_data_reg[8]/Q' [D:/CS214/CPU/CPU.srcs/sources_1/new/RAM.v:68]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net out_num[8] with 2nd driver pin 'ram/board_output_data_reg[8]__0/Q' [D:/CS214/CPU/CPU.srcs/sources_1/new/RAM.v:57]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net out_num[20] with 1st driver pin 'ram/board_output_data_reg[20]/Q' [D:/CS214/CPU/CPU.srcs/sources_1/new/RAM.v:68]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net out_num[20] with 2nd driver pin 'ram/board_output_data_reg[20]__0/Q' [D:/CS214/CPU/CPU.srcs/sources_1/new/RAM.v:57]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net out_num[28] with 1st driver pin 'ram/board_output_data_reg[28]/Q' [D:/CS214/CPU/CPU.srcs/sources_1/new/RAM.v:68]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net out_num[28] with 2nd driver pin 'ram/board_output_data_reg[28]__0/Q' [D:/CS214/CPU/CPU.srcs/sources_1/new/RAM.v:57]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net out_num[16] with 1st driver pin 'ram/board_output_data_reg[16]/Q' [D:/CS214/CPU/CPU.srcs/sources_1/new/RAM.v:68]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net out_num[16] with 2nd driver pin 'ram/board_output_data_reg[16]__0/Q' [D:/CS214/CPU/CPU.srcs/sources_1/new/RAM.v:57]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net out_num[18] with 1st driver pin 'ram/board_output_data_reg[18]/Q' [D:/CS214/CPU/CPU.srcs/sources_1/new/RAM.v:68]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net out_num[18] with 2nd driver pin 'ram/board_output_data_reg[18]__0/Q' [D:/CS214/CPU/CPU.srcs/sources_1/new/RAM.v:57]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net out_num[30] with 1st driver pin 'ram/board_output_data_reg[30]/Q' [D:/CS214/CPU/CPU.srcs/sources_1/new/RAM.v:68]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net out_num[30] with 2nd driver pin 'ram/board_output_data_reg[30]__0/Q' [D:/CS214/CPU/CPU.srcs/sources_1/new/RAM.v:57]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net out_num[0] with 1st driver pin 'ram/board_output_data_reg[0]/Q' [D:/CS214/CPU/CPU.srcs/sources_1/new/RAM.v:68]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net out_num[0] with 2nd driver pin 'ram/board_output_data_reg[0]__0/Q' [D:/CS214/CPU/CPU.srcs/sources_1/new/RAM.v:57]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net out_num[12] with 1st driver pin 'ram/board_output_data_reg[12]/Q' [D:/CS214/CPU/CPU.srcs/sources_1/new/RAM.v:68]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net out_num[12] with 2nd driver pin 'ram/board_output_data_reg[12]__0/Q' [D:/CS214/CPU/CPU.srcs/sources_1/new/RAM.v:57]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net out_num[2] with 1st driver pin 'ram/board_output_data_reg[2]/Q' [D:/CS214/CPU/CPU.srcs/sources_1/new/RAM.v:68]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net out_num[2] with 2nd driver pin 'ram/board_output_data_reg[2]__0/Q' [D:/CS214/CPU/CPU.srcs/sources_1/new/RAM.v:57]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net out_num[10] with 1st driver pin 'ram/board_output_data_reg[10]/Q' [D:/CS214/CPU/CPU.srcs/sources_1/new/RAM.v:68]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net out_num[10] with 2nd driver pin 'ram/board_output_data_reg[10]__0/Q' [D:/CS214/CPU/CPU.srcs/sources_1/new/RAM.v:57]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net out_num[14] with 1st driver pin 'ram/board_output_data_reg[14]/Q' [D:/CS214/CPU/CPU.srcs/sources_1/new/RAM.v:68]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net out_num[14] with 2nd driver pin 'ram/board_output_data_reg[14]__0/Q' [D:/CS214/CPU/CPU.srcs/sources_1/new/RAM.v:57]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net out_num[13] with 1st driver pin 'ram/board_output_data_reg[13]/Q' [D:/CS214/CPU/CPU.srcs/sources_1/new/RAM.v:68]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net out_num[13] with 2nd driver pin 'ram/board_output_data_reg[13]__0/Q' [D:/CS214/CPU/CPU.srcs/sources_1/new/RAM.v:57]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net out_num[29] with 1st driver pin 'ram/board_output_data_reg[29]/Q' [D:/CS214/CPU/CPU.srcs/sources_1/new/RAM.v:68]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net out_num[29] with 2nd driver pin 'ram/board_output_data_reg[29]__0/Q' [D:/CS214/CPU/CPU.srcs/sources_1/new/RAM.v:57]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net out_num[23] with 1st driver pin 'ram/board_output_data_reg[23]/Q' [D:/CS214/CPU/CPU.srcs/sources_1/new/RAM.v:68]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net out_num[23] with 2nd driver pin 'ram/board_output_data_reg[23]__0/Q' [D:/CS214/CPU/CPU.srcs/sources_1/new/RAM.v:57]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net out_num[15] with 1st driver pin 'ram/board_output_data_reg[15]/Q' [D:/CS214/CPU/CPU.srcs/sources_1/new/RAM.v:68]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net out_num[15] with 2nd driver pin 'ram/board_output_data_reg[15]__0/Q' [D:/CS214/CPU/CPU.srcs/sources_1/new/RAM.v:57]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net out_num[31] with 1st driver pin 'ram/board_output_data_reg[31]/Q' [D:/CS214/CPU/CPU.srcs/sources_1/new/RAM.v:68]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net out_num[31] with 2nd driver pin 'ram/board_output_data_reg[31]__0/Q' [D:/CS214/CPU/CPU.srcs/sources_1/new/RAM.v:57]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net out_num[27] with 1st driver pin 'ram/board_output_data_reg[27]/Q' [D:/CS214/CPU/CPU.srcs/sources_1/new/RAM.v:68]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net out_num[27] with 2nd driver pin 'ram/board_output_data_reg[27]__0/Q' [D:/CS214/CPU/CPU.srcs/sources_1/new/RAM.v:57]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net out_num[11] with 1st driver pin 'ram/board_output_data_reg[11]/Q' [D:/CS214/CPU/CPU.srcs/sources_1/new/RAM.v:68]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net out_num[11] with 2nd driver pin 'ram/board_output_data_reg[11]__0/Q' [D:/CS214/CPU/CPU.srcs/sources_1/new/RAM.v:57]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net out_num[24] with 1st driver pin 'ram/board_output_data_reg[24]/Q' [D:/CS214/CPU/CPU.srcs/sources_1/new/RAM.v:68]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net out_num[24] with 2nd driver pin 'ram/board_output_data_reg[24]__0/Q' [D:/CS214/CPU/CPU.srcs/sources_1/new/RAM.v:57]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net out_num[9] with 1st driver pin 'ram/board_output_data_reg[9]/Q' [D:/CS214/CPU/CPU.srcs/sources_1/new/RAM.v:68]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net out_num[9] with 2nd driver pin 'ram/board_output_data_reg[9]__0/Q' [D:/CS214/CPU/CPU.srcs/sources_1/new/RAM.v:57]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net out_num[4] with 1st driver pin 'ram/board_output_data_reg[4]/Q' [D:/CS214/CPU/CPU.srcs/sources_1/new/RAM.v:68]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net out_num[4] with 2nd driver pin 'ram/board_output_data_reg[4]__0/Q' [D:/CS214/CPU/CPU.srcs/sources_1/new/RAM.v:57]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net out_num[7] with 1st driver pin 'ram/board_output_data_reg[7]/Q' [D:/CS214/CPU/CPU.srcs/sources_1/new/RAM.v:68]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net out_num[7] with 2nd driver pin 'ram/board_output_data_reg[7]__0/Q' [D:/CS214/CPU/CPU.srcs/sources_1/new/RAM.v:57]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net out_num[6] with 1st driver pin 'ram/board_output_data_reg[6]/Q' [D:/CS214/CPU/CPU.srcs/sources_1/new/RAM.v:68]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net out_num[6] with 2nd driver pin 'ram/board_output_data_reg[6]__0/Q' [D:/CS214/CPU/CPU.srcs/sources_1/new/RAM.v:57]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net out_num[3] with 1st driver pin 'ram/board_output_data_reg[3]/Q' [D:/CS214/CPU/CPU.srcs/sources_1/new/RAM.v:68]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net out_num[3] with 2nd driver pin 'ram/board_output_data_reg[3]__0/Q' [D:/CS214/CPU/CPU.srcs/sources_1/new/RAM.v:57]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net out_num[21] with 1st driver pin 'ram/board_output_data_reg[21]/Q' [D:/CS214/CPU/CPU.srcs/sources_1/new/RAM.v:68]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net out_num[21] with 2nd driver pin 'ram/board_output_data_reg[21]__0/Q' [D:/CS214/CPU/CPU.srcs/sources_1/new/RAM.v:57]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net out_num[17] with 1st driver pin 'ram/board_output_data_reg[17]/Q' [D:/CS214/CPU/CPU.srcs/sources_1/new/RAM.v:68]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net out_num[17] with 2nd driver pin 'ram/board_output_data_reg[17]__0/Q' [D:/CS214/CPU/CPU.srcs/sources_1/new/RAM.v:57]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net out_num[19] with 1st driver pin 'ram/board_output_data_reg[19]/Q' [D:/CS214/CPU/CPU.srcs/sources_1/new/RAM.v:68]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net out_num[19] with 2nd driver pin 'ram/board_output_data_reg[19]__0/Q' [D:/CS214/CPU/CPU.srcs/sources_1/new/RAM.v:57]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net out_num[22] with 1st driver pin 'ram/board_output_data_reg[22]/Q' [D:/CS214/CPU/CPU.srcs/sources_1/new/RAM.v:68]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net out_num[22] with 2nd driver pin 'ram/board_output_data_reg[22]__0/Q' [D:/CS214/CPU/CPU.srcs/sources_1/new/RAM.v:57]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net out_num[26] with 1st driver pin 'ram/board_output_data_reg[26]/Q' [D:/CS214/CPU/CPU.srcs/sources_1/new/RAM.v:68]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net out_num[26] with 2nd driver pin 'ram/board_output_data_reg[26]__0/Q' [D:/CS214/CPU/CPU.srcs/sources_1/new/RAM.v:57]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net out_num[25] with 1st driver pin 'ram/board_output_data_reg[25]/Q' [D:/CS214/CPU/CPU.srcs/sources_1/new/RAM.v:68]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net out_num[25] with 2nd driver pin 'ram/board_output_data_reg[25]__0/Q' [D:/CS214/CPU/CPU.srcs/sources_1/new/RAM.v:57]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net out_num[5] with 1st driver pin 'ram/board_output_data_reg[5]/Q' [D:/CS214/CPU/CPU.srcs/sources_1/new/RAM.v:68]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net out_num[5] with 2nd driver pin 'ram/board_output_data_reg[5]__0/Q' [D:/CS214/CPU/CPU.srcs/sources_1/new/RAM.v:57]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net out_num[1] with 1st driver pin 'ram/board_output_data_reg[1]/Q' [D:/CS214/CPU/CPU.srcs/sources_1/new/RAM.v:68]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net out_num[1] with 2nd driver pin 'ram/board_output_data_reg[1]__0/Q' [D:/CS214/CPU/CPU.srcs/sources_1/new/RAM.v:57]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net led_out_OBUF[23] with 1st driver pin 'ram/board_output_sig_reg[7]/Q' [D:/CS214/CPU/CPU.srcs/sources_1/new/RAM.v:69]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net led_out_OBUF[23] with 2nd driver pin 'ram/board_output_sig_reg[7]__0/Q' [D:/CS214/CPU/CPU.srcs/sources_1/new/RAM.v:59]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net led_out_OBUF[22] with 1st driver pin 'ram/board_output_sig_reg[6]/Q' [D:/CS214/CPU/CPU.srcs/sources_1/new/RAM.v:69]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net led_out_OBUF[22] with 2nd driver pin 'ram/board_output_sig_reg[6]__0/Q' [D:/CS214/CPU/CPU.srcs/sources_1/new/RAM.v:59]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net led_out_OBUF[21] with 1st driver pin 'ram/board_output_sig_reg[5]/Q' [D:/CS214/CPU/CPU.srcs/sources_1/new/RAM.v:69]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net led_out_OBUF[21] with 2nd driver pin 'ram/board_output_sig_reg[5]__0/Q' [D:/CS214/CPU/CPU.srcs/sources_1/new/RAM.v:59]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net led_out_OBUF[20] with 1st driver pin 'ram/board_output_sig_reg[4]/Q' [D:/CS214/CPU/CPU.srcs/sources_1/new/RAM.v:69]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net led_out_OBUF[20] with 2nd driver pin 'ram/board_output_sig_reg[4]__0/Q' [D:/CS214/CPU/CPU.srcs/sources_1/new/RAM.v:59]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net led_out_OBUF[19] with 1st driver pin 'ram/board_output_sig_reg[3]/Q' [D:/CS214/CPU/CPU.srcs/sources_1/new/RAM.v:69]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net led_out_OBUF[19] with 2nd driver pin 'ram/board_output_sig_reg[3]__0/Q' [D:/CS214/CPU/CPU.srcs/sources_1/new/RAM.v:59]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net led_out_OBUF[18] with 1st driver pin 'ram/board_output_sig_reg[2]/Q' [D:/CS214/CPU/CPU.srcs/sources_1/new/RAM.v:69]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net led_out_OBUF[18] with 2nd driver pin 'ram/board_output_sig_reg[2]__0/Q' [D:/CS214/CPU/CPU.srcs/sources_1/new/RAM.v:59]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net led_out_OBUF[17] with 1st driver pin 'ram/board_output_sig_reg[1]/Q' [D:/CS214/CPU/CPU.srcs/sources_1/new/RAM.v:69]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net led_out_OBUF[17] with 2nd driver pin 'ram/board_output_sig_reg[1]__0/Q' [D:/CS214/CPU/CPU.srcs/sources_1/new/RAM.v:59]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net led_out_OBUF[16] with 1st driver pin 'ram/board_output_sig_reg[0]/Q' [D:/CS214/CPU/CPU.srcs/sources_1/new/RAM.v:69]
-CRITICAL WARNING: [Synth 8-3352] multi-driven net led_out_OBUF[16] with 2nd driver pin 'ram/board_output_sig_reg[0]__0/Q' [D:/CS214/CPU/CPU.srcs/sources_1/new/RAM.v:59]
 
 Report Check Netlist: 
 +------+------------------+-------+---------+-------+------------------+
 |      |Item              |Errors |Warnings |Status |Description       |
 +------+------------------+-------+---------+-------+------------------+
-|1     |multi_driven_nets |      0|       40|Failed |Multi driven nets |
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
 +------+------------------+-------+---------+-------+------------------+
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:01:07 ; elapsed = 00:01:07 . Memory (MB): peak = 993.160 ; gain = 751.738
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:59 ; elapsed = 00:01:00 . Memory (MB): peak = 996.371 ; gain = 754.801
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -808,25 +716,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:07 ; elapsed = 00:01:08 . Memory (MB): peak = 993.160 ; gain = 751.738
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:00 ; elapsed = 00:01:01 . Memory (MB): peak = 996.371 ; gain = 754.801
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:01:08 ; elapsed = 00:01:08 . Memory (MB): peak = 993.160 ; gain = 751.738
+Finished Renaming Generated Ports : Time (s): cpu = 00:01:01 ; elapsed = 00:01:02 . Memory (MB): peak = 996.371 ; gain = 754.801
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:01:08 ; elapsed = 00:01:09 . Memory (MB): peak = 993.160 ; gain = 751.738
+Finished Handling Custom Attributes : Time (s): cpu = 00:01:01 ; elapsed = 00:01:02 . Memory (MB): peak = 996.371 ; gain = 754.801
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:01:08 ; elapsed = 00:01:09 . Memory (MB): peak = 993.160 ; gain = 751.738
+Finished Renaming Generated Nets : Time (s): cpu = 00:01:01 ; elapsed = 00:01:02 . Memory (MB): peak = 996.371 ; gain = 754.801
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -850,71 +758,68 @@ Report Cell Usage:
 |2     |ram_ip      |     1|
 |3     |rom_ip      |     1|
 |4     |uart_bmpg_0 |     1|
-|5     |BUFG        |     5|
-|6     |CARRY4      |   700|
+|5     |BUFG        |     3|
+|6     |CARRY4      |   697|
 |7     |DSP48E1     |    15|
-|8     |LUT1        |    29|
-|9     |LUT2        |   343|
-|10    |LUT3        |  2170|
-|11    |LUT4        |   335|
-|12    |LUT5        |  1365|
-|13    |LUT6        |  2893|
-|14    |MUXF7       |   480|
-|15    |MUXF8       |   224|
-|16    |FDCE        |  1046|
-|17    |FDPE        |    10|
-|18    |FDRE        |   136|
-|19    |LD          |    40|
-|20    |LDC         |     2|
-|21    |IBUF        |    18|
-|22    |OBUF        |    41|
+|8     |LUT1        |    21|
+|9     |LUT2        |   307|
+|10    |LUT3        |   991|
+|11    |LUT4        |   153|
+|12    |LUT5        |  3055|
+|13    |LUT6        |  2408|
+|14    |MUXF7       |   609|
+|15    |MUXF8       |   256|
+|16    |FDCE        |  1026|
+|17    |FDPE        |     8|
+|18    |FDRE        |    96|
+|19    |LDC         |    32|
+|20    |IBUF        |    16|
+|21    |OBUF        |    41|
 +------+------------+------+
 
 Report Instance Areas: 
 +------+---------------------------+----------+------+
 |      |Instance                   |Module    |Cells |
 +------+---------------------------+----------+------+
-|1     |top                        |          |  9971|
-|2     |  alu                      |ALU       |  2420|
-|3     |  clock                    |CXK       |     5|
-|4     |  icu                      |ICU       |    81|
-|5     |  io_block                 |IO_block  |   294|
-|6     |    ack_butt_antishake     |button    |    74|
-|7     |    cpu_rst_butt_antishake |button_4  |    84|
-|8     |    mode_butt_antishake    |button_5  |    73|
-|9     |    seg                    |seg_block |    55|
-|10    |  pc_counter               |PC        |    51|
-|11    |  pc_ctrl                  |PCctrl    |    16|
-|12    |  ram                      |RAM       |   112|
-|13    |  reg_file                 |REG       |  4376|
-|14    |  rom                      |ROM       |  2337|
-|15    |  simd_alu                 |SIMD_ALU  |   120|
-|16    |    inner_alu0             |ALU_0     |    30|
-|17    |    inner_alu1             |ALU_1     |    30|
-|18    |    inner_alu2             |ALU_2     |    30|
-|19    |    inner_alu3             |ALU_3     |    30|
+|1     |top                        |          |  9853|
+|2     |  alu                      |ALU       |  1032|
+|3     |  clock                    |CXK       |     4|
+|4     |  icu                      |ICU       |   111|
+|5     |  io_block                 |IO_block  |   186|
+|6     |    ack_butt_antishake     |button    |    75|
+|7     |    cpu_rst_butt_antishake |button_4  |    85|
+|8     |    seg                    |seg_block |    26|
+|9     |  pc_counter               |PC        |    37|
+|10    |  pc_ctrl                  |PCctrl    |    16|
+|11    |  ram                      |RAM       |   141|
+|12    |  reg_file                 |REG       |  3925|
+|13    |  rom                      |ROM       |  4168|
+|14    |  simd_alu                 |SIMD_ALU  |   120|
+|15    |    inner_alu0             |ALU_0     |    30|
+|16    |    inner_alu1             |ALU_1     |    30|
+|17    |    inner_alu2             |ALU_2     |    30|
+|18    |    inner_alu3             |ALU_3     |    30|
 +------+---------------------------+----------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:01:08 ; elapsed = 00:01:09 . Memory (MB): peak = 993.160 ; gain = 751.738
+Finished Writing Synthesis Report : Time (s): cpu = 00:01:01 ; elapsed = 00:01:02 . Memory (MB): peak = 996.371 ; gain = 754.801
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 113 critical warnings and 7 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:58 ; elapsed = 00:01:03 . Memory (MB): peak = 993.160 ; gain = 353.621
-Synthesis Optimization Complete : Time (s): cpu = 00:01:08 ; elapsed = 00:01:09 . Memory (MB): peak = 993.160 ; gain = 751.738
+Synthesis finished with 0 errors, 33 critical warnings and 9 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:51 ; elapsed = 00:00:56 . Memory (MB): peak = 996.371 ; gain = 356.184
+Synthesis Optimization Complete : Time (s): cpu = 00:01:01 ; elapsed = 00:01:02 . Memory (MB): peak = 996.371 ; gain = 754.801
 INFO: [Project 1-571] Translating synthesized netlist
-INFO: [Netlist 29-17] Analyzing 1479 Unisim elements for replacement
-INFO: [Netlist 29-28] Unisim Transformation completed in 1 CPU seconds
+INFO: [Netlist 29-17] Analyzing 1625 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
 INFO: [Project 1-111] Unisim Transformation Summary:
-  A total of 42 instances were transformed.
-  LD => LDCE: 40 instances
-  LDC => LDCE: 2 instances
+  A total of 32 instances were transformed.
+  LDC => LDCE: 32 instances
 
 INFO: [Common 17-83] Releasing license: Synthesis
-182 Infos, 60 Warnings, 113 Critical Warnings and 0 Errors encountered.
+178 Infos, 60 Warnings, 33 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:01:11 ; elapsed = 00:01:13 . Memory (MB): peak = 993.160 ; gain = 762.500
+synth_design: Time (s): cpu = 00:01:04 ; elapsed = 00:01:06 . Memory (MB): peak = 996.371 ; gain = 765.004
 INFO: [Common 17-1381] The checkpoint 'D:/CS214/CPU/CPU.runs/synth_1/main.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file main_utilization_synth.rpt -pb main_utilization_synth.pb
-report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.050 . Memory (MB): peak = 993.160 ; gain = 0.000
-INFO: [Common 17-206] Exiting Vivado at Fri May 26 16:42:15 2023...
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.052 . Memory (MB): peak = 996.371 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Fri May 26 23:30:18 2023...

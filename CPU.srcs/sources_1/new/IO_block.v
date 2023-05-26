@@ -76,18 +76,18 @@ module IO_block(
     );
 
     always@(posedge mode_change or negedge rst) begin
-        if(!rst) begin
+         if(!rst) begin
             //mode <= 2'b00;  // ori
             mode <= 2'b10;  // ori
-        end
-        else begin
-            case(mode)
-                2'b00: mode <= 2'b01;   // uart
-                2'b01: mode <= 2'b10;   // run
-                2'b10: mode <= 2'b11;   // debug
-                2'b11: mode <= 2'b00;   //back to ori
-            endcase
-            end
+         end
+        // else begin
+        //     case(mode)
+        //         2'b00: mode <= 2'b01;   // uart
+        //         2'b01: mode <= 2'b10;   // run
+        //         2'b10: mode <= 2'b11;   // debug
+        //         2'b11: mode <= 2'b00;   //back to ori
+        //     endcase
+        //     end
     end
 
 

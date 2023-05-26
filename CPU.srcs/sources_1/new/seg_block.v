@@ -32,7 +32,7 @@ module seg_block(input clk,
                  output reg [7:0] seg_op,
                  output reg [7:0] seg_out);
     
-    reg [2:0] cnt;
+    reg [12:0] cnt;
     reg [3:0] hexadecimals [7:0];
     reg [3:0] current_hex;
     reg[6:0] temp;
@@ -86,8 +86,8 @@ module seg_block(input clk,
         end
     end
     
-    always @ (cnt) begin
-        case(cnt)
+    always @ (cnt[12:10]) begin
+        case(cnt[12:10])
         0: begin seg_op <= 8'b1111_1110; current_hex <= hexadecimals[0]; end
         1: begin seg_op <= 8'b1111_1101; current_hex <= hexadecimals[1]; end
         2: begin seg_op <= 8'b1111_1011; current_hex <= hexadecimals[2]; end
@@ -102,22 +102,22 @@ module seg_block(input clk,
    //TODO FIX SEG_OUT 
     always @ (current_hex) begin
         case (current_hex)
-            4'h0: seg_out    = 8'b01000000; // 0
-            4'h1: seg_out    = 8'b01111001; // 1
-            4'h2: seg_out    = 8'b00100100; // 2
-            4'h3: seg_out    = 8'b00110000; // 3
-            4'h4: seg_out    = 8'b00011001; // 4
-            4'h5: seg_out    = 8'b00010010; // 5
-            4'h6: seg_out    = 8'b00000010; // 6
-            4'h7: seg_out    = 8'b01111000; // 7
-            4'h8: seg_out    = 8'b00000000; // 8
-            4'h9: seg_out    = 8'b00010000; // 9
-            4'ha: seg_out    = 8'b00001000; // A
-            4'hb: seg_out    = 8'b00000011; // b
-            4'hc: seg_out    = 8'b01000110; // c
-            4'hd: seg_out    = 8'b00100001; // d
-            4'he: seg_out    = 8'b00000110; // E
-            4'hf: seg_out    = 8'b00001110; // -
+            4'h0: seg_out    = 8'hc0;
+            4'h1: seg_out    = 8'hf9;
+            4'h2: seg_out    = 8'ha4; // 2
+            4'h3: seg_out    = 8'hb0; // 3
+            4'h4: seg_out    = 8'h99; // 4
+            4'h5: seg_out    = 8'h92; // 5
+            4'h6: seg_out    = 8'h82; // 6
+            4'h7: seg_out    = 8'hf8; // 7
+            4'h8: seg_out    = 8'h80; // 8
+            4'h9: seg_out    = 8'h90; // 9
+            4'ha: seg_out    = 8'h88; // A
+            4'hb: seg_out    = 8'h83; // b
+            4'hc: seg_out    = 8'hc6; // c
+            4'hd: seg_out    = 8'ha1; // d
+            4'he: seg_out    = 8'h86; // E
+            4'hf: seg_out    = 8'hbf; // -
             default: seg_out = 8'b0000000;
         endcase
     end

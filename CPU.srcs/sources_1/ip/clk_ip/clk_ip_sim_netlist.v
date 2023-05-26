@@ -1,9 +1,10 @@
 // Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2017.4 (win64) Build 2086221 Fri Dec 15 20:55:39 MST 2017
-// Date        : Fri May 26 10:47:37 2023
-// Host        : LAPTOP-GUFPQJR2 running 64-bit major release  (build 9200)
-// Command     : write_verilog -force -mode funcsim D:/CS214/CPU/CPU.srcs/sources_1/ip/clk_ip/clk_ip_sim_netlist.v
+// Date        : Thu May 25 17:56:50 2023
+// Host        : DESKTOP-KMJCO78 running 64-bit major release  (build 9200)
+// Command     : write_verilog -force -mode funcsim -rename_top clk_ip -prefix
+//               clk_ip_ clk_ip_sim_netlist.v
 // Design      : clk_ip
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -38,7 +39,6 @@ module clk_ip
         .uart_clk(uart_clk));
 endmodule
 
-(* ORIG_REF_NAME = "clk_ip_clk_wiz" *) 
 module clk_ip_clk_ip_clk_wiz
    (cpu_clk,
     seg_clk,
@@ -116,7 +116,7 @@ module clk_ip_clk_ip_clk_wiz
     .CLKOUT2_PHASE(0.000000),
     .CLKOUT3_DIVIDE(50),
     .CLKOUT3_DUTY_CYCLE(0.500000),
-    .CLKOUT3_PHASE(-90.000000),
+    .CLKOUT3_PHASE(90.000000),
     .CLKOUT4_DIVIDE(1),
     .CLKOUT4_DUTY_CYCLE(0.500000),
     .CLKOUT4_PHASE(0.000000),

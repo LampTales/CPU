@@ -59,13 +59,15 @@ module RAM(input clk,
     assign out_sig = board_output_sig;
     
     always@(*) begin
-        casex(addr)
-            32'b00000000000000000011111111111000: board_output_data = (mem_write) ? write_data : board_output_data;
-            32'b00000000000000000011111111111100: board_output_sig  = (mem_write) ? write_data : board_output_sig;
-        endcase
-    end
-    always @(negedge rst) begin
-        board_output_data = 0;
-        board_output_sig  = 0;
+        if (!rst) begin
+            board_output_data = 0;
+            board_output_sig  = 0;
+        end
+        else begin
+            casex(addr)
+                32'b00000000000000000011111111111000: board_output_data = (mem_write) ? write_data : board_output_data;
+                32'b00000000000000000011111111111100: board_output_sig  = (mem_write) ? write_data : board_output_sig;
+            endcase
+        end
     end
 endmodule

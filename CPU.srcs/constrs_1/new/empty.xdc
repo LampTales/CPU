@@ -15,7 +15,6 @@ set_property IOSTANDARD LVCMOS33 [get_ports {seg_out[2]}]
 set_property IOSTANDARD LVCMOS33 [get_ports {seg_out[1]}]
 set_property IOSTANDARD LVCMOS33 [get_ports {seg_out[0]}]
 set_property IOSTANDARD LVCMOS33 [get_ports clk]
-set_property IOSTANDARD LVCMOS33 [get_ports rst]
 
 set_property PACKAGE_PIN C19 [get_ports {seg_op[0]}]
 set_property PACKAGE_PIN E19 [get_ports {seg_op[1]}]
@@ -36,7 +35,6 @@ set_property PACKAGE_PIN C15 [get_ports {seg_out[6]}]
 set_property PACKAGE_PIN E13 [get_ports {seg_out[7]}]
 
 set_property PACKAGE_PIN Y18 [get_ports clk]
-set_property PACKAGE_PIN P20 [get_ports rst]
 
 set_property PACKAGE_PIN Y9 [get_ports {switch_in[23]}]
 set_property PACKAGE_PIN W9 [get_ports {switch_in[22]}]
@@ -136,12 +134,23 @@ set_property IOSTANDARD LVCMOS33 [get_ports {switch_in[2]}]
 set_property IOSTANDARD LVCMOS33 [get_ports {switch_in[1]}]
 set_property IOSTANDARD LVCMOS33 [get_ports {switch_in[0]}]
 
-set_property IOSTANDARD LVCMOS33 [get_ports {mode_butt}]
-set_property IOSTANDARD LVCMOS33 [get_ports {ack_butt}]
-set_property IOSTANDARD LVCMOS33 [get_ports {cpu_rst_butt}]
+set_property IOSTANDARD LVCMOS33 [get_ports mode_butt]
+set_property IOSTANDARD LVCMOS33 [get_ports ack_butt]
+set_property IOSTANDARD LVCMOS33 [get_ports cpu_rst_butt]
 
-set_property PACKAGE_PIN P1 [get_ports {mode_butt}]
-set_property PACKAGE_PIN P4 [get_ports {ack_butt}]
-set_property PACKAGE_PIN R1 [get_ports {cpu_rst_butt}]
+set_property PACKAGE_PIN P1 [get_ports mode_butt]
+set_property PACKAGE_PIN P4 [get_ports ack_butt]
+set_property PACKAGE_PIN R1 [get_ports cpu_rst_butt]
 
+
+
+set_property IOSTANDARD LVCMOS33 [get_ports sysrst]
+set_property IOSTANDARD LVCMOS33 [get_ports uart_in]
+set_property IOSTANDARD LVCMOS33 [get_ports uart_out]
+set_property PACKAGE_PIN P5 [get_ports intr_butt]
+set_property IOSTANDARD LVCMOS33 [get_ports intr_butt]
+
+set_property PACKAGE_PIN Y22 [get_ports uart_in]
+set_property PACKAGE_PIN Y21 [get_ports uart_out]
+set_property PACKAGE_PIN P20 [get_ports sysrst]
 

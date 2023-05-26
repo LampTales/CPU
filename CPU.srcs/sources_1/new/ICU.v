@@ -59,7 +59,7 @@ module ICU(input clk,
         end
     end
     // button interrupt
-    always @(posedge clk or negedge rst) begin
+    always @(negedge clk or negedge rst) begin
         if(button) begin
             need_butt_intr <= 1;
         end
@@ -68,7 +68,7 @@ module ICU(input clk,
         end
     end
     // clock interrupt
-    always @(posedge clk or negedge rst) begin
+    always @(negedge clk or negedge rst) begin
         if(cnt >= 32'd100_000_000) begin
             need_clk_intr <= 1;
             cnt <=0;

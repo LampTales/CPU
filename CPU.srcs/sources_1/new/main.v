@@ -34,10 +34,11 @@ module main(
     input uart_in,
     output uart_out
     );
-
+    wire [31:0] instruction;
+    assign led_out = {instruction[31:14],instruction[5:0]};
     // what should be the rst?
     wire rst;
-    assign rst = sysrst;
+    assign rst = !sysrst;
     wire rom_clk;
     wire ram_clk;
     wire reg_clk;
@@ -76,7 +77,7 @@ module main(
         .out(pc_value)
     );
 
-    wire [31:0] instruction;
+
     ROM rom(
         .clk(rom_clk),
         .rst(cpu_rst),
@@ -267,7 +268,7 @@ module main(
 
     IO_block io_block(
         .switch_in(switch_in),
-        .led_out(led_out),
+        // .led_out(led_out),
         .pc_clk(pc_clk),
         .seg_clk(seg_clk),
         .seg_op(seg_op),

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7a100tfgg484-1" LaunchTime="1685090456">
+<GenRun Id="synth_1" LaunchPart="xc7a100tfgg484-1" LaunchTime="1685114946">
   <File Type="PA-TCL" Name="main.tcl"/>
   <File Type="RDS-PROPCONSTRS" Name="main_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="main_reports.tcl"/>
@@ -137,15 +137,16 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PPRDIR/../Minisys1Assemblerv2.2/output/prgmip32.coe">
+    <File Path="c:/Users/Wang/OneDrive/Doc/Minisys1Assemblerv2.2/output/prgmip32.coe">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="c:/Users/Wang/OneDrive/Doc/Minisys1Assemblerv2.2/output/prgmip32.coe">
+    <File Path="$PSRCDIR/sources_1/ip/clk_ip/clk_ip.xci">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
@@ -170,6 +171,7 @@
       </FileInfo>
     </File>
     <Config>
+      <Option Name="TargetConstrsFile" Val="$PSRCDIR/constrs_1/new/empty.xdc"/>
       <Option Name="ConstrsType" Val="XDC"/>
     </Config>
   </FileSet>
@@ -178,6 +180,5 @@
     <Step Id="synth_design"/>
   </Strategy>
   <BlockFileSet Type="BlockSrcs" Name="uart_bmpg_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="clk_ip"/>
   <BlockFileSet Type="BlockSrcs" Name="ram_ip"/>
 </GenRun>

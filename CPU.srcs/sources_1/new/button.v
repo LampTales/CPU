@@ -31,12 +31,11 @@ module button(input clk,
             keycnt        <= 0;
             output_button <= 0;
         end
-        else if (keycnt >= 28'd100_000) begin
+        else if (keycnt >= 28'd800_000) begin
             keycnt <= 0;
             enable <= 1;
         end
         else begin
-            keycnt <= keycnt + 1;
             if (input_button & enable)begin
                 output_button <= 1;
                 enable        <= 0;
