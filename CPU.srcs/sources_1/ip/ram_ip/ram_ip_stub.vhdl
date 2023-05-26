@@ -1,10 +1,10 @@
 -- Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2017.4 (win64) Build 2086221 Fri Dec 15 20:55:39 MST 2017
--- Date        : Mon May 22 10:32:42 2023
--- Host        : LAPTOP-5FTFKB8F running 64-bit major release  (build 9200)
--- Command     : write_vhdl -force -mode synth_stub
---               C:/Users/Wiman/VivadoSaving/CPU/CPU.srcs/sources_1/ip/ram_ip/ram_ip_stub.vhdl
+-- Date        : Fri May 26 14:13:42 2023
+-- Host        : DESKTOP-KMJCO78 running 64-bit major release  (build 9200)
+-- Command     : write_vhdl -force -mode synth_stub -rename_top ram_ip -prefix
+--               ram_ip_ ram_ip_stub.vhdl
 -- Design      : ram_ip
 -- Purpose     : Stub declaration of top-level module interface
 -- Device      : xc7a100tfgg484-1

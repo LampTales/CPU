@@ -61,7 +61,7 @@ module IO_block(
     );
 
     button cpu_rst_butt_antishake(
-        .clk(seg_clk),
+        .clk(pc_clk),
         .rst_n(rst),
         .input_button(cpu_rst_butt),
         .output_button(cpu_rst)
@@ -92,14 +92,14 @@ module IO_block(
 
 
     button ack_butt_antishake(
-        .clk(seg_clk),
+        .clk(pc_clk),
         .rst_n(rst),
         .input_button(ack_butt),
         .output_button(ack)
     );
 
     button interrupt_butt_antishake(
-        .clk(seg_clk),
+        .clk(pc_clk),
         .rst_n(rst),
         .input_button(intr_butt),
         .output_button(interrupt)

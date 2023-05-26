@@ -55,7 +55,7 @@ module test;
 
 initial begin
     clk          = 0;
-    icu_clk      = 1;
+    icu_clk      = 0;
     sysrst       = 1;
     cpu_rst_butt = 0;
     mode_butt    = 0;
@@ -71,17 +71,17 @@ initial begin
     cpu_rst_butt = 0;
     #1000
     intr_butt =1;
-    #5
+    #100
     intr_butt =0;
     #1000
     switch_in = 24'h702fff;
     intr_butt =1;
-    #5
+    #100
     intr_butt =0;
     #3000
     switch_in = 24'h302fff;
     intr_butt =1;
-    #5
+    #100
     intr_butt =0;
 end
 always #10 clk           = ~clk;
