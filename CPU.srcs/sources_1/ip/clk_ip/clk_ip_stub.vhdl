@@ -1,10 +1,9 @@
 -- Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2017.4 (win64) Build 2086221 Fri Dec 15 20:55:39 MST 2017
--- Date        : Thu May 25 17:56:50 2023
+-- Date        : Sat May 27 01:41:02 2023
 -- Host        : DESKTOP-KMJCO78 running 64-bit major release  (build 9200)
--- Command     : write_vhdl -force -mode synth_stub -rename_top clk_ip -prefix
---               clk_ip_ clk_ip_stub.vhdl
+-- Command     : write_vhdl -force -mode synth_stub D:/CS214/CPU/CPU.srcs/sources_1/ip/clk_ip/clk_ip_stub.vhdl
 -- Design      : clk_ip
 -- Purpose     : Stub declaration of top-level module interface
 -- Device      : xc7a100tfgg484-1

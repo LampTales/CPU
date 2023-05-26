@@ -33,6 +33,7 @@ module CXK(
     output uart_clk,
     output icu_clk
     );
+    wire icu;
     wire cpu_clk;
     wire ip_cpu_clk;
     clk_ip inner_clk(
@@ -40,9 +41,20 @@ module CXK(
         .cpu_clk(ip_cpu_clk),
         .seg_clk(seg_clk),
         .uart_clk(uart_clk),
-        .icu_clk(icu_clk)
+        // .icu_clk(icu_clk)
+        .icu_clk(icu)
     );
-    assign cpu_clk = (mode == 2'b11) ? switch_clk : ip_cpu_clk;
+    reg[12:0] cnt; 
+    reg[12:0] cnt2; 
+    always @(posedge ip_cpu_clk) begin
+        cnt <=cnt+1;
+    end
+    always @(posedge icu) begin
+        cnt2<=cnt2+1;
+    end
+    assign icu_clk = cnt2[12];
+    assign cpu_clk = (mode == 2'b11) ? switch_clk : cnt[12];
+    // assign cpu_clk = (mode == 2'b11) ? switch_clk : ip_cpu_clk;
     assign pc_clk = cpu_clk;
     assign ram_clk = cpu_clk;
     assign rom_clk = ~cpu_clk;

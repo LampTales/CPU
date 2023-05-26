@@ -27,13 +27,13 @@ module ICU(input clk,
            output reg [31:0] out);
     reg need_butt_intr;
     reg need_clk_intr;
-    reg exl;
+    reg [1:0] exl;
     reg [31:0] epc;
     reg [31:0] cnt;
     // always @(posedge clk or negedge rst) begin
     //     if (!rst)begin
-    //         out <= 0;
-    //         exl <= 0;
+    //         out           <= 0;
+    //         exl           <= 0;
     //     end
     //     else if (eret) begin
     //         out <= epc;
@@ -58,80 +58,86 @@ module ICU(input clk,
     //         out <= 0;
     //     end
     // end
-    
+
     //epc
     always @(posedge clk or negedge rst) begin
-        if (!rst)begin
-            epc <= 0;
+        if(!rst)begin
+            epc<=0;
         end
-        else if (!exl&(need_butt_intr|need_clk_intr))begin
-            epc <= pc;
+        else if(!exl&(need_butt_intr|need_clk_intr))begin
+            epc<=pc;
         end
         else begin
-            epc <= epc;
+            epc<=epc;
         end
     end
-    
-    
+
+
     // exl
     always @(posedge clk or negedge rst) begin
-        if (!rst|eret)begin
+        if(!rst|eret)begin
             exl <= 0;
         end
-        else if (need_butt_intr|need_clk_intr)begin
+        else if(need_butt_intr)begin
             exl <= 1;
         end
+        else if(need_clk_intr)begin
+            exl <= 2; 
+        end
         else begin
-            exl <= exl;
+            exl<=exl;
         end
     end
-    
+
     // out
     always @(posedge clk or negedge rst) begin
         if (!rst)begin
             out <= 0;
         end
-        else if (eret)begin
-            out <= epc;
+        else if(eret)begin
+            out<= epc;
         end
-            else if (!exl & need_butt_intr)begin
-            out <= 4;
-            end
-            else if (!exl & need_clk_intr)begin
-            out <= 8;
-            end
+        else if(!exl & need_butt_intr)begin
+            out<=4;
+        end
+        else if (!exl & need_clk_intr)begin
+            out<=0;
+        end
         else begin
-            out <= 0;
+            out<=0;
         end
     end
-    
+
     // button interrupt
     always @(negedge clk or negedge rst) begin
-        if (button) begin
-            need_butt_intr <= 1;
-        end
-        else if (!exl | !rst)begin
+        if(!rst)begin
             need_butt_intr <= 0;
         end
+        else if(button) begin
+            need_butt_intr <= 1;
+        end
         else begin
-            need_butt_intr <= need_butt_intr;
+            need_butt_intr <= 0;
         end
     end
-    
+
     // clock interrupt
     always @(negedge clk or negedge rst) begin
-        if (cnt > 32'd100_000_000) begin
-            cnt           <= 0;
-            need_clk_intr <= 0;
+        if(!rst)begin
+            cnt<=0;
+            need_clk_intr <=0;
         end
-        else if (!exl | !rst)begin
-            cnt           <= 0;
-            need_clk_intr <= 0;
+        else if(cnt > 32'd1000_000_000) begin
+            cnt <=0;
+            need_clk_intr <= 1;
         end
-        else begin
-            cnt           <= cnt+1;
+        else if (exl==1)begin
+            cnt <=cnt+1;
             need_clk_intr <= need_clk_intr;
         end
+        else begin
+            cnt <= cnt+1;
+            need_clk_intr <= 0;
+        end
     end
-    
 endmodule

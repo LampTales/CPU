@@ -1,10 +1,9 @@
 -- Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2017.4 (win64) Build 2086221 Fri Dec 15 20:55:39 MST 2017
--- Date        : Thu May 25 17:56:50 2023
+-- Date        : Sat May 27 01:41:02 2023
 -- Host        : DESKTOP-KMJCO78 running 64-bit major release  (build 9200)
--- Command     : write_vhdl -force -mode funcsim -rename_top clk_ip -prefix
---               clk_ip_ clk_ip_sim_netlist.vhdl
+-- Command     : write_vhdl -force -mode funcsim D:/CS214/CPU/CPU.srcs/sources_1/ip/clk_ip/clk_ip_sim_netlist.vhdl
 -- Design      : clk_ip
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -22,6 +21,8 @@ entity clk_ip_clk_ip_clk_wiz is
     icu_clk : out STD_LOGIC;
     clk_in1 : in STD_LOGIC
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of clk_ip_clk_ip_clk_wiz : entity is "clk_ip_clk_wiz";
 end clk_ip_clk_ip_clk_wiz;
 
 architecture STRUCTURE of clk_ip_clk_ip_clk_wiz is
@@ -88,20 +89,20 @@ clkout4_buf: unisim.vcomponents.BUFG
 plle2_adv_inst: unisim.vcomponents.PLLE2_ADV
     generic map(
       BANDWIDTH => "OPTIMIZED",
-      CLKFBOUT_MULT => 23,
+      CLKFBOUT_MULT => 8,
       CLKFBOUT_PHASE => 0.000000,
       CLKIN1_PERIOD => 10.000000,
       CLKIN2_PERIOD => 0.000000,
-      CLKOUT0_DIVIDE => 50,
+      CLKOUT0_DIVIDE => 128,
       CLKOUT0_DUTY_CYCLE => 0.500000,
       CLKOUT0_PHASE => 0.000000,
-      CLKOUT1_DIVIDE => 23,
+      CLKOUT1_DIVIDE => 16,
       CLKOUT1_DUTY_CYCLE => 0.500000,
       CLKOUT1_PHASE => 0.000000,
-      CLKOUT2_DIVIDE => 115,
+      CLKOUT2_DIVIDE => 80,
       CLKOUT2_DUTY_CYCLE => 0.500000,
       CLKOUT2_PHASE => 0.000000,
-      CLKOUT3_DIVIDE => 50,
+      CLKOUT3_DIVIDE => 128,
       CLKOUT3_DUTY_CYCLE => 0.500000,
       CLKOUT3_PHASE => 90.000000,
       CLKOUT4_DIVIDE => 1,
@@ -111,7 +112,7 @@ plle2_adv_inst: unisim.vcomponents.PLLE2_ADV
       CLKOUT5_DUTY_CYCLE => 0.500000,
       CLKOUT5_PHASE => 0.000000,
       COMPENSATION => "ZHOLD",
-      DIVCLK_DIVIDE => 2,
+      DIVCLK_DIVIDE => 1,
       IS_CLKINSEL_INVERTED => '0',
       IS_PWRDWN_INVERTED => '0',
       IS_RST_INVERTED => '0',

@@ -35,8 +35,7 @@ module main(
     output uart_out
     );
     wire [31:0] instruction;
-    // assign led_out = {instruction[31:14],instruction[5:0]};
-    assign led_out = icu_out;
+    assign led_out = {instruction[31:14],instruction[5:0]};
     // what should be the rst?
     wire rst;
     assign rst = !sysrst;
