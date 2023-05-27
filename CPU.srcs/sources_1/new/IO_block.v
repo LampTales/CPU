@@ -55,7 +55,8 @@ module IO_block(
     seg_block seg(
         .clk(seg_clk),
         .rst(rst),
-        .seg_in(board_output_data),
+        .seg_in1(board_output_data[15:0]),
+        .seg_in2(board_output_data[31:16]),
         .seg_op(seg_op),
         .seg_out(seg_out)
     );

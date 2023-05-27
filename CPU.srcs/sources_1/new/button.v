@@ -42,8 +42,8 @@ module button(input clk,
             enable <= 1;
         end
         else if(input_button)begin
-            // enable <= 0;
-            enable <= 1;
+            enable <= 0;
+            // enable <= 1;
         end
         else begin
             enable <= enable;

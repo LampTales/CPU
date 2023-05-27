@@ -37,6 +37,7 @@ module main(
     wire [31:0] instruction;
     // assign led_out = {instruction[31:14],instruction[5:0]};
     // assign led_out = {icu_out[11:0],pc_value[11:0]};
+    // assign led_out = out_num[31:8];
     // what should be the rst?
     wire rst;
     assign rst = !sysrst;
@@ -190,10 +191,10 @@ module main(
 
     wire [31:0] data_to_alu_select;
     MUX_32 which_data_to_alu(
-    .in0(reg_read_data1),
-    .in1(expand_imme),
-    .select(alu_src),
-    .out(data_to_alu_select)
+        .in0(reg_read_data1),
+        .in1(expand_imme),
+        .select(alu_src),
+        .out(data_to_alu_select)
     );
 
     wire [31:0] alu_result;
