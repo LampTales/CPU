@@ -1,9 +1,10 @@
 -- Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2017.4 (win64) Build 2086221 Fri Dec 15 20:55:39 MST 2017
--- Date        : Sat May 27 02:58:47 2023
+-- Date        : Sat May 27 12:19:58 2023
 -- Host        : DESKTOP-KMJCO78 running 64-bit major release  (build 9200)
--- Command     : write_vhdl -force -mode funcsim D:/CS214/CPU/CPU.srcs/sources_1/ip/rom_ip/rom_ip_sim_netlist.vhdl
+-- Command     : write_vhdl -force -mode funcsim -rename_top rom_ip -prefix
+--               rom_ip_ rom_ip_sim_netlist.vhdl
 -- Design      : rom_ip
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -18,8 +19,6 @@ entity rom_ip_bindec is
     ena_array : out STD_LOGIC_VECTOR ( 1 downto 0 );
     addra : in STD_LOGIC_VECTOR ( 1 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of rom_ip_bindec : entity is "bindec";
 end rom_ip_bindec;
 
 architecture STRUCTURE of rom_ip_bindec is
@@ -77,8 +76,6 @@ entity rom_ip_blk_mem_gen_mux is
     \DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_19\ : in STD_LOGIC_VECTOR ( 7 downto 0 );
     \DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_20\ : in STD_LOGIC_VECTOR ( 7 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of rom_ip_blk_mem_gen_mux : entity is "blk_mem_gen_mux";
 end rom_ip_blk_mem_gen_mux;
 
 architecture STRUCTURE of rom_ip_blk_mem_gen_mux is
@@ -470,8 +467,6 @@ entity rom_ip_blk_mem_gen_prim_wrapper_init is
     dina : in STD_LOGIC_VECTOR ( 0 to 0 );
     wea : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of rom_ip_blk_mem_gen_prim_wrapper_init : entity is "blk_mem_gen_prim_wrapper_init";
 end rom_ip_blk_mem_gen_prim_wrapper_init;
 
 architecture STRUCTURE of rom_ip_blk_mem_gen_prim_wrapper_init is
@@ -3220,7 +3215,7 @@ begin
       INITP_0D => X"0000000000000000000000000000000000000000000000000000000000000000",
       INITP_0E => X"0000000000000000000000000000000000000000000000000000000000000000",
       INITP_0F => X"0000000000000000000000000000000000000000000000000000000000000000",
-      INIT_00 => X"400200232546C400204024A7A400002B002B002824E360640024240064006400",
+      INIT_00 => X"400200232546C400204024A7A400002B002B002824E360642400240064006400",
       INIT_01 => X"82AA0044C482AA0044AA0044AA0044AA0040400200232546C403204024A70040",
       INIT_02 => X"0323032303230323032320E3606400E3606400202D2D2F28E3606420A30044C4",
       INIT_03 => X"0000000000000000000000000000000000000000000000000000000000000000",
@@ -4194,8 +4189,6 @@ entity rom_ip_blk_mem_gen_prim_width is
     dina : in STD_LOGIC_VECTOR ( 0 to 0 );
     wea : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of rom_ip_blk_mem_gen_prim_width : entity is "blk_mem_gen_prim_width";
 end rom_ip_blk_mem_gen_prim_width;
 
 architecture STRUCTURE of rom_ip_blk_mem_gen_prim_width is
@@ -4647,8 +4640,6 @@ entity rom_ip_blk_mem_gen_generic_cstr is
     dina : in STD_LOGIC_VECTOR ( 31 downto 0 );
     wea : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of rom_ip_blk_mem_gen_generic_cstr : entity is "blk_mem_gen_generic_cstr";
 end rom_ip_blk_mem_gen_generic_cstr;
 
 architecture STRUCTURE of rom_ip_blk_mem_gen_generic_cstr is
@@ -5125,8 +5116,6 @@ entity rom_ip_blk_mem_gen_top is
     dina : in STD_LOGIC_VECTOR ( 31 downto 0 );
     wea : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of rom_ip_blk_mem_gen_top : entity is "blk_mem_gen_top";
 end rom_ip_blk_mem_gen_top;
 
 architecture STRUCTURE of rom_ip_blk_mem_gen_top is
@@ -5152,8 +5141,6 @@ entity rom_ip_blk_mem_gen_v8_4_1_synth is
     dina : in STD_LOGIC_VECTOR ( 31 downto 0 );
     wea : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of rom_ip_blk_mem_gen_v8_4_1_synth : entity is "blk_mem_gen_v8_4_1_synth";
 end rom_ip_blk_mem_gen_v8_4_1_synth;
 
 architecture STRUCTURE of rom_ip_blk_mem_gen_v8_4_1_synth is
@@ -5383,8 +5370,6 @@ entity rom_ip_blk_mem_gen_v8_4_1 is
   attribute C_WRITE_WIDTH_B of rom_ip_blk_mem_gen_v8_4_1 : entity is 32;
   attribute C_XDEVICEFAMILY : string;
   attribute C_XDEVICEFAMILY of rom_ip_blk_mem_gen_v8_4_1 : entity is "artix7";
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of rom_ip_blk_mem_gen_v8_4_1 : entity is "blk_mem_gen_v8_4_1";
   attribute downgradeipidentifiedwarnings : string;
   attribute downgradeipidentifiedwarnings of rom_ip_blk_mem_gen_v8_4_1 : entity is "yes";
 end rom_ip_blk_mem_gen_v8_4_1;

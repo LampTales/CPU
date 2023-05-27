@@ -55,10 +55,9 @@
 //  Output     Output      Phase    Duty Cycle   Pk-to-Pk     Phase
 //   Clock     Freq (MHz)  (degrees)    (%)     Jitter (ps)  Error (ps)
 //----------------------------------------------------------------------------
-// _cpu_clk_____6.250______0.000______50.0______251.196____114.212
-// _seg_clk____50.000______0.000______50.0______167.017____114.212
-// uart_clk____10.000______0.000______50.0______229.362____114.212
-// _icu_clk_____6.250_____90.000______50.0______251.196____114.212
+// ip_cpu_clk____12.500______0.000______50.0______269.669____155.540
+// _seg_clk____50.000______0.000______50.0______203.457____155.540
+// uart_clk____10.000______0.000______50.0______281.286____155.540
 //
 //----------------------------------------------------------------------------
 // Input Clock   Freq (MHz)    Input Jitter (UI)
@@ -74,10 +73,9 @@
   clk_ip instance_name
    (
     // Clock out ports
-    .cpu_clk(cpu_clk),     // output cpu_clk
+    .ip_cpu_clk(ip_cpu_clk),     // output ip_cpu_clk
     .seg_clk(seg_clk),     // output seg_clk
     .uart_clk(uart_clk),     // output uart_clk
-    .icu_clk(icu_clk),     // output icu_clk
    // Clock in ports
     .clk_in1(clk_in1));      // input clk_in1
 // INST_TAG_END ------ End INSTANTIATION Template ---------

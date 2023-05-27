@@ -1,7 +1,7 @@
 // Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2017.4 (win64) Build 2086221 Fri Dec 15 20:55:39 MST 2017
-// Date        : Sat May 27 01:41:02 2023
+// Date        : Sat May 27 14:47:10 2023
 // Host        : DESKTOP-KMJCO78 running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode funcsim D:/CS214/CPU/CPU.srcs/sources_1/ip/clk_ip/clk_ip_sim_netlist.v
 // Design      : clk_ip
@@ -13,56 +13,49 @@
 
 (* NotValidForBitStream *)
 module clk_ip
-   (cpu_clk,
+   (ip_cpu_clk,
     seg_clk,
     uart_clk,
-    icu_clk,
     clk_in1);
-  output cpu_clk;
+  output ip_cpu_clk;
   output seg_clk;
   output uart_clk;
-  output icu_clk;
   input clk_in1;
 
   (* IBUF_LOW_PWR *) wire clk_in1;
-  wire cpu_clk;
-  wire icu_clk;
+  wire ip_cpu_clk;
   wire seg_clk;
   wire uart_clk;
 
   clk_ip_clk_ip_clk_wiz inst
        (.clk_in1(clk_in1),
-        .cpu_clk(cpu_clk),
-        .icu_clk(icu_clk),
+        .ip_cpu_clk(ip_cpu_clk),
         .seg_clk(seg_clk),
         .uart_clk(uart_clk));
 endmodule
 
 (* ORIG_REF_NAME = "clk_ip_clk_wiz" *) 
 module clk_ip_clk_ip_clk_wiz
-   (cpu_clk,
+   (ip_cpu_clk,
     seg_clk,
     uart_clk,
-    icu_clk,
     clk_in1);
-  output cpu_clk;
+  output ip_cpu_clk;
   output seg_clk;
   output uart_clk;
-  output icu_clk;
   input clk_in1;
 
   wire clk_in1;
   wire clk_in1_clk_ip;
   wire clkfbout_buf_clk_ip;
   wire clkfbout_clk_ip;
-  wire cpu_clk;
-  wire cpu_clk_clk_ip;
-  wire icu_clk;
-  wire icu_clk_clk_ip;
+  wire ip_cpu_clk;
+  wire ip_cpu_clk_clk_ip;
   wire seg_clk;
   wire seg_clk_clk_ip;
   wire uart_clk;
   wire uart_clk_clk_ip;
+  wire NLW_plle2_adv_inst_CLKOUT3_UNCONNECTED;
   wire NLW_plle2_adv_inst_CLKOUT4_UNCONNECTED;
   wire NLW_plle2_adv_inst_CLKOUT5_UNCONNECTED;
   wire NLW_plle2_adv_inst_DRDY_UNCONNECTED;
@@ -84,8 +77,8 @@ module clk_ip_clk_ip_clk_wiz
         .O(clk_in1_clk_ip));
   (* BOX_TYPE = "PRIMITIVE" *) 
   BUFG clkout1_buf
-       (.I(cpu_clk_clk_ip),
-        .O(cpu_clk));
+       (.I(ip_cpu_clk_clk_ip),
+        .O(ip_cpu_clk));
   (* BOX_TYPE = "PRIMITIVE" *) 
   BUFG clkout2_buf
        (.I(seg_clk_clk_ip),
@@ -95,28 +88,24 @@ module clk_ip_clk_ip_clk_wiz
        (.I(uart_clk_clk_ip),
         .O(uart_clk));
   (* BOX_TYPE = "PRIMITIVE" *) 
-  BUFG clkout4_buf
-       (.I(icu_clk_clk_ip),
-        .O(icu_clk));
-  (* BOX_TYPE = "PRIMITIVE" *) 
   PLLE2_ADV #(
     .BANDWIDTH("OPTIMIZED"),
-    .CLKFBOUT_MULT(8),
+    .CLKFBOUT_MULT(17),
     .CLKFBOUT_PHASE(0.000000),
     .CLKIN1_PERIOD(10.000000),
     .CLKIN2_PERIOD(0.000000),
-    .CLKOUT0_DIVIDE(128),
+    .CLKOUT0_DIVIDE(68),
     .CLKOUT0_DUTY_CYCLE(0.500000),
     .CLKOUT0_PHASE(0.000000),
-    .CLKOUT1_DIVIDE(16),
+    .CLKOUT1_DIVIDE(17),
     .CLKOUT1_DUTY_CYCLE(0.500000),
     .CLKOUT1_PHASE(0.000000),
-    .CLKOUT2_DIVIDE(80),
+    .CLKOUT2_DIVIDE(85),
     .CLKOUT2_DUTY_CYCLE(0.500000),
     .CLKOUT2_PHASE(0.000000),
-    .CLKOUT3_DIVIDE(128),
+    .CLKOUT3_DIVIDE(1),
     .CLKOUT3_DUTY_CYCLE(0.500000),
-    .CLKOUT3_PHASE(90.000000),
+    .CLKOUT3_PHASE(0.000000),
     .CLKOUT4_DIVIDE(1),
     .CLKOUT4_DUTY_CYCLE(0.500000),
     .CLKOUT4_PHASE(0.000000),
@@ -124,7 +113,7 @@ module clk_ip_clk_ip_clk_wiz
     .CLKOUT5_DUTY_CYCLE(0.500000),
     .CLKOUT5_PHASE(0.000000),
     .COMPENSATION("ZHOLD"),
-    .DIVCLK_DIVIDE(1),
+    .DIVCLK_DIVIDE(2),
     .IS_CLKINSEL_INVERTED(1'b0),
     .IS_PWRDWN_INVERTED(1'b0),
     .IS_RST_INVERTED(1'b0),
@@ -137,10 +126,10 @@ module clk_ip_clk_ip_clk_wiz
         .CLKIN1(clk_in1_clk_ip),
         .CLKIN2(1'b0),
         .CLKINSEL(1'b1),
-        .CLKOUT0(cpu_clk_clk_ip),
+        .CLKOUT0(ip_cpu_clk_clk_ip),
         .CLKOUT1(seg_clk_clk_ip),
         .CLKOUT2(uart_clk_clk_ip),
-        .CLKOUT3(icu_clk_clk_ip),
+        .CLKOUT3(NLW_plle2_adv_inst_CLKOUT3_UNCONNECTED),
         .CLKOUT4(NLW_plle2_adv_inst_CLKOUT4_UNCONNECTED),
         .CLKOUT5(NLW_plle2_adv_inst_CLKOUT5_UNCONNECTED),
         .DADDR({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
