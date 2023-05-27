@@ -13,7 +13,7 @@
 
    - CPU特性
 
-     - ISA 
+     - ISA //todo SIMD eret
 
        - 3类指令
 
@@ -108,12 +108,17 @@
            - j: 跳转 (PC = (PC & 0xf0000000) \| (address << 2))
            - jal: 跳转并保存返回地址 (ra = PC + 4; PC = (PC & 0xf0000000) \| (address << 2))
    
-     - 寻址空间设计
+     - 寻址空间设计：采用哈佛结构，用ROM和RAM分别存储指令和数据
    
      - 对外设IO的支持
-   
-       - 内存映射
-       - 中断？/轮询？
+       - 内存映射：//todo
+         - board_input_data: `0x3FF0`
+         - board_input_case: `0x3FF4`
+         - board_output_data: `0x3FF8`
+         - board_output_sig: `0x3FFC`
+       - IO确认两种方案
+         - 软件方案（最终选择）//todo
+         - 硬件方案 (弃用) //todo
    
      - 单周期CPU
        - 5段流水线 (IF, ID, EX, MEM, WB)
@@ -135,13 +140,197 @@
      - 
    
    - CPU内部结构
-   
      - 各子模块接口关系图
      - 子模块设计说明
+       - ALU.v
+         - 功能: 根据CTRL信号进行，算术逻辑运算
+           - 输入:
+             - 12位 alu_op: ALU操作码， 高6位为opcode，低6位为func_code
+             - 5位 shamt: 移位位数
+             - 32位 in0: 第一个操作数
+             - 32位 in1: 第二个操作数
+           - 输出:
+             - 32位 out: 运算结果
+             - 1位 equal: in0 和 in1 是否相等
+             - 8位 error_code: 错误码 (0: 正常，1:溢出错误，2: 除零错误)
+       - button.v
+         - 功能: 按键消抖
+         - 输入:
+           - 1位 clk: 时钟信号
+           - 1位 rst_n: 复位信号
+           - 1位 input_button: 原始按钮信号
+         - 输出:
+           - 1位 output_button: 消抖按钮信号
+       - CTRL.v
+         - 功能: 生成总控制信号，传送给其他模块
+         - 输入:
+          - 6位 opcode: 指令操作码
+          - 5位 shamt_in: 指令移位位数
+          - 6位 func_code: 指令功能码
+         - 输出
+          - 12位 alu_op: ALU操作码， 高6位为opcode，低6位为func_code （传给ALU.v）
+          - 5位 shamt_out: 移位位数
+          - 1位 reg_dst: 寄存器目标选择信号
+          - 1位 branch: beq分支信号
+          - 1位 nbranch: bne分支信号
+          - 1位 mem_read: 读存储器信号
+          - 1位 mem_write: 写存储器信号
+          - 1位 mem_to_reg: 存储器数据写回寄存器信号
+          - 1位 alu_src: ALU第二个操作数选择信号
+          - 1位 reg_write: 寄存器写使能信号
+          - 1位 ignore
+          - 1位 simd: simd指令信号
+          - 1位 j: j指令信号
+          - 1位 jr: jr指令信号
+          - 1位 jal: jal指令信号
+          - 1位 eret: eret指令信号
+       - CXK.v
+         - 功能: 分频器
+          - 输入:
+            - 1位 clk: 时钟信号
+            - 1位 rst: 复位信号
+            - 2位 mode: 工作模式选择信号
+            - 1位 switch_clk: //todo
+          - 输出:
+            - 1位 rom_clock: ROM时钟信号
+            - 1位 ram_clock: RAM时钟信号
+            - 1位 reg_clock: 寄存器时钟信号
+            - 1位 pc_clock: PC时钟信号
+            - 1位 seg_clock: 七段数码管时钟信号
+            - 1位 uart_clock: UART时钟信号
+            - 1位 icu_clock: ICU时钟信号
+       - Expander.v
+         - 功能: 立即数扩展器
+           - 输入:
+             - 16位 imme: 待扩展立即数
+             - 1位 ignore: 忽略信号
+           - 输出:
+             - 32位 expand_imme: 扩展后立即数
+       - ICU.v
+         - 功能: 中断控制器
+           - 输入:
+             - 1位 clk: 时钟信号
+             - 1位 rst: 复位信号
+             - 1位 irq: 中断请求信号
+             - 1位 eret: eret指令信号
+             - 32位 pc: pc寄存器
+             - 1位 button: 中断按键信号
+           - 输出:
+             - 32位 out: 中断处理指令地址
+       - IO_block.v
+         - 功能: IO处理器
+          - 输入:
+            - 24位 switch_in: 24位拨码开关输入
+            - 1位 pc_clk: PC时钟信号
+            - 1位 seg_clk: 七段数码管时钟信号
+            - 1位 rst: 复位信号
+            - 1位 clk_rst_butt: //todo
+            - 1位 mode_butt: 工作模式选择按钮
+            - 1位 ack_butt: 中断确认按钮
+            - 1位 intr_butt: 中断按钮
+            - 32位 board_output_data: 板上需输出数据
+            - 8位 board_output_sig: 板上需输出信号 //todo
+            - 8位 errorcode: 错误码
+          - 输出:
+            - 24位 led_out: 24位LED输出
+            - 8位 seg_op: 七段数码管使能信号
+            - 8位 seg_out: 七段数码管输出
+            - 1位 interrupt: 中断信号
+            - 2位 mode: 工作模式选择信号
+            - 1位 ack: 中断确认信号
+            - 1位 switch_clk: //todo
+            - 8位 board_input_data: 板上输入数据 //todo
+            - 8位 board_input_sig: 板上输入信号 //todo
+         - led_block.v
+           - 功能: LED显示模块
+             - 输入:
+               - 24位 led_in: LED输入
+             - 输出:
+               - 24位 led_out: LED输出
+         - MUX.v
+           - 功能: 2路选择器
+             - 输入:
+               - 32位 in0: 选择信号为0时的输入
+               - 32位 in1: 选择信号为1时的输入
+               - 1位 select: 选择信号
+             - 输出:
+               - 32位 out: 选择后的输出
+         - PC.v
+           - 功能: PC寄存器更新模块
+             - 输入:
+               - 1位 clk: 时钟信号
+               - 1位 rst: 复位信号
+               - 32位 next: 下一条指令地址
+             - 输出:
+               - 32位 out: 输出下一条指令地址
+         - PCctrl.v
+           - 功能: PC寄存器控制模块
+             - 输入:
+               - 32位 pc: PC写入数据 //todo
+               - 1位 j: j指令信号
+               - 1位 jal: jal指令信号
+               - 26位 j_inst: j指令地址 //todo
+               - 1位 branch: beq分支信号
+               - 1位 nbranch: bne分支信号
+               - 32位 expand_imme: 扩展后立即数
+               - 1位 jr: jr指令信号
+               - 32位 ra: //todo
+               - 2位 mode: 工作模式选择信号
+               - 1位 clk: 时钟信号
+               - 32位 interrupt_handler: 中断处理指令地址
+             - 输出:
+               - 32位 link_addr: //todo
+               - 32位 next: 下一条指令地址
+         - RAM.v
+           - 功能: RAM模块，用于存储数据
+             - 输入:
+               - 1位 clk: 时钟信号
+               - 1位 rst: 复位信号
+               - 1位 mem_read: 读使能信号
+               - 1位 mem_write: 写使能信号
+               - 32位 addr: 写入地址
+               - 32位 write_data: 写入数据
+               - 8位 in_num: 样例内数据输入
+               - 4位 in_case: 样例序号输入
+             - 输出:
+               - 32位 read_data: 读出数据
+               - 32位 out_num: //todo
+               - 8位 out_sig: 信号输出 //todo
+         - ROM.v
+           - 功能: ROM模块，用于读取指令
+             - 输入:
+               - 1位 clk: 时钟信号
+               - 1位 rst: 复位信号
+               - 32位 addr: 读取地址
+             - 输出:
+               - 32位 instruction: 读出指令
+         - seg_block.v
+           - 功能: 七段数码管显示模块
+             - 输入:
+               - 1位 clk: 时钟信号
+               - 1位 rst: 复位信号
+               - 32位 seg_in: 七段数码管待输出数据
+             - 输出:
+               - 8位 seg_op: 七段数码管使能信号
+               - 8位 seg_out: 七段数码管输出
+         - SIMD_ALU.v
+           - 功能: SIMD_ALU模块，用于SIMD指令运算
+             - 输入:
+               - 12位 alu_op: 运算类型，同ALU
+               - 128位 in0: 运算数0
+               - 128位 in1: 运算数1
+             - 输出:
+               - 128位 out: 运算结果
+
    
    - 问题及总结
    
      - CTRL.v中的控制信号的生成复杂，如何简化？
+       - 将opcode和funct都传入ALU中方便ALU判断指令类别
      - 如何实现中断？
+
      - 如何实现IO？
      - 如何实现乘除法？
+       - 由于我们只需要用到8 bit的乘法运算，于是不引入lo, hi寄存器，只需直接将结果存入存储结果的寄存器中
+       - 除法计算我们将用于存入存储结果的32位寄存器分高16位和低16位中，高十六位存商，低十六位存余数
+     - 如何实现模式切换

@@ -190,10 +190,10 @@ module main(
 
     wire [31:0] data_to_alu_select;
     MUX_32 which_data_to_alu(
-    .in0(reg_read_data1),
-    .in1(expand_imme),
-    .select(alu_src),
-    .out(data_to_alu_select)
+        .in0(reg_read_data1),
+        .in1(expand_imme),
+        .select(alu_src),
+        .out(data_to_alu_select)
     );
 
     wire [31:0] alu_result;
