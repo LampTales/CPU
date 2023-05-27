@@ -47,9 +47,9 @@ module RAM(input clk,
     assign board_input_case = in_case;
     always@(*) begin
         casex(addr)
-            32'b00000000000000000011111111110000: read_data = board_input_data;
-            32'b00000000000000000011111111110100: read_data = board_input_case;
-            default: read_data                              = ram_out;
+            32'b00000000000000000011111111110000: read_data <= board_input_data;
+            32'b00000000000000000011111111110100: read_data <= board_input_case;
+            default: read_data                              <= ram_out;
         endcase
     end
     
@@ -60,15 +60,25 @@ module RAM(input clk,
     
     always@(*) begin
         if (!rst) begin
-            board_output_data = 0;
-            board_output_sig  = 0;
+            board_output_data <= 0;
+            board_output_sig  <= 0;
         end
         else begin
-        casex(addr)
-            32'b00000000000000000011111111111000: board_output_data = (mem_write) ? write_data : board_output_data;
-            32'b00000000000000000011111111111100: board_output_sig  = (mem_write) ? write_data : board_output_sig;
-        endcase
+            casex(addr)
+                32'b00000000000000000011111111111000: begin 
+                board_output_data <= (mem_write) ? write_data : board_output_data;
+                board_output_sig  <= board_output_sig;
+            end
+            32'b00000000000000000011111111111100: begin
+                board_output_data <= board_output_data;
+                board_output_sig <= (mem_write) ? write_data : board_output_sig;
+            end
+            default:begin
+                board_output_data <= board_output_data;
+                board_output_sig <=board_output_sig  ;
+            end
+            endcase
         end
     end
-
+    
 endmodule
