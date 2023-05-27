@@ -35,7 +35,8 @@ module main(
     output uart_out
     );
     wire [31:0] instruction;
-    assign led_out = {instruction[31:14],instruction[5:0]};
+    // assign led_out = {instruction[31:14],instruction[5:0]};
+    // assign led_out = {icu_out[11:0],pc_value[11:0]};
     // what should be the rst?
     wire rst;
     assign rst = !sysrst;
@@ -268,7 +269,7 @@ module main(
 
     IO_block io_block(
         .switch_in(switch_in),
-        // .led_out(led_out),
+        .led_out(led_out),
         .pc_clk(pc_clk),
         .seg_clk(seg_clk),
         .seg_op(seg_op),

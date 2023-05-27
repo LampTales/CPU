@@ -56,10 +56,9 @@
 //  Output     Output      Phase    Duty Cycle   Pk-to-Pk     Phase
 //   Clock     Freq (MHz)  (degrees)    (%)     Jitter (ps)  Error (ps)
 //----------------------------------------------------------------------------
-// _cpu_clk_____6.250______0.000______50.0______251.196____114.212
-// _seg_clk____50.000______0.000______50.0______167.017____114.212
-// uart_clk____10.000______0.000______50.0______229.362____114.212
-// _icu_clk_____6.250_____90.000______50.0______251.196____114.212
+// ip_cpu_clk____12.500______0.000______50.0______269.669____155.540
+// _seg_clk____50.000______0.000______50.0______203.457____155.540
+// uart_clk____10.000______0.000______50.0______281.286____155.540
 //
 //----------------------------------------------------------------------------
 // Input Clock   Freq (MHz)    Input Jitter (UI)
@@ -68,15 +67,14 @@
 
 `timescale 1ps/1ps
 
-(* CORE_GENERATION_INFO = "clk_ip,clk_wiz_v5_4_3_0,{component_name=clk_ip,use_phase_alignment=true,use_min_o_jitter=false,use_max_i_jitter=false,use_dyn_phase_shift=false,use_inclk_switchover=false,use_dyn_reconfig=false,enable_axi=0,feedback_source=FDBK_AUTO,PRIMITIVE=PLL,num_out_clk=4,clkin1_period=10.0,clkin2_period=10.0,use_power_down=false,use_reset=false,use_locked=false,use_inclk_stopped=false,feedback_type=SINGLE,CLOCK_MGR_TYPE=NA,manual_override=false}" *)
+(* CORE_GENERATION_INFO = "clk_ip,clk_wiz_v5_4_3_0,{component_name=clk_ip,use_phase_alignment=true,use_min_o_jitter=false,use_max_i_jitter=false,use_dyn_phase_shift=false,use_inclk_switchover=false,use_dyn_reconfig=false,enable_axi=0,feedback_source=FDBK_AUTO,PRIMITIVE=PLL,num_out_clk=3,clkin1_period=10.000,clkin2_period=10.000,use_power_down=false,use_reset=false,use_locked=false,use_inclk_stopped=false,feedback_type=SINGLE,CLOCK_MGR_TYPE=NA,manual_override=false}" *)
 
 module clk_ip 
  (
   // Clock out ports
-  output        cpu_clk,
+  output        ip_cpu_clk,
   output        seg_clk,
   output        uart_clk,
-  output        icu_clk,
  // Clock in ports
   input         clk_in1
  );
@@ -84,10 +82,9 @@ module clk_ip
   clk_ip_clk_wiz inst
   (
   // Clock out ports  
-  .cpu_clk(cpu_clk),
+  .ip_cpu_clk(ip_cpu_clk),
   .seg_clk(seg_clk),
   .uart_clk(uart_clk),
-  .icu_clk(icu_clk),
  // Clock in ports
   .clk_in1(clk_in1)
   );

@@ -1,7 +1,7 @@
 -- Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2017.4 (win64) Build 2086221 Fri Dec 15 20:55:39 MST 2017
--- Date        : Sat May 27 01:41:02 2023
+-- Date        : Sat May 27 14:47:10 2023
 -- Host        : DESKTOP-KMJCO78 running 64-bit major release  (build 9200)
 -- Command     : write_vhdl -force -mode synth_stub D:/CS214/CPU/CPU.srcs/sources_1/ip/clk_ip/clk_ip_stub.vhdl
 -- Design      : clk_ip
@@ -13,10 +13,9 @@ use IEEE.STD_LOGIC_1164.ALL;
 
 entity clk_ip is
   Port ( 
-    cpu_clk : out STD_LOGIC;
+    ip_cpu_clk : out STD_LOGIC;
     seg_clk : out STD_LOGIC;
     uart_clk : out STD_LOGIC;
-    icu_clk : out STD_LOGIC;
     clk_in1 : in STD_LOGIC
   );
 
@@ -26,6 +25,6 @@ architecture stub of clk_ip is
 attribute syn_black_box : boolean;
 attribute black_box_pad_pin : string;
 attribute syn_black_box of stub : architecture is true;
-attribute black_box_pad_pin of stub : architecture is "cpu_clk,seg_clk,uart_clk,icu_clk,clk_in1";
+attribute black_box_pad_pin of stub : architecture is "ip_cpu_clk,seg_clk,uart_clk,clk_in1";
 begin
 end;
