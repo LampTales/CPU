@@ -17,6 +17,9 @@ proc create_report { reportName command } {
   }
 }
 set_param xicom.use_bs_reader 1
+set_param synth.incrementalSynthesisCache C:/Users/Wang/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-30556-DESKTOP-KMJCO78/incrSyn
+set_msg_config -id {Synth 8-256} -limit 10000
+set_msg_config -id {Synth 8-638} -limit 10000
 create_project -in_memory -part xc7a100tfgg484-1
 
 set_param project.singleFileAddWarning.threshold 0
@@ -52,9 +55,6 @@ read_verilog -library xil_defaultlib {
   D:/CS214/CPU/CPU.srcs/sources_1/new/button.v
   D:/CS214/CPU/CPU.srcs/sources_1/new/ICU.v
 }
-read_ip -quiet D:/CS214/CPU/CPU.srcs/sources_1/ip/rom_ip/rom_ip.xci
-set_property used_in_implementation false [get_files -all d:/CS214/CPU/CPU.srcs/sources_1/ip/rom_ip/rom_ip_ooc.xdc]
-
 read_ip -quiet D:/CS214/CPU/CPU.srcs/sources_1/ip/uart_bmpg_0/uart_bmpg_0.xci
 
 read_ip -quiet D:/CS214/CPU/CPU.srcs/sources_1/ip/ram_ip/ram_ip.xci
@@ -64,6 +64,9 @@ read_ip -quiet D:/CS214/CPU/CPU.srcs/sources_1/ip/clk_ip/clk_ip.xci
 set_property used_in_implementation false [get_files -all d:/CS214/CPU/CPU.srcs/sources_1/ip/clk_ip/clk_ip_board.xdc]
 set_property used_in_implementation false [get_files -all d:/CS214/CPU/CPU.srcs/sources_1/ip/clk_ip/clk_ip.xdc]
 set_property used_in_implementation false [get_files -all d:/CS214/CPU/CPU.srcs/sources_1/ip/clk_ip/clk_ip_ooc.xdc]
+
+read_ip -quiet D:/CS214/CPU/CPU.srcs/sources_1/ip/rom_ip/rom_ip.xci
+set_property used_in_implementation false [get_files -all d:/CS214/CPU/CPU.srcs/sources_1/ip/rom_ip/rom_ip_ooc.xdc]
 
 # Mark all dcp files as not used in implementation to prevent them from being
 # stitched into the results of this synthesis run. Any black boxes in the
@@ -76,8 +79,6 @@ foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
 read_xdc D:/CS214/CPU/CPU.srcs/constrs_1/new/empty.xdc
 set_property used_in_implementation false [get_files D:/CS214/CPU/CPU.srcs/constrs_1/new/empty.xdc]
 
-read_xdc dont_touch.xdc
-set_property used_in_implementation false [get_files dont_touch.xdc]
 
 synth_design -top main -part xc7a100tfgg484-1
 
