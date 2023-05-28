@@ -46,8 +46,8 @@ module IO_block(
     input [7:0] errorcode,
     
     //UART
-    input start_pg,
-    input uart_out_done
+    input start_pg
+//    input uart_out_done
     
     );
 
@@ -129,7 +129,7 @@ module IO_block(
     assign led_out[15:8] = error[7:0];
     assign led_out[7:2] = 0;
     assign led_out[1] = start_pg;
-    assign led_out[0] = uart_out_done;
+//    assign led_out[0] = uart_out_done;
     
     
 

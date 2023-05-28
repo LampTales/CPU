@@ -29,6 +29,9 @@ module main(
     input intr_butt,
     input [23:0] switch_in,
     output [23:0] led_out,
+    output uart_done_led,
+    output start_pg_led,
+    
     output [7:0] seg_op,
     output [7:0] seg_out,
     //UART
@@ -60,9 +63,14 @@ module main(
     wire uart_out_done;
     wire spg_bufg;
     BUFG U1(.I(start_pg), .O(spg_bufg));
-    uart_bmpg_0 uart_block(
-        .upg_clk_i(clk),
-        .upg_rst_i(sysrst),
+    reg upg_rst;
+    always @ (posedge clk) begin
+        if (spg_bufg) upg_rst = 0;
+        if (sysrst) upg_rst = 1;
+    end
+        uart_bmpg_0 uart_block(
+        .upg_clk_i(uart_clk),
+        .upg_rst_i(upg_rst),
         .upg_rx_i(uart_rx),
         .upg_clk_o(uart_out_clk),
         .upg_wen_o(uart_out_wen),
@@ -71,11 +79,6 @@ module main(
         .upg_done_o(uart_out_done),
         .upg_tx_o(uart_tx)
     );
-    reg upg_rst;
-    always @ (posedge clk) begin
-        if (spg_bufg) upg_rst = 0;
-        if (sysrst) upg_rst = 1;
-    end
     /* CPU work on normal mode when kickOff is 1. CPU work on Uart communicate mode when kickOff is 0.*/
     wire kickOff = upg_rst | (~upg_rst & uart_out_done);
     //used for other modules which don't relate to UARTwire rst;
@@ -324,10 +327,9 @@ module main(
         .board_output_sig(out_sig),
         .errorcode(errorcode),
         
-        //UART
-        
-        .start_pg(start_pg),
-        .uart_out_done(uart_out_done)
+        //UART        
+        .start_pg(start_pg)
+//        .uart_out_done(uart_out_done)
     );
 
 endmodule
