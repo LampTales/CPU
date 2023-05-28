@@ -167,7 +167,7 @@ module CTRL(input [5:0] op_code,
      others: 1
      */
     assign reg_write = (op_code == 6'b101011 || op_code == 6'b000100 || op_code == 6'b000101 || op_code == 6'b010000
-    ||op_code == 6'b000010 || op_code == 6'b 000011) ? 1'b0 : 1'b1;
+    ||op_code == 6'b000010) ? 1'b0 : 1'b1;
     
     /*
      j:
