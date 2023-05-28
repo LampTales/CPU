@@ -1,5 +1,0 @@
-<?xml version="1.0"?>
-<Runs Version="1" Minor="0">
-	<Run Id="rom_ip_synth_1" LaunchDir="C:/Users/Wiman/VivadoSaving/CPU/CPU.runs/rom_ip_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
-</Runs>
-
