@@ -2,8 +2,8 @@
 A: .word 11
 .text 0x0000
 #========io备忘========
-# 开关输入 16376  样例输入 16380
-# seg输出  16368  led输出  16372
+# 开关输入 16368  样例输入 16372
+# seg输出  16376 led输出  16380
 #====================
 # 别忘了jump
 BEGIN:	j MAIN
@@ -72,11 +72,16 @@ CASE4:	xor $s1,$t1,$t2
 		j RE1
 
 CASE5:	sltu $s1,$t1,$t2	
-		sw $s1,16376($zero)
+		sw $s1,16380($zero)
 		j RE1
 
-CASE6:	slt $s1,$t1,$t2
-		sw $s1,16376($zero)
+CASE6:	sll $t1, $t1, 24
+		sra $t1, $t1, 24
+		sll $t2, $t2, 24
+		sra $t2, $t2, 24
+		slt $s1,$t1,$t2
+		sw $t1,16376($zero)
+		sw $s1,16380($zero)
 		j RE1
 
 CASE7:	ori $t0,$t1,-256
