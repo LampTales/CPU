@@ -73,22 +73,22 @@ CASE1:
     addi    $t0,        $zero,          0
     addi    $v0,        $zero,          0
     jal     CASE1_FUNC
+    lui     $s1,        255
+    andi    $t0,        $t0,            -1
+    or      $t0,        $s1,            $t0
     sw      $t0,        16376($zero)
-
     j       RE1
 
 CASE2:
     addi    $t0,        $zero,          0
     addi    $v0,        $zero,          0
     jal     CASE2_FUNC
-
     j       RE1
 
 CASE3:
     addi    $t0,        $zero,          0
     addi    $v0,        $zero,          0
     jal     CASE3_FUNC
-
     j       RE1
 
 CASE4:
@@ -182,7 +182,7 @@ RE3:
     andi    $s1,        $s1,            -1
     or      $s2,        $s2,            $t0
     or      $s1,        $s1,            $t0
-    #       s1,         quotient                    ; s2 remainder
+    #       s1,         quotient                            ; s2 remainder
 D_LOOP:
     sw      $s1,        16376($zero)
     addi    $t9,        $zero,          5
@@ -204,85 +204,88 @@ RE3_EXIT:
     j       MAIN
 
 
-CASE1_FUNC: 
-    bne $t1, $zero, CASE1_FUNC_NEXT
-    jr      $ra                                     # return
+CASE1_FUNC:
+    bne     $t1,        $zero,          CASE1_FUNC_NEXT
+    jr      $ra                                             # return
 
 CASE1_FUNC_NEXT:
-                                                    # save ra
+                                                            # save ra
     sw      $ra,        0($sp)
     addi    $sp,        $sp,            -4
     addi    $t0,        $t0,            1
-                                                    # save t1
+                                                            # save t1
     sw      $t1,        0($sp)
     addi    $sp,        $sp,            -4
     addi    $t0,        $t0,            1
 
     addi    $t1,        $t1,            -1
     jal     CASE1_FUNC
-                                                    # load back t1
+                                                            # load back t1
     addi    $sp,        $sp,            4
     lw      $t1,        0($sp)
     addi    $t0,        $t0,            1
-                                                    # load back ra
+                                                            # load back ra
     addi    $sp,        $sp,            4
     lw      $ra,        0($sp)
     addi    $t0,        $t0,            1
 
     add     $v0,        $v0,            $t1
-    jr      $ra                                     # return
+    jr      $ra                                             # return
 
 
 
 CASE2_FUNC: bne $t1, $zero, CASE2_FUNC_NEXT
-    jr      $ra                                     # return
+    jr      $ra                                             # return
 
 CASE2_FUNC_NEXT:
-                                                    # save ra
+                                                            # save ra
     sw      $ra,        0($sp)
     addi    $sp,        $sp,            -4
-                                                    # save t1
+                                                            # save t1
     sw      $t1,        0($sp)
     addi    $sp,        $sp,            -4
-
-# show t1
-    sw      $t1,        16376($zero)
+    lui     $s1,        255
+    andi    $t1,        $t1,            -1
+    or      $s1,        $s1,            $t1
+    sw      $s1,        16376($zero)                        # show t1
     addi    $t9,        $zero,          4
 CLK1:
     bne     $t9,        $zero,          CLK1
 
     addi    $t1,        $t1,            -1
     jal     CASE2_FUNC
-                                                    # load back t1
+                                                            # load back t1
     addi    $sp,        $sp,            4
     lw      $t1,        0($sp)
-                                                    # load back ra
+                                                            # load back ra
     addi    $sp,        $sp,            4
     lw      $ra,        0($sp)
 
     add     $v0,        $v0,            $t1
-    jr      $ra                                     # return
+    jr      $ra                                             # return
 
 
 
 CASE3_FUNC: bne $t1, $zero, CASE3_FUNC_NEXT
-    jr      $ra                                     # return
+    jr      $ra                                             # return
 
 CASE3_FUNC_NEXT:
-                                                    # save ra
+                                                            # save ra
     sw      $ra,        0($sp)
     addi    $sp,        $sp,            -4
-                                                    # save t1
+                                                            # save t1
     sw      $t1,        0($sp)
     addi    $sp,        $sp,            -4
 
     addi    $t1,        $t1,            -1
     jal     CASE3_FUNC
-                                                    # load back t1
+                                                            # load back t1
     addi    $sp,        $sp,            4
     lw      $t1,        0($sp)
-                                                    # show t1
-    sw      $t1,        16376($zero)
+    lui     $s1,        255
+    andi    $t1,        $t1,            -1
+    or      $s1,        $s1,            $t1
+    sw      $s1,        16376($zero)                        # show t1
     addi    $t9,        $zero,          4
 CLK2:
     bne     $t9,        $zero,          CLK2
@@ -292,4 +295,4 @@ CLK2:
     lw      $ra,        0($sp)
 
     add     $v0,        $v0,            $t1
-    jr      $ra                                     # return
+    jr      $ra                                             # return
