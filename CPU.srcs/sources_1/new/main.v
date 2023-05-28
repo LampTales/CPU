@@ -245,7 +245,7 @@ module main(
     
     // modify 2
     wire [31:0] link_addr;
-    always @(posedge reg_clk or negedge cpu_rst) begin
+    always @(posedge icu_clk or negedge cpu_rst) begin
         if (!cpu_rst) begin
             link_addr_save <= 0;
         end
