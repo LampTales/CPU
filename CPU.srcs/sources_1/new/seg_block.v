@@ -50,7 +50,7 @@ module seg_block(input clk,
         if (seg_in1[15])begin
             temp3 = ~temp3 +1;
         end
-        if (seg_in2 == 16'hffff)begin
+        if (seg_in2 == 16'hff)begin
             hexadecimals[0] = temp3%10;
             temp3           = temp3/10;
             hexadecimals[1] = temp3%10;
@@ -84,7 +84,7 @@ module seg_block(input clk,
         if (seg_in1[15])begin
             temp4 = ~temp4 +1;
         end
-        if (seg_in2 == 16'hffff)begin
+        if (seg_in2 == 16'hff)begin
             hexadecimals[4] = temp4/10000;
             hexadecimals[5] = 0;
             hexadecimals[6] = 0;
