@@ -43,7 +43,12 @@ module IO_block(
     input [7:0] board_output_sig,
 
     // the rest is hardware signal
-    input [7:0] errorcode
+    input [7:0] errorcode,
+    
+    //UART
+    input start_pg,
+    input uart_out_done
+    
     );
 
     // assign board_input_case[3:0] = switch_in[23:20];
@@ -52,7 +57,6 @@ module IO_block(
     assign board_input_case[2:0] = switch_in[2:0];
     assign board_input_data[7:0] = switch_in[23:16];
     assign switch_clk = switch_in[3:3];
-    
 
     wire inner_cpu_rst;
 
@@ -123,7 +127,9 @@ module IO_block(
 
     assign led_out[23:16] = board_output_sig[7:0];
     assign led_out[15:8] = error[7:0];
-    assign led_out[7:0] = 0;
+    assign led_out[7:2] = 0;
+    assign led_out[1] = start_pg;
+    assign led_out[0] = uart_out_done;
     
     
 

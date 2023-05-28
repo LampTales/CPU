@@ -145,12 +145,16 @@ set_property PACKAGE_PIN R1 [get_ports cpu_rst_butt]
 
 
 set_property IOSTANDARD LVCMOS33 [get_ports sysrst]
-set_property IOSTANDARD LVCMOS33 [get_ports uart_in]
-set_property IOSTANDARD LVCMOS33 [get_ports uart_out]
+set_property IOSTANDARD LVCMOS33 [get_ports uart_rx]
+set_property IOSTANDARD LVCMOS33 [get_ports uart_tx]
+set_property PACKAGE_PIN Y19 [get_ports uart_rx]
+set_property PACKAGE_PIN V18 [get_ports uart_tx]
 set_property PACKAGE_PIN P5 [get_ports intr_butt]
 set_property IOSTANDARD LVCMOS33 [get_ports intr_butt]
-
-set_property PACKAGE_PIN Y22 [get_ports uart_in]
-set_property PACKAGE_PIN Y21 [get_ports uart_out]
 set_property PACKAGE_PIN P20 [get_ports sysrst]
 
+
+
+
+set_property IOSTANDARD LVCMOS33 [get_ports start_pg]
+set_property PACKAGE_PIN P2 [get_ports start_pg]

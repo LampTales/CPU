@@ -31,15 +31,15 @@ module main(
     output [23:0] led_out,
     output [7:0] seg_op,
     output [7:0] seg_out,
-    input uart_in,
-    output uart_out
+    //UART
+    input start_pg,
+    input uart_rx,
+    output uart_tx
     );
     wire [31:0] instruction;
     // assign led_out = {instruction[31:14],instruction[5:0]};
     // assign led_out = {icu_out[11:0],pc_value[11:0]};
     // what should be the rst?
-    wire rst;
-    assign rst = !sysrst;
     wire rom_clk;
     wire ram_clk;
     wire reg_clk;
@@ -49,10 +49,40 @@ module main(
     wire icu_clk;
     wire switch_clk;
 
-    wire cpu_rst_out;
     wire [1:0] mode;
     wire ack;
 
+
+    wire uart_out_clk;
+    wire uart_out_wen;
+    wire [13:0] uart_out_addr;
+    wire [31:0] uart_out_data;
+    wire uart_out_done;
+    wire spg_bufg;
+    BUFG U1(.I(start_pg), .O(spg_bufg));
+    uart_bmpg_0 uart_block(
+        .upg_clk_i(clk),
+        .upg_rst_i(sysrst),
+        .upg_rx_i(uart_rx),
+        .upg_clk_o(uart_out_clk),
+        .upg_wen_o(uart_out_wen),
+        .upg_adr_o(uart_out_addr),
+        .upg_dat_o(uart_out_data),
+        .upg_done_o(uart_out_done),
+        .upg_tx_o(uart_tx)
+    );
+    reg upg_rst;
+    always @ (posedge clk) begin
+        if (spg_bufg) upg_rst = 0;
+        if (sysrst) upg_rst = 1;
+    end
+    /* CPU work on normal mode when kickOff is 1. CPU work on Uart communicate mode when kickOff is 0.*/
+    wire kickOff = upg_rst | (~upg_rst & uart_out_done);
+    //used for other modules which don't relate to UARTwire rst;
+
+    wire rst;
+    assign rst = ! (sysrst | !upg_rst);
+    wire cpu_rst_out;
     wire cpu_rst = rst & !cpu_rst_out;
 
     CXK clock(
@@ -81,9 +111,13 @@ module main(
 
     ROM rom(
         .clk(rom_clk),
-        .rst(cpu_rst),
         .addr(pc_value),
-        .instruction(instruction)
+        .instruction(instruction),
+        .kickOff(kickOff),
+        .uart_out_clk(uart_out_clk),
+        .uart_out_wen(uart_out_wen),
+        .uart_out_addr(uart_out_addr),
+        .uart_out_data(uart_out_data)
     );
 
     wire ignore;
@@ -288,23 +322,12 @@ module main(
         .board_input_case(in_case),
         .board_output_data(out_num),
         .board_output_sig(out_sig),
-        .errorcode(errorcode)
+        .errorcode(errorcode),
+        
+        //UART
+        
+        .start_pg(start_pg),
+        .uart_out_done(uart_out_done)
     );
 
-    wire uart_out_clk;
-    wire uart_out_wen;
-    wire [13:0] uart_out_addr;
-    wire [31:0] uart_out_data;
-    wire uart_out_done;
-    uart_bmpg_0 uart_block(
-        .upg_clk_i(uart_clk),
-        .upg_rst_i(rst),
-        .upg_rx_i(uart_in),
-        .upg_clk_o(uart_out_clk),
-        .upg_wen_o(uart_out_wen),
-        .upg_adr_o(uart_out_addr),
-        .upg_dat_o(uart_out_data),
-        .upg_done_o(uart_out_done),
-        .upg_tx_o(uart_out)
-    );
 endmodule
