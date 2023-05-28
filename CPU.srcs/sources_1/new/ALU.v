@@ -156,8 +156,8 @@ always @(*) begin
                 errorcode = 8'b10;
             end
             else begin
-                out[31:16] = in0 / in1;
-                out[15:0]  = in0 % in1;
+                out[31:16] = $signed(in0) / $signed(in1);
+                out[15:0]  = $signed(in0) % $signed(in1);
                 equal      = 0;
                 errorcode  = 8'b00;
             end
