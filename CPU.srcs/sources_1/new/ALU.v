@@ -120,25 +120,25 @@ always @(*) begin
         end//srl
         
         SLLV: begin
-            out       = in0 << in1;
+            out       = in1 << in0;
             equal     = 0;
             errorcode = 8'b00;
         end//sllv
         
         SRLV: begin
-            out       = in0 >> in1;
+            out       = in1 >> in0;
             equal     = 0;
             errorcode = 8'b00;
         end//srlv
         
         SRA: begin
-            out       = $signed(in0) >>> shamt;
+            out       = $signed(in1) >>> shamt;
             equal     = 0;
             errorcode = 8'b00;
         end//sra
         
         SRAV: begin
-            out       = $signed(in0) >>> in1;
+            out       = $signed(in1) >>> in0;
             equal     = 0;
             errorcode = 8'b00;
         end//srav
