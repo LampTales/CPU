@@ -13,7 +13,7 @@
 
    - CPU特性
 
-     - ISA //todo SIMD eret
+     - ISA
 
        - 3类指令
 
@@ -43,7 +43,10 @@
            | nor  | 000000 | rs | rt | rd | 00000 | 100111 |
            | slt  | 000000 | rs | rt | rd | 00000 | 101010 |
            | sltu | 000000 | rs | rt | rd | 00000 | 101011 |
-   
+           | eret | 010000 | 10000 | 00000 | 00000 | 00000 | 011000 |
+           | add.s | 000000 | rs | rt | rd | 00000 | 001010 |
+           | mul.s | 000000 | rs | rt | rd | 00000 | 001011 |
+           
            - sll: 逻辑左移 (rd = rt << shamt) 空出位置补0
            - srl: 逻辑右移 (rd = rt >> shamt) 空出位置补0
            - sllv: 逻辑左移变量 (rd = rt << rs) 
@@ -63,11 +66,14 @@
            - nor: 非或 (rd = ~(rs | rt))
            - slt: 小于 (rd = (rs < rt) ? 1 : 0)
            - sltu: 小于无符号 (rd = (rs < rt) ? 1 : 0)
+           - eret: 中断处理后返回到中断前的地址
+           - add.s: simd128的add，同时读取后四个连续寄存器内容，计算后保存到后四个连续寄存器中去
+           - mul.s: simd128的mul，同时读取后四个连续寄存器内容，计算后保存到后四个连续寄存器中去
          - I-type
            $$
            \underbrace{opcode}_{6\ bits} \ | \ \underbrace{rs}_{5\ bits} \ | \ \underbrace{rt}_{5\ bits} \ | \  \underbrace{immediate}_{16\ bits}
            $$
-   
+         
            | 指令 | opcode | rs | rt | immediate | 
            | ---- | ------ | ------ | ------ | ------ |
            | beq  | 000100 | rs | rt | immediate |
@@ -82,7 +88,7 @@
            | ori  | 001101 | rs | rt | immediate |
            | xori | 001110 | rs | rt | immediate |
            | lui  | 001111 | 00000 | rt | immediate |
-
+         
            - beq: 分支相等 (if rs == rt) PC += immediate
            - bne: 分支不相等 (if rs != rt) PC += immediate
            - lw: 加载word (rt = Memory[rs + immediate])
@@ -95,7 +101,7 @@
            - ori: 或 (rt = rs | immediate)
            - xori: 异或 (rt = rs ^ immediate)
            - lui: 加载立即数到高位 (rt = immediate << 16)
-   
+         
          - J-type
            $$
            \underbrace{opcode}_{6\ bits} \ | \ \underbrace{address}_{26\ bits}
@@ -104,22 +110,27 @@
            | ---- | ------ | ------ |
            | j    | 000010 | address |
            | jal  | 000011 | address |
-   
+         
            - j: 跳转 (PC = (PC & 0xf0000000) \| (address << 2))
            - jal: 跳转并保存返回地址 (ra = PC + 4; PC = (PC & 0xf0000000) \| (address << 2))
    
      - 寻址空间设计：采用哈佛结构，用ROM和RAM分别存储指令和数据
    
      - 对外设IO的支持
-       - 内存映射：//todo
+       - 内存映射：
          - board_input_data: `0x3FF0`
          - board_input_case: `0x3FF4`
          - board_output_data: `0x3FF8`
          - board_output_sig: `0x3FFC`
        - IO确认两种方案
-         - 软件方案（最终选择）//todo
-         - 硬件方案 (弃用) //todo
-   
+         - 软件方案（最终选择）:
+         
+           ​	在需要读取数据时进行bne循环，然后在板子按下按钮触发按钮中断，在软件的中断处理代码中破坏循环条件，eret返回原来地址，跳出循环，并读取数据；
+         
+         - 硬件方案 (弃用) ：
+         
+           ​	在需要读取数据时进行bne循环，然后在板子按下按钮时直接在bne条件的其中一个寄存器上加1，由硬件直接破坏循环条件，软件跳出循环，并读取数据，该方法硬件会改变reg_file的值，因此软硬件分离上不如上一个方案，因此弃用，但我们的CPU仍然能用该方法进行IO。
+       
      - 单周期CPU
        - 5段流水线 (IF, ID, EX, MEM, WB)
          - IF: 取指令
@@ -190,7 +201,7 @@
             - 1位 clk: 时钟信号
             - 1位 rst: 复位信号
             - 2位 mode: 工作模式选择信号
-            - 1位 switch_clk: //todo
+            - 1位 switch_clk: debug模式下使用该switch作为单步调试的下一步切换
           - 输出:
             - 1位 rom_clock: ROM时钟信号
             - 1位 ram_clock: RAM时钟信号
@@ -224,23 +235,24 @@
             - 1位 pc_clk: PC时钟信号
             - 1位 seg_clk: 七段数码管时钟信号
             - 1位 rst: 复位信号
-            - 1位 clk_rst_butt: //todo
+            - 1位 cpu_rst_butt: CPU重置按钮
             - 1位 mode_butt: 工作模式选择按钮
             - 1位 ack_butt: 中断确认按钮
             - 1位 intr_butt: 中断按钮
-            - 32位 board_output_data: 板上需输出数据
-            - 8位 board_output_sig: 板上需输出信号 //todo
+            - 32位 board_output_data: 板上七段数码管需输出的数据
+            - 8位 board_output_sig: 板上led灯需输出的信号
             - 8位 errorcode: 错误码
           - 输出:
             - 24位 led_out: 24位LED输出
             - 8位 seg_op: 七段数码管使能信号
             - 8位 seg_out: 七段数码管输出
             - 1位 interrupt: 中断信号
+            - 1位 cpu_rst: CPU重置信号
             - 2位 mode: 工作模式选择信号
             - 1位 ack: 中断确认信号
-            - 1位 switch_clk: //todo
-            - 8位 board_input_data: 板上输入数据 //todo
-            - 8位 board_input_sig: 板上输入信号 //todo
+            - 1位 switch_clk: debug模式时钟信号
+            - 8位 board_input_data: 板上输入的数据
+            - 8位 board_input_case: 板上输入的测试样例编号
          - led_block.v
            - 功能: LED显示模块
              - 输入:
@@ -266,20 +278,20 @@
          - PCctrl.v
            - 功能: PC寄存器控制模块
              - 输入:
-               - 32位 pc: PC写入数据 //todo
+               - 32位 pc: PC当前地址
                - 1位 j: j指令信号
                - 1位 jal: jal指令信号
-               - 26位 j_inst: j指令地址 //todo
+               - 26位 j_inst: J指令地址
                - 1位 branch: beq分支信号
                - 1位 nbranch: bne分支信号
                - 32位 expand_imme: 扩展后立即数
                - 1位 jr: jr指令信号
-               - 32位 ra: //todo
+               - 32位 ra: jr时从寄存器读取的地址
                - 2位 mode: 工作模式选择信号
                - 1位 clk: 时钟信号
                - 32位 interrupt_handler: 中断处理指令地址
              - 输出:
-               - 32位 link_addr: //todo
+               - 32位 link_addr: jal时要link的地址
                - 32位 next: 下一条指令地址
          - RAM.v
            - 功能: RAM模块，用于存储数据
@@ -294,8 +306,8 @@
                - 4位 in_case: 样例序号输入
              - 输出:
                - 32位 read_data: 读出数据
-               - 32位 out_num: //todo
-               - 8位 out_sig: 信号输出 //todo
+               - 32位 out_num: 需要板子七段数码管显示的数据
+               - 8位 out_sig: 需要板子led灯显示的信号
          - ROM.v
            - 功能: ROM模块，用于读取指令
              - 输入:
@@ -321,14 +333,14 @@
                - 128位 in1: 运算数1
              - 输出:
                - 128位 out: 运算结果
-
+   
    
    - 问题及总结
    
      - CTRL.v中的控制信号的生成复杂，如何简化？
        - 将opcode和funct都传入ALU中方便ALU判断指令类别
      - 如何实现中断？
-
+   
      - 如何实现IO？
      - 如何实现乘除法？
        - 由于我们只需要用到8 bit的乘法运算，于是不引入lo, hi寄存器，只需直接将结果存入存储结果的寄存器中
