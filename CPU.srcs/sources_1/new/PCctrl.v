@@ -39,7 +39,7 @@ module PCctrl(
     input[31:0] interrupt_handler
     );
     wire [31:0] pc_add_4_dest;
-    assign pc_add_4_dest = pc + 4;
+    assign pc_add_4_dest = pc;
     assign link_addr = pc_add_4_dest;
 
     wire [31:0] j_dest;

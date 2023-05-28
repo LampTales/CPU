@@ -244,20 +244,10 @@ module main(
 
     
     // modify 2
-    reg [31:0] link_addr_save;
     wire [31:0] link_addr;
-    always @(posedge reg_clk or negedge cpu_rst) begin
-        if (!cpu_rst) begin
-            link_addr_save <= 0;
-        end
-        else begin
-            link_addr_save <= link_addr;
-        end
-    end
-    
     MUX_32 whether_write_ra_or_not(
         .in0(write_data_to_reg_select),
-        .in1(link_addr_save),
+        .in1(link_addr),
         .select(jal),
         .out(reg_write_data)
     );
