@@ -5,58 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="01fbbbd4-bdde-4324-a0ea-dc4610bddc20" name="变更" comment="">
-      <change beforePath="$PROJECT_DIR$/../../../CPU.cache/wt/gui_handlers.wdf" beforeDir="false" afterPath="$PROJECT_DIR$/../../../CPU.cache/wt/gui_handlers.wdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../CPU.cache/wt/java_command_handlers.wdf" beforeDir="false" afterPath="$PROJECT_DIR$/../../../CPU.cache/wt/java_command_handlers.wdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../CPU.cache/wt/project.wpc" beforeDir="false" afterPath="$PROJECT_DIR$/../../../CPU.cache/wt/project.wpc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../CPU.cache/wt/synthesis.wdf" beforeDir="false" afterPath="$PROJECT_DIR$/../../../CPU.cache/wt/synthesis.wdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../CPU.cache/wt/webtalk_pa.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../CPU.cache/wt/webtalk_pa.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../CPU.ip_user_files/ip/rom_ip/rom_ip_stub.v" beforeDir="false" afterPath="$PROJECT_DIR$/../../../CPU.ip_user_files/ip/rom_ip/rom_ip_stub.v" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../CPU.ip_user_files/ip/rom_ip/rom_ip_stub.vhdl" beforeDir="false" afterPath="$PROJECT_DIR$/../../../CPU.ip_user_files/ip/rom_ip/rom_ip_stub.vhdl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../CPU.ip_user_files/mem_init_files/prgmip32.coe" beforeDir="false" afterPath="$PROJECT_DIR$/../../../CPU.ip_user_files/mem_init_files/prgmip32.coe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../CPU.ip_user_files/mem_init_files/rom_ip.mif" beforeDir="false" afterPath="$PROJECT_DIR$/../../../CPU.ip_user_files/mem_init_files/rom_ip.mif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../CPU.ip_user_files/sim_scripts/rom_ip/activehdl/README.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../../CPU.ip_user_files/sim_scripts/rom_ip/activehdl/README.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../CPU.ip_user_files/sim_scripts/rom_ip/activehdl/prgmip32.coe" beforeDir="false" afterPath="$PROJECT_DIR$/../../../CPU.ip_user_files/sim_scripts/rom_ip/activehdl/prgmip32.coe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../CPU.ip_user_files/sim_scripts/rom_ip/activehdl/rom_ip.mif" beforeDir="false" afterPath="$PROJECT_DIR$/../../../CPU.ip_user_files/sim_scripts/rom_ip/activehdl/rom_ip.mif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../CPU.ip_user_files/sim_scripts/rom_ip/activehdl/rom_ip.sh" beforeDir="false" afterPath="$PROJECT_DIR$/../../../CPU.ip_user_files/sim_scripts/rom_ip/activehdl/rom_ip.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../CPU.ip_user_files/sim_scripts/rom_ip/ies/README.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../../CPU.ip_user_files/sim_scripts/rom_ip/ies/README.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../CPU.ip_user_files/sim_scripts/rom_ip/ies/prgmip32.coe" beforeDir="false" afterPath="$PROJECT_DIR$/../../../CPU.ip_user_files/sim_scripts/rom_ip/ies/prgmip32.coe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../CPU.ip_user_files/sim_scripts/rom_ip/ies/rom_ip.mif" beforeDir="false" afterPath="$PROJECT_DIR$/../../../CPU.ip_user_files/sim_scripts/rom_ip/ies/rom_ip.mif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../CPU.ip_user_files/sim_scripts/rom_ip/ies/rom_ip.sh" beforeDir="false" afterPath="$PROJECT_DIR$/../../../CPU.ip_user_files/sim_scripts/rom_ip/ies/rom_ip.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../CPU.ip_user_files/sim_scripts/rom_ip/modelsim/README.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../../CPU.ip_user_files/sim_scripts/rom_ip/modelsim/README.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../CPU.ip_user_files/sim_scripts/rom_ip/modelsim/prgmip32.coe" beforeDir="false" afterPath="$PROJECT_DIR$/../../../CPU.ip_user_files/sim_scripts/rom_ip/modelsim/prgmip32.coe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../CPU.ip_user_files/sim_scripts/rom_ip/modelsim/rom_ip.mif" beforeDir="false" afterPath="$PROJECT_DIR$/../../../CPU.ip_user_files/sim_scripts/rom_ip/modelsim/rom_ip.mif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../CPU.ip_user_files/sim_scripts/rom_ip/modelsim/rom_ip.sh" beforeDir="false" afterPath="$PROJECT_DIR$/../../../CPU.ip_user_files/sim_scripts/rom_ip/modelsim/rom_ip.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../CPU.ip_user_files/sim_scripts/rom_ip/questa/README.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../../CPU.ip_user_files/sim_scripts/rom_ip/questa/README.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../CPU.ip_user_files/sim_scripts/rom_ip/questa/prgmip32.coe" beforeDir="false" afterPath="$PROJECT_DIR$/../../../CPU.ip_user_files/sim_scripts/rom_ip/questa/prgmip32.coe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../CPU.ip_user_files/sim_scripts/rom_ip/questa/rom_ip.mif" beforeDir="false" afterPath="$PROJECT_DIR$/../../../CPU.ip_user_files/sim_scripts/rom_ip/questa/rom_ip.mif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../CPU.ip_user_files/sim_scripts/rom_ip/questa/rom_ip.sh" beforeDir="false" afterPath="$PROJECT_DIR$/../../../CPU.ip_user_files/sim_scripts/rom_ip/questa/rom_ip.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../CPU.ip_user_files/sim_scripts/rom_ip/riviera/README.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../../CPU.ip_user_files/sim_scripts/rom_ip/riviera/README.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../CPU.ip_user_files/sim_scripts/rom_ip/riviera/prgmip32.coe" beforeDir="false" afterPath="$PROJECT_DIR$/../../../CPU.ip_user_files/sim_scripts/rom_ip/riviera/prgmip32.coe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../CPU.ip_user_files/sim_scripts/rom_ip/riviera/rom_ip.mif" beforeDir="false" afterPath="$PROJECT_DIR$/../../../CPU.ip_user_files/sim_scripts/rom_ip/riviera/rom_ip.mif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../CPU.ip_user_files/sim_scripts/rom_ip/riviera/rom_ip.sh" beforeDir="false" afterPath="$PROJECT_DIR$/../../../CPU.ip_user_files/sim_scripts/rom_ip/riviera/rom_ip.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../CPU.ip_user_files/sim_scripts/rom_ip/vcs/README.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../../CPU.ip_user_files/sim_scripts/rom_ip/vcs/README.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../CPU.ip_user_files/sim_scripts/rom_ip/vcs/prgmip32.coe" beforeDir="false" afterPath="$PROJECT_DIR$/../../../CPU.ip_user_files/sim_scripts/rom_ip/vcs/prgmip32.coe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../CPU.ip_user_files/sim_scripts/rom_ip/vcs/rom_ip.mif" beforeDir="false" afterPath="$PROJECT_DIR$/../../../CPU.ip_user_files/sim_scripts/rom_ip/vcs/rom_ip.mif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../CPU.ip_user_files/sim_scripts/rom_ip/vcs/rom_ip.sh" beforeDir="false" afterPath="$PROJECT_DIR$/../../../CPU.ip_user_files/sim_scripts/rom_ip/vcs/rom_ip.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../CPU.ip_user_files/sim_scripts/rom_ip/xsim/README.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../../CPU.ip_user_files/sim_scripts/rom_ip/xsim/README.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../CPU.ip_user_files/sim_scripts/rom_ip/xsim/prgmip32.coe" beforeDir="false" afterPath="$PROJECT_DIR$/../../../CPU.ip_user_files/sim_scripts/rom_ip/xsim/prgmip32.coe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../CPU.ip_user_files/sim_scripts/rom_ip/xsim/rom_ip.mif" beforeDir="false" afterPath="$PROJECT_DIR$/../../../CPU.ip_user_files/sim_scripts/rom_ip/xsim/rom_ip.mif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../CPU.ip_user_files/sim_scripts/rom_ip/xsim/rom_ip.sh" beforeDir="false" afterPath="$PROJECT_DIR$/../../../CPU.ip_user_files/sim_scripts/rom_ip/xsim/rom_ip.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../CPU.runs/synth_1/gen_run.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../CPU.runs/synth_1/gen_run.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../CPU.runs/synth_1/main.tcl" beforeDir="false" afterPath="$PROJECT_DIR$/../../../CPU.runs/synth_1/main.tcl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../CPU.runs/synth_1/main.vds" beforeDir="false" afterPath="$PROJECT_DIR$/../../../CPU.runs/synth_1/main.vds" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../CPU.runs/synth_1/runme.log" beforeDir="false" afterPath="$PROJECT_DIR$/../../../CPU.runs/synth_1/runme.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../CPU.runs/synth_1/vivado.jou" beforeDir="false" afterPath="$PROJECT_DIR$/../../../CPU.runs/synth_1/vivado.jou" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../CPU.runs/synth_1/vivado.pb" beforeDir="false" afterPath="$PROJECT_DIR$/../../../CPU.runs/synth_1/vivado.pb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ip/rom_ip/rom_ip.dcp" beforeDir="false" afterPath="$PROJECT_DIR$/../ip/rom_ip/rom_ip.dcp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ip/rom_ip/rom_ip.mif" beforeDir="false" afterPath="$PROJECT_DIR$/../ip/rom_ip/rom_ip.mif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ip/rom_ip/rom_ip.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ip/rom_ip/rom_ip.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ip/rom_ip/rom_ip_sim_netlist.v" beforeDir="false" afterPath="$PROJECT_DIR$/../ip/rom_ip/rom_ip_sim_netlist.v" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ip/rom_ip/rom_ip_sim_netlist.vhdl" beforeDir="false" afterPath="$PROJECT_DIR$/../ip/rom_ip/rom_ip_sim_netlist.vhdl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ip/rom_ip/rom_ip_stub.v" beforeDir="false" afterPath="$PROJECT_DIR$/../ip/rom_ip/rom_ip_stub.v" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ip/rom_ip/rom_ip_stub.vhdl" beforeDir="false" afterPath="$PROJECT_DIR$/../ip/rom_ip/rom_ip_stub.vhdl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/button.v" beforeDir="false" afterPath="$PROJECT_DIR$/button.v" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../CPU.xpr" beforeDir="false" afterPath="$PROJECT_DIR$/../../../CPU.xpr" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/seg_block.v" beforeDir="false" afterPath="$PROJECT_DIR$/seg_block.v" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -71,21 +20,21 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/CS214/CPU/CPU.srcs/sources_1/new/main.v&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;two.files.diff.last.used.file&quot;: &quot;D:/CS214/CPU/CPU.srcs/sources_1/new/main.v&quot;,
-    &quot;two.files.diff.last.used.folder&quot;: &quot;C:/Users/Wang/OneDrive/文档/cs214_proj/CPU/CPU.srcs/sources_1/new&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "true",
+    "last_opened_file_path": "C:/Users/Wang/Desktop/seg_test/seg_test.srcs/sources_1/new/seg_block.v",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "two.files.diff.last.used.file": "C:/Users/Wang/Desktop/seg_test/seg_test.srcs/sources_1/new/seg_block.v",
+    "two.files.diff.last.used.folder": "C:/Users/Wang/OneDrive/文档/cs214_proj/CPU/CPU.srcs/sources_1/new",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RunManager">
     <configuration default="true" type="JetRunConfigurationType">
       <module name="new" />
@@ -119,6 +68,7 @@
       <workItem from="1685097584171" duration="32000" />
       <workItem from="1685114185636" duration="625000" />
       <workItem from="1685166644337" duration="4000" />
+      <workItem from="1685252760354" duration="37000" />
     </task>
     <servers />
   </component>
