@@ -1,7 +1,7 @@
 // Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2017.4 (win64) Build 2086221 Fri Dec 15 20:55:39 MST 2017
-// Date        : Sat May 27 14:47:10 2023
+// Date        : Sun May 28 16:09:49 2023
 // Host        : DESKTOP-KMJCO78 running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode funcsim D:/CS214/CPU/CPU.srcs/sources_1/ip/clk_ip/clk_ip_sim_netlist.v
 // Design      : clk_ip
@@ -94,7 +94,7 @@ module clk_ip_clk_ip_clk_wiz
     .CLKFBOUT_PHASE(0.000000),
     .CLKIN1_PERIOD(10.000000),
     .CLKIN2_PERIOD(0.000000),
-    .CLKOUT0_DIVIDE(68),
+    .CLKOUT0_DIVIDE(34),
     .CLKOUT0_DUTY_CYCLE(0.500000),
     .CLKOUT0_PHASE(0.000000),
     .CLKOUT1_DIVIDE(17),

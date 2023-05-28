@@ -56,7 +56,7 @@
 //  Output     Output      Phase    Duty Cycle   Pk-to-Pk     Phase
 //   Clock     Freq (MHz)  (degrees)    (%)     Jitter (ps)  Error (ps)
 //----------------------------------------------------------------------------
-// ip_cpu_clk____12.500______0.000______50.0______269.669____155.540
+// ip_cpu_clk____25.000______0.000______50.0______235.962____155.540
 // _seg_clk____50.000______0.000______50.0______203.457____155.540
 // uart_clk____10.000______0.000______50.0______281.286____155.540
 //
@@ -123,7 +123,7 @@ wire clk_in2_clk_ip;
     .DIVCLK_DIVIDE        (2),
     .CLKFBOUT_MULT        (17),
     .CLKFBOUT_PHASE       (0.000),
-    .CLKOUT0_DIVIDE       (68),
+    .CLKOUT0_DIVIDE       (34),
     .CLKOUT0_PHASE        (0.000),
     .CLKOUT0_DUTY_CYCLE   (0.500),
     .CLKOUT1_DIVIDE       (17),
