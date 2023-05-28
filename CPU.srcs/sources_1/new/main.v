@@ -144,12 +144,10 @@ module main(
 
     reg [4:0] ra_addr = 31;
     wire [4:0] read0_select;
-    MUX_5 read0_which_reg(
-        .in0(instruction[25:21]),
-        .in1(ra_addr),
-        .select(jr),
-        .out(read0_select)
-    );
+
+    // modify 1
+    assign read0_select = instruction[25:21];
+
     wire [4:0] write_select0;
     MUX_5 write_which_reg0(
         .in0(instruction[20:16]),
@@ -242,10 +240,23 @@ module main(
         .select(mem_to_reg),
         .out(write_data_to_reg_select)
     );
+
+
+    
+    // modify 2
+    reg [31:0] link_addr_save;
+    always @(posedge reg_clk or negedge cpu_rst) begin
+        if (!rst) begin
+            link_addr_save <= 0;
+        end
+        else begin
+            link_addr_save <= link_addr;
+        end
+    end
     wire [31:0] link_addr;
     MUX_32 whether_write_ra_or_not(
         .in0(write_data_to_reg_select),
-        .in1(link_addr),
+        .in1(link_addr_save),
         .select(jal),
         .out(reg_write_data)
     );
