@@ -78,9 +78,9 @@ module PCctrl(
         .out(mux2_out)
     );
 
-    //assign next = mux2_out;
+    assign next = mux2_out;
     // ICU interrupt from wyr
-    assign next= (interrupt_handler==0) ? mux2_out : interrupt_handler;
+    // assign next= (interrupt_handler==0) ? mux2_out : interrupt_handler;
     // debug mode select from oyl
     // wire next_with_icu;
     // assign next_with_icu = (interrupt_handler==0) ? mux2_out : interrupt_handler;

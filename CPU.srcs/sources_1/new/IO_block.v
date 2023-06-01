@@ -66,7 +66,7 @@ module IO_block(
     );
 
     button cpu_rst_butt_antishake(
-        .clk(pc_clk),
+        .clk(seg_clk),
         .rst_n(rst),
         .input_button(cpu_rst_butt),
         .output_button(cpu_rst)
@@ -74,7 +74,7 @@ module IO_block(
 
     wire mode_change;
     button mode_butt_antishake(
-        .clk(pc_clk),
+        .clk(seg_clk),
         .rst_n(rst),
         .input_button(mode_butt),
         .output_button(mode_change)
@@ -85,19 +85,19 @@ module IO_block(
             //mode <= 2'b00;  // ori
             mode <= 2'b10;  // ori
          end
-        // else begin
-        //     case(mode)
-        //         2'b00: mode <= 2'b01;   // uart
-        //         2'b01: mode <= 2'b10;   // run
-        //         2'b10: mode <= 2'b11;   // debug
-        //         2'b11: mode <= 2'b00;   //back to ori
-        //     endcase
-        //     end
+        else begin
+            case(mode)
+                2'b00: mode <= 2'b01;   // uart
+                2'b01: mode <= 2'b10;   // run
+                2'b10: mode <= 2'b11;   // debug
+                2'b11: mode <= 2'b00;   //back to ori
+            endcase
+            end
     end
 
 
     button ack_butt_antishake(
-        .clk(pc_clk),
+        .clk(seg_clk),
         .rst_n(rst),
         .input_button(ack_butt),
         .output_button(ack)

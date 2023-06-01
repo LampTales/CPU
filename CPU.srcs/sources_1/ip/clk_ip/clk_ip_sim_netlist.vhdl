@@ -1,9 +1,10 @@
 -- Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2017.4 (win64) Build 2086221 Fri Dec 15 20:55:39 MST 2017
--- Date        : Sun May 28 16:09:49 2023
--- Host        : DESKTOP-KMJCO78 running 64-bit major release  (build 9200)
--- Command     : write_vhdl -force -mode funcsim D:/CS214/CPU/CPU.srcs/sources_1/ip/clk_ip/clk_ip_sim_netlist.vhdl
+-- Date        : Thu Jun  1 21:24:34 2023
+-- Host        : LAPTOP-HRJPMCSA running 64-bit major release  (build 9200)
+-- Command     : write_vhdl -force -mode funcsim
+--               C:/Users/ASUS/Desktop/materials/Pico/VivadoSaving/CPU/CPU.srcs/sources_1/ip/clk_ip/clk_ip_sim_netlist.vhdl
 -- Design      : clk_ip
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.

@@ -3,7 +3,7 @@
 <!--                                                         -->
 <!-- Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.   -->
 
-<Project Version="7" Minor="35" Path="D:/CS214/CPU/CPU.xpr">
+<Project Version="7" Minor="35" Path="C:/Users/ASUS/Desktop/materials/Pico/VivadoSaving/CPU/CPU.xpr">
   <DefaultLaunch Dir="$PRUNDIR"/>
   <Configuration>
     <Option Name="Id" Val="2b621ba031124e1aa740c31ca1f57363"/>
@@ -40,13 +40,13 @@
     <Option Name="WTVcsLaunchSim" Val="0"/>
     <Option Name="WTRivieraLaunchSim" Val="0"/>
     <Option Name="WTActivehdlLaunchSim" Val="0"/>
-    <Option Name="WTXSimExportSim" Val="101"/>
-    <Option Name="WTModelSimExportSim" Val="101"/>
-    <Option Name="WTQuestaExportSim" Val="101"/>
-    <Option Name="WTIesExportSim" Val="101"/>
-    <Option Name="WTVcsExportSim" Val="101"/>
-    <Option Name="WTRivieraExportSim" Val="101"/>
-    <Option Name="WTActivehdlExportSim" Val="101"/>
+    <Option Name="WTXSimExportSim" Val="103"/>
+    <Option Name="WTModelSimExportSim" Val="103"/>
+    <Option Name="WTQuestaExportSim" Val="103"/>
+    <Option Name="WTIesExportSim" Val="103"/>
+    <Option Name="WTVcsExportSim" Val="103"/>
+    <Option Name="WTRivieraExportSim" Val="103"/>
+    <Option Name="WTActivehdlExportSim" Val="103"/>
     <Option Name="GenerateIPUpgradeLog" Val="TRUE"/>
     <Option Name="XSimRadix" Val="hex"/>
     <Option Name="XSimTimeUnit" Val="ns"/>
@@ -183,7 +183,7 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="c:/Users/Wang/OneDrive/Doc/Minisys1Assemblerv2.2/output/prgmip32.coe">
+      <File Path="$PPRDIR/../../../../uart_tools/Minisys1Assemblerv2.2/output/prgmip32.coe">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
@@ -337,9 +337,7 @@
     </Run>
     <Run Id="rom_ip_synth_1" Type="Ft3:Synth" SrcSet="rom_ip" Part="xc7a100tfgg484-1" ConstrsSet="rom_ip" Description="Vivado Synthesis Defaults" WriteIncrSynthDcp="false" Dir="$PRUNDIR/rom_ip_synth_1" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2017">
-          <Desc>Vivado Synthesis Defaults</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2017"/>
         <Step Id="synth_design"/>
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
@@ -413,9 +411,7 @@
     </Run>
     <Run Id="rom_ip_impl_1" Type="Ft2:EntireDesign" Part="xc7a100tfgg484-1" ConstrsSet="rom_ip" Description="Default settings for Implementation." WriteIncrSynthDcp="false" SynthRun="rom_ip_synth_1" IncludeInArchive="false">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2017">
-          <Desc>Default settings for Implementation.</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2017"/>
         <Step Id="init_design"/>
         <Step Id="opt_design"/>
         <Step Id="power_opt_design"/>

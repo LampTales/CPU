@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7a100tfgg484-1" LaunchTime="1685301392">
+<GenRun Id="synth_1" LaunchPart="xc7a100tfgg484-1" LaunchTime="1685632453">
   <File Type="PA-TCL" Name="main.tcl"/>
   <File Type="RDS-PROPCONSTRS" Name="main_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="main_reports.tcl"/>
@@ -137,7 +137,7 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="c:/Users/Wang/OneDrive/Doc/Minisys1Assemblerv2.2/output/prgmip32.coe">
+    <File Path="$PPRDIR/../../../../uart_tools/Minisys1Assemblerv2.2/output/prgmip32.coe">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>

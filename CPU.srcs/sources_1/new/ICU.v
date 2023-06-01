@@ -127,7 +127,7 @@ module ICU(input clk,
             cnt<=0;
             need_clk_intr <=0;
         end
-        else if(cnt > 32'd1526) begin
+        else if(cnt > 32'b11110000000000000000000000000000) begin
             cnt <=0;
             need_clk_intr <= 1;
         end
